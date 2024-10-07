@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <seasons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/refs/tags/v0.9/seasons.xsd">
+    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/refs/tags/v0.99/seasons.xsd">
 
     <season ratePlanCodeUnique="EDS-CED-SC2-1-960">
         <seasonName>Winter</seasonName>

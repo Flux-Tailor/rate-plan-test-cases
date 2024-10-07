@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceTierThresholds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/refs/tags/v0.99/service_tier_thresholds.xsd">
+    
+      
+    <serviceTierThreshold ratePlanCodeUnique="EDS-CED-SC2-1-960">
+            <serviceTierNr>1</serviceTierNr>
+            <seasonName>Winter</seasonName>
+            <measurementSpecification>
+                <calculationMethod>by_metered_quantity</calculationMethod>
+                <measurementSource>energy</measurementSource>
+                <unitOfMeasure>Wh</unitOfMeasure>
+                <unitMultiplierPowerOfTen>1</unitMultiplierPowerOfTen>
+                <measurementInterval>
+                    <calculationMode>PERIOD</calculationMode>
+                    <calcIntervalKind>MONTH</calcIntervalKind>
+                    <calcIntervalPer>1</calcIntervalPer>
+                </measurementInterval>
+            </measurementSpecification>
+            <min_qty>1</min_qty>
+            <max_qty>1</max_qty>
+        </serviceTierThreshold>
+</serviceTierThresholds>

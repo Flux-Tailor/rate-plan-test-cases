@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<tariffStatements xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/refs/tags/v0.9/tariff_statements.xsd">
+<tariffStatements xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/refs/tags/v0.99/tariff_statements.xsd">
     <tariffStatement>
         <sourceDocKind>Statement</sourceDocKind>
         <sourceURL>https://ets.dps.ny.gov/ets_web/search/showPDF.cfm?G%3E%29S2%3DJ9JSBW%27%5EJW%2B%20%5CCK4%3FXVAHQQ%3AW%2FLJ%5B%5E%3AICSBNKB%5FC%2A69NBFZ%0A</sourceURL>
@@ -11,31 +11,28 @@
         <dpsUtilityPscNumber>10</dpsUtilityPscNumber>
         <serviceType>Electric</serviceType>
         <typeCode>ACUF</typeCode>
-        <DPSCaseNumber/>
+        <DPSCaseNumber>nan</DPSCaseNumber>
         <generalRuleRefs>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2825433</generalRuleRefs>
         <statementCharges>
             <scopeOfApplicability>
-        <include>
-            <serviceClasses>
-                <serviceClass>All</serviceClass>
-            </serviceClasses>
-        </include>
-        <exclude>
-            <serviceClasses>
-                <serviceClass>11</serviceClass>
-            </serviceClasses>
-        </exclude>
-    </scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>All</serviceClass>
+                    </serviceClasses>
+                </include>
+                <exclude>
+                    <serviceClasses>
+                        <serviceClass>11</serviceClass>
+                    </serviceClasses>
+                </exclude>
+            </scopeOfApplicability>
             <statementCharge>
                 <servicePeriod>
                     <startDate>2024-06-01</startDate>
                 </servicePeriod>
                 <chargeName>Avg Cost-Trench-Undg</chargeName>
                 <description>Avg Cost-Trench-Undg</description>
-                <calculationMethod>fixed</calculationMethod>
-                <value>0.0</value>
-                <uom>One time</uom>
-                <unitMultiplier>1</unitMultiplier>
+                <chargeValue>0.0</chargeValue>
                 <chargesComponent>delivery</chargesComponent>
             </statementCharge>
         </statementCharges>
@@ -55,27 +52,35 @@
         <generalRuleRefs>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2825933</generalRuleRefs>
         <statementCharges>
             <scopeOfApplicability>
-        <include>
-            <serviceClasses>
-                <serviceClass>All</serviceClass>
-            </serviceClasses>
-        </include>
-        <exclude>
-            <serviceClasses>
-                <serviceClass>11</serviceClass>
-            </serviceClasses>
-        </exclude>
-    </scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>All</serviceClass>
+                    </serviceClasses>
+                </include>
+                <exclude>
+                    <serviceClasses>
+                        <serviceClass>11</serviceClass>
+                    </serviceClasses>
+                </exclude>
+            </scopeOfApplicability>
             <statementCharge>
                 <servicePeriod>
                     <startDate>2024-06-01</startDate>
                 </servicePeriod>
                 <chargeName>Arrears Mgt. Prog. Surcharge</chargeName>
                 <description>Arrears Mgt. Prog. Surcharge</description>
-                <calculationMethod>fixed</calculationMethod>
-                <value>0.0013</value>
-                <uom>kWh</uom>
-                <unitMultiplier>1</unitMultiplier>
+                <chargeValue>0.0013</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
                 <chargesComponent>delivery</chargesComponent>
             </statementCharge>
         </statementCharges>
@@ -95,27 +100,35 @@
         <generalRuleRefs>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2823955</generalRuleRefs>
         <statementCharges>
             <scopeOfApplicability>
-        <include>
-            <serviceClasses>
-                <serviceClass>All</serviceClass>
-            </serviceClasses>
-        </include>
-        <exclude>
-            <serviceClasses>
-                <serviceClass>11</serviceClass>
-            </serviceClasses>
-        </exclude>
-    </scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>All</serviceClass>
+                    </serviceClasses>
+                </include>
+                <exclude>
+                    <serviceClasses>
+                        <serviceClass>11</serviceClass>
+                    </serviceClasses>
+                </exclude>
+            </scopeOfApplicability>
             <statementCharge>
                 <servicePeriod>
                     <startDate>2024-01-01</startDate>
                 </servicePeriod>
                 <chargeName>Customer Benefit Contribution</chargeName>
                 <description>Customer Benefit Contribution</description>
-                <calculationMethod>fixed</calculationMethod>
-                <value>0.0</value>
-                <uom>kW-DC</uom>
-                <unitMultiplier>1</unitMultiplier>
+                <chargeValue>0.0</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>W</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
                 <chargesComponent>delivery</chargesComponent>
             </statementCharge>
         </statementCharges>
@@ -135,27 +148,24 @@
         <generalRuleRefs>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2814995</generalRuleRefs>
         <statementCharges>
             <scopeOfApplicability>
-        <include>
-            <serviceClasses>
-                <serviceClass>All</serviceClass>
-            </serviceClasses>
-        </include>
-        <exclude>
-            <serviceClasses>
-                <serviceClass>11</serviceClass>
-            </serviceClasses>
-        </exclude>
-    </scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>All</serviceClass>
+                    </serviceClasses>
+                </include>
+                <exclude>
+                    <serviceClasses>
+                        <serviceClass>11</serviceClass>
+                    </serviceClasses>
+                </exclude>
+            </scopeOfApplicability>
             <statementCharge>
                 <servicePeriod>
                     <startDate>2022-01-17</startDate>
                 </servicePeriod>
                 <chargeName>Community Choice Aggregation</chargeName>
                 <description>Community Choice Aggregation</description>
-                <calculationMethod>fixed</calculationMethod>
-                <value>0.0</value>
-                <uom>Monthly</uom>
-                <unitMultiplier>1</unitMultiplier>
+                <chargeValue>0.0</chargeValue>
                 <chargesComponent>delivery</chargesComponent>
             </statementCharge>
         </statementCharges>
@@ -171,31 +181,39 @@
         <dpsUtilityPscNumber>10</dpsUtilityPscNumber>
         <serviceType>Electric</serviceType>
         <typeCode>CESD</typeCode>
-        <DPSCaseNumber/>
+        <DPSCaseNumber>nan</DPSCaseNumber>
         <generalRuleRefs>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2822655</generalRuleRefs>
         <statementCharges>
             <scopeOfApplicability>
-        <include>
-            <serviceClasses>
-                <serviceClass>All</serviceClass>
-            </serviceClasses>
-        </include>
-        <exclude>
-            <serviceClasses>
-                <serviceClass>11</serviceClass>
-            </serviceClasses>
-        </exclude>
-    </scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>All</serviceClass>
+                    </serviceClasses>
+                </include>
+                <exclude>
+                    <serviceClasses>
+                        <serviceClass>11</serviceClass>
+                    </serviceClasses>
+                </exclude>
+            </scopeOfApplicability>
             <statementCharge>
                 <servicePeriod>
                     <startDate>2023-10-01</startDate>
                 </servicePeriod>
                 <chargeName>Clean Energy Standard Delivery</chargeName>
                 <description>Clean Energy Standard Delivery</description>
-                <calculationMethod>fixed</calculationMethod>
-                <value>0.000272</value>
-                <uom>kWh</uom>
-                <unitMultiplier>1</unitMultiplier>
+                <chargeValue>0.000272</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
                 <chargesComponent>delivery</chargesComponent>
             </statementCharge>
         </statementCharges>
@@ -211,31 +229,39 @@
         <dpsUtilityPscNumber>10</dpsUtilityPscNumber>
         <serviceType>Electric</serviceType>
         <typeCode>CESS</typeCode>
-        <DPSCaseNumber/>
+        <DPSCaseNumber>nan</DPSCaseNumber>
         <generalRuleRefs>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2825369</generalRuleRefs>
         <statementCharges>
             <scopeOfApplicability>
-        <include>
-            <serviceClasses>
-                <serviceClass>All</serviceClass>
-            </serviceClasses>
-        </include>
-        <exclude>
-            <serviceClasses>
-                <serviceClass>11</serviceClass>
-            </serviceClasses>
-        </exclude>
-    </scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>All</serviceClass>
+                    </serviceClasses>
+                </include>
+                <exclude>
+                    <serviceClasses>
+                        <serviceClass>11</serviceClass>
+                    </serviceClasses>
+                </exclude>
+            </scopeOfApplicability>
             <statementCharge>
                 <servicePeriod>
                     <startDate>2024-04-01</startDate>
                 </servicePeriod>
                 <chargeName>Clean Energy Stan. Supply Surc</chargeName>
                 <description>Clean Energy Stan. Supply Surc</description>
-                <calculationMethod>fixed</calculationMethod>
-                <value>0.007187</value>
-                <uom>kWh</uom>
-                <unitMultiplier>1</unitMultiplier>
+                <chargeValue>0.007187</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
                 <chargesComponent>delivery</chargesComponent>
             </statementCharge>
         </statementCharges>
@@ -255,27 +281,35 @@
         <generalRuleRefs>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2825845</generalRuleRefs>
         <statementCharges>
             <scopeOfApplicability>
-        <include>
-            <serviceClasses>
-                <serviceClass>All</serviceClass>
-            </serviceClasses>
-        </include>
-        <exclude>
-            <serviceClasses>
-                <serviceClass>11</serviceClass>
-            </serviceClasses>
-        </exclude>
-    </scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>All</serviceClass>
+                    </serviceClasses>
+                </include>
+                <exclude>
+                    <serviceClasses>
+                        <serviceClass>11</serviceClass>
+                    </serviceClasses>
+                </exclude>
+            </scopeOfApplicability>
             <statementCharge>
                 <servicePeriod>
                     <startDate>2024-06-01</startDate>
                 </servicePeriod>
                 <chargeName>Dynamic Load Management Surch</chargeName>
                 <description>Dynamic Load Management Surch</description>
-                <calculationMethod>fixed</calculationMethod>
-                <value>0.0011</value>
-                <uom>kWh</uom>
-                <unitMultiplier>1</unitMultiplier>
+                <chargeValue>0.0011</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
                 <chargesComponent>delivery</chargesComponent>
             </statementCharge>
         </statementCharges>
@@ -291,31 +325,39 @@
         <dpsUtilityPscNumber>10</dpsUtilityPscNumber>
         <serviceType>Electric</serviceType>
         <typeCode>ESCC</typeCode>
-        <DPSCaseNumber/>
+        <DPSCaseNumber>nan</DPSCaseNumber>
         <generalRuleRefs>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2809323</generalRuleRefs>
         <statementCharges>
             <scopeOfApplicability>
-        <include>
-            <serviceClasses>
-                <serviceClass>All</serviceClass>
-            </serviceClasses>
-        </include>
-        <exclude>
-            <serviceClasses>
-                <serviceClass>11</serviceClass>
-            </serviceClasses>
-        </exclude>
-    </scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>All</serviceClass>
+                    </serviceClasses>
+                </include>
+                <exclude>
+                    <serviceClasses>
+                        <serviceClass>11</serviceClass>
+                    </serviceClasses>
+                </exclude>
+            </scopeOfApplicability>
             <statementCharge>
                 <servicePeriod>
                     <startDate>2020-10-15</startDate>
                 </servicePeriod>
                 <chargeName>Emerg. Summer Cooling Credit</chargeName>
                 <description>Emerg. Summer Cooling Credit</description>
-                <calculationMethod>fixed</calculationMethod>
-                <value>0.0</value>
-                <uom>kWh</uom>
-                <unitMultiplier>1</unitMultiplier>
+                <chargeValue>0.0</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
                 <chargesComponent>delivery</chargesComponent>
             </statementCharge>
         </statementCharges>
@@ -335,27 +377,35 @@
         <generalRuleRefs>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2825845</generalRuleRefs>
         <statementCharges>
             <scopeOfApplicability>
-        <include>
-            <serviceClasses>
-                <serviceClass>All</serviceClass>
-            </serviceClasses>
-        </include>
-        <exclude>
-            <serviceClasses>
-                <serviceClass>11</serviceClass>
-            </serviceClasses>
-        </exclude>
-    </scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>All</serviceClass>
+                    </serviceClasses>
+                </include>
+                <exclude>
+                    <serviceClasses>
+                        <serviceClass>11</serviceClass>
+                    </serviceClasses>
+                </exclude>
+            </scopeOfApplicability>
             <statementCharge>
                 <servicePeriod>
                     <startDate>2024-06-01</startDate>
                 </servicePeriod>
                 <chargeName>Electric Vehicle Statement</chargeName>
                 <description>Electric Vehicle Statement</description>
-                <calculationMethod>fixed</calculationMethod>
-                <value>0.0002</value>
-                <uom>kWh</uom>
-                <unitMultiplier>1</unitMultiplier>
+                <chargeValue>0.0002</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
                 <chargesComponent>delivery</chargesComponent>
             </statementCharge>
         </statementCharges>
@@ -371,31 +421,39 @@
         <dpsUtilityPscNumber>10</dpsUtilityPscNumber>
         <serviceType>Electric</serviceType>
         <typeCode>GRT</typeCode>
-        <DPSCaseNumber/>
+        <DPSCaseNumber>nan</DPSCaseNumber>
         <generalRuleRefs>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2825805</generalRuleRefs>
         <statementCharges>
             <scopeOfApplicability>
-        <include>
-            <serviceClasses>
-                <serviceClass>All</serviceClass>
-            </serviceClasses>
-        </include>
-        <exclude>
-            <serviceClasses>
-                <serviceClass>11</serviceClass>
-            </serviceClasses>
-        </exclude>
-    </scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>All</serviceClass>
+                    </serviceClasses>
+                </include>
+                <exclude>
+                    <serviceClasses>
+                        <serviceClass>11</serviceClass>
+                    </serviceClasses>
+                </exclude>
+            </scopeOfApplicability>
             <statementCharge>
                 <servicePeriod>
                     <startDate>2024-05-31</startDate>
                 </servicePeriod>
                 <chargeName>Revenue Tax Surcharge</chargeName>
                 <description>Revenue Tax Surcharge</description>
-                <calculationMethod>fixed</calculationMethod>
-                <value>0.022195</value>
-                <uom>percent</uom>
-                <unitMultiplier>1</unitMultiplier>
+                <chargeValue>0.022195</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>percentage</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>1</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
                 <chargesComponent>delivery</chargesComponent>
             </statementCharge>
         </statementCharges>
@@ -411,31 +469,39 @@
         <dpsUtilityPscNumber>10</dpsUtilityPscNumber>
         <serviceType>Electric</serviceType>
         <typeCode>GRT</typeCode>
-        <DPSCaseNumber/>
+        <DPSCaseNumber>nan</DPSCaseNumber>
         <generalRuleRefs>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2825805</generalRuleRefs>
         <statementCharges>
             <scopeOfApplicability>
-        <include>
-            <serviceClasses>
-                <serviceClass>All</serviceClass>
-            </serviceClasses>
-        </include>
-        <exclude>
-            <serviceClasses>
-                <serviceClass>11</serviceClass>
-            </serviceClasses>
-        </exclude>
-    </scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>All</serviceClass>
+                    </serviceClasses>
+                </include>
+                <exclude>
+                    <serviceClasses>
+                        <serviceClass>11</serviceClass>
+                    </serviceClasses>
+                </exclude>
+            </scopeOfApplicability>
             <statementCharge>
                 <servicePeriod>
                     <startDate>2024-05-31</startDate>
                 </servicePeriod>
                 <chargeName>Revenue Tax Surcharge</chargeName>
                 <description>Revenue Tax Surcharge</description>
-                <calculationMethod>fixed</calculationMethod>
-                <value>0.024066</value>
-                <uom>percent</uom>
-                <unitMultiplier>1</unitMultiplier>
+                <chargeValue>0.024066</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>percentage</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>1</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
                 <chargesComponent>supply</chargesComponent>
             </statementCharge>
         </statementCharges>
@@ -451,31 +517,39 @@
         <dpsUtilityPscNumber>10</dpsUtilityPscNumber>
         <serviceType>Electric</serviceType>
         <typeCode>ICAP</typeCode>
-        <DPSCaseNumber/>
+        <DPSCaseNumber>nan</DPSCaseNumber>
         <generalRuleRefs>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2774085</generalRuleRefs>
         <statementCharges>
             <scopeOfApplicability>
-        <include>
-            <serviceClasses>
-                <serviceClass>All</serviceClass>
-            </serviceClasses>
-        </include>
-        <exclude>
-            <serviceClasses>
-                <serviceClass>11</serviceClass>
-            </serviceClasses>
-        </exclude>
-    </scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>All</serviceClass>
+                    </serviceClasses>
+                </include>
+                <exclude>
+                    <serviceClasses>
+                        <serviceClass>11</serviceClass>
+                    </serviceClasses>
+                </exclude>
+            </scopeOfApplicability>
             <statementCharge>
                 <servicePeriod>
                     <startDate>2013-11-01</startDate>
                 </servicePeriod>
                 <chargeName>Installed Capacity Payment</chargeName>
                 <description>Installed Capacity Payment</description>
-                <calculationMethod>fixed</calculationMethod>
-                <value>7.54</value>
-                <uom>kW</uom>
-                <unitMultiplier>1</unitMultiplier>
+                <chargeValue>7.54</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>W</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
                 <chargesComponent>delivery</chargesComponent>
             </statementCharge>
         </statementCharges>
@@ -495,27 +569,25 @@
         <generalRuleRefs>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2823331</generalRuleRefs>
         <statementCharges>
             <scopeOfApplicability>
-        <include>
-            <serviceClasses>
-                <serviceClass>All</serviceClass>
-            </serviceClasses>
-        </include>
-        <exclude>
-            <serviceClasses>
-                <serviceClass>11</serviceClass>
-            </serviceClasses>
-        </exclude>
-    </scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>All</serviceClass>
+                    </serviceClasses>
+                </include>
+                <exclude>
+                    <serviceClasses>
+                        <serviceClass>10</serviceClass>
+                        <serviceClass>11</serviceClass>
+                    </serviceClasses>
+                </exclude>
+            </scopeOfApplicability>
             <statementCharge>
                 <servicePeriod>
                     <startDate>2023-12-01</startDate>
                 </servicePeriod>
                 <chargeName>LICAAP Discounts</chargeName>
                 <description>Low Income Customer Affordability Assistance Program (LICAAP) Discounts</description>
-                <calculationMethod>fixed</calculationMethod>
-                <value>0.0</value>
-                <uom>Monthly</uom>
-                <unitMultiplier>1</unitMultiplier>
+                <chargeValue>0.0</chargeValue>
                 <chargesComponent>delivery</chargesComponent>
             </statementCharge>
         </statementCharges>
@@ -531,31 +603,39 @@
         <dpsUtilityPscNumber>10</dpsUtilityPscNumber>
         <serviceType>Electric</serviceType>
         <typeCode>MAC</typeCode>
-        <DPSCaseNumber/>
+        <DPSCaseNumber>nan</DPSCaseNumber>
         <generalRuleRefs>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2825995</generalRuleRefs>
         <statementCharges>
             <scopeOfApplicability>
-        <include>
-            <serviceClasses>
-                <serviceClass>All</serviceClass>
-            </serviceClasses>
-        </include>
-        <exclude>
-            <serviceClasses>
-                <serviceClass>11</serviceClass>
-            </serviceClasses>
-        </exclude>
-    </scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>All</serviceClass>
+                    </serviceClasses>
+                </include>
+                <exclude>
+                    <serviceClasses>
+                        <serviceClass>11</serviceClass>
+                    </serviceClasses>
+                </exclude>
+            </scopeOfApplicability>
             <statementCharge>
                 <servicePeriod>
                     <startDate>2024-06-01</startDate>
                 </servicePeriod>
                 <chargeName>Monthly Adjustment Clause</chargeName>
                 <description>Monthly Adjustment Clause</description>
-                <calculationMethod>fixed</calculationMethod>
-                <value>0.00859</value>
-                <uom>kWh</uom>
-                <unitMultiplier>1</unitMultiplier>
+                <chargeValue>0.00859</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
                 <chargesComponent>delivery</chargesComponent>
             </statementCharge>
         </statementCharges>
@@ -571,31 +651,39 @@
         <dpsUtilityPscNumber>10</dpsUtilityPscNumber>
         <serviceType>Electric</serviceType>
         <typeCode>MAC ADJ</typeCode>
-        <DPSCaseNumber/>
+        <DPSCaseNumber>nan</DPSCaseNumber>
         <generalRuleRefs>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2825771</generalRuleRefs>
         <statementCharges>
             <scopeOfApplicability>
-        <include>
-            <serviceClasses>
-                <serviceClass>All</serviceClass>
-            </serviceClasses>
-        </include>
-        <exclude>
-            <serviceClasses>
-                <serviceClass>11</serviceClass>
-            </serviceClasses>
-        </exclude>
-    </scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>All</serviceClass>
+                    </serviceClasses>
+                </include>
+                <exclude>
+                    <serviceClasses>
+                        <serviceClass>11</serviceClass>
+                    </serviceClasses>
+                </exclude>
+            </scopeOfApplicability>
             <statementCharge>
                 <servicePeriod>
                     <startDate>2024-05-10</startDate>
                 </servicePeriod>
                 <chargeName>Monthly Adjustment Clause Adj</chargeName>
                 <description>Monthly Adjustment Clause Adj</description>
-                <calculationMethod>fixed</calculationMethod>
-                <value>0.00154</value>
-                <uom>kWh</uom>
-                <unitMultiplier>1</unitMultiplier>
+                <chargeValue>0.00154</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
                 <chargesComponent>delivery</chargesComponent>
             </statementCharge>
         </statementCharges>
@@ -615,27 +703,24 @@
         <generalRuleRefs>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2824685</generalRuleRefs>
         <statementCharges>
             <scopeOfApplicability>
-        <include>
-            <serviceClasses>
-                <serviceClass>All</serviceClass>
-            </serviceClasses>
-        </include>
-        <exclude>
-            <serviceClasses>
-                <serviceClass>11</serviceClass>
-            </serviceClasses>
-        </exclude>
-    </scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>All</serviceClass>
+                    </serviceClasses>
+                </include>
+                <exclude>
+                    <serviceClasses>
+                        <serviceClass>11</serviceClass>
+                    </serviceClasses>
+                </exclude>
+            </scopeOfApplicability>
             <statementCharge>
                 <servicePeriod>
                     <startDate>2024-02-02</startDate>
                 </servicePeriod>
                 <chargeName>Managed Charging Participation</chargeName>
                 <description>Managed Charging Participation</description>
-                <calculationMethod>fixed</calculationMethod>
-                <value>0.0</value>
-                <uom>Monthly</uom>
-                <unitMultiplier>1</unitMultiplier>
+                <chargeValue>0.0</chargeValue>
                 <chargesComponent>delivery</chargesComponent>
             </statementCharge>
         </statementCharges>
@@ -651,31 +736,39 @@
         <dpsUtilityPscNumber>10</dpsUtilityPscNumber>
         <serviceType>Electric</serviceType>
         <typeCode>MFC</typeCode>
-        <DPSCaseNumber/>
+        <DPSCaseNumber>nan</DPSCaseNumber>
         <generalRuleRefs>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2825991</generalRuleRefs>
         <statementCharges>
             <scopeOfApplicability>
-        <include>
-            <serviceClasses>
-                <serviceClass>All</serviceClass>
-            </serviceClasses>
-        </include>
-        <exclude>
-            <serviceClasses>
-                <serviceClass>11</serviceClass>
-            </serviceClasses>
-        </exclude>
-    </scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>All</serviceClass>
+                    </serviceClasses>
+                </include>
+                <exclude>
+                    <serviceClasses>
+                        <serviceClass>11</serviceClass>
+                    </serviceClasses>
+                </exclude>
+            </scopeOfApplicability>
             <statementCharge>
                 <servicePeriod>
                     <startDate>2024-06-01</startDate>
                 </servicePeriod>
                 <chargeName>Merchant Function Charge</chargeName>
                 <description>Merchant Function Charge</description>
-                <calculationMethod>fixed</calculationMethod>
-                <value>0.113484</value>
-                <uom>kWh</uom>
-                <unitMultiplier>1</unitMultiplier>
+                <chargeValue>0.113484</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
                 <chargesComponent>supply</chargesComponent>
             </statementCharge>
         </statementCharges>
@@ -691,31 +784,39 @@
         <dpsUtilityPscNumber>10</dpsUtilityPscNumber>
         <serviceType>Electric</serviceType>
         <typeCode>MSC ADJ</typeCode>
-        <DPSCaseNumber/>
+        <DPSCaseNumber>nan</DPSCaseNumber>
         <generalRuleRefs>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2825771</generalRuleRefs>
         <statementCharges>
             <scopeOfApplicability>
-        <include>
-            <serviceClasses>
-                <serviceClass>All</serviceClass>
-            </serviceClasses>
-        </include>
-        <exclude>
-            <serviceClasses>
-                <serviceClass>11</serviceClass>
-            </serviceClasses>
-        </exclude>
-    </scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>All</serviceClass>
+                    </serviceClasses>
+                </include>
+                <exclude>
+                    <serviceClasses>
+                        <serviceClass>11</serviceClass>
+                    </serviceClasses>
+                </exclude>
+            </scopeOfApplicability>
             <statementCharge>
                 <servicePeriod>
                     <startDate>2024-05-10</startDate>
                 </servicePeriod>
                 <chargeName>Monthly Supply Charge Adjustme</chargeName>
                 <description>Monthly Supply Charge Adjustme</description>
-                <calculationMethod>fixed</calculationMethod>
-                <value>-0.008014</value>
-                <uom>kWh</uom>
-                <unitMultiplier>1</unitMultiplier>
+                <chargeValue>-0.008014</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
                 <chargesComponent>supply</chargesComponent>
             </statementCharge>
         </statementCharges>
@@ -731,31 +832,39 @@
         <dpsUtilityPscNumber>10</dpsUtilityPscNumber>
         <serviceType>Electric</serviceType>
         <typeCode>MSC CAP</typeCode>
-        <DPSCaseNumber/>
+        <DPSCaseNumber>nan</DPSCaseNumber>
         <generalRuleRefs>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2825985</generalRuleRefs>
         <statementCharges>
             <scopeOfApplicability>
-        <include>
-            <serviceClasses>
-                <serviceClass>All</serviceClass>
-            </serviceClasses>
-        </include>
-        <exclude>
-            <serviceClasses>
-                <serviceClass>11</serviceClass>
-            </serviceClasses>
-        </exclude>
-    </scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>All</serviceClass>
+                    </serviceClasses>
+                </include>
+                <exclude>
+                    <serviceClasses>
+                        <serviceClass>11</serviceClass>
+                    </serviceClasses>
+                </exclude>
+            </scopeOfApplicability>
             <statementCharge>
                 <servicePeriod>
                     <startDate>2024-06-01</startDate>
                 </servicePeriod>
                 <chargeName>Market Supply Charge-Capacity</chargeName>
                 <description>Market Supply Charge-Capacity</description>
-                <calculationMethod>fixed</calculationMethod>
-                <value>0.0394</value>
-                <uom>kWh</uom>
-                <unitMultiplier>1</unitMultiplier>
+                <chargeValue>0.0394</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
                 <chargesComponent>supply</chargesComponent>
             </statementCharge>
         </statementCharges>
@@ -771,31 +880,40 @@
         <dpsUtilityPscNumber>10</dpsUtilityPscNumber>
         <serviceType>Electric</serviceType>
         <typeCode>RDM</typeCode>
-        <DPSCaseNumber/>
+        <DPSCaseNumber>nan</DPSCaseNumber>
         <generalRuleRefs>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2824561</generalRuleRefs>
         <statementCharges>
             <scopeOfApplicability>
-        <include>
-            <serviceClasses>
-                <serviceClass>All</serviceClass>
-            </serviceClasses>
-        </include>
-        <exclude>
-            <serviceClasses>
-                <serviceClass>11</serviceClass>
-            </serviceClasses>
-        </exclude>
-    </scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>All</serviceClass>
+                    </serviceClasses>
+                </include>
+                <exclude>
+                    <serviceClasses>
+                        <serviceClass>10</serviceClass>
+                        <serviceClass>11</serviceClass>
+                    </serviceClasses>
+                </exclude>
+            </scopeOfApplicability>
             <statementCharge>
                 <servicePeriod>
                     <startDate>2024-02-01</startDate>
                 </servicePeriod>
                 <chargeName>Revenue Decoupling Mechanism</chargeName>
                 <description>Revenue Decoupling Mechanism</description>
-                <calculationMethod>fixed</calculationMethod>
-                <value>-0.0031</value>
-                <uom>kWh</uom>
-                <unitMultiplier>1</unitMultiplier>
+                <chargeValue>-0.0031</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
                 <chargesComponent>delivery</chargesComponent>
             </statementCharge>
         </statementCharges>
@@ -811,31 +929,39 @@
         <dpsUtilityPscNumber>10</dpsUtilityPscNumber>
         <serviceType>Electric</serviceType>
         <typeCode>SBC</typeCode>
-        <DPSCaseNumber/>
+        <DPSCaseNumber>nan</DPSCaseNumber>
         <generalRuleRefs>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2823939</generalRuleRefs>
         <statementCharges>
             <scopeOfApplicability>
-        <include>
-            <serviceClasses>
-                <serviceClass>All</serviceClass>
-            </serviceClasses>
-        </include>
-        <exclude>
-            <serviceClasses>
-                <serviceClass>11</serviceClass>
-            </serviceClasses>
-        </exclude>
-    </scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>All</serviceClass>
+                    </serviceClasses>
+                </include>
+                <exclude>
+                    <serviceClasses>
+                        <serviceClass>11</serviceClass>
+                    </serviceClasses>
+                </exclude>
+            </scopeOfApplicability>
             <statementCharge>
                 <servicePeriod>
                     <startDate>2024-01-01</startDate>
                 </servicePeriod>
                 <chargeName>System Benefits Charge</chargeName>
                 <description>System Benefits Charge</description>
-                <calculationMethod>fixed</calculationMethod>
-                <value>0.0065</value>
-                <uom>kWh</uom>
-                <unitMultiplier>1</unitMultiplier>
+                <chargeValue>0.0065</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
                 <chargesComponent>delivery</chargesComponent>
             </statementCharge>
         </statementCharges>
@@ -855,27 +981,24 @@
         <generalRuleRefs>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2825845</generalRuleRefs>
         <statementCharges>
             <scopeOfApplicability>
-        <include>
-            <serviceClasses>
-                <serviceClass>All</serviceClass>
-            </serviceClasses>
-        </include>
-        <exclude>
-            <serviceClasses>
-                <serviceClass>11</serviceClass>
-            </serviceClasses>
-        </exclude>
-    </scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>All</serviceClass>
+                    </serviceClasses>
+                </include>
+                <exclude>
+                    <serviceClasses>
+                        <serviceClass>11</serviceClass>
+                    </serviceClasses>
+                </exclude>
+            </scopeOfApplicability>
             <statementCharge>
                 <servicePeriod>
                     <startDate>2024-06-01</startDate>
                 </servicePeriod>
                 <chargeName>Delivery Revenue Surcharge</chargeName>
                 <description>Delivery Revenue Surcharge</description>
-                <calculationMethod>fixed</calculationMethod>
-                <value>0.007578</value>
-                <uom>Monthly</uom>
-                <unitMultiplier>1</unitMultiplier>
+                <chargeValue>0.007578</chargeValue>
                 <chargesComponent>delivery</chargesComponent>
             </statementCharge>
         </statementCharges>
@@ -895,27 +1018,35 @@
         <generalRuleRefs>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2805571</generalRuleRefs>
         <statementCharges>
             <scopeOfApplicability>
-        <include>
-            <serviceClasses>
-                <serviceClass>All</serviceClass>
-            </serviceClasses>
-        </include>
-        <exclude>
-            <serviceClasses>
-                <serviceClass>11</serviceClass>
-            </serviceClasses>
-        </exclude>
-    </scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>All</serviceClass>
+                    </serviceClasses>
+                </include>
+                <exclude>
+                    <serviceClasses>
+                        <serviceClass>11</serviceClass>
+                    </serviceClasses>
+                </exclude>
+            </scopeOfApplicability>
             <statementCharge>
                 <servicePeriod>
                     <startDate>2020-01-01</startDate>
                 </servicePeriod>
                 <chargeName>Tax Statement</chargeName>
                 <description>Tax Statement</description>
-                <calculationMethod>fixed</calculationMethod>
-                <value>0.0</value>
-                <uom>kWh</uom>
-                <unitMultiplier>1</unitMultiplier>
+                <chargeValue>0.0</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>1</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
                 <chargesComponent>bundled</chargesComponent>
             </statementCharge>
         </statementCharges>
@@ -931,31 +1062,28 @@
         <dpsUtilityPscNumber>10</dpsUtilityPscNumber>
         <serviceType>Electric</serviceType>
         <typeCode>TEL</typeCode>
-        <DPSCaseNumber/>
+        <DPSCaseNumber>nan</DPSCaseNumber>
         <generalRuleRefs>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2822235</generalRuleRefs>
         <statementCharges>
             <scopeOfApplicability>
-        <include>
-            <serviceClasses>
-                <serviceClass>All</serviceClass>
-            </serviceClasses>
-        </include>
-        <exclude>
-            <serviceClasses>
-                <serviceClass>11</serviceClass>
-            </serviceClasses>
-        </exclude>
-    </scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>All</serviceClass>
+                    </serviceClasses>
+                </include>
+                <exclude>
+                    <serviceClasses>
+                        <serviceClass>11</serviceClass>
+                    </serviceClasses>
+                </exclude>
+            </scopeOfApplicability>
             <statementCharge>
                 <servicePeriod>
                     <startDate>2023-09-01</startDate>
                 </servicePeriod>
                 <chargeName>Price Listed Rates and Charges</chargeName>
                 <description>Price Listed Rates and Charges</description>
-                <calculationMethod>fixed</calculationMethod>
-                <value>0.0</value>
-                <uom>Monthly</uom>
-                <unitMultiplier>1</unitMultiplier>
+                <chargeValue>0.0</chargeValue>
                 <chargesComponent>delivery</chargesComponent>
             </statementCharge>
         </statementCharges>
@@ -975,27 +1103,36 @@
         <generalRuleRefs>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2825845</generalRuleRefs>
         <statementCharges>
             <scopeOfApplicability>
-        <include>
-            <serviceClasses>
-                <serviceClass>All</serviceClass>
-            </serviceClasses>
-        </include>
-        <exclude>
-            <serviceClasses>
-                <serviceClass>11</serviceClass>
-            </serviceClasses>
-        </exclude>
-    </scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>All</serviceClass>
+                    </serviceClasses>
+                </include>
+                <exclude>
+                    <serviceClasses>
+                        <serviceClass>11</serviceClass>
+                        <serviceClass>12</serviceClass>
+                    </serviceClasses>
+                </exclude>
+            </scopeOfApplicability>
             <statementCharge>
                 <servicePeriod>
                     <startDate>2024-06-01</startDate>
                 </servicePeriod>
                 <chargeName>VDER Cost Recovery</chargeName>
                 <description>VDER Cost Recovery</description>
-                <calculationMethod>fixed</calculationMethod>
-                <value>0.0038</value>
-                <uom>kWh</uom>
-                <unitMultiplier>1</unitMultiplier>
+                <chargeValue>0.0038</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>1</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
                 <chargesComponent>delivery</chargesComponent>
             </statementCharge>
         </statementCharges>
@@ -1011,31 +1148,40 @@
         <dpsUtilityPscNumber>10</dpsUtilityPscNumber>
         <serviceType>Electric</serviceType>
         <typeCode>VDER-CRED</typeCode>
-        <DPSCaseNumber/>
+        <DPSCaseNumber>nan</DPSCaseNumber>
         <generalRuleRefs>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2825983</generalRuleRefs>
         <statementCharges>
             <scopeOfApplicability>
-        <include>
-            <serviceClasses>
-                <serviceClass>All</serviceClass>
-            </serviceClasses>
-        </include>
-        <exclude>
-            <serviceClasses>
-                <serviceClass>11</serviceClass>
-            </serviceClasses>
-        </exclude>
-    </scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>All</serviceClass>
+                    </serviceClasses>
+                </include>
+                <exclude>
+                    <serviceClasses>
+                        <serviceClass>11</serviceClass>
+                        <serviceClass>12</serviceClass>
+                    </serviceClasses>
+                </exclude>
+            </scopeOfApplicability>
             <statementCharge>
                 <servicePeriod>
                     <startDate>2024-06-01</startDate>
                 </servicePeriod>
                 <chargeName>Value Stack Crediting</chargeName>
                 <description>Value Stack Crediting</description>
-                <calculationMethod>fixed</calculationMethod>
-                <value>0.18375</value>
-                <uom>kWh</uom>
-                <unitMultiplier>1</unitMultiplier>
+                <chargeValue>0.18375</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>1</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
                 <chargesComponent>export</chargesComponent>
             </statementCharge>
         </statementCharges>

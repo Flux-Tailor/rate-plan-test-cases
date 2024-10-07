@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <timeOfUsePeriods xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/refs/tags/v0.9/time_of_use_periods.xsd">    
+    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/refs/tags/v0.99/time_of_use_periods.xsd">    
 
     <timeOfUsePeriod ratePlanCodeUnique="EDS-CED-SC2-1-960">
         <effectivePeriod>

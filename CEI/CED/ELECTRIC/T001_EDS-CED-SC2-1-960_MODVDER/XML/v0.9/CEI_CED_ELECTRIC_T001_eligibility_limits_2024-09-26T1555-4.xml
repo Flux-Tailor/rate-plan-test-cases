@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <eligibilityLimits xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/refs/tags/v0.9/rate-plan-schema/eligibility_limits.xsd">
-    
-    <!-- These values are all empty in this sheet https://docs.google.com/spreadsheets/d/1J9U2chojom5VshKt-tcVRYNLccO95WMy/edit?gid=1728850274#gid=1728850274 -->
+    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/refs/tags/v0.9/eligibility_limits.xsd">
     <eligibilityLimit ratePlanCodeUnique="EDS-CED-SC2-1-960">
         <eligibilityLimitType>ElectricDemand</eligibilityLimitType>
         <name>High</name>
