@@ -5,6 +5,8 @@ on:
       validationDir:
         description: 'The directory to be validated.'
         required: true
+permissions:
+  contents: write
 jobs:
   validate:
     runs-on: ubuntu-latest
