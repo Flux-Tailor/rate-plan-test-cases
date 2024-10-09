@@ -16,5 +16,4 @@ jobs:
         env:
           SCRIPTING_LICENSE_KEY: ${{secrets.SCRIPTING_LICENSE_KEY}}
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          validationDir: ${{ github.event.inputs.validationDir }}
+          validationDir: "CEI"
