@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Oxygen Validation Script
-        uses: Flux-Tailor/oxygen-scripting-validation-action
+        uses: Flux-Tailor/oxygen-scripting-validation-action@v1.0.0
         env:
           SCRIPTING_LICENSE_KEY: ${{secrets.SCRIPTING_LICENSE_KEY}}
         with:
