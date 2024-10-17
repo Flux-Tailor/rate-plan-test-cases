@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<minimumCharges xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/refs/tags/v0.99.1-dev/minimum_charges.xsd">
+    
+    <minimumCharge>
+        <servicePeriod>
+            <startDate>2006-05-04</startDate>
+        </servicePeriod>
+        <chargeName>Minimum Charge</chargeName>
+        <description>Minimum Charge</description>
+        <chargeValue>29.39</chargeValue>
+        <chargesComponent>delivery</chargesComponent>
+    </minimumCharge>
+
+</minimumCharges>

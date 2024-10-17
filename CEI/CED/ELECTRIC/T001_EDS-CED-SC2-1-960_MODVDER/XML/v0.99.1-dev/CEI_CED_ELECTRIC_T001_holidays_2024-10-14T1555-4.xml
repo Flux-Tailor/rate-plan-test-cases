@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<holidays xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/refs/tags/v0.99.1-dev/holidays.xsd">
+
+    <holiday ratePlanCodeUnique="EDS-CED-SC2-1-960">Labor Day</holiday>
+    <holiday ratePlanCodeUnique="EDS-CED-SC2-1-960">Independence Day</holiday>
+    <holiday ratePlanCodeUnique="EDS-CED-SC2-1-960">Memorial Day</holiday>
+    <holiday ratePlanCodeUnique="EDS-CED-SC2-1-960">Christmas Day</holiday>
+    <holiday ratePlanCodeUnique="EDS-CED-SC2-1-960">Thanksgiving Day</holiday>
+    <holiday ratePlanCodeUnique="EDS-CED-SC2-1-960">Indigenous Peoples' Day</holiday>
+    <holiday ratePlanCodeUnique="EDS-CED-SC2-1-960">New Year’s Day</holiday>
+    <holiday ratePlanCodeUnique="EDS-CED-SC2-1-960">President’s Day</holiday>
+    <holiday ratePlanCodeUnique="EDS-CED-SC2-1-960">Veterans Day</holiday>
+    
+</holidays>

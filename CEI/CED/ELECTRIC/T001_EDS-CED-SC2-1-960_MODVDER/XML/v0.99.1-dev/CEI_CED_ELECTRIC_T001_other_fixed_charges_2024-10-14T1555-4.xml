@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<otherFixedCharges xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/refs/tags/v0.99.1-dev/other_fixed_charges.xsd">    
+</otherFixedCharges>

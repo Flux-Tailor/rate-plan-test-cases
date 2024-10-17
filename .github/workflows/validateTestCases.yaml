@@ -1,0 +1,17 @@
+name: Run Validation (manually)
+on:
+  workflow_dispatch:
+    inputs:
+      validationDir:
+        description: 'The directory to be validated.'
+        required: true
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Oxygen Validation Script
+        uses: oxygenxml/oxygen-scripting-validation-action@v1.0.0
+        env:
+          SCRIPTING_LICENSE_KEY: ${{secrets.SCRIPTING_LICENSE_KEY}}
+        with:
+          validationDir: ${{ github.event.inputs.validationDir }}

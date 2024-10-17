@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<seasons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/refs/tags/v0.99.1-dev/seasons.xsd">
+
+    <season ratePlanCodeUnique="EDS-CED-SC2-1-960">
+        <seasonName>Winter</seasonName>
+        <month>1</month>
+    </season>
+    <season ratePlanCodeUnique="EDS-CED-SC2-1-960">
+        <seasonName>Winter</seasonName>
+        <month>2</month>
+    </season>
+    <season ratePlanCodeUnique="EDS-CED-SC2-1-960">
+        <seasonName>Winter</seasonName>
+        <month>3</month>
+    </season>
+    <season ratePlanCodeUnique="EDS-CED-SC2-1-960">
+        <seasonName>Winter</seasonName>
+        <month>4</month>
+    </season>
+    <season ratePlanCodeUnique="EDS-CED-SC2-1-960">
+        <seasonName>Winter</seasonName>
+        <month>5</month>
+    </season>
+    <season ratePlanCodeUnique="EDS-CED-SC2-1-960">
+        <seasonName>Winter</seasonName>
+        <month>10</month>
+    </season>
+    <season ratePlanCodeUnique="EDS-CED-SC2-1-960">
+        <seasonName>Winter</seasonName>
+        <month>11</month>
+    </season>
+    <season ratePlanCodeUnique="EDS-CED-SC2-1-960">
+        <seasonName>Winter</seasonName>
+        <month>12</month>
+    </season>
+    <season ratePlanCodeUnique="EDS-CED-SC2-1-960">
+        <seasonName>Summer</seasonName>
+        <month>6</month>
+    </season>
+    <season ratePlanCodeUnique="EDS-CED-SC2-1-960">
+        <seasonName>Summer</seasonName>
+        <month>7</month>
+    </season>
+    <season ratePlanCodeUnique="EDS-CED-SC2-1-960">
+        <seasonName>Summer</seasonName>
+        <month>8</month>
+    </season>
+    <season ratePlanCodeUnique="EDS-CED-SC2-1-960">
+        <seasonName>Summer</seasonName>
+        <month>9</month>
+    </season>
+</seasons>

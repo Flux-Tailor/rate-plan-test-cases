@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tariffBook xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/refs/tags/v0.99.1-dev/tariff_book_leaf_ranges.xsd">
+    <sourceDocKind>TariffBookLeafRange</sourceDocKind>
+        <sourceURL>https://iedr-public-static-files.s3.amazonaws.com/rate-tariffs/coned/electric/10/coned_electric_10_effective.pdf</sourceURL>
+        <datePublished>2023-07-27</datePublished>
+        <effectivePeriod>
+            <startDate>2012-01-04</startDate>
+        </effectivePeriod>
+        <iedrOrgAbbreviation>CED</iedrOrgAbbreviation>
+        <dpsUtilityPscNumber>10</dpsUtilityPscNumber>
+        <serviceType>Electric</serviceType>
+        <tariffBookLeafRanges>
+            <tariffBookLeafRange>
+                <sourceDocKind>TariffBookLeafRange</sourceDocKind>
+                <sourceURL>https://iedr-public-static-files.s3.amazonaws.com/rate-tariffs/coned/electric/10/coned_electric_10_effective.pdf</sourceURL>
+                <datePublished>2024-05-01</datePublished>
+                <effectivePeriod>
+                    <startDate>2023-08-01</startDate>
+                </effectivePeriod>
+                <iedrOrgAbbreviation>CED</iedrOrgAbbreviation>
+                <dpsUtilityPscNumber>10</dpsUtilityPscNumber>
+                <serviceType>Electric</serviceType>
+                <tariffBookCharges>
+                    <scopeOfApplicability>
+                        <include>
+                            <serviceClasses>
+                                <serviceClass>2</serviceClass>
+                            </serviceClasses>
+                        </include>
+                    </scopeOfApplicability>
+                    <tariffBookCharge>
+                        <servicePeriod>
+                            <startDate>2006-05-04</startDate>
+                        </servicePeriod>
+                        <serviceTierNr>0</serviceTierNr>
+                        <ratePeriodNr>0</ratePeriodNr>
+                        <peakType>base</peakType>
+                        <chargeName>Customer Charge</chargeName>
+                        <description>Customer Charge</description>
+                        <chargeValue>32</chargeValue>
+                        <chargesComponent>delivery</chargesComponent>
+                    </tariffBookCharge>
+                    <tariffBookCharge>
+                        <servicePeriod>
+                            <startDate>2024-02-04</startDate>
+                        </servicePeriod>
+                        <ratePeriodNr>1</ratePeriodNr>
+                        <peakType>base</peakType>
+                        <chargeName>Energy Delivery Charges</chargeName>
+                        <description></description>
+                        <chargeValue>18.59</chargeValue>
+                        <measurementDefinition>
+                            <calculationMethod>by_metered_quantity</calculationMethod>
+                            <measurementSource>energy</measurementSource>
+                            <unitOfMeasure>Wh</unitOfMeasure>
+                            <unitMultiplierPowerOfTen>1</unitMultiplierPowerOfTen>
+                            <measurementInterval>
+                                <calculationMode>PERIOD</calculationMode>
+                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                <calcIntervalPer>1</calcIntervalPer>
+                            </measurementInterval>
+                        </measurementDefinition>
+                        <chargesComponent>delivery</chargesComponent>
+                    </tariffBookCharge>
+                    <tariffBookCharge>
+                        <servicePeriod>
+                            <startDate>2024-02-04</startDate>
+                        </servicePeriod>
+                        <ratePeriodNr>2</ratePeriodNr>
+                        <peakType>base</peakType>
+                        <chargeName>Energy Delivery Charges</chargeName>
+                        <description></description>
+                        <chargeValue>15.59</chargeValue>
+                        <measurementDefinition>
+                            <calculationMethod>by_metered_quantity</calculationMethod>
+                            <measurementSource>energy</measurementSource>
+                            <unitOfMeasure>Wh</unitOfMeasure>
+                            <unitMultiplierPowerOfTen>1</unitMultiplierPowerOfTen>
+                            <measurementInterval>
+                                <calculationMode>PERIOD</calculationMode>
+                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                <calcIntervalPer>1</calcIntervalPer>
+                            </measurementInterval>
+                        </measurementDefinition>
+                        <chargesComponent>delivery</chargesComponent>
+                    </tariffBookCharge>
+                </tariffBookCharges>
+                <startLeafNbr>397</startLeafNbr>
+                <endLeafNbr>397</endLeafNbr>
+                <DPSCaseNumber>22-E-0064</DPSCaseNumber>
+            </tariffBookLeafRange>
+        </tariffBookLeafRanges>
+</tariffBook>
+
+
+
+
