@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timeOfUsePeriods xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/refs/tags/v0.9/time_of_use_periods.xsd">    
+
+    <timeOfUsePeriod ratePlanCodeUnique="EDS-CED-SC2-1-960">
+        <effectivePeriod>
+            <startDate>2006-04-20</startDate>
+        </effectivePeriod>
+        <RatePeriodNrNonHolidays>1</RatePeriodNrNonHolidays>
+        <RatePeriodNrHolidays>1</RatePeriodNrHolidays>
+        <seasonName>Summer</seasonName>
+        <dayType>weekend</dayType>
+        <peakType>base</peakType>
+        <appliesOnHolidays>true</appliesOnHolidays>
+        <timeStart>00:00:00</timeStart>
+        <timeEnd>23:59:59</timeEnd>
+        <chargesComponent>Delivery</chargesComponent>
+        <measurementApplicable></measurementApplicable>
+    </timeOfUsePeriod>
+    
+    <timeOfUsePeriod ratePlanCodeUnique="EDS-CED-SC2-1-960">
+        <effectivePeriod>
+            <startDate>2023-08-01</startDate>
+        </effectivePeriod>
+        <RatePeriodNrNonHolidays>1</RatePeriodNrNonHolidays>
+        <RatePeriodNrHolidays>1</RatePeriodNrHolidays>
+        <seasonName>Summer</seasonName>
+        <dayType>weekday</dayType>
+        <peakType>base</peakType>
+        <appliesOnHolidays>true</appliesOnHolidays>
+        <timeStart>00:00:00</timeStart>
+        <timeEnd>23:59:59</timeEnd>
+        <chargesComponent>Delivery</chargesComponent>
+        <measurementApplicable></measurementApplicable>
+    </timeOfUsePeriod>
+
+    <timeOfUsePeriod ratePlanCodeUnique="EDS-CED-SC2-1-960">
+        <effectivePeriod>
+            <startDate>2023-08-01</startDate>
+        </effectivePeriod>
+        <RatePeriodNrNonHolidays>2</RatePeriodNrNonHolidays>
+        <RatePeriodNrHolidays>2</RatePeriodNrHolidays>
+        <seasonName>Winter</seasonName>
+        <dayType>weekday</dayType>
+        <peakType>base</peakType>
+        <appliesOnHolidays>true</appliesOnHolidays>
+        <timeStart>00:00:00</timeStart>
+        <timeEnd>23:59:59</timeEnd>
+        <chargesComponent>Delivery</chargesComponent>
+        <measurementApplicable></measurementApplicable>
+    </timeOfUsePeriod>
+
+    <timeOfUsePeriod ratePlanCodeUnique="EDS-CED-SC2-1-960">
+        <effectivePeriod>
+            <startDate>2023-08-01</startDate>
+        </effectivePeriod>
+        <RatePeriodNrNonHolidays>2</RatePeriodNrNonHolidays>
+        <RatePeriodNrHolidays>2</RatePeriodNrHolidays>
+        <seasonName>Winter</seasonName>
+        <dayType>weekend</dayType>
+        <peakType>base</peakType>
+        <appliesOnHolidays>true</appliesOnHolidays>
+        <timeStart>00:00:00</timeStart>
+        <timeEnd>23:59:59</timeEnd>
+        <chargesComponent>Delivery</chargesComponent>
+        <measurementApplicable></measurementApplicable>
+    </timeOfUsePeriod>
+    
+</timeOfUsePeriods>
