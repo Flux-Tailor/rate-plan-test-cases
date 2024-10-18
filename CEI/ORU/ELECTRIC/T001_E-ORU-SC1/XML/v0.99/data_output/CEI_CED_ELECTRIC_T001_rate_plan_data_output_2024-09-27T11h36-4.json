@@ -1,0 +1,1409 @@
+{
+    "ratePlanScenario": {
+        "xmlns:vc": "http://www.w3.org/2007/XMLSchema-versioning",
+        "xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+        "xsi:noNamespaceSchemaLocation": "file:/Users/boek/Library/CloudStorage/GoogleDrive-klaar@fluxtailor.com/My%20Drive/DataStandards/RatePlanData/IEDR/rate-plan-schema/rate_plan_data_output.xsd",
+        "ratePlanSelection": {
+            "ratePlanName": "value",
+            "dateDraftUpdate": "value",
+            "dateEffective": "value",
+            "dateCancellation": "value",
+            "ratePlanIedrOrgAbbreviation": "value",
+            "service": "value",
+            "customerClass": "value",
+            "serviceClassNumber": "value",
+            "serviceClassName": "value",
+            "rateCode": "value",
+            "ratePlanDescription": "value",
+            "tariffDpsCaseNumber": "value",
+            "ratePlanHasRetailSupply": "value",
+            "ratePlanHasTieredBlocks": "value",
+            "ratePlanHasDemandCharges": "value",
+            "ratePlanHasIcapTag": "value",
+            "ratePlanHasReactivePower": "value",
+            "ratePlanHasTimeOfUsePricing": "value",
+            "ratePlanIsRateRider": "value",
+            "ratePlanNumberRatePeriods": "value",
+            "ratePlanTariffId": "value",
+            "ratePlanTerritory": "value",
+            "tariffUtilityName": "value",
+            "tariffUtilityPscNumber": "value",
+            "tariffBookLeafRanges": "value",
+            "seasons": {
+                "season": [
+                    {
+                        "ratePlanCodeUnique": "ratePlanCodeUnique0",
+                        "seasonName": "value",
+                        "month": "value"
+                    },
+                    {
+                        "ratePlanCodeUnique": "ratePlanCodeUnique1",
+                        "seasonName": "value",
+                        "month": "value"
+                    }
+                ]
+            },
+            "holidays": {
+                "holiday": [
+                    {
+                        "ratePlanCodeUnique": "ratePlanCodeUnique2",
+                        "#text": "value"
+                    },
+                    {
+                        "ratePlanCodeUnique": "ratePlanCodeUnique3",
+                        "#text": "value"
+                    }
+                ]
+            },
+            "timeOfUsePeriods": {
+                "timeOfUsePeriod": [
+                    {
+                        "ratePlanCodeUnique": "ratePlanCodeUnique4",
+                        "effectivePeriod": {
+                            "startDate": "value",
+                            "endDate": "value"
+                        },
+                        "RatePeriodNrNonHolidays": "value",
+                        "RatePeriodNrHolidays": "value",
+                        "seasonName": "value",
+                        "dayType": "value",
+                        "peakType": "value",
+                        "appliesOnHolidays": "value",
+                        "timeStart": "value",
+                        "timeEnd": "value",
+                        "chargesComponent": {},
+                        "measurementApplicable": "value"
+                    },
+                    {
+                        "ratePlanCodeUnique": "ratePlanCodeUnique5",
+                        "effectivePeriod": {
+                            "startDate": "value",
+                            "endDate": "value"
+                        },
+                        "RatePeriodNrNonHolidays": "value",
+                        "RatePeriodNrHolidays": "value",
+                        "seasonName": "value",
+                        "dayType": "value",
+                        "peakType": "value",
+                        "appliesOnHolidays": "value",
+                        "timeStart": "value",
+                        "timeEnd": "value",
+                        "chargesComponent": {},
+                        "measurementApplicable": "value"
+                    }
+                ]
+            },
+            "serviceTierThresholds": {
+                "serviceTierThreshold": [
+                    {
+                        "ratePlanCodeUnique": "ratePlanCodeUnique6",
+                        "serviceTierNr": {},
+                        "unitOfMeasure": "value",
+                        "unitMultiplier": "value",
+                        "seasonName": "value",
+                        "min_qty": "value",
+                        "max_qty": "value"
+                    },
+                    {
+                        "ratePlanCodeUnique": "ratePlanCodeUnique7",
+                        "serviceTierNr": {},
+                        "unitOfMeasure": "value",
+                        "unitMultiplier": "value",
+                        "seasonName": "value",
+                        "min_qty": "value",
+                        "max_qty": "value"
+                    }
+                ]
+            },
+            "deliveryCharges": {
+                "minimumCharges": {
+                    "minimumCharge": [
+                        {
+                            "servicePeriod": {"startDate": "value"},
+                            "serviceTierNr": "value",
+                            "ratePeriodNr": "value",
+                            "peakType": "value",
+                            "month": "value",
+                            "chargeName": "value",
+                            "description": "value",
+                            "calculationMethod": "value",
+                            "inputMeasurement": "value",
+                            "value": "value",
+                            "uom": "value",
+                            "unitMultiplier": "value",
+                            "chargesComponent": "value"
+                        },
+                        {
+                            "servicePeriod": {"startDate": "value"},
+                            "serviceTierNr": "value",
+                            "ratePeriodNr": "value",
+                            "peakType": "value",
+                            "month": "value",
+                            "chargeName": "value",
+                            "description": "value",
+                            "calculationMethod": "value",
+                            "inputMeasurement": "value",
+                            "value": "value",
+                            "uom": "value",
+                            "unitMultiplier": "value",
+                            "chargesComponent": "value"
+                        }
+                    ]
+                },
+                "otherFixedCharges": {
+                    "otherFixedCharge": [
+                        {
+                            "ratePlanCodeUnique": "ratePlanCodeUnique8",
+                            "servicePeriod": {"startDate": "value"},
+                            "serviceTierNr": "value",
+                            "ratePeriodNr": "value",
+                            "peakType": "value",
+                            "month": "value",
+                            "chargeName": "value",
+                            "description": "value",
+                            "calculationMethod": "value",
+                            "inputMeasurement": "value",
+                            "value": "value",
+                            "uom": "value",
+                            "unitMultiplier": "value",
+                            "chargesComponent": "value"
+                        },
+                        {
+                            "ratePlanCodeUnique": "ratePlanCodeUnique9",
+                            "servicePeriod": {"startDate": "value"},
+                            "serviceTierNr": "value",
+                            "ratePeriodNr": "value",
+                            "peakType": "value",
+                            "month": "value",
+                            "chargeName": "value",
+                            "description": "value",
+                            "calculationMethod": "value",
+                            "inputMeasurement": "value",
+                            "value": "value",
+                            "uom": "value",
+                            "unitMultiplier": "value",
+                            "chargesComponent": "value"
+                        }
+                    ]
+                },
+                "meteredDeliveryCharges": {
+                    "meteredDeliveryCharge": [
+                        {
+                            "servicePeriod": {"startDate": "value"},
+                            "serviceTierNr": "value",
+                            "ratePeriodNr": "value",
+                            "peakType": "value",
+                            "month": "value",
+                            "chargeName": "value",
+                            "description": "value",
+                            "calculationMethod": "value",
+                            "inputMeasurement": "value",
+                            "value": "value",
+                            "uom": "value",
+                            "unitMultiplier": "value",
+                            "chargesComponent": "value"
+                        },
+                        {
+                            "servicePeriod": {"startDate": "value"},
+                            "serviceTierNr": "value",
+                            "ratePeriodNr": "value",
+                            "peakType": "value",
+                            "month": "value",
+                            "chargeName": "value",
+                            "description": "value",
+                            "calculationMethod": "value",
+                            "inputMeasurement": "value",
+                            "value": "value",
+                            "uom": "value",
+                            "unitMultiplier": "value",
+                            "chargesComponent": "value"
+                        }
+                    ]
+                },
+                "nonmeteredServiceCharges": {
+                    "nonmeteredServiceCharge": [
+                        {
+                            "ratePlanCodeUnique": "ratePlanCodeUnique10",
+                            "servicePeriod": {"startDate": "value"},
+                            "serviceTierNr": "value",
+                            "ratePeriodNr": "value",
+                            "peakType": "value",
+                            "month": "value",
+                            "chargeName": "value",
+                            "description": "value",
+                            "calculationMethod": "value",
+                            "inputMeasurement": "value",
+                            "value": "value",
+                            "uom": "value",
+                            "unitMultiplier": "value",
+                            "chargesComponent": "value"
+                        },
+                        {
+                            "ratePlanCodeUnique": "ratePlanCodeUnique11",
+                            "servicePeriod": {"startDate": "value"},
+                            "serviceTierNr": "value",
+                            "ratePeriodNr": "value",
+                            "peakType": "value",
+                            "month": "value",
+                            "chargeName": "value",
+                            "description": "value",
+                            "calculationMethod": "value",
+                            "inputMeasurement": "value",
+                            "value": "value",
+                            "uom": "value",
+                            "unitMultiplier": "value",
+                            "chargesComponent": "value"
+                        }
+                    ]
+                }
+            },
+            "supplyCharges": {
+                "meteredSupplyCharges": {
+                    "meteredSupplyCharge": [
+                        {
+                            "servicePeriod": {"startDate": "value"},
+                            "serviceTierNr": "value",
+                            "ratePeriodNr": "value",
+                            "peakType": "value",
+                            "month": "value",
+                            "chargeName": "value",
+                            "description": "value",
+                            "calculationMethod": "value",
+                            "inputMeasurement": "value",
+                            "value": "value",
+                            "uom": "value",
+                            "unitMultiplier": "value",
+                            "chargesComponent": "value"
+                        },
+                        {
+                            "servicePeriod": {"startDate": "value"},
+                            "serviceTierNr": "value",
+                            "ratePeriodNr": "value",
+                            "peakType": "value",
+                            "month": "value",
+                            "chargeName": "value",
+                            "description": "value",
+                            "calculationMethod": "value",
+                            "inputMeasurement": "value",
+                            "value": "value",
+                            "uom": "value",
+                            "unitMultiplier": "value",
+                            "chargesComponent": "value"
+                        }
+                    ]
+                },
+                "nonmeteredServiceCharges": {
+                    "nonmeteredServiceCharge": [
+                        {
+                            "ratePlanCodeUnique": "ratePlanCodeUnique12",
+                            "servicePeriod": {"startDate": "value"},
+                            "serviceTierNr": "value",
+                            "ratePeriodNr": "value",
+                            "peakType": "value",
+                            "month": "value",
+                            "chargeName": "value",
+                            "description": "value",
+                            "calculationMethod": "value",
+                            "inputMeasurement": "value",
+                            "value": "value",
+                            "uom": "value",
+                            "unitMultiplier": "value",
+                            "chargesComponent": "value"
+                        },
+                        {
+                            "ratePlanCodeUnique": "ratePlanCodeUnique13",
+                            "servicePeriod": {"startDate": "value"},
+                            "serviceTierNr": "value",
+                            "ratePeriodNr": "value",
+                            "peakType": "value",
+                            "month": "value",
+                            "chargeName": "value",
+                            "description": "value",
+                            "calculationMethod": "value",
+                            "inputMeasurement": "value",
+                            "value": "value",
+                            "uom": "value",
+                            "unitMultiplier": "value",
+                            "chargesComponent": "value"
+                        }
+                    ]
+                }
+            },
+            "exportCredits": {
+                "exportCredit": [
+                    {
+                        "servicePeriod": {
+                            "startDate": "value",
+                            "endDate": "value"
+                        },
+                        "serviceTierNr": "value",
+                        "ratePeriodNr": "value",
+                        "peakType": "value",
+                        "month": "value",
+                        "chargeName": "value",
+                        "description": "value",
+                        "calculationMethod": "value",
+                        "inputMeasurement": "value",
+                        "value": "value",
+                        "uom": "value",
+                        "unitMultiplier": "value",
+                        "chargesComponent": "value"
+                    },
+                    {
+                        "servicePeriod": {
+                            "startDate": "value",
+                            "endDate": "value"
+                        },
+                        "serviceTierNr": "value",
+                        "ratePeriodNr": "value",
+                        "peakType": "value",
+                        "month": "value",
+                        "chargeName": "value",
+                        "description": "value",
+                        "calculationMethod": "value",
+                        "inputMeasurement": "value",
+                        "value": "value",
+                        "uom": "value",
+                        "unitMultiplier": "value",
+                        "chargesComponent": "value"
+                    }
+                ]
+            },
+            "otherCharges": {
+                "otherFixedCharges": [
+                    {
+                        "otherFixedCharge": [
+                            {
+                                "ratePlanCodeUnique": "ratePlanCodeUnique14",
+                                "servicePeriod": {"startDate": "value"},
+                                "serviceTierNr": "value",
+                                "ratePeriodNr": "value",
+                                "peakType": "value",
+                                "month": "value",
+                                "chargeName": "value",
+                                "description": "value",
+                                "calculationMethod": "value",
+                                "inputMeasurement": "value",
+                                "value": "value",
+                                "uom": "value",
+                                "unitMultiplier": "value",
+                                "chargesComponent": "value"
+                            },
+                            {
+                                "ratePlanCodeUnique": "ratePlanCodeUnique15",
+                                "servicePeriod": {"startDate": "value"},
+                                "serviceTierNr": "value",
+                                "ratePeriodNr": "value",
+                                "peakType": "value",
+                                "month": "value",
+                                "chargeName": "value",
+                                "description": "value",
+                                "calculationMethod": "value",
+                                "inputMeasurement": "value",
+                                "value": "value",
+                                "uom": "value",
+                                "unitMultiplier": "value",
+                                "chargesComponent": "value"
+                            }
+                        ]
+                    },
+                    {
+                        "otherFixedCharge": [
+                            {
+                                "ratePlanCodeUnique": "ratePlanCodeUnique16",
+                                "servicePeriod": {"startDate": "value"},
+                                "serviceTierNr": "value",
+                                "ratePeriodNr": "value",
+                                "peakType": "value",
+                                "month": "value",
+                                "chargeName": "value",
+                                "description": "value",
+                                "calculationMethod": "value",
+                                "inputMeasurement": "value",
+                                "value": "value",
+                                "uom": "value",
+                                "unitMultiplier": "value",
+                                "chargesComponent": "value"
+                            },
+                            {
+                                "ratePlanCodeUnique": "ratePlanCodeUnique17",
+                                "servicePeriod": {"startDate": "value"},
+                                "serviceTierNr": "value",
+                                "ratePeriodNr": "value",
+                                "peakType": "value",
+                                "month": "value",
+                                "chargeName": "value",
+                                "description": "value",
+                                "calculationMethod": "value",
+                                "inputMeasurement": "value",
+                                "value": "value",
+                                "uom": "value",
+                                "unitMultiplier": "value",
+                                "chargesComponent": "value"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "modifierSelection": [
+            {
+                "ratePlanModifierCodeUnique": {},
+                "ratePlanModifierKind": "value",
+                "statementTypeCode": "value",
+                "scopeOfApplicability": {
+                    "include": {
+                        "serviceClasses": {
+                            "serviceClass": [
+                                "value",
+                                "value"
+                            ]
+                        },
+                        "serviceSubClasses": {
+                            "serviceSubClass": [
+                                "value",
+                                "value"
+                            ]
+                        },
+                        "customRatePlanAttribute": {
+                            "attributeName": {},
+                            "value": {}
+                        },
+                        "territoryId": "value",
+                        "season": {},
+                        "phases": {"phase": "value"}
+                    },
+                    "exclude": {
+                        "serviceClasses": {
+                            "serviceClass": [
+                                "value",
+                                "value"
+                            ]
+                        },
+                        "serviceSubClasses": {
+                            "serviceSubClass": [
+                                "value",
+                                "value"
+                            ]
+                        },
+                        "customRatePlanAttribute": {
+                            "attributeName": {},
+                            "value": {}
+                        },
+                        "territoryId": "value",
+                        "season": {},
+                        "phases": {"phase": "value"}
+                    }
+                },
+                "validPeriod": {
+                    "startDate": "value",
+                    "endDate": "value"
+                },
+                "iedrOrg": "value",
+                "modifierName": "value",
+                "UtilityPscNbr": "value",
+                "service": "value",
+                "modifierDescription": "value",
+                "seasons": {
+                    "season": [
+                        {
+                            "ratePlanCodeUnique": "ratePlanCodeUnique18",
+                            "seasonName": "value",
+                            "month": "value"
+                        },
+                        {
+                            "ratePlanCodeUnique": "ratePlanCodeUnique19",
+                            "seasonName": "value",
+                            "month": "value"
+                        }
+                    ]
+                },
+                "holidays": {
+                    "holiday": [
+                        {
+                            "ratePlanCodeUnique": "ratePlanCodeUnique20",
+                            "#text": "value"
+                        },
+                        {
+                            "ratePlanCodeUnique": "ratePlanCodeUnique21",
+                            "#text": "value"
+                        }
+                    ]
+                },
+                "timeOfUsePeriods": {
+                    "timeOfUsePeriod": [
+                        {
+                            "ratePlanCodeUnique": "ratePlanCodeUnique22",
+                            "effectivePeriod": {
+                                "startDate": "value",
+                                "endDate": "value"
+                            },
+                            "RatePeriodNrNonHolidays": "value",
+                            "RatePeriodNrHolidays": "value",
+                            "seasonName": "value",
+                            "dayType": "value",
+                            "peakType": "value",
+                            "appliesOnHolidays": "value",
+                            "timeStart": "value",
+                            "timeEnd": "value",
+                            "chargesComponent": {},
+                            "measurementApplicable": "value"
+                        },
+                        {
+                            "ratePlanCodeUnique": "ratePlanCodeUnique23",
+                            "effectivePeriod": {
+                                "startDate": "value",
+                                "endDate": "value"
+                            },
+                            "RatePeriodNrNonHolidays": "value",
+                            "RatePeriodNrHolidays": "value",
+                            "seasonName": "value",
+                            "dayType": "value",
+                            "peakType": "value",
+                            "appliesOnHolidays": "value",
+                            "timeStart": "value",
+                            "timeEnd": "value",
+                            "chargesComponent": {},
+                            "measurementApplicable": "value"
+                        }
+                    ]
+                },
+                "serviceTierThresholds": {
+                    "serviceTierThreshold": [
+                        {
+                            "ratePlanCodeUnique": "ratePlanCodeUnique24",
+                            "serviceTierNr": {},
+                            "unitOfMeasure": "value",
+                            "unitMultiplier": "value",
+                            "seasonName": "value",
+                            "min_qty": "value",
+                            "max_qty": "value"
+                        },
+                        {
+                            "ratePlanCodeUnique": "ratePlanCodeUnique25",
+                            "serviceTierNr": {},
+                            "unitOfMeasure": "value",
+                            "unitMultiplier": "value",
+                            "seasonName": "value",
+                            "min_qty": "value",
+                            "max_qty": "value"
+                        }
+                    ]
+                },
+                "deliveryCharges": {
+                    "minimumCharges": {
+                        "minimumCharge": [
+                            {
+                                "servicePeriod": {"startDate": "value"},
+                                "serviceTierNr": "value",
+                                "ratePeriodNr": "value",
+                                "peakType": "value",
+                                "month": "value",
+                                "chargeName": "value",
+                                "description": "value",
+                                "calculationMethod": "value",
+                                "inputMeasurement": "value",
+                                "value": "value",
+                                "uom": "value",
+                                "unitMultiplier": "value",
+                                "chargesComponent": "value"
+                            },
+                            {
+                                "servicePeriod": {"startDate": "value"},
+                                "serviceTierNr": "value",
+                                "ratePeriodNr": "value",
+                                "peakType": "value",
+                                "month": "value",
+                                "chargeName": "value",
+                                "description": "value",
+                                "calculationMethod": "value",
+                                "inputMeasurement": "value",
+                                "value": "value",
+                                "uom": "value",
+                                "unitMultiplier": "value",
+                                "chargesComponent": "value"
+                            }
+                        ]
+                    },
+                    "otherFixedCharges": {
+                        "otherFixedCharge": [
+                            {
+                                "ratePlanCodeUnique": "ratePlanCodeUnique26",
+                                "servicePeriod": {"startDate": "value"},
+                                "serviceTierNr": "value",
+                                "ratePeriodNr": "value",
+                                "peakType": "value",
+                                "month": "value",
+                                "chargeName": "value",
+                                "description": "value",
+                                "calculationMethod": "value",
+                                "inputMeasurement": "value",
+                                "value": "value",
+                                "uom": "value",
+                                "unitMultiplier": "value",
+                                "chargesComponent": "value"
+                            },
+                            {
+                                "ratePlanCodeUnique": "ratePlanCodeUnique27",
+                                "servicePeriod": {"startDate": "value"},
+                                "serviceTierNr": "value",
+                                "ratePeriodNr": "value",
+                                "peakType": "value",
+                                "month": "value",
+                                "chargeName": "value",
+                                "description": "value",
+                                "calculationMethod": "value",
+                                "inputMeasurement": "value",
+                                "value": "value",
+                                "uom": "value",
+                                "unitMultiplier": "value",
+                                "chargesComponent": "value"
+                            }
+                        ]
+                    },
+                    "meteredDeliveryCharges": {
+                        "meteredDeliveryCharge": [
+                            {
+                                "servicePeriod": {"startDate": "value"},
+                                "serviceTierNr": "value",
+                                "ratePeriodNr": "value",
+                                "peakType": "value",
+                                "month": "value",
+                                "chargeName": "value",
+                                "description": "value",
+                                "calculationMethod": "value",
+                                "inputMeasurement": "value",
+                                "value": "value",
+                                "uom": "value",
+                                "unitMultiplier": "value",
+                                "chargesComponent": "value"
+                            },
+                            {
+                                "servicePeriod": {"startDate": "value"},
+                                "serviceTierNr": "value",
+                                "ratePeriodNr": "value",
+                                "peakType": "value",
+                                "month": "value",
+                                "chargeName": "value",
+                                "description": "value",
+                                "calculationMethod": "value",
+                                "inputMeasurement": "value",
+                                "value": "value",
+                                "uom": "value",
+                                "unitMultiplier": "value",
+                                "chargesComponent": "value"
+                            }
+                        ]
+                    },
+                    "nonmeteredServiceCharges": {
+                        "nonmeteredServiceCharge": [
+                            {
+                                "ratePlanCodeUnique": "ratePlanCodeUnique28",
+                                "servicePeriod": {"startDate": "value"},
+                                "serviceTierNr": "value",
+                                "ratePeriodNr": "value",
+                                "peakType": "value",
+                                "month": "value",
+                                "chargeName": "value",
+                                "description": "value",
+                                "calculationMethod": "value",
+                                "inputMeasurement": "value",
+                                "value": "value",
+                                "uom": "value",
+                                "unitMultiplier": "value",
+                                "chargesComponent": "value"
+                            },
+                            {
+                                "ratePlanCodeUnique": "ratePlanCodeUnique29",
+                                "servicePeriod": {"startDate": "value"},
+                                "serviceTierNr": "value",
+                                "ratePeriodNr": "value",
+                                "peakType": "value",
+                                "month": "value",
+                                "chargeName": "value",
+                                "description": "value",
+                                "calculationMethod": "value",
+                                "inputMeasurement": "value",
+                                "value": "value",
+                                "uom": "value",
+                                "unitMultiplier": "value",
+                                "chargesComponent": "value"
+                            }
+                        ]
+                    }
+                },
+                "supplyCharges": {
+                    "meteredSupplyCharges": {
+                        "meteredSupplyCharge": [
+                            {
+                                "servicePeriod": {"startDate": "value"},
+                                "serviceTierNr": "value",
+                                "ratePeriodNr": "value",
+                                "peakType": "value",
+                                "month": "value",
+                                "chargeName": "value",
+                                "description": "value",
+                                "calculationMethod": "value",
+                                "inputMeasurement": "value",
+                                "value": "value",
+                                "uom": "value",
+                                "unitMultiplier": "value",
+                                "chargesComponent": "value"
+                            },
+                            {
+                                "servicePeriod": {"startDate": "value"},
+                                "serviceTierNr": "value",
+                                "ratePeriodNr": "value",
+                                "peakType": "value",
+                                "month": "value",
+                                "chargeName": "value",
+                                "description": "value",
+                                "calculationMethod": "value",
+                                "inputMeasurement": "value",
+                                "value": "value",
+                                "uom": "value",
+                                "unitMultiplier": "value",
+                                "chargesComponent": "value"
+                            }
+                        ]
+                    },
+                    "nonmeteredServiceCharges": {
+                        "nonmeteredServiceCharge": [
+                            {
+                                "ratePlanCodeUnique": "ratePlanCodeUnique30",
+                                "servicePeriod": {"startDate": "value"},
+                                "serviceTierNr": "value",
+                                "ratePeriodNr": "value",
+                                "peakType": "value",
+                                "month": "value",
+                                "chargeName": "value",
+                                "description": "value",
+                                "calculationMethod": "value",
+                                "inputMeasurement": "value",
+                                "value": "value",
+                                "uom": "value",
+                                "unitMultiplier": "value",
+                                "chargesComponent": "value"
+                            },
+                            {
+                                "ratePlanCodeUnique": "ratePlanCodeUnique31",
+                                "servicePeriod": {"startDate": "value"},
+                                "serviceTierNr": "value",
+                                "ratePeriodNr": "value",
+                                "peakType": "value",
+                                "month": "value",
+                                "chargeName": "value",
+                                "description": "value",
+                                "calculationMethod": "value",
+                                "inputMeasurement": "value",
+                                "value": "value",
+                                "uom": "value",
+                                "unitMultiplier": "value",
+                                "chargesComponent": "value"
+                            }
+                        ]
+                    }
+                },
+                "exportCredits": {
+                    "exportCredit": [
+                        {
+                            "servicePeriod": {
+                                "startDate": "value",
+                                "endDate": "value"
+                            },
+                            "serviceTierNr": "value",
+                            "ratePeriodNr": "value",
+                            "peakType": "value",
+                            "month": "value",
+                            "chargeName": "value",
+                            "description": "value",
+                            "calculationMethod": "value",
+                            "inputMeasurement": "value",
+                            "value": "value",
+                            "uom": "value",
+                            "unitMultiplier": "value",
+                            "chargesComponent": "value"
+                        },
+                        {
+                            "servicePeriod": {
+                                "startDate": "value",
+                                "endDate": "value"
+                            },
+                            "serviceTierNr": "value",
+                            "ratePeriodNr": "value",
+                            "peakType": "value",
+                            "month": "value",
+                            "chargeName": "value",
+                            "description": "value",
+                            "calculationMethod": "value",
+                            "inputMeasurement": "value",
+                            "value": "value",
+                            "uom": "value",
+                            "unitMultiplier": "value",
+                            "chargesComponent": "value"
+                        }
+                    ]
+                },
+                "otherCharges": {
+                    "otherFixedCharges": [
+                        {
+                            "otherFixedCharge": [
+                                {
+                                    "ratePlanCodeUnique": "ratePlanCodeUnique32",
+                                    "servicePeriod": {"startDate": "value"},
+                                    "serviceTierNr": "value",
+                                    "ratePeriodNr": "value",
+                                    "peakType": "value",
+                                    "month": "value",
+                                    "chargeName": "value",
+                                    "description": "value",
+                                    "calculationMethod": "value",
+                                    "inputMeasurement": "value",
+                                    "value": "value",
+                                    "uom": "value",
+                                    "unitMultiplier": "value",
+                                    "chargesComponent": "value"
+                                },
+                                {
+                                    "ratePlanCodeUnique": "ratePlanCodeUnique33",
+                                    "servicePeriod": {"startDate": "value"},
+                                    "serviceTierNr": "value",
+                                    "ratePeriodNr": "value",
+                                    "peakType": "value",
+                                    "month": "value",
+                                    "chargeName": "value",
+                                    "description": "value",
+                                    "calculationMethod": "value",
+                                    "inputMeasurement": "value",
+                                    "value": "value",
+                                    "uom": "value",
+                                    "unitMultiplier": "value",
+                                    "chargesComponent": "value"
+                                }
+                            ]
+                        },
+                        {
+                            "otherFixedCharge": [
+                                {
+                                    "ratePlanCodeUnique": "ratePlanCodeUnique34",
+                                    "servicePeriod": {"startDate": "value"},
+                                    "serviceTierNr": "value",
+                                    "ratePeriodNr": "value",
+                                    "peakType": "value",
+                                    "month": "value",
+                                    "chargeName": "value",
+                                    "description": "value",
+                                    "calculationMethod": "value",
+                                    "inputMeasurement": "value",
+                                    "value": "value",
+                                    "uom": "value",
+                                    "unitMultiplier": "value",
+                                    "chargesComponent": "value"
+                                },
+                                {
+                                    "ratePlanCodeUnique": "ratePlanCodeUnique35",
+                                    "servicePeriod": {"startDate": "value"},
+                                    "serviceTierNr": "value",
+                                    "ratePeriodNr": "value",
+                                    "peakType": "value",
+                                    "month": "value",
+                                    "chargeName": "value",
+                                    "description": "value",
+                                    "calculationMethod": "value",
+                                    "inputMeasurement": "value",
+                                    "value": "value",
+                                    "uom": "value",
+                                    "unitMultiplier": "value",
+                                    "chargesComponent": "value"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "ratePlanModifierCodeUnique": {},
+                "ratePlanModifierKind": "value",
+                "statementTypeCode": "value",
+                "scopeOfApplicability": {
+                    "include": {
+                        "serviceClasses": {
+                            "serviceClass": [
+                                "value",
+                                "value"
+                            ]
+                        },
+                        "serviceSubClasses": {
+                            "serviceSubClass": [
+                                "value",
+                                "value"
+                            ]
+                        },
+                        "customRatePlanAttribute": {
+                            "attributeName": {},
+                            "value": {}
+                        },
+                        "territoryId": "value",
+                        "season": {},
+                        "phases": {"phase": "value"}
+                    },
+                    "exclude": {
+                        "serviceClasses": {
+                            "serviceClass": [
+                                "value",
+                                "value"
+                            ]
+                        },
+                        "serviceSubClasses": {
+                            "serviceSubClass": [
+                                "value",
+                                "value"
+                            ]
+                        },
+                        "customRatePlanAttribute": {
+                            "attributeName": {},
+                            "value": {}
+                        },
+                        "territoryId": "value",
+                        "season": {},
+                        "phases": {"phase": "value"}
+                    }
+                },
+                "validPeriod": {
+                    "startDate": "value",
+                    "endDate": "value"
+                },
+                "iedrOrg": "value",
+                "modifierName": "value",
+                "UtilityPscNbr": "value",
+                "service": "value",
+                "modifierDescription": "value",
+                "seasons": {
+                    "season": [
+                        {
+                            "ratePlanCodeUnique": "ratePlanCodeUnique36",
+                            "seasonName": "value",
+                            "month": "value"
+                        },
+                        {
+                            "ratePlanCodeUnique": "ratePlanCodeUnique37",
+                            "seasonName": "value",
+                            "month": "value"
+                        }
+                    ]
+                },
+                "holidays": {
+                    "holiday": [
+                        {
+                            "ratePlanCodeUnique": "ratePlanCodeUnique38",
+                            "#text": "value"
+                        },
+                        {
+                            "ratePlanCodeUnique": "ratePlanCodeUnique39",
+                            "#text": "value"
+                        }
+                    ]
+                },
+                "timeOfUsePeriods": {
+                    "timeOfUsePeriod": [
+                        {
+                            "ratePlanCodeUnique": "ratePlanCodeUnique40",
+                            "effectivePeriod": {
+                                "startDate": "value",
+                                "endDate": "value"
+                            },
+                            "RatePeriodNrNonHolidays": "value",
+                            "RatePeriodNrHolidays": "value",
+                            "seasonName": "value",
+                            "dayType": "value",
+                            "peakType": "value",
+                            "appliesOnHolidays": "value",
+                            "timeStart": "value",
+                            "timeEnd": "value",
+                            "chargesComponent": {},
+                            "measurementApplicable": "value"
+                        },
+                        {
+                            "ratePlanCodeUnique": "ratePlanCodeUnique41",
+                            "effectivePeriod": {
+                                "startDate": "value",
+                                "endDate": "value"
+                            },
+                            "RatePeriodNrNonHolidays": "value",
+                            "RatePeriodNrHolidays": "value",
+                            "seasonName": "value",
+                            "dayType": "value",
+                            "peakType": "value",
+                            "appliesOnHolidays": "value",
+                            "timeStart": "value",
+                            "timeEnd": "value",
+                            "chargesComponent": {},
+                            "measurementApplicable": "value"
+                        }
+                    ]
+                },
+                "serviceTierThresholds": {
+                    "serviceTierThreshold": [
+                        {
+                            "ratePlanCodeUnique": "ratePlanCodeUnique42",
+                            "serviceTierNr": {},
+                            "unitOfMeasure": "value",
+                            "unitMultiplier": "value",
+                            "seasonName": "value",
+                            "min_qty": "value",
+                            "max_qty": "value"
+                        },
+                        {
+                            "ratePlanCodeUnique": "ratePlanCodeUnique43",
+                            "serviceTierNr": {},
+                            "unitOfMeasure": "value",
+                            "unitMultiplier": "value",
+                            "seasonName": "value",
+                            "min_qty": "value",
+                            "max_qty": "value"
+                        }
+                    ]
+                },
+                "deliveryCharges": {
+                    "minimumCharges": {
+                        "minimumCharge": [
+                            {
+                                "servicePeriod": {"startDate": "value"},
+                                "serviceTierNr": "value",
+                                "ratePeriodNr": "value",
+                                "peakType": "value",
+                                "month": "value",
+                                "chargeName": "value",
+                                "description": "value",
+                                "calculationMethod": "value",
+                                "inputMeasurement": "value",
+                                "value": "value",
+                                "uom": "value",
+                                "unitMultiplier": "value",
+                                "chargesComponent": "value"
+                            },
+                            {
+                                "servicePeriod": {"startDate": "value"},
+                                "serviceTierNr": "value",
+                                "ratePeriodNr": "value",
+                                "peakType": "value",
+                                "month": "value",
+                                "chargeName": "value",
+                                "description": "value",
+                                "calculationMethod": "value",
+                                "inputMeasurement": "value",
+                                "value": "value",
+                                "uom": "value",
+                                "unitMultiplier": "value",
+                                "chargesComponent": "value"
+                            }
+                        ]
+                    },
+                    "otherFixedCharges": {
+                        "otherFixedCharge": [
+                            {
+                                "ratePlanCodeUnique": "ratePlanCodeUnique44",
+                                "servicePeriod": {"startDate": "value"},
+                                "serviceTierNr": "value",
+                                "ratePeriodNr": "value",
+                                "peakType": "value",
+                                "month": "value",
+                                "chargeName": "value",
+                                "description": "value",
+                                "calculationMethod": "value",
+                                "inputMeasurement": "value",
+                                "value": "value",
+                                "uom": "value",
+                                "unitMultiplier": "value",
+                                "chargesComponent": "value"
+                            },
+                            {
+                                "ratePlanCodeUnique": "ratePlanCodeUnique45",
+                                "servicePeriod": {"startDate": "value"},
+                                "serviceTierNr": "value",
+                                "ratePeriodNr": "value",
+                                "peakType": "value",
+                                "month": "value",
+                                "chargeName": "value",
+                                "description": "value",
+                                "calculationMethod": "value",
+                                "inputMeasurement": "value",
+                                "value": "value",
+                                "uom": "value",
+                                "unitMultiplier": "value",
+                                "chargesComponent": "value"
+                            }
+                        ]
+                    },
+                    "meteredDeliveryCharges": {
+                        "meteredDeliveryCharge": [
+                            {
+                                "servicePeriod": {"startDate": "value"},
+                                "serviceTierNr": "value",
+                                "ratePeriodNr": "value",
+                                "peakType": "value",
+                                "month": "value",
+                                "chargeName": "value",
+                                "description": "value",
+                                "calculationMethod": "value",
+                                "inputMeasurement": "value",
+                                "value": "value",
+                                "uom": "value",
+                                "unitMultiplier": "value",
+                                "chargesComponent": "value"
+                            },
+                            {
+                                "servicePeriod": {"startDate": "value"},
+                                "serviceTierNr": "value",
+                                "ratePeriodNr": "value",
+                                "peakType": "value",
+                                "month": "value",
+                                "chargeName": "value",
+                                "description": "value",
+                                "calculationMethod": "value",
+                                "inputMeasurement": "value",
+                                "value": "value",
+                                "uom": "value",
+                                "unitMultiplier": "value",
+                                "chargesComponent": "value"
+                            }
+                        ]
+                    },
+                    "nonmeteredServiceCharges": {
+                        "nonmeteredServiceCharge": [
+                            {
+                                "ratePlanCodeUnique": "ratePlanCodeUnique46",
+                                "servicePeriod": {"startDate": "value"},
+                                "serviceTierNr": "value",
+                                "ratePeriodNr": "value",
+                                "peakType": "value",
+                                "month": "value",
+                                "chargeName": "value",
+                                "description": "value",
+                                "calculationMethod": "value",
+                                "inputMeasurement": "value",
+                                "value": "value",
+                                "uom": "value",
+                                "unitMultiplier": "value",
+                                "chargesComponent": "value"
+                            },
+                            {
+                                "ratePlanCodeUnique": "ratePlanCodeUnique47",
+                                "servicePeriod": {"startDate": "value"},
+                                "serviceTierNr": "value",
+                                "ratePeriodNr": "value",
+                                "peakType": "value",
+                                "month": "value",
+                                "chargeName": "value",
+                                "description": "value",
+                                "calculationMethod": "value",
+                                "inputMeasurement": "value",
+                                "value": "value",
+                                "uom": "value",
+                                "unitMultiplier": "value",
+                                "chargesComponent": "value"
+                            }
+                        ]
+                    }
+                },
+                "supplyCharges": {
+                    "meteredSupplyCharges": {
+                        "meteredSupplyCharge": [
+                            {
+                                "servicePeriod": {"startDate": "value"},
+                                "serviceTierNr": "value",
+                                "ratePeriodNr": "value",
+                                "peakType": "value",
+                                "month": "value",
+                                "chargeName": "value",
+                                "description": "value",
+                                "calculationMethod": "value",
+                                "inputMeasurement": "value",
+                                "value": "value",
+                                "uom": "value",
+                                "unitMultiplier": "value",
+                                "chargesComponent": "value"
+                            },
+                            {
+                                "servicePeriod": {"startDate": "value"},
+                                "serviceTierNr": "value",
+                                "ratePeriodNr": "value",
+                                "peakType": "value",
+                                "month": "value",
+                                "chargeName": "value",
+                                "description": "value",
+                                "calculationMethod": "value",
+                                "inputMeasurement": "value",
+                                "value": "value",
+                                "uom": "value",
+                                "unitMultiplier": "value",
+                                "chargesComponent": "value"
+                            }
+                        ]
+                    },
+                    "nonmeteredServiceCharges": {
+                        "nonmeteredServiceCharge": [
+                            {
+                                "ratePlanCodeUnique": "ratePlanCodeUnique48",
+                                "servicePeriod": {"startDate": "value"},
+                                "serviceTierNr": "value",
+                                "ratePeriodNr": "value",
+                                "peakType": "value",
+                                "month": "value",
+                                "chargeName": "value",
+                                "description": "value",
+                                "calculationMethod": "value",
+                                "inputMeasurement": "value",
+                                "value": "value",
+                                "uom": "value",
+                                "unitMultiplier": "value",
+                                "chargesComponent": "value"
+                            },
+                            {
+                                "ratePlanCodeUnique": "ratePlanCodeUnique49",
+                                "servicePeriod": {"startDate": "value"},
+                                "serviceTierNr": "value",
+                                "ratePeriodNr": "value",
+                                "peakType": "value",
+                                "month": "value",
+                                "chargeName": "value",
+                                "description": "value",
+                                "calculationMethod": "value",
+                                "inputMeasurement": "value",
+                                "value": "value",
+                                "uom": "value",
+                                "unitMultiplier": "value",
+                                "chargesComponent": "value"
+                            }
+                        ]
+                    }
+                },
+                "exportCredits": {
+                    "exportCredit": [
+                        {
+                            "servicePeriod": {
+                                "startDate": "value",
+                                "endDate": "value"
+                            },
+                            "serviceTierNr": "value",
+                            "ratePeriodNr": "value",
+                            "peakType": "value",
+                            "month": "value",
+                            "chargeName": "value",
+                            "description": "value",
+                            "calculationMethod": "value",
+                            "inputMeasurement": "value",
+                            "value": "value",
+                            "uom": "value",
+                            "unitMultiplier": "value",
+                            "chargesComponent": "value"
+                        },
+                        {
+                            "servicePeriod": {
+                                "startDate": "value",
+                                "endDate": "value"
+                            },
+                            "serviceTierNr": "value",
+                            "ratePeriodNr": "value",
+                            "peakType": "value",
+                            "month": "value",
+                            "chargeName": "value",
+                            "description": "value",
+                            "calculationMethod": "value",
+                            "inputMeasurement": "value",
+                            "value": "value",
+                            "uom": "value",
+                            "unitMultiplier": "value",
+                            "chargesComponent": "value"
+                        }
+                    ]
+                },
+                "otherCharges": {
+                    "otherFixedCharges": [
+                        {
+                            "otherFixedCharge": [
+                                {
+                                    "ratePlanCodeUnique": "ratePlanCodeUnique50",
+                                    "servicePeriod": {"startDate": "value"},
+                                    "serviceTierNr": "value",
+                                    "ratePeriodNr": "value",
+                                    "peakType": "value",
+                                    "month": "value",
+                                    "chargeName": "value",
+                                    "description": "value",
+                                    "calculationMethod": "value",
+                                    "inputMeasurement": "value",
+                                    "value": "value",
+                                    "uom": "value",
+                                    "unitMultiplier": "value",
+                                    "chargesComponent": "value"
+                                },
+                                {
+                                    "ratePlanCodeUnique": "ratePlanCodeUnique51",
+                                    "servicePeriod": {"startDate": "value"},
+                                    "serviceTierNr": "value",
+                                    "ratePeriodNr": "value",
+                                    "peakType": "value",
+                                    "month": "value",
+                                    "chargeName": "value",
+                                    "description": "value",
+                                    "calculationMethod": "value",
+                                    "inputMeasurement": "value",
+                                    "value": "value",
+                                    "uom": "value",
+                                    "unitMultiplier": "value",
+                                    "chargesComponent": "value"
+                                }
+                            ]
+                        },
+                        {
+                            "otherFixedCharge": [
+                                {
+                                    "ratePlanCodeUnique": "ratePlanCodeUnique52",
+                                    "servicePeriod": {"startDate": "value"},
+                                    "serviceTierNr": "value",
+                                    "ratePeriodNr": "value",
+                                    "peakType": "value",
+                                    "month": "value",
+                                    "chargeName": "value",
+                                    "description": "value",
+                                    "calculationMethod": "value",
+                                    "inputMeasurement": "value",
+                                    "value": "value",
+                                    "uom": "value",
+                                    "unitMultiplier": "value",
+                                    "chargesComponent": "value"
+                                },
+                                {
+                                    "ratePlanCodeUnique": "ratePlanCodeUnique53",
+                                    "servicePeriod": {"startDate": "value"},
+                                    "serviceTierNr": "value",
+                                    "ratePeriodNr": "value",
+                                    "peakType": "value",
+                                    "month": "value",
+                                    "chargeName": "value",
+                                    "description": "value",
+                                    "calculationMethod": "value",
+                                    "inputMeasurement": "value",
+                                    "value": "value",
+                                    "uom": "value",
+                                    "unitMultiplier": "value",
+                                    "chargesComponent": "value"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "ScenarioSettings": {
+            "customerClass": "value",
+            "icapTag": {},
+            "county": "value",
+            "zipcode": "value",
+            "territory": "value",
+            "equipment": "value",
+            "phase": "value"
+        }
+    }
+}

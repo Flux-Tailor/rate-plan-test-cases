@@ -802,7 +802,7 @@
                         <calcIntervalPer>1</calcIntervalPer>
                     </measurementInterval>
                 </measurementDefinition>
-                <chargesComponent>delivery</chargesComponent>
+                <chargesComponent>supply</chargesComponent>
             </statementCharge>
         </statementCharges>
     </tariffStatement>

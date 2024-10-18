@@ -11,27 +11,597 @@
         <dpsUtilityPscNumber>120</dpsUtilityPscNumber>
         <serviceType>Electric</serviceType>
         <typeCode>ARP</typeCode>
-        <generalRuleRefs>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2826693</generalRuleRefs>
+        <docNumber>07</docNumber>
+        <dpsCaseNumber>14-M-0565</dpsCaseNumber>
+        <dpsCaseNumber>20-M-0266</dpsCaseNumber>
+        <generalRuleRefs>General Information Section 51, Arrears
+            Relief Program (“ARP”) Surcharge
+        </generalRuleRefs>
         <statementCharges>
             <scopeOfApplicability>
                 <include>
                     <serviceClasses>
-                        <serviceClass>All</serviceClass>
+                        <serviceClass>1</serviceClass>
                     </serviceClasses>
                 </include>
-                <exclude>
-                    <serviceClasses>
-                        <serviceClass>11</serviceClass>
-                    </serviceClasses>
-                </exclude>
             </scopeOfApplicability>
             <statementCharge>
                 <servicePeriod>
-                    <startDate>2024-06-01</startDate>
+                    <startDate>2024-08-01</startDate>
+                </servicePeriod>
+                <chargeName>Arrears Relief Program</chargeName>
+                <description>The following charges are applicable to energy delivered [all kilowatt-hours (kWhs) or kilowatts (kW), as
+                    applicable] under the service classifications listed below. See PSC No. 120 General Information Section 51, Arrears
+                    Relief Program (“ARP”) Surcharge, for further details. The Company shall collect the ARP Surcharge through the
+                    Transition Surcharge.</description>
+                <chargeValue>0.000528</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
+                <chargesComponent>delivery</chargesComponent>
+            </statementCharge>
+        </statementCharges>
+        <statementCharges>
+            <scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>8</serviceClass>
+                    </serviceClasses>
+                </include>
+            </scopeOfApplicability>
+            <statementCharge>
+                <servicePeriod>
+                    <startDate>2024-08-01</startDate>
+                </servicePeriod>
+                <chargeName>Arrears Relief Program</chargeName>
+                <description>The following charges are applicable to energy delivered [all kilowatt-hours (kWhs) or kilowatts (kW), as
+                    applicable] under the service classifications listed below. See PSC No. 120 General Information Section 51, Arrears
+                    Relief Program (“ARP”) Surcharge, for further details. The Company shall collect the ARP Surcharge through the
+                    Transition Surcharge.</description>
+                <chargeValue>0.000540</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
+                <chargesComponent>delivery</chargesComponent>
+            </statementCharge>
+        </statementCharges>
+        <statementCharges>
+            <scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>12</serviceClass>
+                    </serviceClasses>
+                </include>
+            </scopeOfApplicability>
+            <statementCharge>
+                <servicePeriod>
+                    <startDate>2024-08-01</startDate>
+                </servicePeriod>
+                <chargeName>Arrears Relief Program</chargeName>
+                <description>The following charges are applicable to energy delivered [all kilowatt-hours (kWhs) or kilowatts (kW), as
+                    applicable] under the service classifications listed below. See PSC No. 120 General Information Section 51, Arrears
+                    Relief Program (“ARP”) Surcharge, for further details. The Company shall collect the ARP Surcharge through the
+                    Transition Surcharge.</description>
+                <chargeValue>0.000428</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
+                <chargesComponent>delivery</chargesComponent>
+            </statementCharge>
+        </statementCharges>
+        <statementCharges>
+            <scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>5</serviceClass>
+                    </serviceClasses>
+                </include>
+            </scopeOfApplicability>
+            <statementCharge>
+                <servicePeriod>
+                    <startDate>2024-08-01</startDate>
+                </servicePeriod>
+                <chargeName>Arrears Relief Program</chargeName>
+                <description>The following charges are applicable to energy delivered [all kilowatt-hours (kWhs) or kilowatts (kW), as
+                    applicable] under the service classifications listed below. See PSC No. 120 General Information Section 51, Arrears
+                    Relief Program (“ARP”) Surcharge, for further details. The Company shall collect the ARP Surcharge through the
+                    Transition Surcharge.</description>
+                <chargeValue>0.000378</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
+                <chargesComponent>delivery</chargesComponent>
+            </statementCharge>
+        </statementCharges>
+        <statementCharges>
+            <scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>6</serviceClass>
+                    </serviceClasses>
+                </include>
+            </scopeOfApplicability>
+            <statementCharge>
+                <servicePeriod>
+                    <startDate>2024-08-01</startDate>
+                </servicePeriod>
+                <chargeName>Arrears Relief Program Phase 1
+                    Charge per kWh</chargeName>
+                <description>The following charges are applicable to energy delivered [all kilowatt-hours (kWhs) or kilowatts (kW), as
+                    applicable] under the service classifications listed below. See PSC No. 120 General Information Section 51, Arrears
+                    Relief Program (“ARP”) Surcharge, for further details. The Company shall collect the ARP Surcharge through the
+                    Transition Surcharge.</description>
+                <chargeValue>0.000225</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
+                <chargesComponent>delivery</chargesComponent>
+            </statementCharge>
+        </statementCharges>
+        <statementCharges>
+            <scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>1</serviceClass>
+                    </serviceClasses>
+                </include>
+            </scopeOfApplicability>
+            <statementCharge>
+                <servicePeriod>
+                    <startDate>2024-08-01</startDate>
+                </servicePeriod>
+                <chargeName>Arrears Relief Program</chargeName>
+                <description>The following charges are applicable to energy delivered [all kilowatt-hours (kWhs) or kilowatts (kW), as
+                    applicable] under the service classifications listed below. See PSC No. 120 General Information Section 51, Arrears
+                    Relief Program (“ARP”) Surcharge, for further details. The Company shall collect the ARP Surcharge through the
+                    Transition Surcharge.</description>
+                <chargeValue>0.000528</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
+                <chargesComponent>delivery</chargesComponent>
+            </statementCharge>
+        </statementCharges>
+        <statementCharges>
+            <scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>1</serviceClass>
+                    </serviceClasses>
+                </include>
+            </scopeOfApplicability>
+            <statementCharge>
+                <servicePeriod>
+                    <startDate>2024-08-01</startDate>
+                </servicePeriod>
+                <chargeName>Arrears Relief Program</chargeName>
+                <description>The following charges are applicable to energy delivered [all kilowatt-hours (kWhs) or kilowatts (kW), as
+                    applicable] under the service classifications listed below. See PSC No. 120 General Information Section 51, Arrears
+                    Relief Program (“ARP”) Surcharge, for further details. The Company shall collect the ARP Surcharge through the
+                    Transition Surcharge.</description>
+                <chargeValue>0.000528</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
+                <chargesComponent>delivery</chargesComponent>
+            </statementCharge>
+        </statementCharges>
+        <statementCharges>
+            <scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>1</serviceClass>
+                    </serviceClasses>
+                </include>
+            </scopeOfApplicability>
+            <statementCharge>
+                <servicePeriod>
+                    <startDate>2024-08-01</startDate>
+                </servicePeriod>
+                <chargeName>Arrears Relief Program</chargeName>
+                <description>The following charges are applicable to energy delivered [all kilowatt-hours (kWhs) or kilowatts (kW), as
+                    applicable] under the service classifications listed below. See PSC No. 120 General Information Section 51, Arrears
+                    Relief Program (“ARP”) Surcharge, for further details. The Company shall collect the ARP Surcharge through the
+                    Transition Surcharge.</description>
+                <chargeValue>0.000528</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
+                <chargesComponent>delivery</chargesComponent>
+            </statementCharge>
+        </statementCharges>
+        <statementCharges>
+            <scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>1</serviceClass>
+                    </serviceClasses>
+                </include>
+            </scopeOfApplicability>
+            <statementCharge>
+                <servicePeriod>
+                    <startDate>2024-08-01</startDate>
+                </servicePeriod>
+                <chargeName>Arrears Relief Program</chargeName>
+                <description>The following charges are applicable to energy delivered [all kilowatt-hours (kWhs) or kilowatts (kW), as
+                    applicable] under the service classifications listed below. See PSC No. 120 General Information Section 51, Arrears
+                    Relief Program (“ARP”) Surcharge, for further details. The Company shall collect the ARP Surcharge through the
+                    Transition Surcharge.</description>
+                <chargeValue>0.000528</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
+                <chargesComponent>delivery</chargesComponent>
+            </statementCharge>
+        </statementCharges>
+        <statementCharges>
+            <scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>1</serviceClass>
+                    </serviceClasses>
+                </include>
+            </scopeOfApplicability>
+            <statementCharge>
+                <servicePeriod>
+                    <startDate>2024-08-01</startDate>
                 </servicePeriod>
                 <chargeName>Arrears Relief Program</chargeName>
                 <description>Arrears Relief Program</description>
-                <chargeValue>0</chargeValue>
+                <chargeValue>0.000528</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
+                <chargesComponent>delivery</chargesComponent>
+            </statementCharge>
+        </statementCharges>
+        <statementCharges>
+            <scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>1</serviceClass>
+                    </serviceClasses>
+                </include>
+            </scopeOfApplicability>
+            <statementCharge>
+                <servicePeriod>
+                    <startDate>2024-08-01</startDate>
+                </servicePeriod>
+                <chargeName>Arrears Relief Program</chargeName>
+                <description>Arrears Relief Program</description>
+                <chargeValue>0.000528</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
+                <chargesComponent>delivery</chargesComponent>
+            </statementCharge>
+        </statementCharges><statementCharges>
+            <scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>1</serviceClass>
+                    </serviceClasses>
+                </include>
+            </scopeOfApplicability>
+            <statementCharge>
+                <servicePeriod>
+                    <startDate>2024-08-01</startDate>
+                </servicePeriod>
+                <chargeName>Arrears Relief Program</chargeName>
+                <description>Arrears Relief Program</description>
+                <chargeValue>0.000528</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
+                <chargesComponent>delivery</chargesComponent>
+            </statementCharge>
+        </statementCharges><statementCharges>
+            <scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>1</serviceClass>
+                    </serviceClasses>
+                </include>
+            </scopeOfApplicability>
+            <statementCharge>
+                <servicePeriod>
+                    <startDate>2024-08-01</startDate>
+                </servicePeriod>
+                <chargeName>Arrears Relief Program</chargeName>
+                <description>Arrears Relief Program</description>
+                <chargeValue>0.000528</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
+                <chargesComponent>delivery</chargesComponent>
+            </statementCharge>
+        </statementCharges><statementCharges>
+            <scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>1</serviceClass>
+                    </serviceClasses>
+                </include>
+            </scopeOfApplicability>
+            <statementCharge>
+                <servicePeriod>
+                    <startDate>2024-08-01</startDate>
+                </servicePeriod>
+                <chargeName>Arrears Relief Program</chargeName>
+                <description>Arrears Relief Program</description>
+                <chargeValue>0.000528</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
+                <chargesComponent>delivery</chargesComponent>
+            </statementCharge>
+        </statementCharges><statementCharges>
+            <scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>1</serviceClass>
+                    </serviceClasses>
+                </include>
+            </scopeOfApplicability>
+            <statementCharge>
+                <servicePeriod>
+                    <startDate>2024-08-01</startDate>
+                </servicePeriod>
+                <chargeName>Arrears Relief Program</chargeName>
+                <description>Arrears Relief Program</description>
+                <chargeValue>0.000528</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
+                <chargesComponent>delivery</chargesComponent>
+            </statementCharge>
+        </statementCharges><statementCharges>
+            <scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>1</serviceClass>
+                    </serviceClasses>
+                </include>
+            </scopeOfApplicability>
+            <statementCharge>
+                <servicePeriod>
+                    <startDate>2024-08-01</startDate>
+                </servicePeriod>
+                <chargeName>Arrears Relief Program</chargeName>
+                <description>Arrears Relief Program</description>
+                <chargeValue>0.000528</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
+                <chargesComponent>delivery</chargesComponent>
+            </statementCharge>
+        </statementCharges><statementCharges>
+            <scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>1</serviceClass>
+                    </serviceClasses>
+                </include>
+            </scopeOfApplicability>
+            <statementCharge>
+                <servicePeriod>
+                    <startDate>2024-08-01</startDate>
+                </servicePeriod>
+                <chargeName>Arrears Relief Program</chargeName>
+                <description>Arrears Relief Program</description>
+                <chargeValue>0.000528</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
+                <chargesComponent>delivery</chargesComponent>
+            </statementCharge>
+        </statementCharges><statementCharges>
+            <scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>1</serviceClass>
+                    </serviceClasses>
+                </include>
+            </scopeOfApplicability>
+            <statementCharge>
+                <servicePeriod>
+                    <startDate>2024-08-01</startDate>
+                </servicePeriod>
+                <chargeName>Arrears Relief Program</chargeName>
+                <description>Arrears Relief Program</description>
+                <chargeValue>0.000528</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
+                <chargesComponent>delivery</chargesComponent>
+            </statementCharge>
+        </statementCharges><statementCharges>
+            <scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>1</serviceClass>
+                    </serviceClasses>
+                </include>
+            </scopeOfApplicability>
+            <statementCharge>
+                <servicePeriod>
+                    <startDate>2024-08-01</startDate>
+                </servicePeriod>
+                <chargeName>Arrears Relief Program</chargeName>
+                <description>Arrears Relief Program</description>
+                <chargeValue>0.000528</chargeValue>
+                <measurementDefinition>
+                    <calculationMethod>by_metered_quantity</calculationMethod>
+                    <measurementSource>energy</measurementSource>
+                    <unitOfMeasure>Wh</unitOfMeasure>
+                    <unitMultiplierPowerOfTen>3</unitMultiplierPowerOfTen>
+                    <measurementInterval>
+                        <calculationMode>PERIOD</calculationMode>
+                        <calcIntervalKind>MONTH</calcIntervalKind>
+                        <calcIntervalPer>1</calcIntervalPer>
+                    </measurementInterval>
+                </measurementDefinition>
+                <chargesComponent>delivery</chargesComponent>
+            </statementCharge>
+        </statementCharges><statementCharges>
+            <scopeOfApplicability>
+                <include>
+                    <serviceClasses>
+                        <serviceClass>1</serviceClass>
+                    </serviceClasses>
+                </include>
+            </scopeOfApplicability>
+            <statementCharge>
+                <servicePeriod>
+                    <startDate>2024-08-01</startDate>
+                </servicePeriod>
+                <chargeName>Arrears Relief Program</chargeName>
+                <description>Arrears Relief Program</description>
+                <chargeValue>0.000528</chargeValue>
                 <measurementDefinition>
                     <calculationMethod>by_metered_quantity</calculationMethod>
                     <measurementSource>energy</measurementSource>
