@@ -1,0 +1,155 @@
+name: Test Action Two Workflow
+
+on:
+  workflow_dispatch: 
+  push:
+    paths:
+      - 'action-two.yml'  # Running this workflow when action-two.yml is updated
+
+jobs:
+  test-action-two:
+    runs-on: ubuntu-latest
+    
+    env:
+      SCRIPTING_LICENSE_KEY: ${{ secrets.SCRIPTING_LICENSE_KEY }}
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Set up Java environment
+    - name: Set up Java
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+
+    # Download and set up Oxygen XML Scripting
+    - name: Download and setup Oxygen XML Scripting
+      run: |
+        echo "Setting up Oxygen XML Scripting..."
+        mkdir scripting
+        cd scripting
+        wget -q https://www.oxygenxml.com/InstData/Editor/All/oxygen.tar.gz
+        tar -xzf oxygen.tar.gz
+        echo "${{ secrets.SCRIPTING_LICENSE_KEY }}" > oxygen/scriptinglicensekey.txt
+        echo "Oxygen XML Scripting setup complete."
+      shell: bash
+
+    #  Prepare test environment with dummy files 
+    - name: Prepare test environment
+      run: |
+        # Create test directories
+        mkdir -p test_schema_dir
+        mkdir -p test_cases_dir/v0.99.2-dev
+        
+        # Create dummy schema files with minimal valid content
+        echo '<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"></xs:schema>' > test_schema_dir/all_rate_plan_schemas.xsd
+        echo '<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"></xs:schema>' > test_schema_dir/rate_plan_data_input.xsd
+        echo '<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"></xs:schema>' > test_schema_dir/rate_plan_data_output.xsd
+        echo '<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"></xs:schema>' > test_schema_dir/tariff_books.xsd
+        
+        # Create dummy XML files with minimal valid content
+        echo '<?xml version="1.0" encoding="UTF-8"?><root></root>' > test_cases_dir/v0.99.2-dev/test1.xml
+        echo '<?xml version="1.0" encoding="UTF-8"?><root></root>' > test_cases_dir/v0.99.2-dev/test2.xml
+
+    # Run XML Validation for 0.99.2-dev files
+    - name: Run XML Validation for 0.99.2-dev
+      run: |
+        echo "Starting XML Validation process for 0.99.2-dev..."
+
+        # Set up directories
+        OXYGEN_SCRIPTS="${{ github.workspace }}/scripting/oxygen/scripts"
+        SCHEMA_DIR="${{ github.workspace }}/test_schema_dir"  # Path to test schema files
+        TEST_CASES_DIR="${{ github.workspace }}/test_cases_dir"  # Path to test case files
+        REPORT_DIR="${{ github.workspace }}/validation-reports"
+
+        # Create report directory
+        mkdir -p "$REPORT_DIR"
+
+        # Function to validate XML files
+        validate_and_check() {
+          local schema=$1
+          local xml_file=$2
+          local schema_path="$SCHEMA_DIR/$schema"
+          local report_file="$REPORT_DIR/validation_report_$(basename "$xml_file" .xml)_${schema%.xsd}.html"
+          
+          echo "Validating: $xml_file"
+          echo "Using schema: $schema_path"
+          
+          # Run Oxygen XML validation
+          "$OXYGEN_SCRIPTS/validate.sh" "$xml_file" "$schema_path" \
+            -if "*.xml" \  # Include filter: all XML files
+            -ef "test*.xml" \  # Exclude filter: files starting with "test"
+            -ed ".svn,.git" \  # Exclude directories
+            -rf "$report_file" \  # Report file path
+            -rft "html" \  # Report format: HTML
+            -v  # Verbose mode
+          
+          # Check validation result
+          if [ $? -ne 0 ]; then
+            echo "Validation failed for $xml_file"
+            return 1
+          else
+            echo "Validation succeeded for $xml_file"
+          fi
+        }
+
+        # Find all XML files in 0.99.2-dev directories
+        echo "Searching for XML files in 0.99.2-dev directories within $TEST_CASES_DIR"
+        xml_files=$(find "$TEST_CASES_DIR" -type f -path "*/v0.99.2-dev/*.xml")
+        echo "Found $(echo "$xml_files" | wc -l) XML files in 0.99.2-dev directories"
+
+        validation_failed=false
+
+        # Iterate through each XML file and validate against each schema
+        for xml_file in $xml_files; do
+          for schema in "all_rate_plan_schemas.xsd" "rate_plan_data_input.xsd" "rate_plan_data_output.xsd" "tariff_books.xsd"; do
+            if ! validate_and_check "$schema" "$xml_file"; then
+              validation_failed=true
+            fi
+          done
+        done
+
+        # Check overall validation status
+        if [ "$validation_failed" = true ]; then
+          echo "One or more validations failed"
+          exit 1
+        else
+          echo "All validations completed successfully"
+        fi
+      shell: bash
+
+    # Upload validation reports as files from workflow aka artifacts
+    - name: Upload validation reports
+      uses: actions/upload-artifact@v3
+      with:
+        name: validation-reports
+        path: validation-reports
+
+    # Verify validation results
+    - name: Verify validation results
+      run: |
+        # Check if the validation reports directory exists
+        if [ ! -d "${{ github.workspace }}/validation-reports" ]; then
+          echo "Validation reports directory not found"
+          exit 1
+        fi
+        
+        # Count the number of generated report files
+        report_count=$(find "${{ github.workspace }}/validation-reports" -name "*.html" | wc -l)
+        if [ "$report_count" -eq 0 ]; then
+          echo "No validation reports were generated"
+          exit 1
+        fi
+        
+        echo "Found $report_count validation reports"
+      shell: bash
+
+    # Deploy validation reports to GitHub Pages (only on main branch)
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      if: github.ref == 'refs/heads/main'
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./validation-reports
