@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ratePlanScenarios xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/refs/tags/v0.99.3-dev/rate_plan_data_output.xsd">
+    <ratePlanScenario>
+        <ratePlanOption>
+            <ratePlan>
+                <ratePlanIedrOrgAbbreviation></ratePlanIedrOrgAbbreviation>
+                <tariffUtilityName></tariffUtilityName>
+                <tariffUtilityPscNumber></tariffUtilityPscNumber>
+                <dateEffective></dateEffective>
+                <serviceClassNumber></serviceClassNumber>
+                <serviceClassName></serviceClassName>
+                <rateCode/>
+                <ratePlanName></ratePlanName>
+                <service></service>
+                <customerClass></customerClass>
+                <ratePlanDescription></ratePlanDescription>
+                <tariffDpsCaseNumber></tariffDpsCaseNumber>
+                <ratePlanNumberRatePeriods/>
+            </ratePlan>
+            <charges></charges>
+        </ratePlanOption>
+        <scenarioInputSettingOptions>
+            <customerClass></customerClass>
+        </scenarioInputSettingOptions>
+    </ratePlanScenario>
+    </ratePlanScenario>
+</ratePlanScenarios>

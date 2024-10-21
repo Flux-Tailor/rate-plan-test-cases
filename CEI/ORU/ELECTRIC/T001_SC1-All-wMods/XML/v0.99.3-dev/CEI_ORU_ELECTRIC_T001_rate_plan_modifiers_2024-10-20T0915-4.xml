@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ratePlanModifiers xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/refs/tags/v0.99.3-dev/rate_plan_modifiers.xsd">
+    <ratePlanModifier>
+        <ratePlanModifierCodeUnique>E-ORU-SC1-LIC1-H</ratePlanModifierCodeUnique>
+        <ratePlanModifierKind>HEAP_discounts</ratePlanModifierKind>
+        <scopeOfApplicability>
+            <include>
+                <serviceClasses>
+                    <serviceClass>1</serviceClass>
+                </serviceClasses>
+                <rateCodes>
+                    <rateCode>301</rateCode>
+                </rateCodes>
+                <ratePlans>
+                    <ratePlanCodeUnique>E-ORU-SC1</ratePlanCodeUnique>
+                </ratePlans>
+                <territories>
+                    <territory>
+                        <territoryId>Orange county</territoryId>
+                    </territory>
+                    <territory>
+                        <territoryId>Sullivan county</territoryId>
+                    </territory>
+                    <territory>
+                        <territoryId>Rockland county</territoryId>
+                    </territory>
+                </territories>
+                <season>Winter</season>
+                <customRatePlanAttribute>
+                    <attributeName>Qualified Low Income participants - household income below percentage above federal poverty line</attributeName>
+                    <value>130</value>
+                </customRatePlanAttribute>
+            </include>
+        </scopeOfApplicability>
+        <validPeriod>
+            <startDate>2023-12-01</startDate>
+            <endDate>2025-12-01</endDate>
+            <expectedEndDate>2025-12-01</expectedEndDate>
+        </validPeriod>
+        <iedrOrg>ORU</iedrOrg>
+        <modifierName>HEAP Discount for Electric heat - Tier 1</modifierName>
+        <UtilityPscNbr>3</UtilityPscNbr>
+        <service>Electric</service>
+        <modifierDescription>Low Income Program-Genenral Information Section  7.15</modifierDescription>
+        <seasons>
+            <season>
+                <seasonName>Winter</seasonName>
+                <month>1</month>
+                <month>2</month>
+                <month>3</month>
+                <month>4</month>
+                <month>5</month>
+                <month>10</month>
+                <month>11</month>
+                <month>12</month>
+            </season>
+            <season>
+                <seasonName>Summer</seasonName>
+                <month>6</month>
+                <month>7</month>
+                <month>8</month>
+                <month>9</month>
+            </season>
+        </seasons>
+        <holidays>
+            <holiday>Christmas Day</holiday>
+        </holidays>
+        <charges>
+            <minimumCharge>
+                <servicePeriod>
+                    <startDate>2023-12-01</startDate>
+                </servicePeriod>
+                <chargeName>Tier 1 - Electric heating</chargeName>
+                <chargeValue>-59.29</chargeValue>
+                <chargesComponent>bundled</chargesComponent>
+            </minimumCharge>
+        </charges>
+    </ratePlanModifier>
+</ratePlanModifiers>
