@@ -1,6 +1,4 @@
 name: Validating All Test Case Inputs
-
-
 on:
   workflow_dispatch:  # Allows for manual triggering
   push:
@@ -9,24 +7,19 @@ on:
       - '**/v[0-9]*/**.xml' 
     branches:
       - main        # Only trigger on pushes to main branch
-
 jobs:
   validate-xml:
     runs-on: ubuntu-latest
-    
     env:
       SCRIPTING_LICENSE_KEY: ${{ secrets.SCRIPTING_LICENSE_KEY }}
-
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
-
     - name: Set up Java
       uses: actions/setup-java@v3
       with:
         distribution: 'temurin'
         java-version: '17'
-
     - name: Download and setup Oxygen XML Scripting
       run: |
         echo "Setting up Oxygen XML Scripting..."
@@ -37,7 +30,6 @@ jobs:
         echo "${{ secrets.SCRIPTING_LICENSE_KEY }}" > oxygen/scriptinglicensekey.txt
         echo "Oxygen XML Scripting setup complete."
       shell: bash
-
     - name: Run XML Validation
       run: |
         echo "Starting XML Validation process..."
@@ -53,7 +45,6 @@ jobs:
           "https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/main/rate_plan_data_input.xsd"
           "https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/main/rate_plan_data_output.xsd"
         )
-
         # Initialize summary file
         echo "Validation Summary Report" > "$REPORT_DIR/summary.txt"
         echo "=======================" >> "$REPORT_DIR/summary.txt"
@@ -70,7 +61,6 @@ jobs:
           fi
           return 0
         }
-
         # Function to validate XML files
         validate_and_check() {
           local xml_file=$1
@@ -101,8 +91,7 @@ jobs:
             -v
 
           return $?
-        }
-        
+        }  
         validation_failed=false
 
         # Initialize counters and tracking arrays of possible validation errors
@@ -207,13 +196,11 @@ jobs:
           echo "All validations completed successfully."
         fi
       shell: bash
-
     - name: Upload validation reports
       uses: actions/upload-artifact@v3
       with:
         name: validation-reports
         path: validation-reports
-
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/main'
