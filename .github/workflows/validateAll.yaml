@@ -38,8 +38,8 @@ jobs:
         echo "Oxygen XML Scripting setup complete."
       shell: bash
 
-   - name: Run XML Validation
-     run: |
+    - name: Run XML Validation
+      run: |
         echo "Starting XML Validation process..."
 
         # Set up directories
