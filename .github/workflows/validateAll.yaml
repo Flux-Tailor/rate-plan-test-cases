@@ -1,0 +1,228 @@
+name: Validating All Test Case Inputs
+
+
+on:
+  workflow_dispatch:  # Allows for manual triggering
+  push:
+    paths:
+      - '**.xml'     # Triggers on any XML file changes in any directory
+      - '**/v[0-9]*/**.xml' 
+    branches:
+      - main        # Only trigger on pushes to main branch
+
+jobs:
+  validate-xml:
+    runs-on: ubuntu-latest
+    
+    env:
+      SCRIPTING_LICENSE_KEY: ${{ secrets.SCRIPTING_LICENSE_KEY }}
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Java
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+
+    - name: Download and setup Oxygen XML Scripting
+      run: |
+        echo "Setting up Oxygen XML Scripting..."
+        mkdir scripting
+        cd scripting
+        wget -q https://www.oxygenxml.com/InstData/Editor/All/oxygen.tar.gz
+        tar -xzf oxygen.tar.gz
+        echo "${{ secrets.SCRIPTING_LICENSE_KEY }}" > oxygen/scriptinglicensekey.txt
+        echo "Oxygen XML Scripting setup complete."
+      shell: bash
+
+   - name: Run XML Validation
+      run: |
+        echo "Starting XML Validation process..."
+
+        # Set up directories
+        OXYGEN_SCRIPTS="${{ github.workspace }}/scripting/oxygen/scripts"
+        REPORT_DIR="${{ github.workspace }}/validation-reports"
+        mkdir -p "$REPORT_DIR"
+
+        # Define schema URLs
+        SCHEMA_URLS=(
+          "https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/main/all_rate_plan_schemas.xsd"
+          "https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/main/rate_plan_data_input.xsd"
+          "https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/main/rate_plan_data_output.xsd"
+        )
+
+        # Initialize summary file
+        echo "Validation Summary Report" > "$REPORT_DIR/summary.txt"
+        echo "=======================" >> "$REPORT_DIR/summary.txt"
+        date >> "$REPORT_DIR/summary.txt"
+        echo -e "\n" >> "$REPORT_DIR/summary.txt"
+
+        # Function to check schema location in XML file
+        check_schema_location() {
+          local xml_file=$1
+          if grep -q "xsi:noNamespaceSchemaLocation=\"file:" "$xml_file"; then
+            echo "Error: Local schema location found in $xml_file"
+            echo "Invalid Schema Location: $xml_file (using local file path)" >> "$REPORT_DIR/summary.txt"
+            return 1
+          fi
+          return 0
+        }
+
+        # Function to validate XML files
+        validate_and_check() {
+          local xml_file=$1
+          local schema_url=$2
+          local report_file="$REPORT_DIR/validation_report_$(basename "$xml_file" .xml)_$(basename "$schema_url" .xsd).html"
+          
+          # Check for empty files
+          if [ ! -s "$xml_file" ]; then
+            echo "Error: Empty file found: $xml_file"
+            echo "Empty File: $xml_file" >> "$REPORT_DIR/summary.txt"
+            return 1
+          fi
+
+          # Check schema location
+          if ! check_schema_location "$xml_file"; then
+            return 1
+          fi
+
+          echo "Validating: $xml_file"
+          echo "Using schema: $schema_url"
+          
+          "$OXYGEN_SCRIPTS/validate.sh" "$xml_file" "$schema_url" \
+            -if "*.xml" \
+            -ef "test*.xml" \
+            -ed ".svn,.git" \
+            -rf "$report_file" \
+            -rft "html" \
+            -v
+
+          return $?
+        }
+        
+        validation_failed=false
+
+        # Initialize counters and tracking arrays of possible validation errors
+        declare -A missing_utilities
+        declare -A empty_files
+        declare -A wrong_schema_locations
+        declare -A wrong_versions
+        declare -A processed_files
+
+        echo "Processing Utility Directories..." >> "$REPORT_DIR/summary.txt"
+        echo "=============================" >> "$REPORT_DIR/summary.txt"
+
+        # Process each utility directory
+        for utility in AGR NGG CEI CHG LBR NFG PLI; do
+          if [ -d "$utility" ]; then
+            echo "Processing $utility directory..."
+            echo -e "\n$utility:" >> "$REPORT_DIR/summary.txt"
+            
+            # Find all XML files
+            all_xml_files=$(find "$utility" -type f -name "*.xml")
+            
+            # Check for files in wrong version directories
+            for file in $all_xml_files; do
+              if [[ $file =~ /v0\.9[^0-9]* ]]; then
+                echo "Warning: File in old version directory: $file"
+                wrong_versions["$file"]=1
+                continue
+              fi
+            done
+            
+            # Find valid XML files (excluding old versions)
+            xml_files=$(find "$utility" -type f -name "*.xml" ! -path "*/v0.9*/*")
+            
+            # Check if any XML files were found
+            if [ -z "$xml_files" ]; then
+              echo "Warning: No valid XML files found in $utility directory"
+              echo "  - No valid XML files found" >> "$REPORT_DIR/summary.txt"
+              continue
+            fi
+            
+            # Validate each file against each schema
+            for xml_file in $xml_files; do
+              # Check for electric-only files
+              if [[ $xml_file != *"_electric_"* ]]; then
+                echo "  - Skipping non-electric file: $(basename "$xml_file")" >> "$REPORT_DIR/summary.txt"
+                continue
+              fi
+              
+              processed_files["$xml_file"]=1
+              
+              for schema_url in "${SCHEMA_URLS[@]}"; do
+                if ! validate_and_check "$xml_file" "$schema_url"; then
+                  validation_failed=true
+                  echo "  - Failed: $(basename "$xml_file") with $(basename "$schema_url")" >> "$REPORT_DIR/summary.txt"
+                else
+                  echo "  - Passed: $(basename "$xml_file") with $(basename "$schema_url")" >> "$REPORT_DIR/summary.txt"
+                fi
+              done
+            done
+          else
+            echo "Error: Required utility directory '$utility' not found"
+            missing_utilities["$utility"]=1
+            validation_failed=true
+          fi
+        done
+
+        # Generate comprehensive summary report
+        echo -e "\nValidation Issues Summary" >> "$REPORT_DIR/summary.txt"
+        echo "======================" >> "$REPORT_DIR/summary.txt"
+
+        if [ ${#missing_utilities[@]} -gt 0 ]; then
+          echo -e "\nMissing Utility Directories:" >> "$REPORT_DIR/summary.txt"
+          for utility in "${!missing_utilities[@]}"; do
+            echo "- $utility" >> "$REPORT_DIR/summary.txt"
+          fi
+        fi
+
+        if [ ${#wrong_versions[@]} -gt 0 ]; then
+          echo -e "\nFiles in Deprecated Version Directories (v0.9*):" >> "$REPORT_DIR/summary.txt"
+          for file in "${!wrong_versions[@]}"; do
+            echo "- $file" >> "$REPORT_DIR/summary.txt"
+          fi
+        fi
+
+        if [ ${#empty_files[@]} -gt 0 ]; then
+          echo -e "\nEmpty Files:" >> "$REPORT_DIR/summary.txt"
+          for file in "${!empty_files[@]}"; do
+            echo "- $file" >> "$REPORT_DIR/summary.txt"
+          fi
+        fi
+
+        if [ ${#wrong_schema_locations[@]} -gt 0 ]; then
+          echo -e "\nFiles with Invalid Schema Locations:" >> "$REPORT_DIR/summary.txt"
+          for file in "${!wrong_schema_locations[@]}"; do
+            echo "- $file" >> "$REPORT_DIR/summary.txt"
+          fi
+        fi
+
+        echo -e "\nProcessed Files Summary:" >> "$REPORT_DIR/summary.txt"
+        echo "Total files processed: ${#processed_files[@]}" >> "$REPORT_DIR/summary.txt"
+
+        if [ "$validation_failed" = true ]; then
+          echo -e "\nValidation Result: FAILED" >> "$REPORT_DIR/summary.txt"
+          echo "One or more validations failed. Check the summary report for details."
+          exit 1
+        else
+          echo -e "\nValidation Result: PASSED" >> "$REPORT_DIR/summary.txt"
+          echo "All validations completed successfully."
+        fi
+      shell: bash
+
+    - name: Upload validation reports
+      uses: actions/upload-artifact@v3
+      with:
+        name: validation-reports
+        path: validation-reports
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      if: github.ref == 'refs/heads/main'
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./validation-reports
