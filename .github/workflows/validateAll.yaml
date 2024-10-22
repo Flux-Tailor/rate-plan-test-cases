@@ -39,7 +39,7 @@ jobs:
       shell: bash
 
    - name: Run XML Validation
-      run: |
+     run: |
         echo "Starting XML Validation process..."
 
         # Set up directories
