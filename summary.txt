@@ -1,46 +1,104 @@
 Validation Summary Report
 =======================
-Thu Oct 24 23:24:32 UTC 2024
+Thu Oct 24 23:35:47 UTC 2024
 
 Problems found by utility:
 
 === AGR ===
-Total problems found: 0
-Files with issues:
-None
+Files processed: 15
+Files with problems: 14
+Total problems found: 71
+
+Problem details:
+AGR/NYE/GAS/statements_pscNbr087/XML/v0.99.2-dev/XXX_YYY_ELECTRIC_T00X_name_2024-MM-DDT1555hhmm-4.xml  (2 problems)
+AGR/NYE/GAS/T001/XML/v0.99.2-dev/XXX_YYY_ELECTRIC_T00X_name_2024-MM-DDT1555hhmm-4.xml  (2 problems)
+AGR/NYE/GAS/statements_pscNbr090/XML/v0.99.2-dev/XXX_YYY_ELECTRIC_T00X_name_2024-MM-DDT1555hhmm-4.xml  (2 problems)
+AGR/NYE/ELECTRIC/statements_pscNbr120/XML/v0.99.3-dev/AGR_NYE_ELECTRIC_PSC120_tariff_statements_2024-10-16T1555-4.xml  (21 problems)
 
 === CEI ===
-Total problems found: 0
-Files with issues:
-None
+Files processed: 52
+Files with problems: 14
+Total problems found: 1483
+
+Problem details:
+CEI/CED/ELECTRIC/msc_charges/CEI_CED_E_msc_charges_supply_2024-10-20T1220-4.xml  (2 problems)
+CEI/CED/ELECTRIC/T002_SC1-All/XML/v0.99.3-dev/CEI_CED_E_T002_SC1-All_rate_plan_data_output_2024-10-20T1915-4.xml  (13 problems)
 
 === CHG ===
-Total problems found: 0
-Files with issues:
-None
+Files processed: 2
+2
+2
+Files with problems: 2
+2
+2
+Total problems found: 4
+4
+4
+
+Problem details:
+CHG/GAS/T001/XML/v0.99.2-dev/XXX_YYY_ELECTRIC_T00X_name_2024-MM-DDT1555hhmm-4.xml  (2 problems)
+CHG/ELECTRIC/T001/XML/v0.99.2-dev/XXX_YYY_ELECTRIC_T00X_name_2024-MM-DDT1555hhmm-4.xml  (2 problems)
+FILE: /home/runner/work/rate-plan-test-cases/rate-plan-test-cases/temp_validation_LBR/LBR/GAS/statements_pscNbr001/XML/v0.99.2-dev/XXX_YYY_ELECTRIC_T00X_name_2024-MM-DDT1555hhmm-4.xml  (2 problems)
+FILE: /home/runner/work/rate-plan-test-cases/rate-plan-test-cases/temp_validation_LBR/LBR/GAS/T001/XML/v0.99.2-dev/XXX_YYY_ELECTRIC_T00X_name_2024-MM-DDT1555hhmm-4.xml  (2 problems)
 
 === LBR ===
-Total problems found: 0
-Files with issues:
-None
+Files processed: 2
+2
+11
+Files with problems: 2
+2
+11
+Total problems found: 4
+4
+90
+
+Problem details:
+LBR/GAS/statements_pscNbr001/XML/v0.99.2-dev/XXX_YYY_ELECTRIC_T00X_name_2024-MM-DDT1555hhmm-4.xml  (2 problems)
+LBR/GAS/T001/XML/v0.99.2-dev/XXX_YYY_ELECTRIC_T00X_name_2024-MM-DDT1555hhmm-4.xml  (2 problems)
+FILE: /home/runner/work/rate-plan-test-cases/rate-plan-test-cases/temp_validation_NFG/NFG/GAS/statements_pscNbr008/XML/v0.99.2-dev/XXX_YYY_ELECTRIC_T00X_name_2024-MM-DDT1555hhmm-4.xml  (2 problems)
+FILE: /home/runner/work/rate-plan-test-cases/rate-plan-test-cases/temp_validation_NFG/NFG/GAS/T001/XML/v0.99.2-dev/XXX_YYY_ELECTRIC_T00X_name_2024-MM-DDT1555hhmm-4.xml  (2 problems)
 
 === NFG ===
-Total problems found: 0
-Files with issues:
-None
+Files processed: 2
+11
+Files with problems: 2
+11
+Total problems found: 4
+90
+
+Problem details:
+NFG/GAS/statements_pscNbr008/XML/v0.99.2-dev/XXX_YYY_ELECTRIC_T00X_name_2024-MM-DDT1555hhmm-4.xml  (2 problems)
+NFG/GAS/T001/XML/v0.99.2-dev/XXX_YYY_ELECTRIC_T00X_name_2024-MM-DDT1555hhmm-4.xml  (2 problems)
+FILE: /home/runner/work/rate-plan-test-cases/rate-plan-test-cases/temp_validation_NGG/NGG/KNY/GAS/statements_pscNbr012/XML/v0.99.2-dev/XXX_YYY_ELECTRIC_T00X_name_2024-MM-DDT1555hhmm-4.xml  (2 problems)
+FILE: /home/runner/work/rate-plan-test-cases/rate-plan-test-cases/temp_validation_NGG/NGG/KNY/GAS/T001/XML/v0.99.2-dev/XXX_YYY_ELECTRIC_T00X_name_2024-MM-DDT1555hhmm-4.xml  (2 problems)
+FILE: /home/runner/work/rate-plan-test-cases/rate-plan-test-cases/temp_validation_NGG/NGG/KLI/GAS/statements_pscNbr001/XML/v0.99.2-dev/XXX_YYY_ELECTRIC_T00X_name_2024-MM-DDT1555hhmm-4.xml  (2 problems)
 
 === NGG ===
-Total problems found: 0
-Files with issues:
-None
+Files processed: 11
+Files with problems: 11
+Total problems found: 90
+
+Problem details:
+NGG/KNY/GAS/statements_pscNbr012/XML/v0.99.2-dev/XXX_YYY_ELECTRIC_T00X_name_2024-MM-DDT1555hhmm-4.xml  (2 problems)
+NGG/KNY/GAS/T001/XML/v0.99.2-dev/XXX_YYY_ELECTRIC_T00X_name_2024-MM-DDT1555hhmm-4.xml  (2 problems)
+NGG/KLI/GAS/statements_pscNbr001/XML/v0.99.2-dev/XXX_YYY_ELECTRIC_T00X_name_2024-MM-DDT1555hhmm-4.xml  (2 problems)
+NGG/KLI/GAS/T001/XML/v0.99.2-dev/XXX_YYY_ELECTRIC_T00X_name_2024-MM-DDT1555hhmm-4.xml  (2 problems)
+NGG/NIM/GAS/statements_pscNbr219/XML/v0.99.2-dev/XXX_YYY_ELECTRIC_T00X_name_2024-MM-DDT1555hhmm-4.xml  (2 problems)
+NGG/NIM/GAS/T001/XML/v0.99.2-dev/XXX_YYY_ELECTRIC_T00X_name_2024-MM-DDT1555hhmm-4.xml  (2 problems)
 
 === PLI ===
-Total problems found: 0
-Files with issues:
-None
+Files processed: 2
+Files with problems: 2
+Total problems found: 4
+
+Problem details:
+PLI/ELECTRIC/statements/XML/v0.99.2-dev/XXX_YYY_ELECTRIC_T00X_name_2024-MM-DDT1555hhmm-4.xml  (2 problems)
+PLI/ELECTRIC/T001/XML/v0.99.2-dev/XXX_YYY_ELECTRIC_T00X_name_2024-MM-DDT1555hhmm-4.xml  (2 problems)
 
 =======================
 Overall Statistics
 =======================
-Total problems found: 0
-Number of files with issues: 0
+/home/runner/work/_temp/b694165d-c807-47ef-aa36-17bdc2ee422f.sh: line 100: total_files_processed + 2
+2
+2: syntax error in expression (error token is "2
+2")
