@@ -99,19 +99,52 @@ jobs:
           fi
         done
         
-        # Create summary report
+        # Create summary report that shows total problem count for each utility
         {
           echo "Validation Summary Report"
           echo "======================="
           date
           echo
           echo "Problems found by utility:"
+          echo
+          
+          # Process each utility
           for util in AGR CEI CHG LBR NFG NGG PLI; do
+            echo "=== $util ==="
             if grep -A1 "=== Results for $util ===" "${REPORT_DIR}/validation_report.txt" > /dev/null; then
-              echo "$util:"
-              grep "problem(s) found" "${REPORT_DIR}/validation_report.txt" | grep "$util" || echo "No problems found"
+              # Count total problems for this utility
+              problem_count=$(grep -A1 "=== Results for $util ===" "${REPORT_DIR}/validation_report.txt" | \
+                            grep "problem(s) found" | \
+                            awk '{sum += $1} END {print sum}')
+              
+              # Get list of files with problems
+              echo "Total problems found: ${problem_count:-0}"
+              echo "Files with problems:"
+              if grep -A1 "=== Results for $util ===" "${REPORT_DIR}/validation_report.txt" | \
+                 grep -B1 "problem(s) found" | \
+                 grep "/${util}/" > /dev/null; then
+                grep -A1 "=== Results for $util ===" "${REPORT_DIR}/validation_report.txt" | \
+                  grep -B1 "problem(s) found" | \
+                  grep "/${util}/" | \
+                  sed 's/.*\(/'${util}'\/.*\)/\1/'
+              else
+                echo "None"
+              fi
+            else
+              echo "No validation results found"
             fi
+            echo
           done
+          
+          echo "======================="
+          echo "Summary Statistics"
+          echo "======================="
+          total_problems=$(grep "problem(s) found" "${REPORT_DIR}/validation_report.txt" | \
+                          awk '{sum += $1} END {print sum}')
+          total_files=$(grep "problem(s) found" "${REPORT_DIR}/validation_report.txt" | wc -l)
+          echo "Total problems across all utilities: ${total_problems:-0}"
+          echo "Total files with problems: ${total_files:-0}"
+          
         } > "${REPORT_DIR}/summary.txt"
 
         # Display summary in workflow logs
