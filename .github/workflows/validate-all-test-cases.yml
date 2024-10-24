@@ -107,45 +107,41 @@ jobs:
           echo
           echo "Problems found by utility:"
           echo
-          
-          # Process each utility
+        
+          # Process each utility's results
           for util in AGR CEI CHG LBR NFG NGG PLI; do
             echo "=== $util ==="
-            if grep -A1 "=== Results for $util ===" "${REPORT_DIR}/validation_report.txt" > /dev/null; then
+            # Look for problems in temporary validation directories
+            if grep -a "temp_validation_${util}.*${util}" "${REPORT_DIR}/validation_report.txt" > /dev/null 2>&1; then
               # Count total problems for this utility
-              problem_count=$(grep -A1 "=== Results for $util ===" "${REPORT_DIR}/validation_report.txt" | \
-                            grep "problem(s) found" | \
-                            awk '{sum += $1} END {print sum}')
-              
-              # Get list of files with problems
-              echo "Total problems found: ${problem_count:-0}"
-              echo "Files with problems:"
-              if grep -A1 "=== Results for $util ===" "${REPORT_DIR}/validation_report.txt" | \
-                 grep -B1 "problem(s) found" | \
-                 grep "/${util}/" > /dev/null; then
-                grep -A1 "=== Results for $util ===" "${REPORT_DIR}/validation_report.txt" | \
-                  grep -B1 "problem(s) found" | \
-                  grep "/${util}/" | \
-                  sed 's/.*\(/'${util}'\/.*\)/\1/'
-              else
-                echo "None"
-              fi
+              problems=$(grep -a "problem(s) found" "${REPORT_DIR}/validation_report.txt" | \
+                        grep -a "temp_validation_${util}" | \
+                        awk '{sum += $1} END {print sum}')
+            
+              echo "Total problems found: ${problems:-0}"
+              echo "Files with issues:"
+            
+              # Extract file paths, removing temporary directory prefix
+              grep -a -B1 "problem(s) found" "${REPORT_DIR}/validation_report.txt" | \
+                grep -a "temp_validation_${util}" | \
+                sed -E "s|.*/temp_validation_${util}/${util}/|${util}/|g" || echo "None"
+            
             else
-              echo "No validation results found"
+              echo "No validation problems found"
             fi
             echo
           done
-          
+        
           echo "======================="
-          echo "Summary Statistics"
+          echo "Overall Statistics"
           echo "======================="
-          total_problems=$(grep "problem(s) found" "${REPORT_DIR}/validation_report.txt" | \
+          total_problems=$(grep -a "problem(s) found" "${REPORT_DIR}/validation_report.txt" | \
                           awk '{sum += $1} END {print sum}')
-          total_files=$(grep "problem(s) found" "${REPORT_DIR}/validation_report.txt" | wc -l)
-          echo "Total problems across all utilities: ${total_problems:-0}"
-          echo "Total files with problems: ${total_files:-0}"
-          
-        } > "${REPORT_DIR}/summary.txt"
+          total_files=$(grep -a "problem(s) found" "${REPORT_DIR}/validation_report.txt" | wc -l)
+          echo "Total problems found: ${total_problems:-0}"
+          echo "Number of files with issues: ${total_files:-0}"
+        
+        } > "${REPORT_DIR}/summary.txt" 2>&1 || true
 
         # Display summary in workflow logs
         cat "${REPORT_DIR}/summary.txt"
