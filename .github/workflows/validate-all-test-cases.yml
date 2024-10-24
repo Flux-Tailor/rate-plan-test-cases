@@ -132,7 +132,7 @@ jobs:
             
             # Check for files in wrong version directories
             for file in $all_xml_files; do
-              if [[ $file =~ /v0\.9[^0-9]* ]]; then
+              if [[ $file =~ /v0\.9\.[0-8]/ ]]; then
                 echo "Warning: File in old version directory: $file"
                 wrong_versions["$file"]=1
                 continue
