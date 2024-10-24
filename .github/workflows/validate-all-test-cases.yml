@@ -8,7 +8,7 @@ on:
       - '.github/workflows/**'  # Temporary as we test
 
     branches:
-      - main        # Triggers on push to main and its own branch
+      - main     # Triggers on push to main and its own branch
       - validatingAllTestCases
 
 permissions: 
@@ -48,195 +48,93 @@ jobs:
         echo "Oxygen XML Scripting setup complete."
       shell: bash
     - name: Run XML Validation
-      id: validation  # Added ID for reference
+      id: validation  # Added ID for reference in other steps
       continue-on-error: true  # Allow workflow to continue even if this fails
       run: |
-        # Set up directories and variables
         echo "Starting XML Validation process..."
         
-        echo "=== Version Analysis ==="
-        echo "Files found by version:"
-        find . -type f -name "*.xml" -exec dirname {} \; | sort | uniq -c
-        
-        echo "=== Files that will be validated (0.99.3-dev and up) ==="
-        find . -type f -name "*.xml" | grep -E "v0\.99\.[3-9]|v1\." || echo "No matching files found"
-        
-        echo "=== Files that will be skipped (older versions) ==="
-        find . -type f -name "*.xml" | grep -E "v0\.99\.[0-2]|v0\.[0-8]" || echo "No older files found"
-        
-        echo "=== Starting main validation ===" 
         # Set up directories
         OXYGEN_SCRIPTS="${{ github.workspace }}/scripting/oxygen/scripts"
         REPORT_DIR="${{ github.workspace }}/validation-reports"
         mkdir -p "$REPORT_DIR"
-
-        # Define schema URLs
-        SCHEMA_URLS=(
-          "https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/main/all_rate_plan_schemas.xsd"
-          "https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/main/rate_plan_data_input.xsd"
-          "https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/main/rate_plan_data_output.xsd"
-        )
-        # Initialize summary file
-        echo "Validation Summary Report" > "$REPORT_DIR/summary.txt"
-        echo "=======================" >> "$REPORT_DIR/summary.txt"
-        date >> "$REPORT_DIR/summary.txt"
-        echo -e "\n" >> "$REPORT_DIR/summary.txt"
-
-        # Function to check schema location in XML file
-        check_schema_location() {
-          local xml_file=$1
-          if grep -q "xsi:noNamespaceSchemaLocation=\"file:" "$xml_file"; then
-            echo "Error: Local schema location found in $xml_file"
-            echo "Invalid Schema Location: $xml_file (using local file path)" >> "$REPORT_DIR/summary.txt"
-            return 1
-          fi
-          return 0
-        }
-        # Function to validate XML files
-        validate_and_check() {
-          local xml_file=$1
-          local schema_url=$2
-          local report_file="$REPORT_DIR/validation_report_$(basename "$xml_file" .xml)_$(basename "$schema_url" .xsd).html"
-          
-          # Check for empty files
-          if [ ! -s "$xml_file" ]; then
-            echo "Error: Empty file found: $xml_file"
-            echo "Empty File: $xml_file" >> "$REPORT_DIR/summary.txt"
-            return 1
-          fi
-
-          # Check schema location
-          if ! check_schema_location "$xml_file"; then
-            return 1
-          fi
-
-          echo "Validating: $xml_file"
-          echo "Using schema: $schema_url"
-          
-          # Capture the validation output (error logging)
-          output=$("$OXYGEN_SCRIPTS/validate.sh" "$xml_file" "$schema_url" \
-            -if "*.xml" \
-            -ef "test*.xml" \
-            -ed ".svn,.git" \
-            -rf "$report_file" \
-            -rft "html" \
-            -v 2>&1)
-  
-          validation_status=$?
-  
-          if [ $validation_status -ne 0 ]; then
-            echo "Validation failed for $xml_file"
-            echo "Error output: $output"
-            echo "Validation failed for $xml_file" >> "$REPORT_DIR/summary.txt"
-            echo "Error output: $output" >> "$REPORT_DIR/summary.txt"
-          fi
-
-          return $validation_status
-        }
-        validation_failed=false
         
-        # Initialize tracking arrays of possible validation errors
-        declare -A missing_utilities empty_files wrong_schema_locations wrong_versions processed_files
+        # Show files that will be validated/skipped
+        echo "=== Files Analysis ==="
+        echo "All XML files found:"
+        find . -type f -name "*.xml" -not -path "*/v0.9/*" | sort
         
-        echo "Processing Utility Directories..." >> "$REPORT_DIR/summary.txt"
-        echo "=============================" >> "$REPORT_DIR/summary.txt"
+        echo -e "\n=== Starting Validation ==="
         
-        # Process each utility directory
-        for utility in AGR NGG CEI CHG LBR NFG PLI; do
-          if [ ! -d "$utility" ]; then
-            echo "Error: Required utility directory '$utility' not found"
-            missing_utilities["$utility"]=1
-            validation_failed=true
-            continue
-          fi
+        # Run validation on all XML files except v0.9
+        "$OXYGEN_SCRIPTS/validate.sh" . \
+          -if "*.xml" \
+          -ef "**/v0.9/*.xml" \
+          -ed ".svn,.git" \
+          -rf "$REPORT_DIR/validation_report.html" \
+          -rft "html" \
+          -v
           
-          echo "Processing $utility directory..."
-          echo -e "\n$utility:" >> "$REPORT_DIR/summary.txt"
-          
-          # Find and filter XML files
-          while IFS= read -r file; do
-            if [[ $file =~ /v0\.99\.[3-9]|v1\./ ]]; then
-              processed_files["$file"]=1
-              
-              for schema_url in "${SCHEMA_URLS[@]}"; do
-                if validate_and_check "$file" "$schema_url"; then
-                  echo "  - Passed: $(basename "$file") with $(basename "$schema_url")" >> "$REPORT_DIR/summary.txt"
-                else
-                  validation_failed=true
-                  echo "  - Failed: $(basename "$file") with $(basename "$schema_url")" >> "$REPORT_DIR/summary.txt"
-                fi
-              done
-            else
-              echo "Warning: Skipping file from older version: $file"
-              wrong_versions["$file"]=1
-            fi
-          done < <(find "$utility" -type f -name "*.xml")
-          
-          if [ ${#processed_files[@]} -eq 0 ]; then
-            echo "Warning: No valid XML files found in $utility directory"
-            echo "  - No valid XML files found" >> "$REPORT_DIR/summary.txt"
-          fi
-        done
+        validation_status=$?
         
-        # Generate summary report
+        # Create a summary report
         {
-          echo -e "\nValidation Issues Summary"
-          echo "======================"
+          echo "Validation Summary Report"
+          echo "======================="
+          date
+          echo
           
-          if [ ${#missing_utilities[@]} -gt 0 ]; then
-            echo -e "\nMissing Utility Directories:" >> "$REPORT_DIR/summary.txt"
-            for utility in "${!missing_utilities[@]}"; do
-              echo "- $utility" >> "$REPORT_DIR/summary.txt"
-            done
-          fi
-          
-          if [ ${#wrong_versions[@]} -gt 0 ]; then
-            echo -e "\nFiles in Deprecated Version Directories (v0.9*):" >> "$REPORT_DIR/summary.txt"
-            for file in "${!wrong_versions[@]}"; do
-              echo "- $file" >> "$REPORT_DIR/summary.txt"
-            done
-          fi
-          
-          if [ ${#empty_files[@]} -gt 0 ]; then
-            echo -e "\nEmpty Files:" >> "$REPORT_DIR/summary.txt"
-            for file in "${!empty_files[@]}"; do
-              echo "- $file" >> "$REPORT_DIR/summary.txt"
-            done
-          fi
-          
-          if [ ${#wrong_schema_locations[@]} -gt 0 ]; then
-            echo -e "\nFiles with Invalid Schema Locations:" >> "$REPORT_DIR/summary.txt"
-            for file in "${!wrong_schema_locations[@]}"; do
-              echo "- $file" >> "$REPORT_DIR/summary.txt"
-            done
-          fi
-          
-          echo -e "\nProcessed Files Summary:" >> "$REPORT_DIR/summary.txt"
-          echo "Total files processed: ${#processed_files[@]}" >> "$REPORT_DIR/summary.txt"
-          
-          if [ "$validation_failed" = true ]; then
-            echo -e "\nValidation Result: FAILED" >> "$REPORT_DIR/summary.txt"
+          if [ $validation_status -eq 0 ]; then
+            echo "Validation Status: PASSED"
           else
-            echo -e "\nValidation Result: PASSED"
+            echo "Validation Status: FAILED"
+            echo "Check validation_report.html for details"
           fi
-        } >> "$REPORT_DIR/summary.txt"
+          
+        } > "$REPORT_DIR/summary.txt"
         
-        if [ "$validation_failed" = true ]; then
-          echo "One or more validations failed. Check the summary report for details."
+        # Display summary in console
+        cat "$REPORT_DIR/summary.txt"
+        
+        if [ $validation_status -ne 0 ]; then
+          echo "Validation failures detected. Check the report for details."
           exit 1
-        else
-          echo "All validations completed successfully."
         fi
       shell: bash
+      
     - name: Upload validation reports
       if: always()  # This will ensures that it runs regardless of previous step status since it keeps exiting
       uses: actions/upload-artifact@v3
       with:
         name: validation-reports
         path: validation-reports
-    - name: Deploy to GitHub Pages
-      if: always() && github.ref == 'refs/heads/main'  # Run on main branch even if validation fails
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./validation-reports
+        
+    - name: Deploy validation reports to branch
+      if: always()  # Run even if validation fails
+      run: |
+        # Configure git
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+        
+        # Create a new temporary directory
+        TEMP_DIR="temp_reports"
+        mkdir -p "$TEMP_DIR"
+        
+        # Copy only the validation report
+        cp validation-reports/validation_report.html "$TEMP_DIR/"
+        cp validation-reports/summary.txt "$TEMP_DIR/"
+        
+        # Force push to the branch
+        git fetch
+        if git show-ref --quiet refs/remotes/origin/test-case-validation-reports; then
+          git checkout test-case-validation-reports
+        else
+          git checkout --orphan test-case-validation-reports
+          git rm -rf .
+        fi
+        
+        # Move reports to root and commit
+        cp -r "$TEMP_DIR"/* .
+        git add validation_report.html summary.txt
+        git commit -m "Update validation reports [skip ci]"
+        git push -f origin test-case-validation-reports
+      shell: bash
