@@ -81,13 +81,13 @@ jobs:
           -if "*.xml" \
           -ef "**/v0.9/*.xml" \
           -ed ".svn,.git" \
-          -rf "$REPORT_DIR/validation_report.txt" \
+          -rf "../$REPORT_DIR/validation_report.txt" \
           -rft "txt" \
           -v
           
         validation_status=$?
         
-        # Create a summary report
+        # Create a summary report in original REPORT_DIR
         {
           echo "Validation Summary Report"
           echo "======================="
@@ -101,8 +101,8 @@ jobs:
             echo "Check validation_report.txt for details"
           fi
           
-        } > "$REPORT_DIR/summary.txt"
-        
+        } > "../$REPORT_DIR/summary.txt"
+
         # Display summary in console
         cat "$REPORT_DIR/summary.txt"
         
@@ -131,8 +131,8 @@ jobs:
         mkdir -p "$TEMP_DIR"
         
         # Copy only the validation report
-        cp validation-reports/validation_report.txt "$TEMP_DIR/"
-        cp validation-reports/summary.txt "$TEMP_DIR/"
+        cp "${GITHUB_WORKSPACE}/validation-reports/validation_report.txt" "$TEMP_DIR/"
+        cp "${GITHUB_WORKSPACE}/validation-reports/summary.txt" "$TEMP_DIR/"
         
         # Force push to the branch
         git fetch
