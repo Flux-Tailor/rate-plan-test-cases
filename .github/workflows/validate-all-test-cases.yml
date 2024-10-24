@@ -67,15 +67,7 @@ jobs:
         OXYGEN_SCRIPTS="${{ github.workspace }}/scripting/oxygen/scripts"
         REPORT_DIR="${{ github.workspace }}/validation-reports"
         mkdir -p "$REPORT_DIR"
- 
-        # Initialize summary file
-        {
-          echo "Validation Summary Report"
-          echo "======================="
-          date
-          echo
-        } > "$REPORT_DIR/summary.txt"
-        
+
         # Define schema URLs
         SCHEMA_URLS=(
           "https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/main/all_rate_plan_schemas.xsd"
@@ -119,15 +111,25 @@ jobs:
           echo "Validating: $xml_file"
           echo "Using schema: $schema_url"
           
-          "$OXYGEN_SCRIPTS/validate.sh" "$xml_file" "$schema_url" \
+          # Capture the validation output (error logging)
+          output=$("$OXYGEN_SCRIPTS/validate.sh" "$xml_file" "$schema_url" \
             -if "*.xml" \
             -ef "test*.xml" \
             -ed ".svn,.git" \
             -rf "$report_file" \
             -rft "html" \
-            -v
+            -v 2>&1)
+  
+          validation_status=$?
+  
+          if [ $validation_status -ne 0 ]; then
+            echo "Validation failed for $xml_file"
+            echo "Error output: $output"
+            echo "Validation failed for $xml_file" >> "$REPORT_DIR/summary.txt"
+            echo "Error output: $output" >> "$REPORT_DIR/summary.txt"
+          fi
 
-          return $?
+          return $validation_status
         }
         validation_failed=false
         
