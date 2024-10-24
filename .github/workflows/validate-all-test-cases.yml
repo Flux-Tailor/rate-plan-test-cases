@@ -53,21 +53,23 @@ jobs:
       run: |
         echo "Starting XML Validation process..."
         
-        # Set up directories
-        OXYGEN_SCRIPTS="${{ github.workspace }}/scripting/oxygen/scripts"
-        REPORT_DIR="${{ github.workspace }}/validation-reports"
+        # Set up directories with absolute paths
+        WORKSPACE="${GITHUB_WORKSPACE}"
+        OXYGEN_SCRIPTS="${WORKSPACE}/scripting/oxygen/scripts"
+        REPORT_DIR="validation-reports" 
         mkdir -p "$REPORT_DIR"
-
-        echo "Created report directory at: $REPORT_DIR"
         
-        # Move to a clean directory for validation
-        mkdir test_cases_validation
-        cd test_cases_validation
+        echo "Created report directory at: $(pwd)/${REPORT_DIR}"
 
+        # Move to a clean directory for validation
+        VALIDATION_DIR="test_cases_validation"
+        mkdir -p "$VALIDATION_DIR"
+        cd "$VALIDATION_DIR"
+        
         # Copy only the utility directories we want to validate
         for util in AGR CEI CHG LBR NFG NGG PLI; do
-          if [ -d "../$util" ]; then
-            cp -r "../$util" .
+          if [ -d "${WORKSPACE}/$util" ]; then
+            cp -r "${WORKSPACE}/$util" .
           fi
         done
 
@@ -77,25 +79,16 @@ jobs:
         find . -type f -name "*.xml" -not -path "*/v0.9/*" | sort
         
         echo -e "\n=== Starting Validation ==="
-
-        # Debugging; show where we are
-        pwd
-        echo "Current directory contents:"
-        ls -la
         
         # Run validation on all XML files except v0.9
         "$OXYGEN_SCRIPTS/validate.sh" . \
           -if "*.xml" \
           -ef "**/v0.9/*.xml" \
           -ed ".svn,.git" \
-          -rf "../$REPORT_DIR/validation_report.txt" \
+          -rf "../${REPORT_DIR}/validation_report.txt" \
           -rft "txt" \
           -v
           
-        # After validation, check if file was created
-        echo "Contents of report directory after validation:"
-        ls -la "${REPORT_DIR}"
-        
         validation_status=$?
         
         # Create a summary report in original REPORT_DIR
@@ -116,6 +109,11 @@ jobs:
 
         # Display summary in console
         cat "$REPORT_DIR/summary.txt"
+
+        # Debug: Show where files ended up
+        cd ..
+        echo "Files in report directory:"
+        ls -la "${REPORT_DIR}"
         
         if [ $validation_status -ne 0 ]; then
           echo "Validation failures detected. Check the report for details."
@@ -142,8 +140,8 @@ jobs:
         mkdir -p "$TEMP_DIR"
         
         # Copy only the validation report
-        cp "${GITHUB_WORKSPACE}/validation-reports/validation_report.txt" "$TEMP_DIR/"
-        cp "${GITHUB_WORKSPACE}/validation-reports/summary.txt" "$TEMP_DIR/"
+        cp "validation-reports/validation_report.txt" "$TEMP_DIR/"
+        cp "validation-reports/summary.txt" "$TEMP_DIR/"
         
         # Force push to the branch
         git fetch
