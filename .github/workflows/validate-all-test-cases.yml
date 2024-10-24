@@ -58,10 +58,21 @@ jobs:
         REPORT_DIR="${{ github.workspace }}/validation-reports"
         mkdir -p "$REPORT_DIR"
         
+        # Move to a clean directory for validation
+        mkdir test_cases_validation
+        cd test_cases_validation
+
+        # Copy only the utility directories we want to validate
+        for util in AGR CEI CHG LBR NFG NGG PLI; do
+          if [ -d "../$util" ]; then
+            cp -r "../$util" .
+          fi
+        done
+
         # Show files that will be validated/skipped
         echo "=== Files Analysis ==="
-        echo "All XML files found:"
-        find AGR CEI CHG LBR NFG NGG PLI -type f -name "*.xml" -not -path "*/v0.9/*" | sort
+        echo "All XML files in test cases:"
+        find . -type f -name "*.xml" -not -path "*/v0.9/*" | sort
         
         echo -e "\n=== Starting Validation ==="
         
