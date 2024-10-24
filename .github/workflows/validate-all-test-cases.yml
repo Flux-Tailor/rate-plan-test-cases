@@ -61,7 +61,7 @@ jobs:
         # Show files that will be validated/skipped
         echo "=== Files Analysis ==="
         echo "All XML files found:"
-        find . -type f -name "*.xml" -not -path "*/v0.9/*" | sort
+        find AGR CEI CHG LBR NFG NGG PLI -type f -name "*.xml" -not -path "*/v0.9/*" | sort
         
         echo -e "\n=== Starting Validation ==="
         
@@ -70,8 +70,8 @@ jobs:
           -if "*.xml" \
           -ef "**/v0.9/*.xml" \
           -ed ".svn,.git" \
-          -rf "$REPORT_DIR/validation_report.html" \
-          -rft "html" \
+          -rf "$REPORT_DIR/validation_report.txt" \
+          -rft "txt" \
           -v
           
         validation_status=$?
@@ -87,7 +87,7 @@ jobs:
             echo "Validation Status: PASSED"
           else
             echo "Validation Status: FAILED"
-            echo "Check validation_report.html for details"
+            echo "Check validation_report.txt for details"
           fi
           
         } > "$REPORT_DIR/summary.txt"
@@ -120,7 +120,7 @@ jobs:
         mkdir -p "$TEMP_DIR"
         
         # Copy only the validation report
-        cp validation-reports/validation_report.html "$TEMP_DIR/"
+        cp validation-reports/validation_report.txt "$TEMP_DIR/"
         cp validation-reports/summary.txt "$TEMP_DIR/"
         
         # Force push to the branch
@@ -134,7 +134,7 @@ jobs:
         
         # Move reports to root and commit
         cp -r "$TEMP_DIR"/* .
-        git add validation_report.html summary.txt
+        git add validation_report.txt summary.txt
         git commit -m "Update validation reports [skip ci]"
         git push -f origin test-case-validation-reports
       shell: bash
