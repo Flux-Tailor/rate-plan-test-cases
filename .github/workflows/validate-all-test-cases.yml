@@ -5,7 +5,7 @@ on:
     paths:
       - '**.xml'     # Triggers on any XML file changes in any directory
       - '**/v[0-9]*/**.xml' 
-      - '.github/workflows/**'  # Temporary for testing
+      - '.github/workflows/**'  # Temporary as we test
 
     branches:
       - main        # Triggers on push to main and its own branch
@@ -49,6 +49,7 @@ jobs:
       shell: bash
     - name: Run XML Validation
       run: |
+        # Set up directories and variables
         echo "Starting XML Validation process..."
         
         echo "=== Version Analysis ==="
@@ -66,7 +67,15 @@ jobs:
         OXYGEN_SCRIPTS="${{ github.workspace }}/scripting/oxygen/scripts"
         REPORT_DIR="${{ github.workspace }}/validation-reports"
         mkdir -p "$REPORT_DIR"
-
+ 
+        # Initialize summary file
+        {
+          echo "Validation Summary Report"
+          echo "======================="
+          date
+          echo
+        } > "$REPORT_DIR/summary.txt"
+        
         # Define schema URLs
         SCHEMA_URLS=(
           "https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/main/all_rate_plan_schemas.xsd"
@@ -119,106 +128,99 @@ jobs:
             -v
 
           return $?
-        }  
+        }
         validation_failed=false
-
-        # Initialize counters and tracking arrays of possible validation errors
-        declare -A missing_utilities
-        declare -A empty_files
-        declare -A wrong_schema_locations
-        declare -A wrong_versions
-        declare -A processed_files
-
+        
+        # Initialize tracking arrays of possible validation errors
+        declare -A missing_utilities empty_files wrong_schema_locations wrong_versions processed_files
+        
         echo "Processing Utility Directories..." >> "$REPORT_DIR/summary.txt"
         echo "=============================" >> "$REPORT_DIR/summary.txt"
-
+        
         # Process each utility directory
         for utility in AGR NGG CEI CHG LBR NFG PLI; do
-          # Skip if directory doesn't exist
-          [ ! -d "$utility" ] && {
+          if [ ! -d "$utility" ]; then
             echo "Error: Required utility directory '$utility' not found"
             missing_utilities["$utility"]=1
             validation_failed=true
             continue
-          }
+          fi
+          
           echo "Processing $utility directory..."
           echo -e "\n$utility:" >> "$REPORT_DIR/summary.txt"
-  
-          # Find all XML files
-          all_xml_files=$(find "$utility" -type f -name "*.xml")
-          valid_files=()
-  
-          # Filter files by version
-          for file in $all_xml_files; do
-            [[ $file =~ /v0\.99\.[3-9]|v1\./ ]] && valid_files+=("$file") || {
+          
+          # Find and filter XML files
+          while IFS= read -r file; do
+            if [[ $file =~ /v0\.99\.[3-9]|v1\./ ]]; then
+              processed_files["$file"]=1
+              
+              for schema_url in "${SCHEMA_URLS[@]}"; do
+                if validate_and_check "$file" "$schema_url"; then
+                  echo "  - Passed: $(basename "$file") with $(basename "$schema_url")" >> "$REPORT_DIR/summary.txt"
+                else
+                  validation_failed=true
+                  echo "  - Failed: $(basename "$file") with $(basename "$schema_url")" >> "$REPORT_DIR/summary.txt"
+                fi
+              done
+            else
               echo "Warning: Skipping file from older version: $file"
               wrong_versions["$file"]=1
-            }
-          done
-  
-          # Skip if no valid files found
-          [ ${#valid_files[@]} -eq 0 ] && {
+            fi
+          done < <(find "$utility" -type f -name "*.xml")
+          
+          if [ ${#processed_files[@]} -eq 0 ]; then
             echo "Warning: No valid XML files found in $utility directory"
             echo "  - No valid XML files found" >> "$REPORT_DIR/summary.txt"
-            continue
-          }
-  
-          # Validate each valid file
-          for xml_file in "${valid_files[@]}"; do 
-            processed_files["$xml_file"]=1
-    
-            for schema_url in "${SCHEMA_URLS[@]}"; do
-              validate_and_check "$xml_file" "$schema_url" && {
-                echo "  - Passed: $(basename "$xml_file") with $(basename "$schema_url")" >> "$REPORT_DIR/summary.txt"
-              } || {
-                validation_failed=true
-                echo "  - Failed: $(basename "$xml_file") with $(basename "$schema_url")" >> "$REPORT_DIR/summary.txt"
-              }
-            done
-          done
+          fi
         done
-
-        # Generate comprehensive summary report of issues
-        echo -e "\nValidation Issues Summary" >> "$REPORT_DIR/summary.txt"
-        echo "======================" >> "$REPORT_DIR/summary.txt"
-
-        if [ ${#missing_utilities[@]} -gt 0 ]; then
-          echo -e "\nMissing Utility Directories:" >> "$REPORT_DIR/summary.txt"
-          for utility in "${!missing_utilities[@]}"; do
-            echo "- $utility" >> "$REPORT_DIR/summary.txt"
+        
+        # Generate summary report
+        {
+          echo -e "\nValidation Issues Summary"
+          echo "======================"
+          
+          if [ ${#missing_utilities[@]} -gt 0 ]; then
+            echo -e "\nMissing Utility Directories:" >> "$REPORT_DIR/summary.txt"
+            for utility in "${!missing_utilities[@]}"; do
+              echo "- $utility" >> "$REPORT_DIR/summary.txt"
+            done
           fi
-        fi
-
-        if [ ${#wrong_versions[@]} -gt 0 ]; then
-          echo -e "\nFiles in Deprecated Version Directories (v0.9*):" >> "$REPORT_DIR/summary.txt"
-          for file in "${!wrong_versions[@]}"; do
-            echo "- $file" >> "$REPORT_DIR/summary.txt"
+          
+          if [ ${#wrong_versions[@]} -gt 0 ]; then
+            echo -e "\nFiles in Deprecated Version Directories (v0.9*):" >> "$REPORT_DIR/summary.txt"
+            for file in "${!wrong_versions[@]}"; do
+              echo "- $file" >> "$REPORT_DIR/summary.txt"
+            done
           fi
-        fi
-
-        if [ ${#empty_files[@]} -gt 0 ]; then
-          echo -e "\nEmpty Files:" >> "$REPORT_DIR/summary.txt"
-          for file in "${!empty_files[@]}"; do
-            echo "- $file" >> "$REPORT_DIR/summary.txt"
+          
+          if [ ${#empty_files[@]} -gt 0 ]; then
+            echo -e "\nEmpty Files:" >> "$REPORT_DIR/summary.txt"
+            for file in "${!empty_files[@]}"; do
+              echo "- $file" >> "$REPORT_DIR/summary.txt"
+            done
           fi
-        fi
-
-        if [ ${#wrong_schema_locations[@]} -gt 0 ]; then
-          echo -e "\nFiles with Invalid Schema Locations:" >> "$REPORT_DIR/summary.txt"
-          for file in "${!wrong_schema_locations[@]}"; do
-            echo "- $file" >> "$REPORT_DIR/summary.txt"
+          
+          if [ ${#wrong_schema_locations[@]} -gt 0 ]; then
+            echo -e "\nFiles with Invalid Schema Locations:" >> "$REPORT_DIR/summary.txt"
+            for file in "${!wrong_schema_locations[@]}"; do
+              echo "- $file" >> "$REPORT_DIR/summary.txt"
+            done
           fi
-        fi
-
-        echo -e "\nProcessed Files Summary:" >> "$REPORT_DIR/summary.txt"
-        echo "Total files processed: ${#processed_files[@]}" >> "$REPORT_DIR/summary.txt"
-
+          
+          echo -e "\nProcessed Files Summary:" >> "$REPORT_DIR/summary.txt"
+          echo "Total files processed: ${#processed_files[@]}" >> "$REPORT_DIR/summary.txt"
+          
+          if [ "$validation_failed" = true ]; then
+            echo -e "\nValidation Result: FAILED" >> "$REPORT_DIR/summary.txt"
+          else
+            echo -e "\nValidation Result: PASSED"
+          fi
+        } >> "$REPORT_DIR/summary.txt"
+        
         if [ "$validation_failed" = true ]; then
-          echo -e "\nValidation Result: FAILED" >> "$REPORT_DIR/summary.txt"
           echo "One or more validations failed. Check the summary report for details."
           exit 1
         else
-          echo -e "\nValidation Result: PASSED" >> "$REPORT_DIR/summary.txt"
           echo "All validations completed successfully."
         fi
       shell: bash
