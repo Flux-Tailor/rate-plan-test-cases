@@ -140,13 +140,33 @@ jobs:
             done
             
             # Find valid XML files (excluding old versions)
-            xml_files=$(find "$utility" -type f -name "*.xml" ! -path "*/v0.9*/*")
+            xml_files=$(find "$utility" -type f -name "*.xml" ! -path "*/v0.9.[0-8]*/*")
             
             # Check if any XML files were found
             if [ -z "$xml_files" ]; then
               echo "Warning: No valid XML files found in $utility directory"
               echo "  - No valid XML files found" >> "$REPORT_DIR/summary.txt"
               continue
+            fi
+            if [ -z "$xml_files" ]; then
+              echo "Warning: No valid XML files found in $utility directory"
+              echo "  - No valid XML files found" >> "$REPORT_DIR/summary.txt"
+              # Skip this utility but don't exit the script
+              continue
+            else
+              # We'll still process the found files
+              for xml_file in $xml_files; do 
+                processed_files["$xml_file"]=1
+    
+                for schema_url in "${SCHEMA_URLS[@]}"; do
+                  if ! validate_and_check "$xml_file" "$schema_url"; then
+                    validation_failed=true
+                    echo "  - Failed: $(basename "$xml_file") with $(basename "$schema_url")" >> "$REPORT_DIR/summary.txt"
+                  else
+                    echo "  - Passed: $(basename "$xml_file") with $(basename "$schema_url")" >> "$REPORT_DIR/summary.txt"
+                  fi
+                done
+              done
             fi
             
             # Validate each file against each schema
