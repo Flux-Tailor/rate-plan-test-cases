@@ -1,13 +1,18 @@
-name: Validating All Test Case Inputs
-on:
+name: XML Test Case Validation
   workflow_dispatch:  # Allows for manual triggering
   push:
     paths:
       - '**.xml'     # Triggers on any XML file changes in any directory
       - '**/v[0-9]*/**.xml' 
+      - '.github/workflows/**'  # Temporary for testing
+
     branches:
       - main        # Triggers on push to main and its own branch
       - validatingAllTestCases
+
+permissions: 
+  contents: write
+  pages: write
 
 jobs:
   validate-xml:
