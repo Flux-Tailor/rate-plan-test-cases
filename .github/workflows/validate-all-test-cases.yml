@@ -107,47 +107,72 @@ jobs:
           echo
           echo "Problems found by utility:"
           echo
-        
+
           # Process each utility's results
           for util in AGR CEI CHG LBR NFG NGG PLI; do
             echo "=== $util ==="
-            # Look for problems in temporary validation directories
-            if grep -a "temp_validation_${util}.*${util}" "${REPORT_DIR}/validation_report.txt" > /dev/null 2>&1; then
-              # Count total problems for this utility
-              problems=$(grep -a "problem(s) found" "${REPORT_DIR}/validation_report.txt" | \
-                        grep -a "temp_validation_${util}" | \
-                        awk '{sum += $1} END {print sum}')
+          
+            # Extract section for this utility
+            section_start="=== Results for ${util} ==="
+            if grep -A 100 "$section_start" "${REPORT_DIR}/validation_report.txt" > "temp_section.txt"; then
+              # Extract summary statistics
+              files_total=$(grep "files verified in total" "temp_section.txt" | grep -o "[0-9]\+ files" | cut -d' ' -f1)
+              files_with_problems=$(grep "files reported with validation problems" "temp_section.txt" | grep -o "[0-9]\+ files" | cut -d' ' -f1)
+              total_problems=$(grep "problems found on aggregate" "temp_section.txt" | grep -o "[0-9]\+ problems" | cut -d' ' -f1)
             
-              echo "Total problems found: ${problems:-0}"
-              echo "Files with issues:"
+              echo "Files processed: ${files_total:-0}"
+              echo "Files with problems: ${files_with_problems:-0}"
+              echo "Total problems found: ${total_problems:-0}"
+              echo
+              echo "Problem details:"
             
-              # Extract file paths, removing temporary directory prefix
-              grep -a -B1 "problem(s) found" "${REPORT_DIR}/validation_report.txt" | \
-                grep -a "temp_validation_${util}" | \
+              # Extract and format file problems
+              sed -n '/FILES WITH VALIDATION PROBLEMS/,/=== Results/p' "temp_section.txt" | \
+                grep "FILE:" | \
                 sed -E "s|.*/temp_validation_${util}/${util}/|${util}/|g" || echo "None"
             
+              rm temp_section.txt
             else
-              echo "No validation problems found"
+              echo "No validation results found"
             fi
             echo
           done
-        
+
           echo "======================="
           echo "Overall Statistics"
           echo "======================="
-          total_problems=$(grep -a "problem(s) found" "${REPORT_DIR}/validation_report.txt" | \
-                          awk '{sum += $1} END {print sum}')
-          total_files=$(grep -a "problem(s) found" "${REPORT_DIR}/validation_report.txt" | wc -l)
-          echo "Total problems found: ${total_problems:-0}"
-          echo "Number of files with issues: ${total_files:-0}"
+        
+          # Calculate totals across all utilities
+          total_files_processed=0
+          total_files_with_problems=0
+          total_problems_found=0
+        
+          for util in AGR CEI CHG LBR NFG NGG PLI; do
+            section_start="=== Results for ${util} ==="
+            if grep -A 100 "$section_start" "${REPORT_DIR}/validation_report.txt" > "temp_section.txt"; then
+              files=$(grep "files verified in total" "temp_section.txt" | grep -o "[0-9]\+ files" | cut -d' ' -f1)
+              problems_files=$(grep "files reported with validation problems" "temp_section.txt" | grep -o "[0-9]\+ files" | cut -d' ' -f1)
+              problems=$(grep "problems found on aggregate" "temp_section.txt" | grep -o "[0-9]\+ problems" | cut -d' ' -f1)
+            
+              total_files_processed=$((total_files_processed + ${files:-0}))
+              total_files_with_problems=$((total_files_with_problems + ${problems_files:-0}))
+              total_problems_found=$((total_problems_found + ${problems:-0}))
+            
+              rm temp_section.txt
+            fi
+          done
+        
+          echo "Total files processed: $total_files_processed"
+          echo "Total files with problems: $total_files_with_problems"
+          echo "Total problems found: $total_problems_found"
         
         } > "${REPORT_DIR}/summary.txt" 2>&1 || true
-
-        # Display summary in workflow logs
+      
+        # Display summary in logs
         cat "${REPORT_DIR}/summary.txt"
-        
-        # Check if any problems were found
-        if grep -q "problem(s) found" "${REPORT_DIR}/validation_report.txt"; then
+      
+        # Exit with error if problems were found
+        if [ "$total_problems_found" -gt 0 ]; then
           echo "Validation failures detected. Check the report for details."
           exit 1
         fi
