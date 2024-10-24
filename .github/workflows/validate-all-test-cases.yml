@@ -1,13 +1,13 @@
 name: Validate All Test Cases
 on:
-  workflow_dispatch:
+  workflow_dispatch: # Allows for manual triggering
   push:
     paths:
-      - '**.xml'
+      - '**.xml' # Triggers on any XML file changes in any directory
       - '**/v[0-9]*/**.xml' 
-      - '.github/workflows/**'
+      - '.github/workflows/**' # Temporary as we test
     branches:
-      - main
+      - main # Triggers on push to main and its own branch
       - validatingAllTestCases
 
 permissions: 
@@ -52,11 +52,12 @@ jobs:
       shell: bash
 
     - name: Run XML Validation
-      id: validation
-      continue-on-error: true
+      id: validation # Added ID for reference in other steps
+      continue-on-error: true # Allow workflow to continue even if this fails
       run: |
         echo "Starting XML Validation process..."
-        
+
+        # Set up paths
         WORKSPACE="${GITHUB_WORKSPACE}"
         OXYGEN_SCRIPTS="${WORKSPACE}/scripting/oxygen/scripts"
         REPORT_DIR="validation-reports" 
@@ -65,7 +66,7 @@ jobs:
         # Initialize main report file
         echo "XML Validation Report - $(date)" > "${REPORT_DIR}/validation_report.txt"
         
-        # Process each utility directory separately
+        # Process each utility directory separately (due to IOB errors)
         for util in AGR CEI CHG LBR NFG NGG PLI; do
           if [ -d "$util" ]; then
             echo "Processing $util directory..."
@@ -83,9 +84,9 @@ jobs:
               -ed ".svn,.git" \
               -rf "${REPORT_DIR}/temp_report_${util}.txt" \
               -rft "txt" \
-              -v || true
+              -v || true # Continue even if validation finds errors
             
-            # Append results to main report if temp report exists
+            # Combine results to main report if temp report exists
             if [ -f "${REPORT_DIR}/temp_report_${util}.txt" ]; then
               echo "=== Results for $util ===" >> "${REPORT_DIR}/validation_report.txt"
               cat "${REPORT_DIR}/temp_report_${util}.txt" >> "${REPORT_DIR}/validation_report.txt"
@@ -113,7 +114,7 @@ jobs:
           done
         } > "${REPORT_DIR}/summary.txt"
 
-        # Display summary
+        # Display summary in workflow logs
         cat "${REPORT_DIR}/summary.txt"
         
         # Check if any problems were found
@@ -124,21 +125,22 @@ jobs:
       shell: bash
       
     - name: Upload validation reports
-      if: always()
+      if: always() # This will ensures that it runs regardless of previous step status since it keeps exiting
       uses: actions/upload-artifact@v3
       with:
         name: validation-reports
-        path: validation-reports
+        path: validation-reports # Upload all files in this directory
         
     - name: Deploy validation reports to branch
-      if: always()
+      if: always() # Run even if validation fails
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         
         TEMP_DIR="temp_reports"
         mkdir -p "$TEMP_DIR"
-        
+
+        # Copy reports (use || true to prevent failures if files don't exist)
         cp validation-reports/validation_report.txt "$TEMP_DIR/" || true
         cp validation-reports/summary.txt "$TEMP_DIR/" || true
         
@@ -150,6 +152,7 @@ jobs:
           git rm -rf .
         fi
         
+        # Update and push the reports
         cp -r "$TEMP_DIR"/* . || true
         git add validation_report.txt summary.txt || true
         git commit -m "Update validation reports [skip ci]" || echo "No changes to commit"
