@@ -1,14 +1,13 @@
 name: Validate All Test Cases
 on:
-  workflow_dispatch:  # Allows for manual triggering
+  workflow_dispatch:
   push:
     paths:
-      - '**.xml'     # Triggers on any XML file changes in any directory
+      - '**.xml'
       - '**/v[0-9]*/**.xml' 
-      - '.github/workflows/**'  # Temporary as we test
-
+      - '.github/workflows/**'
     branches:
-      - main     # Triggers on push to main and its own branch
+      - main
       - validatingAllTestCases
 
 permissions: 
@@ -23,6 +22,7 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
+
     - name: Debug Information
       run: |
         echo "Event name: ${{ github.event_name }}"
@@ -32,24 +32,34 @@ jobs:
         echo "Current directory structure:"
         ls -la
       shell: bash
+
     - name: Set up Java
       uses: actions/setup-java@v3
       with:
         distribution: 'temurin'
         java-version: '17'
+
     - name: Download and setup Oxygen XML Scripting
       run: |
         echo "Setting up Oxygen XML Scripting..."
-        mkdir scripting
+        mkdir -p scripting/oxygen
         cd scripting
-        wget -q https://www.oxygenxml.com/InstData/Editor/All/oxygen.tar.gz
-        tar -xzf oxygen.tar.gz
+        # Download to temporary file
+        wget -q -O oxygen_temp.tar.gz https://www.oxygenxml.com/InstData/Editor/All/oxygen.tar.gz
+        # Extract only the necessary validation components
+        tar -xzf oxygen_temp.tar.gz --strip-components=1 \
+          oxygen/scripts/validate.sh \
+          oxygen/lib \
+          oxygen/classes
+        # Remove the temporary archive
+        rm oxygen_temp.tar.gz
         echo "${{ secrets.SCRIPTING_LICENSE_KEY }}" > oxygen/scriptinglicensekey.txt
         echo "Oxygen XML Scripting setup complete."
       shell: bash
+
     - name: Run XML Validation
-      id: validation  # Added ID for reference in other steps
-      continue-on-error: true  # Allow workflow to continue even if this fails
+      id: validation
+      continue-on-error: true
       run: |
         echo "Starting XML Validation process..."
         
@@ -108,7 +118,7 @@ jobs:
         } > "../$REPORT_DIR/summary.txt"
 
         # Display summary in console
-        cat "$REPORT_DIR/summary.txt"
+        cat "../$REPORT_DIR/summary.txt"
 
         # Debug: Show where files ended up
         cd ..
@@ -122,28 +132,24 @@ jobs:
       shell: bash
       
     - name: Upload validation reports
-      if: always()  # This will ensures that it runs regardless of previous step status since it keeps exiting
+      if: always()
       uses: actions/upload-artifact@v3
       with:
         name: validation-reports
         path: validation-reports
         
     - name: Deploy validation reports to branch
-      if: always()  # Run even if validation fails
+      if: always()
       run: |
-        # Configure git
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         
-        # Create a new temporary directory
         TEMP_DIR="temp_reports"
         mkdir -p "$TEMP_DIR"
         
-        # Copy only the validation report
         cp "validation-reports/validation_report.txt" "$TEMP_DIR/"
         cp "validation-reports/summary.txt" "$TEMP_DIR/"
         
-        # Force push to the branch
         git fetch
         if git show-ref --quiet refs/remotes/origin/test-case-validation-reports; then
           git checkout test-case-validation-reports
@@ -152,7 +158,6 @@ jobs:
           git rm -rf .
         fi
         
-        # Move reports to root and commit
         cp -r "$TEMP_DIR"/* .
         git add validation_report.txt summary.txt
         git commit -m "Update validation reports [skip ci]"
