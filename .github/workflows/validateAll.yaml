@@ -8,7 +8,8 @@ on:
       - '**.xml'     # Triggers on any XML file changes in any directory
       - '**/v[0-9]*/**.xml' 
     branches:
-      - main        # Only trigger on pushes to main branch
+      - main        # Triggers on push to main and its own branch
+      - validatingAllTestCases
 
 jobs:
   validate-xml:
