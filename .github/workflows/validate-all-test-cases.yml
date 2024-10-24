@@ -51,6 +51,16 @@ jobs:
       run: |
         echo "Starting XML Validation process..."
 
+        # Diagnostic commands to understand time duration
+        echo "Total XML files found:"
+        find . -type f -name "*.xml" ! -path "*/v0.9.[0-8]*/*" | wc -l
+        
+        echo "Files per directory:"
+        for util in AGR NGG CEI CHG LBR NFG PLI; do
+          echo "$util: $(find $util -type f -name "*.xml" ! -path "*/v0.9.[0-8]*/*" 2>/dev/null | wc -l)"
+        done
+        
+        echo "Starting main validation...
         # Set up directories
         OXYGEN_SCRIPTS="${{ github.workspace }}/scripting/oxygen/scripts"
         REPORT_DIR="${{ github.workspace }}/validation-reports"
@@ -132,11 +142,11 @@ jobs:
             
             # Check for files in wrong version directories
             for file in $all_xml_files; do
-              if [[ $file =~ /v0\.9\.[0-8]/ ]]; then
+              if [[ $file =~ /v0\.99\.[0-2]|-dev/ ]] || [[ $file =~ /v0\.[0-8]/ ]]; then
                 echo "Warning: File in old version directory: $file"
                 wrong_versions["$file"]=1
                 continue
-              fi
+                fi
             done
             
             # Find valid XML files (excluding old versions)
