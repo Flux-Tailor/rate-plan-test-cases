@@ -57,6 +57,8 @@ jobs:
         OXYGEN_SCRIPTS="${{ github.workspace }}/scripting/oxygen/scripts"
         REPORT_DIR="${{ github.workspace }}/validation-reports"
         mkdir -p "$REPORT_DIR"
+
+        echo "Created report directory at: $REPORT_DIR"
         
         # Move to a clean directory for validation
         mkdir test_cases_validation
@@ -75,6 +77,11 @@ jobs:
         find . -type f -name "*.xml" -not -path "*/v0.9/*" | sort
         
         echo -e "\n=== Starting Validation ==="
+
+        # Debugging; show where we are
+        pwd
+        echo "Current directory contents:"
+        ls -la
         
         # Run validation on all XML files except v0.9
         "$OXYGEN_SCRIPTS/validate.sh" . \
@@ -85,6 +92,10 @@ jobs:
           -rft "txt" \
           -v
           
+        # After validation, check if file was created
+        echo "Contents of report directory after validation:"
+        ls -la "${REPORT_DIR}"
+        
         validation_status=$?
         
         # Create a summary report in original REPORT_DIR
