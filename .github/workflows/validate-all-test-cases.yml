@@ -134,51 +134,48 @@ jobs:
 
         # Process each utility directory
         for utility in AGR NGG CEI CHG LBR NFG PLI; do
-          if [ -d "$utility" ]; then
-            echo "Processing $utility directory..."
-            echo -e "\n$utility:" >> "$REPORT_DIR/summary.txt"
-            
-            # Find all XML files
-            all_xml_files=$(find "$utility" -type f -name "*.xml")
-            
-            # Check for files in wrong version directories
-            for file in $all_xml_files; do
-              if ! [[ $file =~ /v0\.99\.[3-9]|v1\./ ]]; then
-                  echo "Warning: Skipping file from older version: $file"
-                  wrong_versions["$file"]=1
-                  continue
-              fi
-            done
-            
-            # Find valid XML files (only including 0.99.3-dev and up)
-            xml_files=$(find "$utility" -type f -name "*.xml" | grep -E "v0\.99\.[3-9]|v1\." || true)
-            
-            # Check if any XML files were found
-            if [ -z "$xml_files" ]; then
-                echo "Warning: No valid XML files found in $utility directory"
-                echo "  - No valid XML files found" >> "$REPORT_DIR/summary.txt"
-                # Skip this utility but don't exit the script
-                continue
-            fi
-            
-            # Validate each file against each schema
-            for xml_file in $xml_files; do 
-              processed_files["$xml_file"]=1
-              
-              for schema_url in "${SCHEMA_URLS[@]}"; do
-                if ! validate_and_check "$xml_file" "$schema_url"; then
-                  validation_failed=true
-                  echo "  - Failed: $(basename "$xml_file") with $(basename "$schema_url")" >> "$REPORT_DIR/summary.txt"
-                else
-                  echo "  - Passed: $(basename "$xml_file") with $(basename "$schema_url")" >> "$REPORT_DIR/summary.txt"
-                fi
-              done
-            done
-          else
+          # Skip if directory doesn't exist
+          [ ! -d "$utility" ] && {
             echo "Error: Required utility directory '$utility' not found"
             missing_utilities["$utility"]=1
             validation_failed=true
-          fi
+            continue
+          }
+          echo "Processing $utility directory..."
+          echo -e "\n$utility:" >> "$REPORT_DIR/summary.txt"
+  
+          # Find all XML files
+          all_xml_files=$(find "$utility" -type f -name "*.xml")
+          valid_files=()
+  
+          # Filter files by version
+          for file in $all_xml_files; do
+            [[ $file =~ /v0\.99\.[3-9]|v1\./ ]] && valid_files+=("$file") || {
+              echo "Warning: Skipping file from older version: $file"
+              wrong_versions["$file"]=1
+            }
+          done
+  
+          # Skip if no valid files found
+          [ ${#valid_files[@]} -eq 0 ] && {
+            echo "Warning: No valid XML files found in $utility directory"
+            echo "  - No valid XML files found" >> "$REPORT_DIR/summary.txt"
+            continue
+          }
+  
+          # Validate each valid file
+          for xml_file in "${valid_files[@]}"; do 
+            processed_files["$xml_file"]=1
+    
+            for schema_url in "${SCHEMA_URLS[@]}"; do
+              validate_and_check "$xml_file" "$schema_url" && {
+                echo "  - Passed: $(basename "$xml_file") with $(basename "$schema_url")" >> "$REPORT_DIR/summary.txt"
+              } || {
+                validation_failed=true
+                echo "  - Failed: $(basename "$xml_file") with $(basename "$schema_url")" >> "$REPORT_DIR/summary.txt"
+              }
+            done
+          done
         done
 
         # Generate comprehensive summary report of issues
