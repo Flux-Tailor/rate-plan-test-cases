@@ -1,4 +1,5 @@
-name: XML Test Case Validation
+name: Validate All Test Cases
+on:
   workflow_dispatch:  # Allows for manual triggering
   push:
     paths:
@@ -22,6 +23,15 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
+    - name: Debug Information
+      run: |
+        echo "Event name: ${{ github.event_name }}"
+        echo "Branch name: ${{ github.ref }}"
+        echo "Repository: ${{ github.repository }}"
+        echo "Workflow: ${{ github.workflow }}"
+        echo "Current directory structure:"
+        ls -la
+      shell: bash
     - name: Set up Java
       uses: actions/setup-java@v3
       with:
