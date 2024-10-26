@@ -9,6 +9,13 @@ on:
     branches:
       - main # Triggers on push to main and its own branch
       - validatingAllTestCases
+  pull_request:  # Trigger on a pr to main 
+    branches:
+      - main
+    paths:
+      - '**.xml'
+      - '**/v[0-9]*/**.xml'
+      - '.github/workflows/**'
 
 permissions: 
   contents: write
@@ -22,15 +29,27 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
-      
-    - name: Debug Information
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}  # Checkout PR code
+        fetch-depth: 0
+
+    - name: Debug Repository Information
       run: |
-        echo "Event name: ${{ github.event_name }}"
+        echo "Current repository: ${{ github.repository }}"
+        echo "Working directory: $GITHUB_WORKSPACE"
         echo "Branch name: ${{ github.ref }}"
-        echo "Repository: ${{ github.repository }}"
-        echo "Workflow: ${{ github.workflow }}"
-        echo "Current directory structure:"
-        ls -la
+        echo "Directory contents:"
+        ls -R $GITHUB_WORKSPACE/AGR/NYE/ELECTRIC/T002_SC1-All/XML/v0.99.3-dev/ || echo "Directory not found"
+      shell: bash
+
+    - name: Debug PR Information
+      if: github.event_name == 'pull_request'
+      run: |
+        echo "PR SHA: ${{ github.event.pull_request.head.sha }}"
+        echo "Changed files:"
+        git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }}
+        echo "XML files changed:"
+        git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }} | grep '\.xml$' || echo "No XML files changed"
       shell: bash
 
     - name: Set up Java
@@ -51,55 +70,47 @@ jobs:
         echo "Oxygen XML Scripting setup complete."
       shell: bash
 
-    - name: Run XML Validation
+    - name: Run XML Validation and Generate Reports
       id: validation # Added ID for reference in other steps
       continue-on-error: true # Allow workflow to continue even if this fails
       run: |
         echo "Starting XML Validation process..."
-
         # Set up paths
         WORKSPACE="${GITHUB_WORKSPACE}"
         OXYGEN_SCRIPTS="${WORKSPACE}/scripting/oxygen/scripts"
         REPORT_DIR="validation-reports" 
         mkdir -p "$REPORT_DIR"
         
-        # Initialize main report file
+        # Initialize main report file with timestamp and header
         echo "XML Validation Report - $(date)" > "${REPORT_DIR}/validation_report.txt"
         
-        # Process each utility directory separately (due to IOB errors)
         for util in AGR CEI CHG LBR NFG NGG PLI; do
           if [ -d "$util" ]; then
-            echo "Processing $util directory..."
+            echo "Processing $util..."
             
-            # Create temporary directory for this utility
             TEMP_DIR="temp_validation_${util}"
             mkdir -p "$TEMP_DIR"
             cp -r "$util" "$TEMP_DIR/"
             
-            # Run validation for this utility
-            echo "Validating $util files..."
+            # Run validation and capture full output
             "${OXYGEN_SCRIPTS}/validate.sh" "$TEMP_DIR/$util" \
               -if "*.xml" \
               -ef "**/v0.9/*.xml" \
               -ed ".svn,.git" \
               -rf "${REPORT_DIR}/temp_report_${util}.txt" \
-              -rft "txt" \
-              -v || true # Continue even if validation finds errors
+              -rft "txt" || true
             
-            # Combine results to main report if temp report exists
             if [ -f "${REPORT_DIR}/temp_report_${util}.txt" ]; then
               echo "=== Results for $util ===" >> "${REPORT_DIR}/validation_report.txt"
               cat "${REPORT_DIR}/temp_report_${util}.txt" >> "${REPORT_DIR}/validation_report.txt"
               echo -e "\n\n" >> "${REPORT_DIR}/validation_report.txt"
-              rm "${REPORT_DIR}/temp_report_${util}.txt"
             fi
             
-            # Cleanup temporary directory
             rm -rf "$TEMP_DIR"
           fi
         done
         
-        # Create summary report that shows total problem count for each utility
+        # Create detailed summary report
         {
           echo "Validation Summary Report"
           echo "======================="
@@ -107,30 +118,25 @@ jobs:
           echo
           echo "Problems found by utility:"
           echo
-
-          # Process each utility's results
+          
           for util in AGR CEI CHG LBR NFG NGG PLI; do
             echo "=== $util ==="
-          
-            # Extract section for this utility
             section_start="=== Results for ${util} ==="
             if grep -A 100 "$section_start" "${REPORT_DIR}/validation_report.txt" > "temp_section.txt"; then
-              # Extract summary statistics
               files_total=$(grep "files verified in total" "temp_section.txt" | grep -o "[0-9]\+ files" | cut -d' ' -f1)
               files_with_problems=$(grep "files reported with validation problems" "temp_section.txt" | grep -o "[0-9]\+ files" | cut -d' ' -f1)
               total_problems=$(grep "problems found on aggregate" "temp_section.txt" | grep -o "[0-9]\+ problems" | cut -d' ' -f1)
-            
+              
               echo "Files processed: ${files_total:-0}"
               echo "Files with problems: ${files_with_problems:-0}"
               echo "Total problems found: ${total_problems:-0}"
               echo
               echo "Problem details:"
-            
-              # Extract and format file problems
+              
               sed -n '/FILES WITH VALIDATION PROBLEMS/,/=== Results/p' "temp_section.txt" | \
                 grep "FILE:" | \
                 sed -E "s|.*/temp_validation_${util}/${util}/|${util}/|g" || echo "None"
-            
+              
               rm temp_section.txt
             else
               echo "No validation results found"
@@ -141,59 +147,67 @@ jobs:
           echo "======================="
           echo "Overall Statistics"
           echo "======================="
-        
-          # Calculate totals across all utilities
+          
           total_files_processed=0
           total_files_with_problems=0
           total_problems_found=0
-        
+          
           for util in AGR CEI CHG LBR NFG NGG PLI; do
             section_start="=== Results for ${util} ==="
             if grep -A 100 "$section_start" "${REPORT_DIR}/validation_report.txt" > "temp_section.txt"; then
-              files=$(grep "files verified in total" "temp_section.txt" | grep -o "[0-9]\+ files" | cut -d' ' -f1)
-              problems_files=$(grep "files reported with validation problems" "temp_section.txt" | grep -o "[0-9]\+ files" | cut -d' ' -f1)
-              problems=$(grep "problems found on aggregate" "temp_section.txt" | grep -o "[0-9]\+ problems" | cut -d' ' -f1)
-            
-              total_files_processed=$((total_files_processed + ${files:-0}))
-              total_files_with_problems=$((total_files_with_problems + ${problems_files:-0}))
-              total_problems_found=$((total_problems_found + ${problems:-0}))
-            
+              files=$(grep "files verified in total" "temp_section.txt" | grep -o "[0-9]\+" || echo "0")
+              problems_files=$(grep "files reported with validation problems" "temp_section.txt" | grep -o "[0-9]\+" || echo "0")
+              problems=$(grep "problems found on aggregate" "temp_section.txt" | grep -o "[0-9]\+" || echo "0")
+              
+              total_files_processed=$((total_files_processed + files))
+              total_files_with_problems=$((total_files_with_problems + problems_files))
+              total_problems_found=$((total_problems_found + problems))
+              
               rm temp_section.txt
             fi
           done
-        
+          
           echo "Total files processed: $total_files_processed"
           echo "Total files with problems: $total_files_with_problems"
           echo "Total problems found: $total_problems_found"
-        
+          
         } > "${REPORT_DIR}/summary.txt" 2>&1 || true
-      
-        # Display summary in logs
+                
+        # Output the counts for next steps
+        echo "total_problems=$total_problems_found" >> $GITHUB_OUTPUT
+        echo "total_problem_files=$total_files_with_problems" >> $GITHUB_OUTPUT
+        echo "validation_failed=$([[ $total_problems_found -gt 0 ]] && echo "1" || echo "0")" >> $GITHUB_OUTPUT
+        
+        # Show summary in the workflow log
         cat "${REPORT_DIR}/summary.txt"
-      
-        # Exit with error if problems were found
-        if [ "$total_problems_found" -gt 0 ]; then
-          echo "Validation failures detected. Check the report for details."
-          exit 1
-        fi
-      shell: bash
-      
+
     - name: Upload validation reports
       if: always() # This will ensures that it runs regardless of previous step status since it keeps exiting
       uses: actions/upload-artifact@v3
       with:
         name: validation-reports
         path: validation-reports # Upload all files in this directory
-        
+    
+
+    
+    - name: Check Validation Results
+      if: always()
+      run: |
+        if [ "${{ steps.validation.outputs.validation_failed }}" == "1" ]; then
+          echo "::error::Validation failed with ${{ steps.validation.outputs.total_problems }} problems in ${{ steps.validation.outputs.total_problem_files }} files"
+          exit 1
+        else
+          echo "✅ Validation passed - no problems found"
+        fi
+
     - name: Deploy validation reports to branch
-      if: always() # Run even if validation fails
+      if: always()
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         
         TEMP_DIR="temp_reports"
         mkdir -p "$TEMP_DIR"
-
         # Copy reports (use || true to prevent failures if files don't exist)
         cp validation-reports/validation_report.txt "$TEMP_DIR/" || true
         cp validation-reports/summary.txt "$TEMP_DIR/" || true
@@ -211,4 +225,3 @@ jobs:
         git add validation_report.txt summary.txt || true
         git commit -m "Update validation reports [skip ci]" || echo "No changes to commit"
         git push -f origin test-case-validation-reports
-      shell: bash
