@@ -5,7 +5,6 @@ on:
     paths:
       - '**.xml' # Triggers on any XML file changes in any directory
       - '!**/v0.9/**' # Excludes only 0.9 directory
-      - '!**/v0.9/*.xml' # Excludes 0.9 files  
       - '.github/workflows/**' # Temporary as we test
     branches:
       - main # Triggers on push to main and its own branch
@@ -16,7 +15,6 @@ on:
     paths:
       - '**.xml'
       - '!**/v0.9/**' # Excludes only 0.9 directory
-      - '!**/v0.9/*.xml' # Excludes 0.9 files  
       - '.github/workflows/**'
 
 permissions: 
@@ -24,6 +22,22 @@ permissions:
   pages: write
 
 jobs:
+  debug-trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+    
+      - name: Debug Trigger Info
+        run: |
+          echo "Event name: ${{ github.event_name }}"
+          echo "Actor: ${{ github.actor }}"
+          echo "Ref: ${{ github.ref }}"
+          echo "Base ref: ${{ github.base_ref }}"
+          echo "Changed files:"
+          git diff --name-only ${{ github.event.before }} ${{ github.event.after }} || echo "Could not get changed files"
+          
   validate-xml:
     runs-on: ubuntu-latest
     env:
