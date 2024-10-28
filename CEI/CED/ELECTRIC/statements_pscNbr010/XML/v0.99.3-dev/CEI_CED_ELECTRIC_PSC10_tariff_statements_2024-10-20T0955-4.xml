@@ -18,6 +18,11 @@
                     <serviceClasses>
                         <serviceClass>All</serviceClass>
                     </serviceClasses>
+                    <territories>
+                        <territory>
+                            <territoryId></territoryId>
+                        </territory>
+                    </territories>
                 </include>
                 <exclude>
                     <serviceClasses>

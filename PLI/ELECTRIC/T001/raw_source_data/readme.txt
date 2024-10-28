@@ -1,5 +1,19 @@
 sources:
-ETS DPS
-tariffBook PDF downloaded from on:
-Statement PDF data downloaded from on:
-Supply charge data from https://www3.nyseg.com/cusweb/OPCOSupplyPrice.aspx
+
+sources:
+
+///ETS DPS
+Tariff Book: 
+* downloaded from:
+* on:
+
+Statement:
+* PDF downloaded from:
+* on:
+
+
+///Utility Website
+Supply charge data:
+* downloaded from:
+* on:
+

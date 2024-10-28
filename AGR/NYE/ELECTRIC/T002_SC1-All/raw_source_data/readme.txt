@@ -1,5 +1,6 @@
 sources:
 
+
 IEDR
 rate plan export: IEDR_RatePlan_NYE_SC1_2024-10-16.xlsx
 downloaded from:https://iedr.nyserda.ny.gov/rate-plan/
