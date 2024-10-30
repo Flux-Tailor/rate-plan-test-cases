@@ -1,0 +1,53 @@
+"",Rate Year 1,Rate Year 2,Rate Year 3
+Effective Date,11/01/2023,05/01/2024,05/01/2025
+Customer Charge: (per month),,,
+Secondary,"$1,350.00","$1,525.00","$1,725.00"
+Primary,"$1,700.00","$1,925.00","$2,175.00"
+Subtransmission-Industrial,"$3,250.00","$3,750.00","$4,300.00"
+Subtransmission-Commercial,"$3,100.00","$3,525.00","$4,050.00"
+Transmission,"$4,925.00","$5,600.00","$6,400.00"
+Substation,"$2,975.00","$3,400.00","$3,875.00"
+"Demand Charge:  All kW, per kW of billing demand",,
+"",,
+"",,
+Secondary $16.76,$18.78,$21.08
+Primary $16.57,$18.60,$20.92
+Subtransmission – Industrial $10.88,$12.41,$14.23
+Subtransmission – Commercial $11.42,$13.04,$14.90
+Transmission $10.91,$12.46,$14.23
+Substation $9.59,$10.87,$12.34
+"",Rate Year 1 Make-,Rate Year 2 Make-,Rate Year 3 Make-
+"",Whole Rate,Whole Rate,Whole Rate
+Effective Date,,,
+"",11/01/2023,05/01/2024,05/01/2025
+Customer Charge: (per month),,,
+Secondary,$26.12,$26.12,$26.12
+Primary,$33.69,$33.69,$33.69
+Subtransmission-Industrial,$85.53,$85.53,$85.53
+Subtransmission-Commercial,$79.20,$79.20,$79.20
+Transmission,$114.55,$114.55,$114.55
+Substation,$68.12,$68.12,$68.12
+"Demand Charge:  All kW, per kW of billing demand",,
+"",,
+Secondary $0.36,$0.36,$0.36
+Primary $0.33,$0.33,$0.33
+Subtransmission – Industrial $0.31,$0.31,$0.31
+Subtransmission – Commercial $0.30,$0.30,$0.30
+Transmission $0.24,$0.24,$0.24
+Substation $0.23,$0.23,$0.23
+"",,Effective Date,
+"",11/01/2023,05/01/2024,05/01/2025
+Secondary,$5.42,$6.07,$6.81
+Primary,$5.90,$6.62,$7.45
+Substation,$3.81,$4.32,$4.91
+Sub Transmission Industrial,$3.15,$3.59,$4.11
+Sub Transmission Commercial,$3.30,$3.77,$4.31
+Transmission,$3.64,$4.16,$4.75
+Make-Whole Minimum Delivery Demand,,Effective Date,
+Charge,11/01/2023,05/01/2024,05/01/2025
+Secondary,$0.11,$0.11,$0.11
+Primary,$0.12,$0.12,$0.12
+Substation,$0.10,$0.10,$0.10
+Sub Transmission Industrial,$0.08,$0.08,$0.08
+Sub Transmission Commercial,$0.09,$0.09,$0.09
+Transmission,$0.08,$0.08,$0.08
