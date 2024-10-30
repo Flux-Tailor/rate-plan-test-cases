@@ -1,0 +1,1225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tariffBooks xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/refs/tags/v0.99.5-dev/tariff_books.xsd">
+     <tariffBook>
+        <iedrOrgAbbreviation>NIM</iedrOrgAbbreviation>
+        <iedrUtilityUserFacingName>Niagara Mohawk</iedrUtilityUserFacingName>
+        <dpsCompanyId>3823176</dpsCompanyId>
+        <dpsPscNumber>19</dpsPscNumber>
+        <serviceType>Electric</serviceType>
+        <sourceDocKind>TariffBook</sourceDocKind>
+         <sourceURL>https://github.com/Flux-Tailor/rate-plan-test-cases/blob/main/NGG/NIM/ELECTRIC/</sourceURL><!--temp url prior to doc upload, to be updated once commit is merged-->
+        <datePublished>2024-10-16</datePublished>
+        <dateSourceLastUpdated>2006-05-04T18:13:51.0</dateSourceLastUpdated>
+        <dateTimeDataExtract>2006-05-04T18:13:51.0</dateTimeDataExtract>
+        <effectivePeriod>
+            <startDate>2006-05-04</startDate>
+            <endDate>2006-05-04</endDate>
+            <expectedEndDate>2006-05-04</expectedEndDate>
+        </effectivePeriod>
+        <serviceClasses>
+            <serviceClass>
+                <serviceClassNumber>3</serviceClassNumber>
+                <serviceClassName>Service Classification No. 8 Large General Serice Time Of Use</serviceClassName>
+                <tariffBookLeafRanges>
+                    <tariffBookLeafRange>
+                        <startLeafNumber>194</startLeafNumber>
+                        <endLeafNumber>204.7</endLeafNumber>
+                        <dpsCaseNumber>22-E-0319</dpsCaseNumber>
+                        <receivedDate>2023-10-27</receivedDate>
+                        <initialEffectiveDate>2023-11-01</initialEffectiveDate>
+                        <effectiveDate>2023-11-01</effectiveDate>
+                        <revisionNumber>23</revisionNumber>
+                        <supersedingRevisionNumber>21
+                        </supersedingRevisionNumber>
+                        <status>EFFECTIVE</status>
+                    </tariffBookLeafRange>
+                </tariffBookLeafRanges>
+                <rates>
+                    <rate>
+                        <rateCode>SC03</rateCode>
+                        <rateName>Large General Service
+                        </rateName>
+                        <tariffBookLeafRanges>
+                            <tariffBookLeafRange>
+                                <startLeafNumber>194</startLeafNumber>
+                                <endLeafNumber>194</endLeafNumber>
+                                <dpsCaseNumber>22-E-0319</dpsCaseNumber>
+                                <receivedDate>2023-10-27</receivedDate>
+                                <initialEffectiveDate>2023-11-01</initialEffectiveDate>
+                                <effectiveDate>2023-11-01</effectiveDate>
+                                <revisionNumber>23</revisionNumber>
+                                <supersedingRevisionNumber>21
+                                </supersedingRevisionNumber>
+                                <status>EFFECTIVE</status>
+                            </tariffBookLeafRange>
+                        </tariffBookLeafRanges>
+                        <ratePlanOptions>
+                            <ratePlanOption>
+                                <tariffBookLeafRanges>
+                                    <tariffBookLeafRange>
+                                        <startLeafNumber>194</startLeafNumber>
+                                        <endLeafNumber>196</endLeafNumber>
+                                        <dpsCaseNumber>22-E-0319</dpsCaseNumber>
+                                        <receivedDate>2023-10-27</receivedDate>
+                                        <initialEffectiveDate>2023-11-01</initialEffectiveDate>
+                                        <effectiveDate>2023-11-01</effectiveDate>
+                                        <revisionNumber>23</revisionNumber>
+                                        <supersedingRevisionNumber>21
+                                        </supersedingRevisionNumber>
+                                        <status>EFFECTIVE</status>
+                                    </tariffBookLeafRange>
+                                </tariffBookLeafRanges>
+                                <ratePlan ratePlanCodeUnique="ERS-AGR-RGE-SC08S-LAR-001"><!--draft rate code as none is available in RPB data set-->
+                                    <iedrOrgAbbreviation>RGE</iedrOrgAbbreviation>
+                                    <initialEffectiveDate>2023-11-01</initialEffectiveDate>
+                                    <effectiveDate>2023-11-01</effectiveDate>
+                                    <ratePlanName>SC8 Large General Service Time Of Use Rate Secondary ESCO Supply Service (ESS)</ratePlanName>
+                                    <service>Electric</service>
+                                    <customerClass>Commercial</customerClass>
+                                    <ratePlanDescription>This Retail Access choice includes fixed components for the Company delivery service, a Transition
+                                        Charge as described in Section 12.B., and a Bill Issuance Charge. Customers that elect ESS and receive
+                                        a Consolidated Bill shall not be subject to the Bill Issuance Charge. An Energy Service Services
+                                        Company (“ESCO”) provides Electric Power Supply to the customer. The Company provides the
+                                        delivery service only.</ratePlanDescription>
+                                    <dpsCaseNumber>22-E-0319</dpsCaseNumber>
+                                    <ratePlanHasRetailSupply>true</ratePlanHasRetailSupply>
+                                    <ratePlanHasIcapTag>true</ratePlanHasIcapTag>
+                                    <ratePlanHasReactivePower>true</ratePlanHasReactivePower>
+                                    <ratePlanHasTimeOfUsePricing>true</ratePlanHasTimeOfUsePricing>
+                                    <ratePlanNumberRatePeriods>3</ratePlanNumberRatePeriods>
+                                </ratePlan>
+                                <eligibility>
+                                    <criterion>
+                                        <criterionKind>Equipment</criterionKind>
+                                        <name>TimeOfUseMetering</name>
+                                        <description>Large General Service (Primary and Secondary) with Time-of-Use Metering for any customer with a billing demand equal to or greater than 500 KW during any two of the previous twelve months and for continuing service thereafter.</description>
+                                    </criterion>
+                                    <limit>
+                                        <limitKind>ElectricDemand</limitKind>
+                                        <name>Active Energy Demand</name>
+                                        <limitValue>300</limitValue>
+                                        <limitMeasureSpecification>
+                                            <calculationMethod>avg</calculationMethod>
+                                            <calculationBaseValue>calculationBaseValue0</calculationBaseValue>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                            <measurementInterval>
+                                                <calculationMode>SLIDING</calculationMode>
+                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                <calcIntervalPer>1</calcIntervalPer>
+                                            </measurementInterval>
+                                            <statisticKind>min</statisticKind>
+                                            <inclusionStatus>inclusive</inclusionStatus>
+                                        </limitMeasureSpecification>
+                                        <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
+                                            the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
+                                            consecutive months, the customer thereafter shall be billed under another appropriate service classification.
+                                           </description>
+                                    </limit>
+                                    <limit>
+                                        <limitKind>ElectricDemand</limitKind>
+                                        <name>Active Energy Demand</name>
+                                        <limitValue>200</limitValue>
+                                        <limitMeasureSpecification>
+                                            <calculationMethod>by_metered_quantity</calculationMethod>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                            <measurementInterval>
+                                                <calculationMode>SLIDING</calculationMode>
+                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                <calcIntervalPer>12</calcIntervalPer>
+                                            </measurementInterval>
+                                            <statisticKind>max</statisticKind>
+                                            <inclusionStatus>inclusive</inclusionStatus>
+                                        </limitMeasureSpecification>
+                                        <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
+                                            the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
+                                            consecutive months, the customer thereafter shall be billed under another appropriate service classification.</description>
+                                    </limit>
+                                </eligibility>
+                                <seasons>
+                                    <season>
+                                        <seasonName>Winter</seasonName>
+                                        <month>1</month>
+                                        <month>2</month>
+                                        <month>12</month>
+                                    </season>
+                                    <season>
+                                        <seasonName>Base</seasonName>
+                                        <month>3</month>
+                                        <month>4</month>
+                                        <month>5</month>
+                                        <month>10</month>
+                                        <month>11</month>
+                                    </season>
+                                    <season>
+                                        <seasonName>Summer</seasonName>
+                                        <month>6</month>
+                                        <month>7</month>
+                                        <month>8</month>
+                                        <month>8</month>
+                                    </season>
+                                </seasons>
+                                <timeOfUsePeriods>
+                                    <timeOfUsePeriod>
+                                        <effectivePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                        </effectivePeriod>
+                                        <RatePeriodNumberNonHolidays>1</RatePeriodNumberNonHolidays>
+                                        <RatePeriodNumberHolidays>1</RatePeriodNumberHolidays>
+                                        <seasonName>Base</seasonName>
+                                        <dayType>weekday</dayType>
+                                        <peakType>peak</peakType>
+                                        <appliesOnHolidays>true</appliesOnHolidays>
+                                        <timeStart>07:00:00</timeStart>
+                                        <timeEnd>23:00:00</timeEnd>
+                                        <chargesComponent>
+                                        </chargesComponent>
+                                        <measurementApplicable>energy</measurementApplicable>
+                                    </timeOfUsePeriod>
+                                    <timeOfUsePeriod>
+                                        <effectivePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                        </effectivePeriod>
+                                        <RatePeriodNumberNonHolidays>2</RatePeriodNumberNonHolidays>
+                                        <RatePeriodNumberHolidays>2</RatePeriodNumberHolidays>
+                                        <seasonName>Base</seasonName>
+                                        <dayType>weekday</dayType>
+                                        <peakType>offpeak</peakType>
+                                        <appliesOnHolidays>true</appliesOnHolidays>
+                                        <timeStart>23:00:00</timeStart>
+                                        <timeEnd>07:00:00</timeEnd>
+                                        <chargesComponent>
+                                        </chargesComponent>
+                                        <measurementApplicable>energy</measurementApplicable>
+                                    </timeOfUsePeriod>
+                                    <timeOfUsePeriod>
+                                        <effectivePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                        </effectivePeriod>
+                                        <RatePeriodNumberNonHolidays>2</RatePeriodNumberNonHolidays>
+                                        <RatePeriodNumberHolidays>2</RatePeriodNumberHolidays>
+                                        <seasonName>Base</seasonName>
+                                        <dayType>weekend</dayType>
+                                        <peakType>offpeak</peakType>
+                                        <appliesOnHolidays>true</appliesOnHolidays>
+                                        <timeStart>01:00:00</timeStart>
+                                        <timeEnd>24:00:00</timeEnd>
+                                        <chargesComponent>
+                                        </chargesComponent>
+                                        <measurementApplicable>energy</measurementApplicable>
+                                    </timeOfUsePeriod>
+                                    <timeOfUsePeriod>
+                                        <effectivePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                        </effectivePeriod>
+                                        <RatePeriodNumberNonHolidays>1</RatePeriodNumberNonHolidays>
+                                        <RatePeriodNumberHolidays>1</RatePeriodNumberHolidays>
+                                        <seasonName>Summer</seasonName>
+                                        <dayType>weekday</dayType>
+                                        <peakType>peak</peakType>
+                                        <appliesOnHolidays>true</appliesOnHolidays>
+                                        <timeStart>07:00:00</timeStart>
+                                        <timeEnd>23:00:00</timeEnd>
+                                        <chargesComponent>
+                                        </chargesComponent>
+                                        <measurementApplicable>energy</measurementApplicable>
+                                    </timeOfUsePeriod>
+                                    <timeOfUsePeriod>
+                                        <effectivePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                        </effectivePeriod>
+                                        <RatePeriodNumberNonHolidays>2</RatePeriodNumberNonHolidays>
+                                        <RatePeriodNumberHolidays>2</RatePeriodNumberHolidays>
+                                        <seasonName>Summer</seasonName>
+                                        <dayType>weekday</dayType>
+                                        <peakType>offpeak</peakType>
+                                        <appliesOnHolidays>true</appliesOnHolidays>
+                                        <timeStart>23:00:00</timeStart>
+                                        <timeEnd>07:00:00</timeEnd>
+                                        <chargesComponent>
+                                        </chargesComponent>
+                                        <measurementApplicable>energy</measurementApplicable>
+                                    </timeOfUsePeriod>
+                                    <timeOfUsePeriod>
+                                        <effectivePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                        </effectivePeriod>
+                                        <RatePeriodNumberNonHolidays>2</RatePeriodNumberNonHolidays>
+                                        <RatePeriodNumberHolidays>2</RatePeriodNumberHolidays>
+                                        <seasonName>Summer</seasonName>
+                                        <dayType>weekend</dayType>
+                                        <peakType>offpeak</peakType>
+                                        <appliesOnHolidays>true</appliesOnHolidays>
+                                        <timeStart>01:00:00</timeStart>
+                                        <timeEnd>24:00:00</timeEnd>
+                                        <chargesComponent>
+                                        </chargesComponent>
+                                        <measurementApplicable>energy</measurementApplicable>
+                                    </timeOfUsePeriod>
+                                    <timeOfUsePeriod>
+                                        <effectivePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                        </effectivePeriod>
+                                        <RatePeriodNumberNonHolidays>1</RatePeriodNumberNonHolidays>
+                                        <RatePeriodNumberHolidays>1</RatePeriodNumberHolidays>
+                                        <seasonName>Winter</seasonName>
+                                        <dayType>weekday</dayType>
+                                        <peakType>peak</peakType>
+                                        <appliesOnHolidays>true</appliesOnHolidays>
+                                        <timeStart>07:00:00</timeStart>
+                                        <timeEnd>23:00:00</timeEnd>
+                                        <chargesComponent>
+                                        </chargesComponent>
+                                        <measurementApplicable>energy</measurementApplicable>
+                                    </timeOfUsePeriod>
+                                    <timeOfUsePeriod>
+                                        <effectivePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                        </effectivePeriod>
+                                        <RatePeriodNumberNonHolidays>2</RatePeriodNumberNonHolidays>
+                                        <RatePeriodNumberHolidays>2</RatePeriodNumberHolidays>
+                                        <seasonName>Winter</seasonName>
+                                        <dayType>weekday</dayType>
+                                        <peakType>offpeak</peakType>
+                                        <appliesOnHolidays>true</appliesOnHolidays>
+                                        <timeStart>23:00:00</timeStart>
+                                        <timeEnd>07:00:00</timeEnd>
+                                        <chargesComponent>
+                                        </chargesComponent>
+                                        <measurementApplicable>energy</measurementApplicable>
+                                    </timeOfUsePeriod>
+                                    <timeOfUsePeriod>
+                                        <effectivePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                        </effectivePeriod>
+                                        <RatePeriodNumberNonHolidays>2</RatePeriodNumberNonHolidays>
+                                        <RatePeriodNumberHolidays>2</RatePeriodNumberHolidays>
+                                        <seasonName>Winter</seasonName>
+                                        <dayType>weekend</dayType>
+                                        <peakType>offpeak</peakType>
+                                        <appliesOnHolidays>true</appliesOnHolidays>
+                                        <timeStart>01:00:00</timeStart>
+                                        <timeEnd>24:00:00</timeEnd>
+                                        <chargesComponent>
+                                        </chargesComponent>
+                                        <measurementApplicable>energy</measurementApplicable>
+                                    </timeOfUsePeriod>
+                                </timeOfUsePeriods>
+                                <charges>
+                                    <minimumCharge>
+                                        <servicePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                        </servicePeriod>
+                                        <chargeName>Bill Issuance Charge</chargeName>
+                                        <description>Customer Charge</description>
+                                        <chargeValue>.99</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_billing_cycle</calculationMethod>
+                                            <measurementInterval>
+                                                <calculationMode>PERIOD</calculationMode>
+                                                <calcIntervalKind>PER-CYCLE</calcIntervalKind>
+                                                <calcIntervalPer>1</calcIntervalPer>
+                                            </measurementInterval>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </minimumCharge>
+                                    <minimumCharge>
+                                        <servicePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                            <endDate>2024-04-30</endDate>
+                                        </servicePeriod>
+                                        <chargeName>Customer Charge</chargeName>
+                                        <description>Customer Charge</description>
+                                        <chargeValue>1350</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>fixed</calculationMethod>
+                                            <measurementInterval>
+                                                <calculationMode>PERIOD</calculationMode>
+                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                <calcIntervalPer>1</calcIntervalPer>
+                                            </measurementInterval>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </minimumCharge>
+                                    <minimumCharge>
+                                        <servicePeriod>
+                                            <startDate>2024-05-01</startDate>
+                                            <endDate>2025-04-30</endDate>
+                                        </servicePeriod>
+                                        <chargeName>Customer Charge</chargeName>
+                                        <description>Customer Charge</description>
+                                        <chargeValue>1525</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>fixed</calculationMethod>
+                                            <measurementInterval>
+                                                <calculationMode>PERIOD</calculationMode>
+                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                <calcIntervalPer>1</calcIntervalPer>
+                                            </measurementInterval>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </minimumCharge>
+                                    <minimumCharge>
+                                        <servicePeriod>
+                                            <startDate>2025-05-01</startDate>
+                                            <expectedEndDate>2026-04-30</expectedEndDate>
+                                        </servicePeriod>
+                                        <chargeName>Customer Charge</chargeName>
+                                        <description>Customer Charge</description>
+                                        <chargeValue>1725</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>fixed</calculationMethod>
+                                            <measurementInterval>
+                                                <calculationMode>PERIOD</calculationMode>
+                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                <calcIntervalPer>1</calcIntervalPer>
+                                            </measurementInterval>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </minimumCharge>
+                                    <minimumCharge>
+                                        <servicePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                            <endDate>2024-04-30</endDate>
+                                        </servicePeriod>
+                                        <chargeName>Customer Charge Rate Year 1 Make-Whole Rate</chargeName>
+                                        <description>Customer Charge Rate Year 1 Make-Whole Rate</description>
+                                        <chargeValue>26.12</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>fixed</calculationMethod>
+                                            <measurementInterval>
+                                                <calculationMode>PERIOD</calculationMode>
+                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                <calcIntervalPer>1</calcIntervalPer>
+                                            </measurementInterval>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </minimumCharge>
+                                    <minimumCharge>
+                                        <servicePeriod>
+                                            <startDate>2024-05-01</startDate>
+                                            <endDate>2025-04-30</endDate>
+                                        </servicePeriod>
+                                        <chargeName>Customer Charge Rate Year 2 Make-Whole Rate</chargeName>
+                                        <description>Customer Charge Rate Year 2 Make-Whole Rate</description>
+                                        <chargeValue>26.12</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>fixed</calculationMethod>
+                                            <measurementInterval>
+                                                <calculationMode>PERIOD</calculationMode>
+                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                <calcIntervalPer>1</calcIntervalPer>
+                                            </measurementInterval>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </minimumCharge>
+                                    <minimumCharge>
+                                        <servicePeriod>
+                                            <startDate>2025-05-01</startDate>
+                                            <expectedEndDate>2026-04-30</expectedEndDate>
+                                        </servicePeriod>
+                                        <chargeName>Customer Charge Rate Year 3 Make-Whole Rate</chargeName>
+                                        <description>Customer Charge Rate Year 3 Make-Whole Rate</description>
+                                        <chargeValue>26.12</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>fixed</calculationMethod>
+                                            <measurementInterval>
+                                                <calculationMode>PERIOD</calculationMode>
+                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                <calcIntervalPer>1</calcIntervalPer>
+                                            </measurementInterval>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </minimumCharge>
+                                    <nonmeteredServiceCharge>
+                                        <servicePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                            <endDate>2024-04-30</endDate>
+                                        </servicePeriod>
+                                        <chargeName>Demand Charge</chargeName>
+                                        <description>All kW, per kW of billing demand</description>
+                                        <chargeValue>16.76</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_variable_utility_settings</calculationMethod>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </nonmeteredServiceCharge>
+                                    <nonmeteredServiceCharge>
+                                        <servicePeriod>
+                                            <startDate>2024-05-01</startDate>
+                                            <expectedEndDate>2025-04-30</expectedEndDate>
+                                        </servicePeriod>
+                                        <chargeName>Demand Charge</chargeName>
+                                        <description>All kW, per kW of billing demand</description>
+                                        <chargeValue>18.78</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_variable_utility_settings</calculationMethod>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </nonmeteredServiceCharge>
+                                    <nonmeteredServiceCharge>
+                                        <servicePeriod>
+                                            <startDate>2025-05-01</startDate>
+                                            <expectedEndDate>2026-04-30</expectedEndDate>
+                                        </servicePeriod>
+                                        <chargeName>Demand Charge</chargeName>
+                                        <description>All kW, per kW of billing demand</description>
+                                        <chargeValue>21.08</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_variable_utility_settings</calculationMethod>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </nonmeteredServiceCharge>
+                                    <nonmeteredServiceCharge>
+                                        <servicePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                            <endDate>2024-04-30</endDate>
+                                        </servicePeriod>
+                                        <chargeName>Demand Charge</chargeName>
+                                        <description>All kW, per kW of billing demand</description>
+                                        <chargeValue>0.36</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_variable_utility_settings</calculationMethod>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </nonmeteredServiceCharge>
+                                    <nonmeteredServiceCharge>
+                                        <servicePeriod>
+                                            <startDate>2024-05-01</startDate>
+                                            <expectedEndDate>2025-04-30</expectedEndDate>
+                                        </servicePeriod>
+                                        <chargeName>Demand Charge</chargeName>
+                                        <description>All kW, per kW of billing demand</description>
+                                        <chargeValue>0.36</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_variable_utility_settings</calculationMethod>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </nonmeteredServiceCharge>
+                                    <nonmeteredServiceCharge>
+                                        <servicePeriod>
+                                            <startDate>2025-05-01</startDate>
+                                            <expectedEndDate>2026-04-30</expectedEndDate>
+                                        </servicePeriod>
+                                        <chargeName>Demand Charge</chargeName>
+                                        <description>All kW, per kW of billing demand</description>
+                                        <chargeValue>0.36</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_variable_utility_settings</calculationMethod>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </nonmeteredServiceCharge>
+                                    <nonmeteredServiceCharge>
+                                        <servicePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                        </servicePeriod>
+                                        <chargeName>Reactive Charge</chargeName>
+                                        <description>Reactive kilovolt-ampere hours, per billing reactive kilovolt-ampere hour</description>
+                                        <chargeValue>0.00127</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_variable_utility_settings</calculationMethod>
+                                            <measurementSource>phasorReactivePower</measurementSource>
+                                            <unitOfMeasure>kVArh</unitOfMeasure>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </nonmeteredServiceCharge>
+                                    <nonmeteredServiceCharge>
+                                        <servicePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                            <endDate>2024-04-30</endDate>
+                                        </servicePeriod>
+                                        <chargeName>Minimum Delivery Demand Charge</chargeName>
+                                        <description>per kW of service capacity contracted for</description>
+                                        <chargeValue>5.42</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_variable_utility_settings</calculationMethod>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </nonmeteredServiceCharge>
+                                    <nonmeteredServiceCharge>
+                                        <servicePeriod>
+                                            <startDate>2024-05-01</startDate>
+                                            <expectedEndDate>2025-04-30</expectedEndDate>
+                                        </servicePeriod>
+                                        <chargeName>Minimum Delivery Demand Charge</chargeName>
+                                        <description>per kW of service capacity contracted for</description>
+                                        <chargeValue>6.07</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_variable_utility_settings</calculationMethod>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </nonmeteredServiceCharge>
+                                    <nonmeteredServiceCharge>
+                                        <servicePeriod>
+                                            <startDate>2025-05-01</startDate>
+                                            <expectedEndDate>2026-04-30</expectedEndDate>
+                                        </servicePeriod>
+                                        <chargeName>Minimum Delivery Demand Charge</chargeName>
+                                        <description>per kW of service capacity contracted for</description>
+                                        <chargeValue>6.81</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_variable_utility_settings</calculationMethod>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </nonmeteredServiceCharge>
+                                    <nonmeteredServiceCharge>
+                                        <servicePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                            <endDate>2024-04-30</endDate>
+                                        </servicePeriod>
+                                        <chargeName>Minimum Delivery Demand Charge Make Whole Rate</chargeName>
+                                        <description>per kW of service capacity contracted for</description>
+                                        <chargeValue>0.11</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_variable_utility_settings</calculationMethod>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </nonmeteredServiceCharge>
+                                    <nonmeteredServiceCharge>
+                                        <servicePeriod>
+                                            <startDate>2024-05-01</startDate>
+                                            <expectedEndDate>2025-04-30</expectedEndDate>
+                                        </servicePeriod>
+                                        <chargeName>Minimum Delivery Demand Charge Make Whole Rate</chargeName>
+                                        <description>per kW of service capacity contracted for</description>
+                                        <chargeValue>0.11</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_variable_utility_settings</calculationMethod>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </nonmeteredServiceCharge>
+                                    <nonmeteredServiceCharge>
+                                        <servicePeriod>
+                                            <startDate>2025-05-01</startDate>
+                                            <expectedEndDate>2026-04-30</expectedEndDate>
+                                        </servicePeriod>
+                                        <chargeName>Minimum Delivery Demand Charge Make Whole Rate</chargeName>
+                                        <description>per kW of service capacity contracted for</description>
+                                        <chargeValue>0.11</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_variable_utility_settings</calculationMethod>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </nonmeteredServiceCharge>
+                                </charges>
+                            </ratePlanOption>
+                            <ratePlanOption>
+                                <tariffBookLeafRanges>
+                                    <tariffBookLeafRange>
+                                        <startLeafNumber>194.2</startLeafNumber>
+                                        <endLeafNumber>196</endLeafNumber>
+                                        <dpsCaseNumber>22-E-0319</dpsCaseNumber>
+                                        <receivedDate>2023-10-27</receivedDate>
+                                        <initialEffectiveDate>2023-11-01</initialEffectiveDate>
+                                        <effectiveDate>2023-11-01</effectiveDate>
+                                        <revisionNumber>23</revisionNumber>
+                                        <supersedingRevisionNumber>21
+                                        </supersedingRevisionNumber>
+                                        <status>EFFECTIVE</status>
+                                    </tariffBookLeafRange>
+                                </tariffBookLeafRanges>
+                                <ratePlan ratePlanCodeUnique="EDS-AGR-RGE-SC08S-LAR-001">
+                                    <iedrOrgAbbreviation>RGE</iedrOrgAbbreviation>
+                                    <initialEffectiveDate>2023-11-01</initialEffectiveDate>
+                                    <effectiveDate>2023-11-01</effectiveDate>
+                                    <ratePlanName>SC8 Large General Service Time Of Use Rate Secondary RG&amp;E Supply Service (RSS)</ratePlanName>
+                                    <service>Electric</service>
+                                    <customerClass>Commercial</customerClass>
+                                    <ratePlanDescription>This Non-Retail Access choice includes fixed components for the Company delivery service, a Transition
+                                        Charge as described in Section 12.B., a Bill Issuance Charge, and a commodity charge that fluctuates with the
+                                        market price of electricity and consists of energy, capacity, capacity reserves, losses, unaccounted for energy,
+                                        ancillary services, NYPA Transmission Access Charge (NTAC), transmission project costs allocated to the
+                                        Company under the NYISO tariff s approved by FERC, and Supply Adjustment Charge. Electricity supply is
+                                        provided by the Company.</ratePlanDescription>
+                                    <dpsCaseNumber>22-E-0319</dpsCaseNumber>
+                                    <ratePlanHasRetailSupply>false</ratePlanHasRetailSupply>
+                                    <ratePlanHasIcapTag>true</ratePlanHasIcapTag>
+                                    <ratePlanHasReactivePower>true</ratePlanHasReactivePower>
+                                    <ratePlanHasTimeOfUsePricing>true</ratePlanHasTimeOfUsePricing>
+                                    <ratePlanNumberRatePeriods>3</ratePlanNumberRatePeriods>
+                                </ratePlan>
+                                <eligibility>
+                                    <criterion>
+                                        <criterionKind>Equipment</criterionKind>
+                                        <name>TimeOfUseMetering</name>
+                                        <description>Large General Service (Primary and Secondary) with Time-of-Use Metering for any customer with a billing demand equal to or greater than 500 KW during any two of the previous twelve months and for continuing service thereafter.</description>
+                                    </criterion>
+                                    <criterion>
+                                        <criterionKind>MandatoryEnrollment</criterionKind>
+                                        <name>Mandatory Enrollment</name>
+                                        <description>A customer taking service under Hourly Pricing shall remain subject to this provision until their monthly measured demand has been less than 200 KW for 12 consecutive months, at which time the customer shall be billed under another appropriate service classification.
+                                            </description>
+                                    </criterion>
+                                    <criterion>
+                                        <criterionKind>VoluntaryEnrollment</criterionKind>
+                                        <name>Voluntary Enrollment</name>
+                                        <description>Hourly Pricing is voluntary for any customer who would otherwise qualify for service under Service Classification No. 8 – Large General Service – Time of Use Rate. Once a customer elects Hourly Pricing they shall remain subject to this provision until their monthly measured demand has been 200 KW or less for 12 consecutive months, the customer shall then be billed under another appropriate service classification.</description>
+                                    </criterion>
+                                    <limit>
+                                        <limitKind>ElectricDemand</limitKind>
+                                        <name>Active Energy Demand</name>
+                                        <limitValue>300</limitValue>
+                                        <limitMeasureSpecification>
+                                            <calculationMethod>avg</calculationMethod>
+                                            <calculationBaseValue>calculationBaseValue0</calculationBaseValue>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                            <measurementInterval>
+                                                <calculationMode>SLIDING</calculationMode>
+                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                <calcIntervalPer>1</calcIntervalPer>
+                                            </measurementInterval>
+                                            <statisticKind>min</statisticKind>
+                                            <inclusionStatus>inclusive</inclusionStatus>
+                                        </limitMeasureSpecification>
+                                        <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
+                                            the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
+                                            consecutive months, the customer thereafter shall be billed under another appropriate service classification.
+                                            </description>
+                                    </limit>
+                                    <limit>
+                                        <limitKind>ElectricDemand</limitKind>
+                                        <name>Active Energy Demand</name>
+                                        <limitValue>200</limitValue>
+                                        <limitMeasureSpecification>
+                                            <calculationMethod>by_metered_quantity</calculationMethod>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                            <measurementInterval>
+                                                <calculationMode>SLIDING</calculationMode>
+                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                <calcIntervalPer>12</calcIntervalPer>
+                                            </measurementInterval>
+                                            <statisticKind>max</statisticKind>
+                                            <inclusionStatus>inclusive</inclusionStatus>
+                                        </limitMeasureSpecification>
+                                        <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
+                                            the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
+                                            consecutive months, the customer thereafter shall be billed under another appropriate service classification.</description>
+                                    </limit>
+                                </eligibility>
+                                <seasons>
+                                    <season>
+                                        <seasonName>Winter</seasonName>
+                                        <month>1</month>
+                                        <month>2</month>
+                                        <month>12</month>
+                                    </season>
+                                    <season>
+                                        <seasonName>Base</seasonName>
+                                        <month>3</month>
+                                        <month>4</month>
+                                        <month>5</month>
+                                        <month>10</month>
+                                        <month>11</month>
+                                    </season>
+                                    <season>
+                                        <seasonName>Summer</seasonName>
+                                        <month>6</month>
+                                        <month>7</month>
+                                        <month>8</month>
+                                        <month>8</month>
+                                    </season>
+                                </seasons>
+                                <timeOfUsePeriods>
+                                    <timeOfUsePeriod>
+                                        <effectivePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                        </effectivePeriod>
+                                        <RatePeriodNumberNonHolidays>1</RatePeriodNumberNonHolidays>
+                                        <RatePeriodNumberHolidays>1</RatePeriodNumberHolidays>
+                                        <seasonName>Base</seasonName>
+                                        <dayType>weekday</dayType>
+                                        <peakType>peak</peakType>
+                                        <appliesOnHolidays>true</appliesOnHolidays>
+                                        <timeStart>07:00:00</timeStart>
+                                        <timeEnd>23:00:00</timeEnd>
+                                        <chargesComponent>
+                                        </chargesComponent>
+                                        <measurementApplicable>energy</measurementApplicable>
+                                    </timeOfUsePeriod>
+                                    <timeOfUsePeriod>
+                                        <effectivePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                        </effectivePeriod>
+                                        <RatePeriodNumberNonHolidays>2</RatePeriodNumberNonHolidays>
+                                        <RatePeriodNumberHolidays>2</RatePeriodNumberHolidays>
+                                        <seasonName>Base</seasonName>
+                                        <dayType>weekday</dayType>
+                                        <peakType>offpeak</peakType>
+                                        <appliesOnHolidays>true</appliesOnHolidays>
+                                        <timeStart>23:00:00</timeStart>
+                                        <timeEnd>07:00:00</timeEnd>
+                                        <chargesComponent>
+                                        </chargesComponent>
+                                        <measurementApplicable>energy</measurementApplicable>
+                                    </timeOfUsePeriod>
+                                    <timeOfUsePeriod>
+                                        <effectivePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                        </effectivePeriod>
+                                        <RatePeriodNumberNonHolidays>2</RatePeriodNumberNonHolidays>
+                                        <RatePeriodNumberHolidays>2</RatePeriodNumberHolidays>
+                                        <seasonName>Base</seasonName>
+                                        <dayType>weekend</dayType>
+                                        <peakType>offpeak</peakType>
+                                        <appliesOnHolidays>true</appliesOnHolidays>
+                                        <timeStart>01:00:00</timeStart>
+                                        <timeEnd>24:00:00</timeEnd>
+                                        <chargesComponent>
+                                        </chargesComponent>
+                                        <measurementApplicable>energy</measurementApplicable>
+                                    </timeOfUsePeriod>
+                                    <timeOfUsePeriod>
+                                        <effectivePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                        </effectivePeriod>
+                                        <RatePeriodNumberNonHolidays>1</RatePeriodNumberNonHolidays>
+                                        <RatePeriodNumberHolidays>1</RatePeriodNumberHolidays>
+                                        <seasonName>Summer</seasonName>
+                                        <dayType>weekday</dayType>
+                                        <peakType>peak</peakType>
+                                        <appliesOnHolidays>true</appliesOnHolidays>
+                                        <timeStart>07:00:00</timeStart>
+                                        <timeEnd>23:00:00</timeEnd>
+                                        <chargesComponent>
+                                        </chargesComponent>
+                                        <measurementApplicable>energy</measurementApplicable>
+                                    </timeOfUsePeriod>
+                                    <timeOfUsePeriod>
+                                        <effectivePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                        </effectivePeriod>
+                                        <RatePeriodNumberNonHolidays>2</RatePeriodNumberNonHolidays>
+                                        <RatePeriodNumberHolidays>2</RatePeriodNumberHolidays>
+                                        <seasonName>Summer</seasonName>
+                                        <dayType>weekday</dayType>
+                                        <peakType>offpeak</peakType>
+                                        <appliesOnHolidays>true</appliesOnHolidays>
+                                        <timeStart>23:00:00</timeStart>
+                                        <timeEnd>07:00:00</timeEnd>
+                                        <chargesComponent>
+                                        </chargesComponent>
+                                        <measurementApplicable>energy</measurementApplicable>
+                                    </timeOfUsePeriod>
+                                    <timeOfUsePeriod>
+                                        <effectivePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                        </effectivePeriod>
+                                        <RatePeriodNumberNonHolidays>2</RatePeriodNumberNonHolidays>
+                                        <RatePeriodNumberHolidays>2</RatePeriodNumberHolidays>
+                                        <seasonName>Summer</seasonName>
+                                        <dayType>weekend</dayType>
+                                        <peakType>offpeak</peakType>
+                                        <appliesOnHolidays>true</appliesOnHolidays>
+                                        <timeStart>01:00:00</timeStart>
+                                        <timeEnd>24:00:00</timeEnd>
+                                        <chargesComponent>
+                                        </chargesComponent>
+                                        <measurementApplicable>energy</measurementApplicable>
+                                    </timeOfUsePeriod>
+                                    <timeOfUsePeriod>
+                                        <effectivePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                        </effectivePeriod>
+                                        <RatePeriodNumberNonHolidays>1</RatePeriodNumberNonHolidays>
+                                        <RatePeriodNumberHolidays>1</RatePeriodNumberHolidays>
+                                        <seasonName>Winter</seasonName>
+                                        <dayType>weekday</dayType>
+                                        <peakType>peak</peakType>
+                                        <appliesOnHolidays>true</appliesOnHolidays>
+                                        <timeStart>07:00:00</timeStart>
+                                        <timeEnd>23:00:00</timeEnd>
+                                        <chargesComponent>
+                                        </chargesComponent>
+                                        <measurementApplicable>energy</measurementApplicable>
+                                    </timeOfUsePeriod>
+                                    <timeOfUsePeriod>
+                                        <effectivePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                        </effectivePeriod>
+                                        <RatePeriodNumberNonHolidays>2</RatePeriodNumberNonHolidays>
+                                        <RatePeriodNumberHolidays>2</RatePeriodNumberHolidays>
+                                        <seasonName>Winter</seasonName>
+                                        <dayType>weekday</dayType>
+                                        <peakType>offpeak</peakType>
+                                        <appliesOnHolidays>true</appliesOnHolidays>
+                                        <timeStart>23:00:00</timeStart>
+                                        <timeEnd>07:00:00</timeEnd>
+                                        <chargesComponent>
+                                        </chargesComponent>
+                                        <measurementApplicable>energy</measurementApplicable>
+                                    </timeOfUsePeriod>
+                                    <timeOfUsePeriod>
+                                        <effectivePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                        </effectivePeriod>
+                                        <RatePeriodNumberNonHolidays>2</RatePeriodNumberNonHolidays>
+                                        <RatePeriodNumberHolidays>2</RatePeriodNumberHolidays>
+                                        <seasonName>Winter</seasonName>
+                                        <dayType>weekend</dayType>
+                                        <peakType>offpeak</peakType>
+                                        <appliesOnHolidays>true</appliesOnHolidays>
+                                        <timeStart>01:00:00</timeStart>
+                                        <timeEnd>24:00:00</timeEnd>
+                                        <chargesComponent>
+                                        </chargesComponent>
+                                        <measurementApplicable>energy</measurementApplicable>
+                                    </timeOfUsePeriod>
+                                </timeOfUsePeriods>
+                                <charges>
+                                    <minimumCharge>
+                                        <servicePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                        </servicePeriod>
+                                        <chargeName>Bill Issuance Charge</chargeName>
+                                        <description>Bill Issuance Charge</description>
+                                        <chargeValue>.99</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_billing_cycle</calculationMethod>
+                                            <measurementInterval>
+                                                <calculationMode>PERIOD</calculationMode>
+                                                <calcIntervalKind>PER-CYCLE</calcIntervalKind>
+                                                <calcIntervalPer>1</calcIntervalPer>
+                                            </measurementInterval>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </minimumCharge>
+                                    <minimumCharge>
+                                        <servicePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                            <endDate>2024-04-30</endDate>
+                                        </servicePeriod>
+                                        <chargeName>Customer Charge</chargeName>
+                                        <description>Customer Charge</description>
+                                        <chargeValue>1350</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>fixed</calculationMethod>
+                                            <measurementInterval>
+                                                <calculationMode>PERIOD</calculationMode>
+                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                <calcIntervalPer>1</calcIntervalPer>
+                                            </measurementInterval>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </minimumCharge>
+                                    <minimumCharge>
+                                        <servicePeriod>
+                                            <startDate>2024-05-01</startDate>
+                                            <endDate>2025-04-30</endDate>
+                                        </servicePeriod>
+                                        <chargeName>Customer Charge</chargeName>
+                                        <description>Customer Charge</description>
+                                        <chargeValue>1525</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>fixed</calculationMethod>
+                                            <measurementInterval>
+                                                <calculationMode>PERIOD</calculationMode>
+                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                <calcIntervalPer>1</calcIntervalPer>
+                                            </measurementInterval>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </minimumCharge>
+                                    <minimumCharge>
+                                        <servicePeriod>
+                                            <startDate>2025-05-01</startDate>
+                                            <expectedEndDate>2026-04-30</expectedEndDate>
+                                        </servicePeriod>
+                                        <chargeName>Customer Charge</chargeName>
+                                        <description>Customer Charge</description>
+                                        <chargeValue>1725</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>fixed</calculationMethod>
+                                            <measurementInterval>
+                                                <calculationMode>PERIOD</calculationMode>
+                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                <calcIntervalPer>1</calcIntervalPer>
+                                            </measurementInterval>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </minimumCharge>
+                                    <minimumCharge>
+                                        <servicePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                            <endDate>2024-04-30</endDate>
+                                        </servicePeriod>
+                                        <chargeName>Customer Charge Rate Year 1 Make-Whole Rate</chargeName>
+                                        <description>Customer Charge Rate Year 1 Make-Whole Rate</description>
+                                        <chargeValue>26.12</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>fixed</calculationMethod>
+                                            <measurementInterval>
+                                                <calculationMode>PERIOD</calculationMode>
+                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                <calcIntervalPer>1</calcIntervalPer>
+                                            </measurementInterval>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </minimumCharge>
+                                    <minimumCharge>
+                                        <servicePeriod>
+                                            <startDate>2024-05-01</startDate>
+                                            <endDate>2025-04-30</endDate>
+                                        </servicePeriod>
+                                        <chargeName>Customer Charge Rate Year 2 Make-Whole Rate</chargeName>
+                                        <description>Customer Charge Rate Year 2 Make-Whole Rate</description>
+                                        <chargeValue>26.12</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>fixed</calculationMethod>
+                                            <measurementInterval>
+                                                <calculationMode>PERIOD</calculationMode>
+                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                <calcIntervalPer>1</calcIntervalPer>
+                                            </measurementInterval>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </minimumCharge>
+                                    <minimumCharge>
+                                        <servicePeriod>
+                                            <startDate>2025-05-01</startDate>
+                                            <expectedEndDate>2026-04-30</expectedEndDate>
+                                        </servicePeriod>
+                                        <chargeName>Customer Charge Rate Year 3 Make-Whole Rate</chargeName>
+                                        <description>Customer Charge Rate Year 3 Make-Whole Rate</description>
+                                        <chargeValue>26.12</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>fixed</calculationMethod>
+                                            <measurementInterval>
+                                                <calculationMode>PERIOD</calculationMode>
+                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                <calcIntervalPer>1</calcIntervalPer>
+                                            </measurementInterval>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </minimumCharge>
+                                    <nonmeteredServiceCharge>
+                                        <servicePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                            <endDate>2024-04-30</endDate>
+                                        </servicePeriod>
+                                        <chargeName>Demand Charge</chargeName>
+                                        <description>All kW, per kW of billing demand</description>
+                                        <chargeValue>16.76</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_variable_utility_settings</calculationMethod>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </nonmeteredServiceCharge>
+                                    <nonmeteredServiceCharge>
+                                        <servicePeriod>
+                                            <startDate>2024-05-01</startDate>
+                                            <expectedEndDate>2025-04-30</expectedEndDate>
+                                        </servicePeriod>
+                                        <chargeName>Demand Charge</chargeName>
+                                        <description>All kW, per kW of billing demand</description>
+                                        <chargeValue>18.78</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_variable_utility_settings</calculationMethod>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </nonmeteredServiceCharge>
+                                    <nonmeteredServiceCharge>
+                                        <servicePeriod>
+                                            <startDate>2025-05-01</startDate>
+                                            <expectedEndDate>2026-04-30</expectedEndDate>
+                                        </servicePeriod>
+                                        <chargeName>Demand Charge</chargeName>
+                                        <description>All kW, per kW of billing demand</description>
+                                        <chargeValue>21.08</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_variable_utility_settings</calculationMethod>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </nonmeteredServiceCharge>
+                                    <nonmeteredServiceCharge>
+                                        <servicePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                            <endDate>2024-04-30</endDate>
+                                        </servicePeriod>
+                                        <chargeName>Demand Charge</chargeName>
+                                        <description>All kW, per kW of billing demand</description>
+                                        <chargeValue>0.36</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_variable_utility_settings</calculationMethod>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </nonmeteredServiceCharge>
+                                    <nonmeteredServiceCharge>
+                                        <servicePeriod>
+                                            <startDate>2024-05-01</startDate>
+                                            <expectedEndDate>2025-04-30</expectedEndDate>
+                                        </servicePeriod>
+                                        <chargeName>Demand Charge</chargeName>
+                                        <description>All kW, per kW of billing demand</description>
+                                        <chargeValue>0.36</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_variable_utility_settings</calculationMethod>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </nonmeteredServiceCharge>
+                                    <nonmeteredServiceCharge>
+                                        <servicePeriod>
+                                            <startDate>2025-05-01</startDate>
+                                            <expectedEndDate>2026-04-30</expectedEndDate>
+                                        </servicePeriod>
+                                        <chargeName>Demand Charge</chargeName>
+                                        <description>All kW, per kW of billing demand</description>
+                                        <chargeValue>0.36</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_variable_utility_settings</calculationMethod>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </nonmeteredServiceCharge>
+                                    <nonmeteredServiceCharge>
+                                        <servicePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                        </servicePeriod>
+                                        <chargeName>Reactive Charge</chargeName>
+                                        <description>Reactive kilovolt-ampere hours, per billing reactive kilovolt-ampere hour</description>
+                                        <chargeValue>0.00127</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_variable_utility_settings</calculationMethod>
+                                            <measurementSource>phasorReactivePower</measurementSource>
+                                            <unitOfMeasure>kVArh</unitOfMeasure>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </nonmeteredServiceCharge>
+                                    <nonmeteredServiceCharge>
+                                        <servicePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                            <endDate>2024-04-30</endDate>
+                                        </servicePeriod>
+                                        <chargeName>Minimum Delivery Demand Charge</chargeName>
+                                        <description>per kW of service capacity contracted for</description>
+                                        <chargeValue>5.42</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_variable_utility_settings</calculationMethod>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </nonmeteredServiceCharge>
+                                    <nonmeteredServiceCharge>
+                                        <servicePeriod>
+                                            <startDate>2024-05-01</startDate>
+                                            <expectedEndDate>2025-04-30</expectedEndDate>
+                                        </servicePeriod>
+                                        <chargeName>Minimum Delivery Demand Charge</chargeName>
+                                        <description>per kW of service capacity contracted for</description>
+                                        <chargeValue>6.07</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_variable_utility_settings</calculationMethod>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </nonmeteredServiceCharge>
+                                    <nonmeteredServiceCharge>
+                                        <servicePeriod>
+                                            <startDate>2025-05-01</startDate>
+                                            <expectedEndDate>2026-04-30</expectedEndDate>
+                                        </servicePeriod>
+                                        <chargeName>Minimum Delivery Demand Charge</chargeName>
+                                        <description>per kW of service capacity contracted for</description>
+                                        <chargeValue>6.81</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_variable_utility_settings</calculationMethod>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </nonmeteredServiceCharge>
+                                    <nonmeteredServiceCharge>
+                                        <servicePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                            <endDate>2024-04-30</endDate>
+                                        </servicePeriod>
+                                        <chargeName>Minimum Delivery Demand Charge Make Whole Rate</chargeName>
+                                        <description>per kW of service capacity contracted for</description>
+                                        <chargeValue>0.11</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_variable_utility_settings</calculationMethod>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </nonmeteredServiceCharge>
+                                    <nonmeteredServiceCharge>
+                                        <servicePeriod>
+                                            <startDate>2024-05-01</startDate>
+                                            <expectedEndDate>2025-04-30</expectedEndDate>
+                                        </servicePeriod>
+                                        <chargeName>Minimum Delivery Demand Charge Make Whole Rate</chargeName>
+                                        <description>per kW of service capacity contracted for</description>
+                                        <chargeValue>0.11</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_variable_utility_settings</calculationMethod>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </nonmeteredServiceCharge>
+                                    <nonmeteredServiceCharge>
+                                        <servicePeriod>
+                                            <startDate>2025-05-01</startDate>
+                                            <expectedEndDate>2026-04-30</expectedEndDate>
+                                        </servicePeriod>
+                                        <chargeName>Minimum Delivery Demand Charge Make Whole Rate</chargeName>
+                                        <description>per kW of service capacity contracted for</description>
+                                        <chargeValue>0.11</chargeValue>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_variable_utility_settings</calculationMethod>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                        </measurementDefinition>
+                                        <chargesComponent>delivery</chargesComponent>
+                                    </nonmeteredServiceCharge>
+                                </charges>
+                            </ratePlanOption>
+                        </ratePlanOptions>
+                        </rate>
+                </rates>
+            </serviceClass>
+        </serviceClasses>
+    </tariffBook>
+</tariffBooks>

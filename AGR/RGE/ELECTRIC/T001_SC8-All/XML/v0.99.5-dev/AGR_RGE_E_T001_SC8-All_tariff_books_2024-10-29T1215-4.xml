@@ -6562,7 +6562,7 @@
                                                 <calcIntervalKind>MONTH</calcIntervalKind>
                                                 <calcIntervalPer>12</calcIntervalPer>
                                             </measurementInterval>
-                                            <statisticKind>max</statisticKind>
+                                            <statisticKind>min</statisticKind>
                                             <inclusionStatus>inclusive</inclusionStatus>
                                         </limitMeasureSpecification>
                                         <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
