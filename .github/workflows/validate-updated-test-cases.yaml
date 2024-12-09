@@ -143,7 +143,7 @@ jobs:
       run: |
         if [ "${{ steps.validation.outputs.validation_failed }}" == "1" ]; then
           echo "::error::Validation failed with ${{ steps.validation.outputs.total_problems }} problems in ${{ steps.validation.outputs.total_problem_files }} files"
-          echo "🔎 See the \"Run XML Validation and Generate Reports\" step above for detailed error reoport, or download the same report here: ${{ steps.artifact.outputs.artifact-url }}"
+          echo "🔎 See the \"Run XML Validation and Generate Reports\" step above for detailed error report, or download the same report here: ${{ steps.artifact.outputs.artifact-url }}"
           exit 1
         else
           echo "✅ Validation passed - no problems found"
