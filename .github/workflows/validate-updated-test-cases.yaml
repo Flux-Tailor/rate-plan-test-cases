@@ -1,0 +1,151 @@
+name: Validate Updated Test Cases
+on:
+  workflow_dispatch: # Allows for manual triggering
+  push:
+    paths:
+      - '**.xml' # Triggers on any XML file changes in any directory
+      - '!**/v0.9/**' # Excludes only 0.9 directory
+      - '.github/workflows/**' # Temporary as we test
+    branches:
+      - main # Triggers on push to main and its own branch
+  pull_request:  # Trigger on a pr to main 
+    branches:
+      - main
+    paths:
+      - '**.xml'
+      - '!**/v0.9/**' # Excludes only 0.9 directory
+      - '.github/workflows/**'
+
+permissions: 
+  contents: write
+  pages: write
+
+jobs:
+  validate-xml:
+    runs-on: ubuntu-latest
+    env:
+      SCRIPTING_LICENSE_KEY: ${{ secrets.SCRIPTING_LICENSE_KEY }}
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        ref: ${{ github.event.pull_request.head.sha }}  # Checkout PR code
+        fetch-depth: 0
+    - name: Debug Information
+      run: |
+        echo "Event name: ${{ github.event_name }}"
+        echo "Branch name: ${{ github.ref }}"
+        echo "Repository: ${{ github.repository }}"
+        echo "Workflow: ${{ github.workflow }}"
+        echo "Current directory structure:"
+        ls -la
+      shell: bash
+
+    - name: Debug PR Information
+      if: github.event_name == 'pull_request'
+      run: |
+        echo "PR SHA: ${{ github.event.pull_request.head.sha }}"
+        echo "Changed files:"
+        git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }}
+        echo "XML files changed:"
+        git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }} | grep '\.xml$' || echo "No XML files changed"
+      shell: bash
+
+    - name: Set up Java
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+
+    - name: Download and setup Oxygen XML Scripting
+      run: |
+        echo "Setting up Oxygen XML Scripting..."
+        mkdir scripting
+        cd scripting
+        wget -q https://www.oxygenxml.com/InstData/Editor/All/oxygen.tar.gz
+        tar -xzf oxygen.tar.gz
+        rm oxygen.tar.gz
+        echo "${{ secrets.SCRIPTING_LICENSE_KEY }}" > oxygen/scriptinglicensekey.txt
+        echo "Oxygen XML Scripting setup complete."
+      shell: bash
+
+    - name: Run XML Validation and Generate Reports
+      id: validation # Added ID for reference in other steps
+      continue-on-error: true # Allow workflow to continue even if this fails
+      run: |
+        echo "Starting XML Validation process..."
+        # Set up paths
+        WORKSPACE="${GITHUB_WORKSPACE}"
+        OXYGEN_SCRIPTS="${WORKSPACE}/scripting/oxygen/scripts"
+        REPORT_DIR="validation-reports" 
+        mkdir -p "$REPORT_DIR"
+               
+        # generate list of changed files in this PR (ACMRT includes added, modified, renamed, but not deleted)
+        CHANGED_FILES=`git --no-pager diff --name-only --diff-filter=ACMRT ${{github.event.pull_request.base.sha}} ${{ github.event.pull_request.head.sha }}`
+
+        echo $CHANGED_FILES
+        # Create temporary directory for this PR
+        TEMP_DIR="temp_changed_files_${{ github.event.number }}"
+        mkdir -p "$TEMP_DIR"
+
+        # copy changed files into tmp dir so we can run validation on entire directory at once
+        # for better reporting and performance
+        for file in $CHANGED_FILES; do
+          # only validate changed xml files, skip the rest
+          if [ "${file: -4}" != ".xml" ]; then
+            continue
+          fi
+
+          cp $file "$TEMP_DIR/"
+        done
+
+        # Run validation on all the files in this directory
+        VALIDATION_REPORT_FILE="${REPORT_DIR}/validation_report_PR${{ github.event.number }}.txt" >> $GITHUB_OUTPUT
+
+        echo "Validating $TEMP_DIR ..."
+        "${OXYGEN_SCRIPTS}/validate.sh" "$TEMP_DIR" \
+           -rf  $VALIDATION_REPORT_FILE \
+           -rft "txt" || echo "Validation failed"
+
+        # Cleanup temporary directory
+        rm -rf "$TEMP_DIR"
+        
+        # Extract summary statistics
+        files_total=$(grep "verified in total" $VALIDATION_REPORT_FILE | grep -o "[0-9]\+ file" | cut -d' ' -f1)
+        files_with_problems=$(grep "reported with validation problems" $VALIDATION_REPORT_FILE | grep -o "[0-9]\+ file" | cut -d' ' -f1)
+        total_problems=$(grep "found on aggregate" $VALIDATION_REPORT_FILE | grep -o "[0-9]\+ problem" | cut -d' ' -f1)
+
+        # Display report in logs
+        cat $VALIDATION_REPORT_FILE
+        echo "\n\n"
+
+        if [[ $total_problems -gt 0 ]]; then
+          echo "validation_failed=1" >> $GITHUB_OUTPUT
+          echo "total_problems=$total_problems" >> $GITHUB_OUTPUT
+          echo "total_problem_files=$files_with_problems" >> $GITHUB_OUTPUT
+          echo "Validation failures detected. Check the report for details."
+          exit 1
+        else
+          echo "validation_failed=0" >> $GITHUB_OUTPUT
+          echo "✅ Validation passed"
+        fi
+      
+    - name: Upload validation reports
+      id: artifact
+      if: always() # This will ensures that it runs regardless of previous step status since it keeps exiting
+      uses: actions/upload-artifact@v4
+      with:
+        name: validation-reports
+        path: validation-reports # Upload all files in this directory
+        
+    - name: Check Validation Results
+      if: always()
+      run: |
+        if [ "${{ steps.validation.outputs.validation_failed }}" == "1" ]; then
+          echo "::error::Validation failed with ${{ steps.validation.outputs.total_problems }} problems in ${{ steps.validation.outputs.total_problem_files }} files"
+          echo "🔎 See the \"Run XML Validation and Generate Reports\" step above for detailed error report, or download the same report here: ${{ steps.artifact.outputs.artifact-url }}"
+          exit 1
+        else
+          echo "✅ Validation passed - no problems found"
+        fi
+
