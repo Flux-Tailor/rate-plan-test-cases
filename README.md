@@ -4,4 +4,4 @@ This repository contains sample instances of Rate Plan data conforming to the Ra
 
 The test case XML should be validated against rate-plan-schema releases, e.g. https://raw.githubusercontent.com/Flux-Tailor/rate-plan-schema/refs/tags/v0.9/<schema.xsd>.
 
-This is a work in progress and are not yet finalized.
+This is a work in progress and are not yet finalized. 
