@@ -7,7 +7,7 @@
             <iedrOrgAbbreviation>ORU</iedrOrgAbbreviation>
             <organizationType>DistributedSystemPlatformProvider</organizationType>
         </utilityInfo>
-        <commodity>electricitySecondaryMetered</commodity>
+        <commodity>electricityPrimaryMetered</commodity>
         <dataSource>TariffBook</dataSource>
         <mediaType>application/pdf</mediaType>
         <sourceURL>https://iedr-public-static-files.s3.amazonaws.com/rate-tariffs/orange-and-rockland-utilities/electric/3/orange-and-rockland-utilities_electric_3_effective.pdf</sourceURL>
@@ -67,7 +67,7 @@
                                         <rateCode>301</rateCode>
                                         <ratePlanCodeUnique>E-ORU-SC1</ratePlanCodeUnique>
                                     </ratePlanIdentifiers>
-                                    <commodity>electricitySecondaryMetered</commodity>
+                                    <commodity>electricityPrimaryMetered</commodity>
                                     <utilityInfo>
                                         <iedrOrgAbbreviation>ORU</iedrOrgAbbreviation>
                                         <organizationType>DistributedSystemPlatformProvider</organizationType>
@@ -281,7 +281,7 @@
                                         <rateCode>X3E</rateCode>
                                         <ratePlanCodeUnique>E-ORU-SC1-RA</ratePlanCodeUnique>
                                     </ratePlanIdentifiers>
-                                    <commodity>electricitySecondaryMetered</commodity>
+                                    <commodity>electricityPrimaryMetered</commodity>
                                     <utilityInfo>
                                         <iedrOrgAbbreviation>ORU</iedrOrgAbbreviation>
                                         <organizationType>DistributedSystemPlatformProvider</organizationType>
@@ -481,7 +481,7 @@
                                         <rateCode>301</rateCode>
                                         <ratePlanCodeUnique>E-ORU-SC1-LIC1-H</ratePlanCodeUnique>
                                     </ratePlanIdentifiers>
-                                    <commodity>electricitySecondaryMetered</commodity>
+                                    <commodity>electricityPrimaryMetered</commodity>
                                     <utilityInfo>
                                         <iedrOrgAbbreviation>ORU</iedrOrgAbbreviation>
                                         <organizationType>DistributedSystemPlatformProvider</organizationType>

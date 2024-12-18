@@ -11,7 +11,7 @@
                 <iedrOrgAbbreviation>ORU</iedrOrgAbbreviation>
                 <organizationType>DistributedSystemPlatformProvider</organizationType>
             </utilityInfo>
-            <commodity>electricitySecondaryMetered</commodity>
+            <commodity>electricityPrimaryMetered</commodity>
             <dataSource>Statement</dataSource>
             <mediaType>application/pdf</mediaType>
             <sourceURL>https://ets.dps.ny.gov/ets_web/search/showPDF.cfm?G%3E%29S2%3DJ9JSBW%27%5EZ%3F%28%21%3CCK4%3FXVAHQQ%3AW%2FLJ%5B%5E%3AICSBNKB%5FC%2A69NBFZ%0A</sourceURL>
@@ -29,7 +29,7 @@
             <iedrOrgAbbreviation>ORU</iedrOrgAbbreviation>
             <organizationType>DistributedSystemPlatformProvider</organizationType>
         </utilityInfo>
-        <commodity>electricitySecondaryMetered</commodity>
+        <commodity>electricityPrimaryMetered</commodity>
         <ratePlanModifierKind>HEAP_discounts</ratePlanModifierKind>
         <ratePlanModifierApplicability>
             <include>
@@ -162,7 +162,7 @@
                 <iedrOrgAbbreviation>ORU</iedrOrgAbbreviation>
                 <organizationType>DistributedSystemPlatformProvider</organizationType>
             </utilityInfo>
-            <commodity>electricitySecondaryMetered</commodity>
+            <commodity>electricityPrimaryMetered</commodity>
             <dataSource>Statement</dataSource>
             <mediaType>application/pdf</mediaType>
             <sourceURL>https://ets.dps.ny.gov/ets_web/search/showPDF.cfm?G%3E%29S2%3DJ9JSBW%27%5EZ%3F%28%21%3CCK4%3FXVAHQQ%3AW%2FLJ%5B%5E%3AICSBNKB%5FC%2A69NBFZ%0A</sourceURL>
@@ -180,7 +180,7 @@
             <iedrOrgAbbreviation>ORU</iedrOrgAbbreviation>
             <organizationType>DistributedSystemPlatformProvider</organizationType>
         </utilityInfo>
-        <commodity>electricitySecondaryMetered</commodity>
+        <commodity>electricityPrimaryMetered</commodity>
         <ratePlanModifierKind>HEAP_discounts</ratePlanModifierKind>
         <ratePlanModifierApplicability>
             <include>
@@ -313,7 +313,7 @@
                 <iedrOrgAbbreviation>ORU</iedrOrgAbbreviation>
                 <organizationType>DistributedSystemPlatformProvider</organizationType>
             </utilityInfo>
-            <commodity>electricitySecondaryMetered</commodity>
+            <commodity>electricityPrimaryMetered</commodity>
             <dataSource>Statement</dataSource>
             <mediaType>application/pdf</mediaType>
             <sourceURL>https://ets.dps.ny.gov/ets_web/search/showPDF.cfm?G%3E%29S2%3DJ9JSBW%27%5EZ%3F%28%21%3CCK4%3FXVAHQQ%3AW%2FLJ%5B%5E%3AICSBNKB%5FC%2A69NBFZ%0A</sourceURL>
@@ -331,7 +331,7 @@
             <iedrOrgAbbreviation>ORU</iedrOrgAbbreviation>
             <organizationType>DistributedSystemPlatformProvider</organizationType>
         </utilityInfo>
-        <commodity>electricitySecondaryMetered</commodity>
+        <commodity>electricityPrimaryMetered</commodity>
         <ratePlanModifierKind>HEAP_discounts</ratePlanModifierKind>
         <ratePlanModifierApplicability>
             <include>
@@ -464,7 +464,7 @@
                 <iedrOrgAbbreviation>ORU</iedrOrgAbbreviation>
                 <organizationType>DistributedSystemPlatformProvider</organizationType>
             </utilityInfo>
-            <commodity>electricitySecondaryMetered</commodity>
+            <commodity>electricityPrimaryMetered</commodity>
             <dataSource>Statement</dataSource>
             <mediaType>application/pdf</mediaType>
             <sourceURL>https://ets.dps.ny.gov/ets_web/search/showPDF.cfm?G%3E%29S2%3DJ9JSBW%27%5EZ%3F%28%21%3CCK4%3FXVAHQQ%3AW%2FLJ%5B%5E%3AICSBNKB%5FC%2A69NBFZ%0A</sourceURL>
@@ -482,7 +482,7 @@
             <iedrOrgAbbreviation>ORU</iedrOrgAbbreviation>
             <organizationType>DistributedSystemPlatformProvider</organizationType>
         </utilityInfo>
-        <commodity>electricitySecondaryMetered</commodity>
+        <commodity>electricityPrimaryMetered</commodity>
         <ratePlanModifierKind>HEAP_discounts</ratePlanModifierKind>
         <ratePlanModifierApplicability>
             <include>
