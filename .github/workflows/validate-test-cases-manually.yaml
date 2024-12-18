@@ -1,4 +1,4 @@
-name: Run Validation (manually)
+name: Run XML Validation (manually)
 on:
   workflow_dispatch:
     inputs:
