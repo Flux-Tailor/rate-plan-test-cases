@@ -5,7 +5,7 @@
             <iedrOrgAbbreviation>CED</iedrOrgAbbreviation>
             <organizationType>DistributedSystemPlatformProvider</organizationType>
         </utilityInfo>
-        <commodity>electricitySecondaryMetered</commodity>
+        <commodity>electricityPrimaryMetered</commodity>
         <dataSource>TariffBook</dataSource>
         <mediaType>application/pdf</mediaType>
         <sourceURL>https://iedr-public-static-files.s3.amazonaws.com/rate-tariffs/coned/electric/10/coned_electric_10_effective.pdf</sourceURL>
@@ -67,7 +67,7 @@
                                     <rateCode>SC1-1-RA</rateCode>
                                     <ratePlanCodeUnique>EDS-CED-SC1-1-442</ratePlanCodeUnique>
                                 </ratePlanIdentifiers>
-                                <commodity>electricitySecondaryMetered</commodity>
+                                <commodity>electricityPrimaryMetered</commodity>
                                 <utilityInfo>
                                     <iedrOrgAbbreviation>CED</iedrOrgAbbreviation>
                                     <dpsPscNumber>10</dpsPscNumber>
@@ -272,7 +272,7 @@
                                     <rateCode>SC1-1</rateCode>
                                     <ratePlanCodeUnique>EDS-CED-SC1-1-224</ratePlanCodeUnique>
                                 </ratePlanIdentifiers>
-                                <commodity>electricitySecondaryMetered</commodity>
+                                <commodity>electricityPrimaryMetered</commodity>
                                 <utilityInfo>
                                     <iedrOrgAbbreviation>CED</iedrOrgAbbreviation>
                                     <dpsPscNumber>10</dpsPscNumber>
@@ -513,7 +513,7 @@
                                     <rateCode>SC1-2-RA</rateCode>
                                     <ratePlanCodeUnique>ERS-CED-SC1-2-642</ratePlanCodeUnique>
                                 </ratePlanIdentifiers>
-                                <commodity>electricitySecondaryMetered</commodity>
+                                <commodity>electricityPrimaryMetered</commodity>
                                 <utilityInfo>
                                     <iedrOrgAbbreviation>CED</iedrOrgAbbreviation>
                                     <dpsPscNumber>10</dpsPscNumber>
@@ -808,7 +808,7 @@
                                     <rateCode>SC1-2</rateCode>
                                     <ratePlanCodeUnique>ERS-CED-SC1-2-700</ratePlanCodeUnique>
                                 </ratePlanIdentifiers>
-                                <commodity>electricitySecondaryMetered</commodity>
+                                <commodity>electricityPrimaryMetered</commodity>
                                 <utilityInfo>
                                     <iedrOrgAbbreviation>CED</iedrOrgAbbreviation>
                                     <dpsPscNumber>10</dpsPscNumber>
@@ -1117,7 +1117,7 @@
                                     <rateCode>SC1-2D-RA</rateCode>
                                     <ratePlanCodeUnique>ERS-CED-SC1-2-738</ratePlanCodeUnique>
                                 </ratePlanIdentifiers>
-                                <commodity>electricitySecondaryMetered</commodity>
+                                <commodity>electricityPrimaryMetered</commodity>
                                 <utilityInfo>
                                     <iedrOrgAbbreviation>CED</iedrOrgAbbreviation>
                                     <dpsPscNumber>10</dpsPscNumber>
@@ -1412,7 +1412,7 @@
                                     <rateCode>SC1-2D</rateCode>
                                     <ratePlanCodeUnique>EDS-CED-SC1-2-941</ratePlanCodeUnique>
                                 </ratePlanIdentifiers>
-                                <commodity>electricitySecondaryMetered</commodity>
+                                <commodity>electricityPrimaryMetered</commodity>
                                 <utilityInfo>
                                     <iedrOrgAbbreviation>CED</iedrOrgAbbreviation>
                                     <dpsPscNumber>10</dpsPscNumber>
@@ -1743,7 +1743,7 @@
                                     <rateCode>SC1-3-RA</rateCode>
                                     <ratePlanCodeUnique>ERS-CED-SC1-3-775</ratePlanCodeUnique>
                                 </ratePlanIdentifiers>
-                                <commodity>electricitySecondaryMetered</commodity>
+                                <commodity>electricityPrimaryMetered</commodity>
                                 <utilityInfo>
                                     <iedrOrgAbbreviation>CED</iedrOrgAbbreviation>
                                     <dpsPscNumber>10</dpsPscNumber>
@@ -2038,7 +2038,7 @@
                                     <rateCode>SC1-3</rateCode>
                                     <ratePlanCodeUnique>ERS-CED-SC1-3-466</ratePlanCodeUnique>
                                 </ratePlanIdentifiers>
-                                <commodity>electricitySecondaryMetered</commodity>
+                                <commodity>electricityPrimaryMetered</commodity>
                                 <utilityInfo>
                                     <iedrOrgAbbreviation>CED</iedrOrgAbbreviation>
                                     <dpsPscNumber>10</dpsPscNumber>
@@ -2369,7 +2369,7 @@
                                     <rateCode>SC1-4-RA</rateCode>
                                     <ratePlanCodeUnique>ERS-CED-SC1-4-359</ratePlanCodeUnique>
                                 </ratePlanIdentifiers>
-                                <commodity>electricitySecondaryMetered</commodity>
+                                <commodity>electricityPrimaryMetered</commodity>
                                 <utilityInfo>
                                     <iedrOrgAbbreviation>CED</iedrOrgAbbreviation>
                                     <dpsPscNumber>10</dpsPscNumber>
@@ -2664,7 +2664,7 @@
                                     <rateCode>SC1-4</rateCode>
                                     <ratePlanCodeUnique>ERS-CED-SC1-4-522</ratePlanCodeUnique>
                                 </ratePlanIdentifiers>
-                                <commodity>electricitySecondaryMetered</commodity>
+                                <commodity>electricityPrimaryMetered</commodity>
                                 <utilityInfo>
                                     <iedrOrgAbbreviation>CED</iedrOrgAbbreviation>
                                     <dpsPscNumber>10</dpsPscNumber>
