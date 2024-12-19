@@ -421,20 +421,6 @@
                                             <unitOfMeasure>kWh</unitOfMeasure>
                                         </measurementDefinition>
                                     </meteredServiceCharge>
-                                    <meteredServiceCharge>
-                                        <effectivePeriod>
-                                            <startDate>2024-02-05</startDate>
-                                            <endDate>2024-03-06</endDate>
-                                        </effectivePeriod>
-                                        <statementComponent>supply</statementComponent>
-                                        <name>Market supply charge</name>
-                                        <value>0.142429</value>
-                                        <measurementDefinition>
-                                            <calculationMethod>by_metered_quantity</calculationMethod>
-                                            <measurementSource>energy</measurementSource>
-                                            <unitOfMeasure>kWh</unitOfMeasure>
-                                        </measurementDefinition>
-                                    </meteredServiceCharge>
                                 </charges>
                             </ratePlan>
                         </ratePlans>
@@ -1047,20 +1033,6 @@
                                             <unitOfMeasure>kWh</unitOfMeasure>
                                         </measurementDefinition>
                                     </meteredServiceCharge>
-                                    <meteredServiceCharge>
-                                        <effectivePeriod>
-                                            <startDate>2024-02-05</startDate>
-                                            <endDate>2024-03-06</endDate>
-                                        </effectivePeriod>
-                                        <statementComponent>supply</statementComponent>
-                                        <name>Market supply charge</name>
-                                        <value>0.142429</value>
-                                        <measurementDefinition>
-                                            <calculationMethod>by_metered_quantity</calculationMethod>
-                                            <measurementSource>energy</measurementSource>
-                                            <unitOfMeasure>kWh</unitOfMeasure>
-                                        </measurementDefinition>
-                                    </meteredServiceCharge>
                                 </charges>
                             </ratePlan>
                             <ratePlan ratePlanURI="https://iedr.nyserda.ny.gov/rate-plan/90d30878-b022-4c54-87bb-71fe7359aae6">
@@ -1645,20 +1617,6 @@
                                         <statementComponent>delivery</statementComponent>
                                         <name>ToU metered charge</name>
                                         <value>0.0233</value>
-                                        <measurementDefinition>
-                                            <calculationMethod>by_metered_quantity</calculationMethod>
-                                            <measurementSource>energy</measurementSource>
-                                            <unitOfMeasure>kWh</unitOfMeasure>
-                                        </measurementDefinition>
-                                    </meteredServiceCharge>
-                                    <meteredServiceCharge>
-                                        <effectivePeriod>
-                                            <startDate>2024-02-05</startDate>
-                                            <endDate>2024-03-06</endDate>
-                                        </effectivePeriod>
-                                        <statementComponent>supply</statementComponent>
-                                        <name>Market supply charge</name>
-                                        <value>0.142429</value>
                                         <measurementDefinition>
                                             <calculationMethod>by_metered_quantity</calculationMethod>
                                             <measurementSource>energy</measurementSource>
@@ -2277,20 +2235,6 @@
                                             <unitOfMeasure>kWh</unitOfMeasure>
                                         </measurementDefinition>
                                     </meteredServiceCharge>
-                                    <meteredServiceCharge>
-                                        <effectivePeriod>
-                                            <startDate>2024-02-05</startDate>
-                                            <endDate>2024-03-06</endDate>
-                                        </effectivePeriod>
-                                        <statementComponent>supply</statementComponent>
-                                        <name>Market supply charge</name>
-                                        <value>0.142429</value>
-                                        <measurementDefinition>
-                                            <calculationMethod>by_metered_quantity</calculationMethod>
-                                            <measurementSource>energy</measurementSource>
-                                            <unitOfMeasure>kWh</unitOfMeasure>
-                                        </measurementDefinition>
-                                    </meteredServiceCharge>
                                 </charges>
                             </ratePlan>
                             </ratePlans>
@@ -2901,20 +2845,6 @@
                                             <calculationMethod>by_metered_quantity</calculationMethod>
                                             <measurementSource>demand</measurementSource>
                                             <unitOfMeasure>kW</unitOfMeasure>
-                                        </measurementDefinition>
-                                    </meteredServiceCharge>
-                                    <meteredServiceCharge>
-                                        <effectivePeriod>
-                                            <startDate>2024-02-05</startDate>
-                                            <endDate>2024-03-06</endDate>
-                                        </effectivePeriod>
-                                        <statementComponent>supply</statementComponent>
-                                        <name>Market supply charge</name>
-                                        <value>0.142429</value>
-                                        <measurementDefinition>
-                                            <calculationMethod>by_metered_quantity</calculationMethod>
-                                            <measurementSource>energy</measurementSource>
-                                            <unitOfMeasure>kWh</unitOfMeasure>
                                         </measurementDefinition>
                                     </meteredServiceCharge>
                                 </charges>
