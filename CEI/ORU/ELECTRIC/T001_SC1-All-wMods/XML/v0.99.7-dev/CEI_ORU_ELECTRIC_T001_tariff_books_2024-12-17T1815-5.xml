@@ -170,30 +170,6 @@
                                             <maxQuantity>999999999</maxQuantity>
                                         </serviceTierThreshold>
                                     </serviceTierThresholds>
-                                    <timeOfUsePeriods>
-                                        <timeOfUsePeriod>
-                                            <measurementApplicable>energy</measurementApplicable>
-                                            <statementComponent>bundled</statementComponent>
-                                            <peakType>base</peakType>
-                                            <seasonName>Base</seasonName>
-                                            <dayType>all</dayType>
-                                            <periodStart>
-                                                <timeStart>00:00:00</timeStart>
-                                                <inclusionStatus>inclusive</inclusionStatus>
-                                            </periodStart>
-                                            <periodEnd>
-                                                <timeEnd>00:00:00</timeEnd>
-                                                <inclusionStatus>exclusive</inclusionStatus>
-                                            </periodEnd>
-                                            <ratePeriodNumberNonHolidays>1</ratePeriodNumberNonHolidays>
-                                            <ratePeriodNumberHolidays>1</ratePeriodNumberHolidays>
-                                            <totalRatePeriodsPerSeason>1</totalRatePeriodsPerSeason>
-                                            <appliesOnHolidays>true</appliesOnHolidays>
-                                            <effectivePeriod>
-                                                <startDate>2024-12-01</startDate>
-                                            </effectivePeriod>
-                                        </timeOfUsePeriod>
-                                    </timeOfUsePeriods>
                                     <charges>
                                         <minimumCharge>
                                             <effectivePeriod>
@@ -384,30 +360,6 @@
                                             <maxQuantity>999999999</maxQuantity>
                                         </serviceTierThreshold>
                                     </serviceTierThresholds>
-                                    <timeOfUsePeriods>
-                                        <timeOfUsePeriod>
-                                            <measurementApplicable>energy</measurementApplicable>
-                                            <statementComponent>bundled</statementComponent>
-                                            <peakType>base</peakType>
-                                            <seasonName>Base</seasonName>
-                                            <dayType>all</dayType>
-                                            <periodStart>
-                                                <timeStart>00:00:00</timeStart>
-                                                <inclusionStatus>inclusive</inclusionStatus>
-                                            </periodStart>
-                                            <periodEnd>
-                                                <timeEnd>00:00:00</timeEnd>
-                                                <inclusionStatus>exclusive</inclusionStatus>
-                                            </periodEnd>
-                                            <ratePeriodNumberNonHolidays>1</ratePeriodNumberNonHolidays>
-                                            <ratePeriodNumberHolidays>1</ratePeriodNumberHolidays>
-                                            <totalRatePeriodsPerSeason>1</totalRatePeriodsPerSeason>
-                                            <appliesOnHolidays>true</appliesOnHolidays>
-                                            <effectivePeriod>
-                                                <startDate>2024-12-01</startDate>
-                                            </effectivePeriod>
-                                        </timeOfUsePeriod>
-                                    </timeOfUsePeriods>
                                     <charges>
                                         <minimumCharge>
                                             <effectivePeriod>
@@ -584,30 +536,6 @@
                                             <maxQuantity>999999999</maxQuantity>
                                         </serviceTierThreshold>
                                     </serviceTierThresholds>
-                                    <timeOfUsePeriods>
-                                        <timeOfUsePeriod>
-                                            <measurementApplicable>energy</measurementApplicable>
-                                            <statementComponent>bundled</statementComponent>
-                                            <peakType>base</peakType>
-                                            <seasonName>Base</seasonName>
-                                            <dayType>all</dayType>
-                                            <periodStart>
-                                                <timeStart>00:00:00</timeStart>
-                                                <inclusionStatus>inclusive</inclusionStatus>
-                                            </periodStart>
-                                            <periodEnd>
-                                                <timeEnd>00:00:00</timeEnd>
-                                                <inclusionStatus>exclusive</inclusionStatus>
-                                            </periodEnd>
-                                            <ratePeriodNumberNonHolidays>1</ratePeriodNumberNonHolidays>
-                                            <ratePeriodNumberHolidays>1</ratePeriodNumberHolidays>
-                                            <totalRatePeriodsPerSeason>1</totalRatePeriodsPerSeason>
-                                            <appliesOnHolidays>true</appliesOnHolidays>
-                                            <effectivePeriod>
-                                                <startDate>2024-12-01</startDate>
-                                            </effectivePeriod>
-                                        </timeOfUsePeriod>
-                                    </timeOfUsePeriods>
                                     <charges>
                                         <minimumCharge>
                                             <effectivePeriod>
