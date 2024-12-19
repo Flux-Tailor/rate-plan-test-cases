@@ -461,7 +461,7 @@
                                         <effectivePeriod>
                                             <startDate>2024-05-01</startDate>
                                             <endDate>2025-04-30</endDate>
-                                        </effectivePeriod>                                       
+                                        </effectivePeriod>
                                         <statementComponent>delivery</statementComponent>
                                         <name>Energy Charge</name>
                                         <description> The Delivery Charge that appears on the customer’s bill is the sum of the Energy Charge
@@ -527,7 +527,7 @@
                                     <meteredServiceCharge>
                                         <effectivePeriod>
                                             <startDate>2025-05-01</startDate>
-                                            <endDate>2026-04-30</endDate> 
+                                            <endDate>2026-04-30</endDate>
                                         </effectivePeriod>
                                         <statementComponent>delivery</statementComponent>
                                         <name>Make-Whole Energy Charge</name>
@@ -543,6 +543,248 @@
                                     </meteredServiceCharge>
                                 </charges>
                             </ratePlan>
+                            <ratePlan ratePlanURI="https://iedr.nyserda.ny.gov/rate-plan/TODO">
+                                <ratePlanIdentifiers>
+                                    <serviceClassNumber>1</serviceClassNumber>
+                                    <rateCode>SC01</rateCode>
+                                    <ratePlanCodeUnique>ERS-AGR-NYE-SC01-S-RES-001</ratePlanCodeUnique>
+                                </ratePlanIdentifiers>
+                                <commodity>electricityPrimaryMetered</commodity>
+                                <utilityInfo>
+                                    <iedrOrgAbbreviation>NYE</iedrOrgAbbreviation>
+                                    <organizationType>DistributedSystemPlatformProvider</organizationType>
+                                </utilityInfo>
+                                <ratePlanApplicability>
+                                    <modelComponents>
+                                        <hasIcapTag>false</hasIcapTag>
+                                        <hasRetailSupply>false</hasRetailSupply>
+                                        <hasServiceTiers>false</hasServiceTiers>
+                                        <hasTimeOfUsePricing>false</hasTimeOfUsePricing>
+                                        <isRider>false</isRider>
+                                    </modelComponents>
+                                    <profile>
+                                        <customerClasses>
+                                            <customerClass>Residential</customerClass>
+                                            <!-- TODO: description removed since 0.99.5 -->
+                                        </customerClasses>
+                                        <phases>
+                                            <phase>none</phase>
+                                            <!-- TODO: map existing description to phasecode - "Residential Customers: Continuous - Alternating Current, 60 Cycle; 120, 120/208, or 120/240 Volts - Single Phase. (Characteristics depend upon available circuits.) Religious, Veterans' Organizations, and Community Residence Supportive Living Facility Customers: Continuous - Alternating current, 60 cycle; Single or Three Phase. (Characteristics depend upon available circuits and equipment.)" -->
+                                        </phases>
+
+                                    </profile>
+                                </ratePlanApplicability>
+                                <provenanceMetadata>
+                                    <tariffBookLeafRanges>
+                                        <tariffBookLeafRange>
+                                            <startLeafNumber>124</startLeafNumber>
+                                            <startLeafMetadata>
+                                                <receivedDate>2023-10-27</receivedDate>
+                                                <initialEffectiveDate>2023-11-01</initialEffectiveDate>
+                                                <effectiveDate>2023-11-01</effectiveDate>
+                                                <dpsCaseNumber>22-E-0317</dpsCaseNumber>
+                                                <status>EFFECTIVE</status>
+                                                <revisionNumber>27</revisionNumber>
+                                                <supersedingRevisionNumber>25</supersedingRevisionNumber>
+                                            </startLeafMetadata>
+                                            <endLeafNumber>123</endLeafNumber>
+                                            <!-- TODO: Is this correct? Maybe error in previous version -->
+                                        </tariffBookLeafRange>
+                                    </tariffBookLeafRanges>
+                                    <dpsCaseNumber>22-E-0317</dpsCaseNumber>
+                                    <iedrRatePlanBrowserURL>TODO</iedrRatePlanBrowserURL>
+                                    <tariffStatementTypeCode>TODO</tariffStatementTypeCode>
+                                </provenanceMetadata>
+                                <name>Service Classification No. 1 - ESCO Supply Service (ESS)</name>
+                                <validityStatusDates>
+                                    <effectivePeriod>
+                                        <startDate>2023-11-01</startDate>
+                                    </effectivePeriod>
+                                </validityStatusDates>
+                                <description>Residential Straight</description>
+                                <holidays>
+                                    <!-- TODO: Holidays missing from 0.99.5 version -->
+                                    <holidayName>Christmas Day</holidayName>
+                                </holidays>
+
+                                <!-- TODO: I do not see any serviceTierThresholds for this ratePlan in the 0.99.5 version  -->
+                                <serviceTierThresholds> </serviceTierThresholds>
+
+                                <!-- TODO: I do not see any timeOfUsePeriods for this ratePlan in the 0.99.5 version  -->
+                                <timeOfUsePeriods>
+                                    <timeOfUsePeriod> </timeOfUsePeriod>
+                                </timeOfUsePeriods>
+                                <charges>
+                                    <minimumCharge>
+                                        <effectivePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                            <endDate>2024-04-30</endDate>
+                                        </effectivePeriod>
+                                        <statementComponent>delivery</statementComponent>
+                                        <name>Customer Charge</name>
+                                        <value>19.00</value>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_billing_cycle</calculationMethod>
+                                            <measurementInterval>
+                                                <calculationMode>PERIOD</calculationMode>
+                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                <calcIntervalPer>1</calcIntervalPer>
+                                            </measurementInterval>
+                                        </measurementDefinition>
+                                    </minimumCharge>
+                                    <minimumCharge>
+                                        <effectivePeriod>
+                                            <startDate>2024-05-01</startDate>
+                                            <endDate>2025-04-30</endDate>
+                                        </effectivePeriod>
+                                        <statementComponent>delivery</statementComponent>
+                                        <name>Customer Charge</name>
+                                        <value>19.00</value>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_billing_cycle</calculationMethod>
+                                            <measurementInterval>
+                                                <calculationMode>PERIOD</calculationMode>
+                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                <calcIntervalPer>1</calcIntervalPer>
+                                            </measurementInterval>
+                                        </measurementDefinition>
+                                    </minimumCharge>
+                                    <minimumCharge>
+                                        <effectivePeriod>
+                                            <startDate>2025-05-01</startDate>
+                                        </effectivePeriod>
+                                        <statementComponent>delivery</statementComponent>
+                                        <name>Customer Charge</name>
+                                        <value>19.00</value>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_billing_cycle</calculationMethod>
+                                            <measurementInterval>
+                                                <calculationMode>PERIOD</calculationMode>
+                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                <calcIntervalPer>1</calcIntervalPer>
+                                            </measurementInterval>
+                                        </measurementDefinition>
+                                    </minimumCharge>
+                                    <otherFixedCharge>
+                                        <effectivePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                        </effectivePeriod>
+                                        <statementComponent>delivery</statementComponent>
+                                        <name>Bill Issuance Charge</name>
+                                        <value>.89</value>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_billing_cycle</calculationMethod>
+                                            <measurementInterval>
+                                                <calculationMode>TOTAL</calculationMode>
+                                                <calcIntervalKind>PER-CYCLE</calcIntervalKind>
+                                                <calcIntervalPer>1</calcIntervalPer>
+                                            </measurementInterval>
+                                        </measurementDefinition>
+                                    </otherFixedCharge>
+                                    <meteredServiceCharge>
+                                        <effectivePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                            <endDate>2024-04-30</endDate>
+                                        </effectivePeriod>
+                                        <statementComponent>delivery</statementComponent>
+                                        <name>Delivery Charges</name>
+                                        <description> The Delivery Charge that appears on the customer’s bill is the sum of the Energy Charge
+                                            plus the Make-Whole Charge. Effective May 1, 2026, the Make-Whole Rate shall expire and the Delivery Charge that appears on the
+                                            customer’s bill shall not include the Make-Whole Rate.</description>
+                                        <value>0.06139</value>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_metered_quantity</calculationMethod>
+                                            <measurementSource>energy</measurementSource>
+                                            <unitOfMeasure>Wh</unitOfMeasure>
+                                        </measurementDefinition>
+                                    </meteredServiceCharge>
+                                    <meteredServiceCharge>
+                                        <effectivePeriod>
+                                            <startDate>2024-05-01</startDate>
+                                            <endDate>2025-04-30</endDate>
+                                        </effectivePeriod>
+                                        <statementComponent>delivery</statementComponent>
+                                        <name>Delivery Charges</name>
+                                        <description> The Delivery Charge that appears on the customer’s bill is the sum of the Energy Charge
+                                            plus the Make-Whole Charge. Effective May 1, 2026, the Make-Whole Rate shall expire and the Delivery Charge that appears on the
+                                            customer’s bill shall not include the Make-Whole Rate.</description>
+                                        <value>0.07618</value>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_metered_quantity</calculationMethod>
+                                            <measurementSource>energy</measurementSource>
+                                            <unitOfMeasure>Wh</unitOfMeasure>
+                                        </measurementDefinition>
+                                    </meteredServiceCharge>
+                                    <meteredServiceCharge>
+                                        <effectivePeriod>
+                                            <startDate>2025-05-01</startDate>
+                                        </effectivePeriod>
+                                        <statementComponent>delivery</statementComponent>
+                                        <name>Delivery Charges</name>
+                                        <description> The Delivery Charge that appears on the customer’s bill is the sum of the Energy Charge
+                                            plus the Make-Whole Charge. Effective May 1, 2026, the Make-Whole Rate shall expire and the Delivery Charge that appears on the
+                                            customer’s bill shall not include the Make-Whole Rate.</description>
+                                        <value>0.09507</value>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_metered_quantity</calculationMethod>
+                                            <measurementSource>energy</measurementSource>
+                                            <unitOfMeasure>Wh</unitOfMeasure>
+                                        </measurementDefinition>
+                                    </meteredServiceCharge>
+                                    <meteredServiceCharge>
+                                        <effectivePeriod>
+                                            <startDate>2023-11-01</startDate>
+                                            <endDate>2024-04-30</endDate>
+                                        </effectivePeriod>
+                                        <statementComponent>delivery</statementComponent>
+                                        <name>Make-Whole Energy Charge</name>
+                                        <description> The Delivery Charge that appears on the customer’s bill is the sum of the Energy Charge
+                                            plus the Make-Whole Charge. Effective May 1, 2026, the Make-Whole Rate shall expire and the Delivery Charge that appears on the
+                                            customer’s bill shall not include the Make-Whole Rate.</description>
+                                        <value>0.00276</value>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_metered_quantity</calculationMethod>
+                                            <measurementSource>energy</measurementSource>
+                                            <unitOfMeasure>Wh</unitOfMeasure>
+                                        </measurementDefinition>
+                                    </meteredServiceCharge>
+                                    <meteredServiceCharge>
+                                        <effectivePeriod>
+                                            <startDate>2024-05-01</startDate>
+                                            <endDate>2025-04-30</endDate>
+                                        </effectivePeriod>
+                                        <statementComponent>delivery</statementComponent>
+                                        <name>Make-Whole Energy Charge</name>
+                                        <description> The Delivery Charge that appears on the customer’s bill is the sum of the Energy Charge
+                                            plus the Make-Whole Charge. Effective May 1, 2026, the Make-Whole Rate shall expire and the Delivery Charge that appears on the
+                                            customer’s bill shall not include the Make-Whole Rate.</description>
+                                        <value>0.00276</value>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_metered_quantity</calculationMethod>
+                                            <measurementSource>energy</measurementSource>
+                                            <unitOfMeasure>Wh</unitOfMeasure>
+                                        </measurementDefinition>
+                                    </meteredServiceCharge>
+                                    <meteredServiceCharge>
+                                        <effectivePeriod>
+                                            <startDate>2025-05-01</startDate>
+                                            <endDate>2026-04-30</endDate>
+                                        </effectivePeriod>
+                                        <statementComponent>delivery</statementComponent>
+                                        <name>Make-Whole Energy Charge</name>
+                                        <description> The Delivery Charge that appears on the customer’s bill is the sum of the Energy Charge
+                                            plus the Make-Whole Charge. Effective May 1, 2026, the Make-Whole Rate shall expire and the Delivery Charge that appears on the
+                                            customer’s bill shall not include the Make-Whole Rate.</description>
+                                        <value>0.00276</value>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_metered_quantity</calculationMethod>
+                                            <measurementSource>energy</measurementSource>
+                                            <unitOfMeasure>Wh</unitOfMeasure>
+                                        </measurementDefinition>
+                                    </meteredServiceCharge>
+                                </charges>
+                            </ratePlan>
+
                         </ratePlans>
                     </rate>
                 </rates>
