@@ -10,7 +10,6 @@
         <commodity>electricityPrimaryMetered</commodity>
         <dataSource>TariffBook</dataSource>
         <mediaType>application/pdf</mediaType>
-        <!-- TODO: URL pointed to github in v0.99.5.  Confirm this is correct sourceURL --> 
         <sourceURL>https://iedr-public-static-files.s3.amazonaws.com/rate-tariffs/new-york-state-electric-and-gas/electric/120/new-york-state-electric-and-gas_electric_120_effective.pdf</sourceURL>
         <dataCreationMethod>Manual</dataCreationMethod>
         <dataDownloadURL>https://iedr-public-static-files.s3.amazonaws.com/rate-tariffs/new-york-state-electric-and-gas/electric/120/new-york-state-electric-and-gas_electric_120_effective.pdf</dataDownloadURL>
@@ -61,7 +60,7 @@
                             </tariffBookLeafRange>
                         </tariffBookLeafRanges>
                         <ratePlans>
-                            <ratePlan ratePlanURI="https://iedr.nyserda.ny.gov/rate-plan/TODO">
+                            <ratePlan ratePlanURI="https://iedr.nyserda.ny.gov/rate-plan/146fbd5e-ef3f-441e-9168-01c9c3eaccf1">
                                 <ratePlanIdentifiers>
                                     <serviceClassNumber>1</serviceClassNumber>
                                     <rateCode>SC01</rateCode>
@@ -83,13 +82,7 @@
                                     <profile>
                                         <customerClasses>
                                             <customerClass>Residential</customerClass>
-                                            <!-- TODO: description removed since 0.99.5 -->
                                         </customerClasses>
-                                        <phases>
-                                            <phase>none</phase>
-                                            <!-- TODO: map existing description to phasecode - "Residential Customers: Continuous - Alternating Current, 60 Cycle; 120, 120/208, or 120/240 Volts - Single Phase. (Characteristics depend upon available circuits.) Religious, Veterans' Organizations, and Community Residence Supportive Living Facility Customers: Continuous - Alternating current, 60 cycle; Single or Three Phase. (Characteristics depend upon available circuits and equipment.)" -->
-                                        </phases>
-
                                     </profile>
                                 </ratePlanApplicability>
                                 <provenanceMetadata>
@@ -109,7 +102,7 @@
                                         </tariffBookLeafRange>
                                     </tariffBookLeafRanges>
                                     <dpsCaseNumber>22-E-0317</dpsCaseNumber>
-                                    <iedrRatePlanBrowserURL>TODO</iedrRatePlanBrowserURL>
+                                    <iedrRatePlanBrowserURL></iedrRatePlanBrowserURL>
                                     <tariffStatementTypeCode/>
                                 </provenanceMetadata>
                                 <name>Service Classification No. 1</name>
@@ -119,16 +112,7 @@
                                     </effectivePeriod>
                                 </validityStatusDates>
                                 <description>Residential Straight</description>
-                                <holidays>
-                                    <!-- TODO: Holidays missing from 0.99.5 version -->
-                                    <holidayName>Christmas Day</holidayName>
-                                </holidays>
-                                <!-- TODO: No serviceTierThresholds for this ratePlan in the 0.99.5 version  -->
-                                <serviceTierThresholds> </serviceTierThresholds>
-                                <!-- TODO: No timeOfUsePeriods for this ratePlan in the 0.99.5 version  -->
-                                <timeOfUsePeriods>
-                                    <timeOfUsePeriod></timeOfUsePeriod>
-                                </timeOfUsePeriods>
+
                                 <charges>
                                     <minimumCharge>
                                         <effectivePeriod>
@@ -299,7 +283,7 @@
                                     </meteredServiceCharge>
                                 </charges>
                             </ratePlan>
-                            <ratePlan ratePlanURI="https://iedr.nyserda.ny.gov/rate-plan/TODO">
+                            <ratePlan ratePlanURI="https://iedr.nyserda.ny.gov/rate-plan/ca5be7ca-15ad-40c9-b8b2-4a87b6de6136">
                                 <ratePlanIdentifiers>
                                     <serviceClassNumber>1</serviceClassNumber>
                                     <rateCode>SC01</rateCode>
@@ -321,13 +305,7 @@
                                     <profile>
                                         <customerClasses>
                                             <customerClass>Residential</customerClass>
-                                            <!-- TODO: description removed since 0.99.5 -->
                                         </customerClasses>
-                                        <phases>
-                                            <phase>none</phase>
-                                            <!-- TODO: map existing description to phasecode - "Residential Customers: Continuous - Alternating Current, 60 Cycle; 120, 120/208, or 120/240 Volts - Single Phase. (Characteristics depend upon available circuits.) Religious, Veterans' Organizations, and Community Residence Supportive Living Facility Customers: Continuous - Alternating current, 60 cycle; Single or Three Phase. (Characteristics depend upon available circuits and equipment.)" -->
-                                        </phases>
-
                                     </profile>
                                 </ratePlanApplicability>
                                 <provenanceMetadata>
@@ -347,8 +325,8 @@
                                         </tariffBookLeafRange>
                                     </tariffBookLeafRanges>
                                     <dpsCaseNumber>22-E-0317</dpsCaseNumber>
-                                    <iedrRatePlanBrowserURL>TODO</iedrRatePlanBrowserURL>
-                                    <tariffStatementTypeCode>TODO</tariffStatementTypeCode>
+                                    <iedrRatePlanBrowserURL></iedrRatePlanBrowserURL>
+                                    <tariffStatementTypeCode></tariffStatementTypeCode>
                                 </provenanceMetadata>
                                 <name>Service Classification No. 1 NYSEG Supply Service (NSS)</name>
                                 <validityStatusDates>
@@ -357,16 +335,6 @@
                                     </effectivePeriod>
                                 </validityStatusDates>
                                 <description>Residential Straight</description>
-                                <holidays>
-                                    <!-- TODO: Holidays missing from 0.99.5 version -->
-                                    <holidayName>Christmas Day</holidayName>
-                                </holidays>
-                                <!-- TODO: No serviceTierThresholds for this ratePlan in the 0.99.5 version  -->
-                                <serviceTierThresholds> </serviceTierThresholds>
-                                <!-- TODO: No timeOfUsePeriods for this ratePlan in the 0.99.5 version  -->
-                                <timeOfUsePeriods>
-                                    <timeOfUsePeriod> </timeOfUsePeriod>
-                                </timeOfUsePeriods>
                                 <charges>
                                     <minimumCharge>
                                         <effectivePeriod>
@@ -537,7 +505,7 @@
                                     </meteredServiceCharge>
                                 </charges>
                             </ratePlan>
-                            <ratePlan ratePlanURI="https://iedr.nyserda.ny.gov/rate-plan/TODO">
+                            <ratePlan ratePlanURI="https://iedr.nyserda.ny.gov/rate-plan/e9373145-70f3-441a-83ee-478af79d84ea">
                                 <ratePlanIdentifiers>
                                     <serviceClassNumber>1</serviceClassNumber>
                                     <rateCode>SC01</rateCode>
@@ -559,13 +527,7 @@
                                     <profile>
                                         <customerClasses>
                                             <customerClass>Residential</customerClass>
-                                            <!-- TODO: description removed since 0.99.5 -->
                                         </customerClasses>
-                                        <phases>
-                                            <phase>none</phase>
-                                            <!-- TODO: map existing description to phasecode - "Residential Customers: Continuous - Alternating Current, 60 Cycle; 120, 120/208, or 120/240 Volts - Single Phase. (Characteristics depend upon available circuits.) Religious, Veterans' Organizations, and Community Residence Supportive Living Facility Customers: Continuous - Alternating current, 60 cycle; Single or Three Phase. (Characteristics depend upon available circuits and equipment.)" -->
-                                        </phases>
-
                                     </profile>
                                 </ratePlanApplicability>
                                 <provenanceMetadata>
@@ -581,13 +543,12 @@
                                                 <revisionNumber>27</revisionNumber>
                                                 <supersedingRevisionNumber>25</supersedingRevisionNumber>
                                             </startLeafMetadata>
-                                            <endLeafNumber>123</endLeafNumber>
-                                            <!-- TODO: Is endLeafNumber correct? Maybe error in previous version -->
+                                            <endLeafNumber>124</endLeafNumber>
                                         </tariffBookLeafRange>
                                     </tariffBookLeafRanges>
                                     <dpsCaseNumber>22-E-0317</dpsCaseNumber>
-                                    <iedrRatePlanBrowserURL>TODO</iedrRatePlanBrowserURL>
-                                    <tariffStatementTypeCode>TODO</tariffStatementTypeCode>
+                                    <iedrRatePlanBrowserURL></iedrRatePlanBrowserURL>
+                                    <tariffStatementTypeCode></tariffStatementTypeCode>
                                 </provenanceMetadata>
                                 <name>Service Classification No. 1 - ESCO Supply Service (ESS)</name>
                                 <validityStatusDates>
@@ -596,18 +557,6 @@
                                     </effectivePeriod>
                                 </validityStatusDates>
                                 <description>Residential Straight</description>
-                                <holidays>
-                                    <!-- TODO: Holidays missing from 0.99.5 version -->
-                                    <holidayName>Christmas Day</holidayName>
-                                </holidays>
-
-                                <!-- TODO: No serviceTierThresholds for this ratePlan in the 0.99.5 version  -->
-                                <serviceTierThresholds> </serviceTierThresholds>
-
-                                <!-- TODO: No timeOfUsePeriods for this ratePlan in the 0.99.5 version  -->
-                                <timeOfUsePeriods>
-                                    <timeOfUsePeriod> </timeOfUsePeriod>
-                                </timeOfUsePeriods>
                                 <charges>
                                     <minimumCharge>
                                         <effectivePeriod>
@@ -778,7 +727,7 @@
                                     </meteredServiceCharge>
                                 </charges>
                             </ratePlan>
-                            <ratePlan ratePlanURI="https://iedr.nyserda.ny.gov/rate-plan/TODO">
+                            <ratePlan ratePlanURI="https://iedr.nyserda.ny.gov/rate-plan/c44026f6-74d6-448c-a612-4d5cabb4994c">
                                 <ratePlanIdentifiers>
                                     <serviceClassNumber>1</serviceClassNumber>
                                     <rateCode>SC01</rateCode>
@@ -800,12 +749,7 @@
                                     <profile>
                                         <customerClasses>
                                             <customerClass>Residential</customerClass>
-                                            <!-- TODO: description removed since 0.99.5 -->
                                         </customerClasses>
-                                        <phases>
-                                            <phase>none</phase>
-                                            <!-- TODO: map existing description to phasecode - "Residential Customers: Continuous - Alternating Current, 60 Cycle; 120, 120/208, or 120/240 Volts - Single Phase. (Characteristics depend upon available circuits.) Religious, Veterans' Organizations, and Community Residence Supportive Living Facility Customers: Continuous - Alternating current, 60 cycle; Single or Three Phase. (Characteristics depend upon available circuits and equipment.)" -->
-                                        </phases>
                                     </profile>
                                 </ratePlanApplicability>
                                 <provenanceMetadata>
@@ -821,13 +765,12 @@
                                                 <revisionNumber>27</revisionNumber>
                                                 <supersedingRevisionNumber>25</supersedingRevisionNumber>
                                             </startLeafMetadata>
-                                            <endLeafNumber>123</endLeafNumber>
-                                            <!-- TODO: Is endLeafNumber correct? Maybe error in previous version -->
+                                            <endLeafNumber>124</endLeafNumber>
                                         </tariffBookLeafRange>
                                     </tariffBookLeafRanges>
                                     <dpsCaseNumber>22-E-0317</dpsCaseNumber>
-                                    <iedrRatePlanBrowserURL>TODO</iedrRatePlanBrowserURL>
-                                    <tariffStatementTypeCode>TODO</tariffStatementTypeCode>
+                                    <iedrRatePlanBrowserURL></iedrRatePlanBrowserURL>
+                                    <tariffStatementTypeCode></tariffStatementTypeCode>
                                 </provenanceMetadata>
                                 <name>Service Classification No. 1 - Seasonal NYSEG Supply Service (NSS)</name>
                                 <validityStatusDates>
@@ -842,16 +785,6 @@
                                     customer’s bill is the sum of the Energy Charge plus the Make-Whole Charge. Effective 11/01/23:
                                     The total bill for delivery service, however, for the year shall in no case be less than $228.00 plus actual
                                     billed Bill Issuance Charges.</description>
-                                <holidays>
-                                    <!-- TODO: Holidays missing from 0.99.5 version -->
-                                    <holidayName>Christmas Day</holidayName>
-                                </holidays>
-                                <!-- TODO: No serviceTierThresholds for this ratePlan in the 0.99.5 version  -->
-                                <serviceTierThresholds> </serviceTierThresholds>
-                                <!-- TODO: No timeOfUsePeriods for this ratePlan in the 0.99.5 version  -->
-                                <timeOfUsePeriods>
-                                    <timeOfUsePeriod> </timeOfUsePeriod>
-                                </timeOfUsePeriods>
                                 <charges>
                                     <minimumCharge>
                                         <effectivePeriod>
