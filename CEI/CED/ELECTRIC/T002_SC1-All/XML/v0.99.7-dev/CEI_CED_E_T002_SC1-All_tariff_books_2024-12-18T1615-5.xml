@@ -5,7 +5,7 @@
             <iedrOrgAbbreviation>CED</iedrOrgAbbreviation>
             <organizationType>DistributedSystemPlatformProvider</organizationType>
         </utilityInfo>
-        <commodity>electricityPrimaryMetered</commodity>
+        <commodity>electricitySecondaryMetered</commodity>
         <dataSource>TariffBook</dataSource>
         <mediaType>application/pdf</mediaType>
         <sourceURL>https://iedr-public-static-files.s3.amazonaws.com/rate-tariffs/coned/electric/10/coned_electric_10_effective.pdf</sourceURL>
@@ -67,7 +67,7 @@
                                     <rateCode>SC1-1-RA</rateCode>
                                     <ratePlanCodeUnique>EDS-CED-SC1-1-442</ratePlanCodeUnique>
                                 </ratePlanIdentifiers>
-                                <commodity>electricityPrimaryMetered</commodity>
+                                <commodity>electricitySecondaryMetered</commodity>
                                 <utilityInfo>
                                     <iedrOrgAbbreviation>CED</iedrOrgAbbreviation>
                                     <dpsPscNumber>10</dpsPscNumber>
@@ -87,6 +87,35 @@
                                             <customerClass>Residential</customerClass>
                                             <customerClass>Religious</customerClass>
                                         </customerClasses>
+                                        <ratePlanTerritories>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_H</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>H</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_I</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>I</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_J</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>J</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                        </ratePlanTerritories>
                                     </profile>
                                 </ratePlanApplicability>
                                 <provenanceMetadata>
@@ -175,6 +204,30 @@
                                         <maxQuantity>999999999</maxQuantity>
                                     </serviceTierThreshold>
                                 </serviceTierThresholds>
+                                <timeOfUsePeriods>
+                                    <timeOfUsePeriod>
+                                        <measurementApplicable>energy</measurementApplicable>
+                                        <statementComponent>bundled</statementComponent>
+                                        <peakType>base</peakType>
+                                        <seasonName>Base</seasonName>
+                                        <dayType>all</dayType>
+                                        <periodStart>
+                                            <timeStart>00:00:00</timeStart>
+                                            <inclusionStatus>inclusive</inclusionStatus>
+                                        </periodStart>
+                                        <periodEnd>
+                                            <timeEnd>00:00:00</timeEnd>
+                                            <inclusionStatus>exclusive</inclusionStatus>
+                                        </periodEnd>
+                                        <ratePeriodNumberNonHolidays>1</ratePeriodNumberNonHolidays>
+                                        <ratePeriodNumberHolidays>1</ratePeriodNumberHolidays>
+                                        <totalRatePeriodsPerSeason>1</totalRatePeriodsPerSeason>
+                                        <appliesOnHolidays>true</appliesOnHolidays>
+                                        <effectivePeriod>
+                                            <startDate>2024-12-01</startDate>
+                                        </effectivePeriod>
+                                    </timeOfUsePeriod>
+                                </timeOfUsePeriods>
                                 <charges>
                                     <minimumCharge>
                                         <effectivePeriod>
@@ -248,7 +301,7 @@
                                     <rateCode>SC1-1</rateCode>
                                     <ratePlanCodeUnique>EDS-CED-SC1-1-224</ratePlanCodeUnique>
                                 </ratePlanIdentifiers>
-                                <commodity>electricityPrimaryMetered</commodity>
+                                <commodity>electricitySecondaryMetered</commodity>
                                 <utilityInfo>
                                     <iedrOrgAbbreviation>CED</iedrOrgAbbreviation>
                                     <dpsPscNumber>10</dpsPscNumber>
@@ -268,6 +321,35 @@
                                             <customerClass>Residential</customerClass>
                                             <customerClass>Religious</customerClass>
                                         </customerClasses>
+                                        <ratePlanTerritories>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_H</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>H</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_I</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>I</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_J</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>J</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                        </ratePlanTerritories>
                                     </profile>
                                 </ratePlanApplicability>
                                 <provenanceMetadata>
@@ -356,6 +438,30 @@
                                         <maxQuantity>999999999</maxQuantity>
                                     </serviceTierThreshold>
                                 </serviceTierThresholds>
+                                <timeOfUsePeriods>
+                                    <timeOfUsePeriod>
+                                        <measurementApplicable>energy</measurementApplicable>
+                                        <statementComponent>bundled</statementComponent>
+                                        <peakType>base</peakType>
+                                        <seasonName>Base</seasonName>
+                                        <dayType>all</dayType>
+                                        <periodStart>
+                                            <timeStart>00:00:00</timeStart>
+                                            <inclusionStatus>inclusive</inclusionStatus>
+                                        </periodStart>
+                                        <periodEnd>
+                                            <timeEnd>00:00:00</timeEnd>
+                                            <inclusionStatus>exclusive</inclusionStatus>
+                                        </periodEnd>
+                                        <ratePeriodNumberNonHolidays>1</ratePeriodNumberNonHolidays>
+                                        <ratePeriodNumberHolidays>1</ratePeriodNumberHolidays>
+                                        <totalRatePeriodsPerSeason>1</totalRatePeriodsPerSeason>
+                                        <appliesOnHolidays>true</appliesOnHolidays>
+                                        <effectivePeriod>
+                                            <startDate>2024-12-01</startDate>
+                                        </effectivePeriod>
+                                    </timeOfUsePeriod>
+                                </timeOfUsePeriods>
                                 <charges>
                                     <minimumCharge>
                                         <effectivePeriod>
@@ -421,6 +527,20 @@
                                             <unitOfMeasure>kWh</unitOfMeasure>
                                         </measurementDefinition>
                                     </meteredServiceCharge>
+                                    <meteredServiceCharge>
+                                        <effectivePeriod>
+                                            <startDate>2024-02-05</startDate>
+                                            <endDate>2024-03-06</endDate>
+                                        </effectivePeriod>
+                                        <statementComponent>supply</statementComponent>
+                                        <name>Market supply charge</name>
+                                        <value>0.142429</value>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_metered_quantity</calculationMethod>
+                                            <measurementSource>energy</measurementSource>
+                                            <unitOfMeasure>kWh</unitOfMeasure>
+                                        </measurementDefinition>
+                                    </meteredServiceCharge>
                                 </charges>
                             </ratePlan>
                         </ratePlans>
@@ -451,7 +571,7 @@
                                     <rateCode>SC1-2-RA</rateCode>
                                     <ratePlanCodeUnique>ERS-CED-SC1-2-642</ratePlanCodeUnique>
                                 </ratePlanIdentifiers>
-                                <commodity>electricityPrimaryMetered</commodity>
+                                <commodity>electricitySecondaryMetered</commodity>
                                 <utilityInfo>
                                     <iedrOrgAbbreviation>CED</iedrOrgAbbreviation>
                                     <dpsPscNumber>10</dpsPscNumber>
@@ -471,6 +591,35 @@
                                             <customerClass>Residential</customerClass>
                                             <customerClass>Religious</customerClass>
                                         </customerClasses>
+                                        <ratePlanTerritories>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_H</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>H</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_I</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>I</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_J</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>J</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                        </ratePlanTerritories>
                                     </profile>
                                 </ratePlanApplicability>
                                 <provenanceMetadata>
@@ -746,7 +895,7 @@
                                     <rateCode>SC1-2</rateCode>
                                     <ratePlanCodeUnique>ERS-CED-SC1-2-700</ratePlanCodeUnique>
                                 </ratePlanIdentifiers>
-                                <commodity>electricityPrimaryMetered</commodity>
+                                <commodity>electricitySecondaryMetered</commodity>
                                 <utilityInfo>
                                     <iedrOrgAbbreviation>CED</iedrOrgAbbreviation>
                                     <dpsPscNumber>10</dpsPscNumber>
@@ -766,6 +915,35 @@
                                             <customerClass>Residential</customerClass>
                                             <customerClass>Religious</customerClass>
                                         </customerClasses>
+                                        <ratePlanTerritories>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_H</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>H</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_I</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>I</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_J</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>J</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                        </ratePlanTerritories>
                                     </profile>
                                 </ratePlanApplicability>
                                 <provenanceMetadata>
@@ -1033,6 +1211,20 @@
                                             <unitOfMeasure>kWh</unitOfMeasure>
                                         </measurementDefinition>
                                     </meteredServiceCharge>
+                                    <meteredServiceCharge>
+                                        <effectivePeriod>
+                                            <startDate>2024-02-05</startDate>
+                                            <endDate>2024-03-06</endDate>
+                                        </effectivePeriod>
+                                        <statementComponent>supply</statementComponent>
+                                        <name>Market supply charge</name>
+                                        <value>0.142429</value>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_metered_quantity</calculationMethod>
+                                            <measurementSource>energy</measurementSource>
+                                            <unitOfMeasure>kWh</unitOfMeasure>
+                                        </measurementDefinition>
+                                    </meteredServiceCharge>
                                 </charges>
                             </ratePlan>
                             <ratePlan ratePlanURI="https://iedr.nyserda.ny.gov/rate-plan/90d30878-b022-4c54-87bb-71fe7359aae6">
@@ -1041,7 +1233,7 @@
                                     <rateCode>SC1-2D-RA</rateCode>
                                     <ratePlanCodeUnique>ERS-CED-SC1-2-738</ratePlanCodeUnique>
                                 </ratePlanIdentifiers>
-                                <commodity>electricityPrimaryMetered</commodity>
+                                <commodity>electricitySecondaryMetered</commodity>
                                 <utilityInfo>
                                     <iedrOrgAbbreviation>CED</iedrOrgAbbreviation>
                                     <dpsPscNumber>10</dpsPscNumber>
@@ -1061,6 +1253,35 @@
                                             <customerClass>Residential</customerClass>
                                             <customerClass>Religious</customerClass>
                                         </customerClasses>
+                                        <ratePlanTerritories>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_H</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>H</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_I</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>I</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_J</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>J</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                        </ratePlanTerritories>
                                     </profile>
                                 </ratePlanApplicability>
                                 <provenanceMetadata>
@@ -1336,7 +1557,7 @@
                                     <rateCode>SC1-2D</rateCode>
                                     <ratePlanCodeUnique>EDS-CED-SC1-2-941</ratePlanCodeUnique>
                                 </ratePlanIdentifiers>
-                                <commodity>electricityPrimaryMetered</commodity>
+                                <commodity>electricitySecondaryMetered</commodity>
                                 <utilityInfo>
                                     <iedrOrgAbbreviation>CED</iedrOrgAbbreviation>
                                     <dpsPscNumber>10</dpsPscNumber>
@@ -1356,6 +1577,35 @@
                                             <customerClass>Residential</customerClass>
                                             <customerClass>Religious</customerClass>
                                         </customerClasses>
+                                        <ratePlanTerritories>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_H</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>H</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_I</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>I</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_J</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>J</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                        </ratePlanTerritories>
                                     </profile>
                                 </ratePlanApplicability>
                                 <provenanceMetadata>
@@ -1623,6 +1873,20 @@
                                             <unitOfMeasure>kWh</unitOfMeasure>
                                         </measurementDefinition>
                                     </meteredServiceCharge>
+                                    <meteredServiceCharge>
+                                        <effectivePeriod>
+                                            <startDate>2024-02-05</startDate>
+                                            <endDate>2024-03-06</endDate>
+                                        </effectivePeriod>
+                                        <statementComponent>supply</statementComponent>
+                                        <name>Market supply charge</name>
+                                        <value>0.142429</value>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_metered_quantity</calculationMethod>
+                                            <measurementSource>energy</measurementSource>
+                                            <unitOfMeasure>kWh</unitOfMeasure>
+                                        </measurementDefinition>
+                                    </meteredServiceCharge>
                                 </charges>
                             </ratePlan>
                         </ratePlans>
@@ -1653,7 +1917,7 @@
                                     <rateCode>SC1-3-RA</rateCode>
                                     <ratePlanCodeUnique>ERS-CED-SC1-3-775</ratePlanCodeUnique>
                                 </ratePlanIdentifiers>
-                                <commodity>electricityPrimaryMetered</commodity>
+                                <commodity>electricitySecondaryMetered</commodity>
                                 <utilityInfo>
                                     <iedrOrgAbbreviation>CED</iedrOrgAbbreviation>
                                     <dpsPscNumber>10</dpsPscNumber>
@@ -1673,6 +1937,35 @@
                                             <customerClass>Residential</customerClass>
                                             <customerClass>Religious</customerClass>
                                         </customerClasses>
+                                        <ratePlanTerritories>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_H</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>H</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_I</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>I</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_J</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>J</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                        </ratePlanTerritories>
                                     </profile>
                                 </ratePlanApplicability>
                                 <provenanceMetadata>
@@ -1948,7 +2241,7 @@
                                     <rateCode>SC1-3</rateCode>
                                     <ratePlanCodeUnique>ERS-CED-SC1-3-466</ratePlanCodeUnique>
                                 </ratePlanIdentifiers>
-                                <commodity>electricityPrimaryMetered</commodity>
+                                <commodity>electricitySecondaryMetered</commodity>
                                 <utilityInfo>
                                     <iedrOrgAbbreviation>CED</iedrOrgAbbreviation>
                                     <dpsPscNumber>10</dpsPscNumber>
@@ -1968,6 +2261,35 @@
                                             <customerClass>Residential</customerClass>
                                             <customerClass>Religious</customerClass>
                                         </customerClasses>
+                                        <ratePlanTerritories>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_H</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>H</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_I</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>I</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_J</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>J</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                        </ratePlanTerritories>
                                     </profile>
                                 </ratePlanApplicability>
                                 <provenanceMetadata>
@@ -2235,6 +2557,20 @@
                                             <unitOfMeasure>kWh</unitOfMeasure>
                                         </measurementDefinition>
                                     </meteredServiceCharge>
+                                    <meteredServiceCharge>
+                                        <effectivePeriod>
+                                            <startDate>2024-02-05</startDate>
+                                            <endDate>2024-03-06</endDate>
+                                        </effectivePeriod>
+                                        <statementComponent>supply</statementComponent>
+                                        <name>Market supply charge</name>
+                                        <value>0.142429</value>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_metered_quantity</calculationMethod>
+                                            <measurementSource>energy</measurementSource>
+                                            <unitOfMeasure>kWh</unitOfMeasure>
+                                        </measurementDefinition>
+                                    </meteredServiceCharge>
                                 </charges>
                             </ratePlan>
                             </ratePlans>
@@ -2265,7 +2601,7 @@
                                     <rateCode>SC1-4-RA</rateCode>
                                     <ratePlanCodeUnique>ERS-CED-SC1-4-359</ratePlanCodeUnique>
                                 </ratePlanIdentifiers>
-                                <commodity>electricityPrimaryMetered</commodity>
+                                <commodity>electricitySecondaryMetered</commodity>
                                 <utilityInfo>
                                     <iedrOrgAbbreviation>CED</iedrOrgAbbreviation>
                                     <dpsPscNumber>10</dpsPscNumber>
@@ -2285,6 +2621,35 @@
                                             <customerClass>Residential</customerClass>
                                             <customerClass>Religious</customerClass>
                                         </customerClasses>
+                                        <ratePlanTerritories>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_H</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>H</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_I</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>I</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_J</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>J</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                        </ratePlanTerritories>
                                     </profile>
                                 </ratePlanApplicability>
                                 <provenanceMetadata>
@@ -2560,7 +2925,7 @@
                                     <rateCode>SC1-4</rateCode>
                                     <ratePlanCodeUnique>ERS-CED-SC1-4-522</ratePlanCodeUnique>
                                 </ratePlanIdentifiers>
-                                <commodity>electricityPrimaryMetered</commodity>
+                                <commodity>electricitySecondaryMetered</commodity>
                                 <utilityInfo>
                                     <iedrOrgAbbreviation>CED</iedrOrgAbbreviation>
                                     <dpsPscNumber>10</dpsPscNumber>
@@ -2580,6 +2945,35 @@
                                             <customerClass>Residential</customerClass>
                                             <customerClass>Religious</customerClass>
                                         </customerClasses>
+                                        <ratePlanTerritories>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_H</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>H</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_I</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>I</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                            <ratePlanTerritory>
+                                                <IedrRatePlanTerritoryId>NYISO_J</IedrRatePlanTerritoryId>
+                                                <territoryKind>system_operator_zone_id</territoryKind>
+                                                <geographicUnit></geographicUnit>
+                                                <rawValue>J</rawValue>
+                                                <effectivePeriod>
+                                                    <startDate>2024-01-01</startDate>
+                                                </effectivePeriod>
+                                            </ratePlanTerritory>
+                                        </ratePlanTerritories>
                                     </profile>
                                 </ratePlanApplicability>
                                 <provenanceMetadata>
@@ -2845,6 +3239,20 @@
                                             <calculationMethod>by_metered_quantity</calculationMethod>
                                             <measurementSource>demand</measurementSource>
                                             <unitOfMeasure>kW</unitOfMeasure>
+                                        </measurementDefinition>
+                                    </meteredServiceCharge>
+                                    <meteredServiceCharge>
+                                        <effectivePeriod>
+                                            <startDate>2024-02-05</startDate>
+                                            <endDate>2024-03-06</endDate>
+                                        </effectivePeriod>
+                                        <statementComponent>supply</statementComponent>
+                                        <name>Market supply charge</name>
+                                        <value>0.142429</value>
+                                        <measurementDefinition>
+                                            <calculationMethod>by_metered_quantity</calculationMethod>
+                                            <measurementSource>energy</measurementSource>
+                                            <unitOfMeasure>kWh</unitOfMeasure>
                                         </measurementDefinition>
                                     </meteredServiceCharge>
                                 </charges>
