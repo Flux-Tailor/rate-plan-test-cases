@@ -60,7 +60,8 @@
                             </tariffBookLeafRange>
                         </tariffBookLeafRanges>
                         <ratePlans>
-                            <ratePlan ratePlanURI="https://iedr.nyserda.ny.gov/rate-plan/146fbd5e-ef3f-441e-9168-01c9c3eaccf1">
+                            <ratePlan
+                                ratePlanURI="https://iedr.nyserda.ny.gov/rate-plan/146fbd5e-ef3f-441e-9168-01c9c3eaccf1">
                                 <ratePlanIdentifiers>
                                     <serviceClassNumber>1</serviceClassNumber>
                                     <rateCode>SC01</rateCode>
@@ -102,8 +103,8 @@
                                         </tariffBookLeafRange>
                                     </tariffBookLeafRanges>
                                     <dpsCaseNumber>22-E-0317</dpsCaseNumber>
-                                    <iedrRatePlanBrowserURL></iedrRatePlanBrowserURL>
-                                    <tariffStatementTypeCode></tariffStatementTypeCode>
+                                    <iedrRatePlanBrowserURL/>
+                                    <tariffStatementTypeCode/>
                                 </provenanceMetadata>
                                 <name>Service Classification No. 1</name>
                                 <validityStatusDates>
@@ -283,7 +284,8 @@
                                     </meteredServiceCharge>
                                 </charges>
                             </ratePlan>
-                            <ratePlan ratePlanURI="https://iedr.nyserda.ny.gov/rate-plan/ca5be7ca-15ad-40c9-b8b2-4a87b6de6136">
+                            <ratePlan
+                                ratePlanURI="https://iedr.nyserda.ny.gov/rate-plan/ca5be7ca-15ad-40c9-b8b2-4a87b6de6136">
                                 <ratePlanIdentifiers>
                                     <serviceClassNumber>1</serviceClassNumber>
                                     <rateCode>SC01</rateCode>
@@ -325,8 +327,8 @@
                                         </tariffBookLeafRange>
                                     </tariffBookLeafRanges>
                                     <dpsCaseNumber>22-E-0317</dpsCaseNumber>
-                                    <iedrRatePlanBrowserURL></iedrRatePlanBrowserURL>
-                                    <tariffStatementTypeCode></tariffStatementTypeCode>
+                                    <iedrRatePlanBrowserURL/>
+                                    <tariffStatementTypeCode/>
                                 </provenanceMetadata>
                                 <name>Service Classification No. 1 NYSEG Supply Service (NSS)</name>
                                 <validityStatusDates>
@@ -505,7 +507,8 @@
                                     </meteredServiceCharge>
                                 </charges>
                             </ratePlan>
-                            <ratePlan ratePlanURI="https://iedr.nyserda.ny.gov/rate-plan/e9373145-70f3-441a-83ee-478af79d84ea">
+                            <ratePlan
+                                ratePlanURI="https://iedr.nyserda.ny.gov/rate-plan/e9373145-70f3-441a-83ee-478af79d84ea">
                                 <ratePlanIdentifiers>
                                     <serviceClassNumber>1</serviceClassNumber>
                                     <rateCode>SC01</rateCode>
@@ -547,8 +550,8 @@
                                         </tariffBookLeafRange>
                                     </tariffBookLeafRanges>
                                     <dpsCaseNumber>22-E-0317</dpsCaseNumber>
-                                    <iedrRatePlanBrowserURL></iedrRatePlanBrowserURL>
-                                    <tariffStatementTypeCode></tariffStatementTypeCode>
+                                    <iedrRatePlanBrowserURL/>
+                                    <tariffStatementTypeCode/>
                                 </provenanceMetadata>
                                 <name>Service Classification No. 1 - ESCO Supply Service (ESS)</name>
                                 <validityStatusDates>
@@ -727,7 +730,8 @@
                                     </meteredServiceCharge>
                                 </charges>
                             </ratePlan>
-                            <ratePlan ratePlanURI="https://iedr.nyserda.ny.gov/rate-plan/c44026f6-74d6-448c-a612-4d5cabb4994c">
+                            <ratePlan
+                                ratePlanURI="https://iedr.nyserda.ny.gov/rate-plan/c44026f6-74d6-448c-a612-4d5cabb4994c">
                                 <ratePlanIdentifiers>
                                     <serviceClassNumber>1</serviceClassNumber>
                                     <rateCode>SC01</rateCode>
@@ -769,8 +773,8 @@
                                         </tariffBookLeafRange>
                                     </tariffBookLeafRanges>
                                     <dpsCaseNumber>22-E-0317</dpsCaseNumber>
-                                    <iedrRatePlanBrowserURL></iedrRatePlanBrowserURL>
-                                    <tariffStatementTypeCode></tariffStatementTypeCode>
+                                    <iedrRatePlanBrowserURL/>
+                                    <tariffStatementTypeCode/>
                                 </provenanceMetadata>
                                 <name>Service Classification No. 1 - Seasonal NYSEG Supply Service (NSS)</name>
                                 <validityStatusDates>
