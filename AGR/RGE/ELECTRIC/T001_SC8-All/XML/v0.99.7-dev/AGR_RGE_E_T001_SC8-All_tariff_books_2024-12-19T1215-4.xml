@@ -134,64 +134,68 @@
                                                  Company (“ESCO”) provides Electric Power Supply to the customer. The Company provides the
                                                  delivery service only.
                                              </description> 
-                                             <eligibility>
-                                                 <enrollmentCriteria>
-                                                     <enrollmentChoice>    
-                                                     </enrollmentChoice>
-                                                 </enrollmentCriteria>
-                                                 <limit>
-                                                     <limitKind>
-                                                         <serviceMeasurement>demand</serviceMeasurement>
-                                                         <profileMetric>
-                                                             <profileVariable>Capacity</profileVariable>
-                                                         </profileMetric>
-                                                     </limitKind>
-                                                     <name>Active Energy Demand</name>
-                                                     <limitValue>300</limitValue>
-                                                     <limitMeasureSpecification>
-                                                         <calculationMethod>avg</calculationMethod>
-                                                         <calculationBaseValue>calculationBaseValue0</calculationBaseValue>
-                                                         <measurementSource>demand</measurementSource>
-                                                         <unitOfMeasure>kW</unitOfMeasure>
-                                                         <measurementInterval>
-                                                             <calculationMode>SLIDING</calculationMode>
-                                                             <calcIntervalKind>MONTH</calcIntervalKind>
-                                                             <calcIntervalPer>1</calcIntervalPer>
-                                                         </measurementInterval>
-                                                         <statisticKind>min</statisticKind>
-                                                         <inclusionStatus>inclusive</inclusionStatus>
-                                                     </limitMeasureSpecification>
-                                                     <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
-                                                         the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
-                                                         consecutive months, the customer thereafter shall be billed under another appropriate service classification.
-                                                     </description>                                                 </limit>
-                                                 <limit>
-                                                     <limitKind>
-                                                         <serviceMeasurement>demand</serviceMeasurement>
-                                                         <profileMetric>
-                                                             <profileVariable>Capacity</profileVariable>
-                                                         </profileMetric>
-                                                     </limitKind>
-                                                     <name>Active Energy Demand</name>
-                                                     <limitValue>200</limitValue>
-                                                     <limitMeasureSpecification>
-                                                         <calculationMethod>by_metered_quantity</calculationMethod>
-                                                         <measurementSource>demand</measurementSource>
-                                                         <unitOfMeasure>kW</unitOfMeasure>
-                                                         <measurementInterval>
-                                                             <calculationMode>SLIDING</calculationMode>
-                                                             <calcIntervalKind>MONTH</calcIntervalKind>
-                                                             <calcIntervalPer>12</calcIntervalPer>
-                                                         </measurementInterval>
-                                                         <statisticKind>max</statisticKind>
-                                                         <inclusionStatus>inclusive</inclusionStatus>
-                                                     </limitMeasureSpecification>
-                                                     <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
-                                                         the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
-                                                         consecutive months, the customer thereafter shall be billed under another appropriate service classification.
-                                                     </description>
-                                                 </limit>
-                                             </eligibility>
+                                <eligibility>
+                                    <enrollmentCriteria>
+                                        <enrollmentChoice>
+                                            <enrollmentKind></enrollmentKind>
+                                            <name></name>
+                                            <description></description>
+                                        </enrollmentChoice>
+                                    </enrollmentCriteria>
+                                    <limit>
+                                        <limitKind>
+                                            <serviceMeasurement>demand</serviceMeasurement>
+                                            <profileMetric> 
+                                                <profileVariable>Capacity</profileVariable>
+                                            </profileMetric>
+                                        </limitKind>
+                                        <name>Active Energy Demand</name>
+                                        <limitValue>300</limitValue>
+                                        <limitMeasureSpecification>
+                                            <calculationMethod>avg</calculationMethod>
+                                            <calculationBaseValue>calculationBaseValue0</calculationBaseValue>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                            <measurementInterval>
+                                                <calculationMode>SLIDING</calculationMode>
+                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                <calcIntervalPer>1</calcIntervalPer>
+                                            </measurementInterval>
+                                            <statisticKind>min</statisticKind>
+                                            <inclusionStatus>inclusive</inclusionStatus>
+                                        </limitMeasureSpecification>
+                                        <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
+                                            the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
+                                            consecutive months, the customer thereafter shall be billed under another appropriate service classification.
+                                        </description>
+                                    </limit>
+                                    <limit>
+                                        <limitKind>
+                                            <serviceMeasurement>demand</serviceMeasurement> 
+                                            <profileMetric> 
+                                                <profileVariable>Capacity</profileVariable>
+                                            </profileMetric>
+                                        </limitKind>
+                                        <name>Active Energy Demand</name>
+                                        <limitValue>200</limitValue>
+                                        <limitMeasureSpecification>
+                                            <calculationMethod>by_metered_quantity</calculationMethod>
+                                            <measurementSource>demand</measurementSource>
+                                            <unitOfMeasure>kW</unitOfMeasure>
+                                            <measurementInterval>
+                                                <calculationMode>SLIDING</calculationMode>
+                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                <calcIntervalPer>12</calcIntervalPer>
+                                            </measurementInterval>
+                                            <statisticKind>max</statisticKind>
+                                            <inclusionStatus>inclusive</inclusionStatus>
+                                        </limitMeasureSpecification>
+                                        <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
+                                            the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
+                                            consecutive months, the customer thereafter shall be billed under another appropriate service classification.
+                                        </description>
+                                    </limit>        
+                                </eligibility>
                                              <seasons>
                                                  <season>
                                                      <seasonName>Winter</seasonName>
@@ -1396,51 +1400,67 @@
                                                     delivery service only.
                                                 </description>             
                                                 <eligibility>
-                                                <LimitType>
-                                                    <limit>
-                                                        <limitKind>ElectricDemand</limitKind>
-                                                        <name>Active Energy Demand</name>
-                                                        <limitValue>300</limitValue>
-                                                        <limitMeasureSpecification>
-                                                            <calculationMethod>avg</calculationMethod>
-                                                            <calculationBaseValue>calculationBaseValue0</calculationBaseValue>
-                                                            <measurementSource>demand</measurementSource>
-                                                            <unitOfMeasure>kW</unitOfMeasure>
-                                                            <measurementInterval>
-                                                                <calculationMode>SLIDING</calculationMode>
-                                                                <calcIntervalKind>MONTH</calcIntervalKind>
-                                                                <calcIntervalPer>1</calcIntervalPer>
-                                                            </measurementInterval>
-                                                            <statisticKind>min</statisticKind>
-                                                            <inclusionStatus>inclusive</inclusionStatus>
+                                                    <enrollmentCriteria>
+                                                        <enrollmentChoice>
+                                                            <enrollmentKind></enrollmentKind>
+                                                            <name></name>
+                                                            <description></description>
+                                                        </enrollmentChoice>
+                                                    </enrollmentCriteria>
+                                                  <limit>
+                                                    <limitKind>
+                                                        <serviceMeasurement>demand</serviceMeasurement>
+                                                        <profileMetric> 
+                                                            <profileVariable>Capacity</profileVariable>
+                                                        </profileMetric>
+                                                    </limitKind>
+                                                    <name>Active Energy Demand</name>
+                                                    <limitValue>300</limitValue>
+                                                    <limitMeasureSpecification>
+                                                        <calculationMethod>avg</calculationMethod>
+                                                        <calculationBaseValue>calculationBaseValue0</calculationBaseValue>
+                                                        <measurementSource>demand</measurementSource>
+                                                        <unitOfMeasure>kW</unitOfMeasure>
+                                                        <measurementInterval>
+                                                            <calculationMode>SLIDING</calculationMode>
+                                                            <calcIntervalKind>MONTH</calcIntervalKind>
+                                                            <calcIntervalPer>1</calcIntervalPer>
+                                                        </measurementInterval>
+                                                        <statisticKind>min</statisticKind>
+                                                        <inclusionStatus>inclusive</inclusionStatus>
+                                                   </limitMeasureSpecification>
+                                                   <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
+                                                            the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
+                                                            consecutive months, the customer thereafter shall be billed under another appropriate service classification.
+                                                   </description>
+                                                </limit>
+                                                <limit>
+                                                    <limitKind>
+                                                        <serviceMeasurement>demand</serviceMeasurement> 
+                                                            <profileMetric> 
+                                                                <profileVariable>Capacity</profileVariable>
+                                                            </profileMetric>
+                                                    </limitKind>
+                                                    <name>Active Energy Demand</name>
+                                                    <limitValue>200</limitValue>
+                                                    <limitMeasureSpecification>
+                                                        <calculationMethod>by_metered_quantity</calculationMethod>
+                                                        <measurementSource>demand</measurementSource>
+                                                        <unitOfMeasure>kW</unitOfMeasure>
+                                                        <measurementInterval>
+                                                            <calculationMode>SLIDING</calculationMode>
+                                                            <calcIntervalKind>MONTH</calcIntervalKind>
+                                                            <calcIntervalPer>12</calcIntervalPer>
+                                                        </measurementInterval>
+                                                        <statisticKind>max</statisticKind>
+                                                        <inclusionStatus>inclusive</inclusionStatus>
                                                         </limitMeasureSpecification>
                                                         <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
                                                             the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
                                                             consecutive months, the customer thereafter shall be billed under another appropriate service classification.
                                                         </description>
-                                                     </limit>
-                                                     <limit>
-                                                         <limitKind>ElectricDemand</limitKind>
-                                                         <name>Active Energy Demand</name>
-                                                         <limitValue>200</limitValue>
-                                                         <limitMeasureSpecification>
-                                                             <calculationMethod>by_metered_quantity</calculationMethod>
-                                                             <measurementSource>demand</measurementSource>
-                                                             <unitOfMeasure>kW</unitOfMeasure>
-                                                             <measurementInterval>
-                                                                 <calculationMode>SLIDING</calculationMode>
-                                                                 <calcIntervalKind>MONTH</calcIntervalKind>
-                                                                 <calcIntervalPer>12</calcIntervalPer>
-                                                             </measurementInterval>
-                                                             <statisticKind>max</statisticKind>
-                                                             <inclusionStatus>inclusive</inclusionStatus>
-                                                         </limitMeasureSpecification>
-                                                         <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
-                                                             the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
-                                                             consecutive months, the customer thereafter shall be billed under another appropriate service classification.</description>
-                                                     </limit>
-                                                    </LimitType>
-                                                    </eligibility>
+                                                 </limit>        
+                                              </eligibility>
                                                     <seasons>
                                                     <season>
                                                         <seasonName>Winter</seasonName>
@@ -1997,53 +2017,65 @@
                                                 <eligibility>
                                                     <enrollmentCriteria>
                                                         <enrollmentChoice>
+                                                            <enrollmentKind></enrollmentKind>
+                                                            <name></name>
+                                                            <description></description>
                                                         </enrollmentChoice>
-                                                 </enrollmentCriteria>
-                                                 <LimitType>
-                                                     <limit>
-                                                         <limitKind>ElectricDemand</limitKind>
-                                                         <name>Active Energy Demand</name>
-                                                         <limitValue>300</limitValue>
-                                                         <limitMeasureSpecification>
-                                                             <calculationMethod>avg</calculationMethod>
-                                                             <calculationBaseValue>calculationBaseValue0</calculationBaseValue>
-                                                             <measurementSource>demand</measurementSource>
-                                                             <unitOfMeasure>kW</unitOfMeasure>
-                                                             <measurementInterval>
-                                                                 <calculationMode>SLIDING</calculationMode>
-                                                                 <calcIntervalKind>MONTH</calcIntervalKind>
-                                                                 <calcIntervalPer>1</calcIntervalPer>
-                                                             </measurementInterval>
-                                                             <statisticKind>min</statisticKind>
-                                                             <inclusionStatus>inclusive</inclusionStatus>
-                                                         </limitMeasureSpecification>
-                                                         <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
-                                                             the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
-                                                             consecutive months, the customer thereafter shall be billed under another appropriate service classification.
-                                                         </description>
-                                                     </limit>
-                                                     <limit>
-                                                         <limitKind>ElectricDemand</limitKind>
-                                                         <name>Active Energy Demand</name>
-                                                         <limitValue>200</limitValue>
-                                                         <limitMeasureSpecification>
-                                                             <calculationMethod>by_metered_quantity</calculationMethod>
-                                                             <measurementSource>demand</measurementSource>
-                                                             <unitOfMeasure>kW</unitOfMeasure>
-                                                             <measurementInterval>
-                                                                 <calculationMode>SLIDING</calculationMode>
-                                                                 <calcIntervalKind>MONTH</calcIntervalKind>
-                                                                 <calcIntervalPer>12</calcIntervalPer>
-                                                             </measurementInterval>
-                                                             <statisticKind>max</statisticKind>
-                                                             <inclusionStatus>inclusive</inclusionStatus>
-                                                         </limitMeasureSpecification>
-                                                         <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
-                                                             the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
-                                                             consecutive months, the customer thereafter shall be billed under another appropriate service classification.</description>
-                                                     </limit>
-                                                 </LimitType>
-                                             </eligibility>
+                                                    </enrollmentCriteria>
+                                                    <limit>
+                                                        <limitKind>
+                                                            <serviceMeasurement>demand</serviceMeasurement>
+                                                            <profileMetric> 
+                                                                <profileVariable>Capacity</profileVariable>
+                                                            </profileMetric>
+                                                        </limitKind>
+                                                        <name>Active Energy Demand</name>
+                                                        <limitValue>300</limitValue>
+                                                        <limitMeasureSpecification>
+                                                            <calculationMethod>avg</calculationMethod>
+                                                            <calculationBaseValue>calculationBaseValue0</calculationBaseValue>
+                                                            <measurementSource>demand</measurementSource>
+                                                            <unitOfMeasure>kW</unitOfMeasure>
+                                                            <measurementInterval>
+                                                                <calculationMode>SLIDING</calculationMode>
+                                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                                <calcIntervalPer>1</calcIntervalPer>
+                                                            </measurementInterval>
+                                                            <statisticKind>min</statisticKind>
+                                                            <inclusionStatus>inclusive</inclusionStatus>
+                                                        </limitMeasureSpecification>
+                                                        <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
+                                                            the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
+                                                            consecutive months, the customer thereafter shall be billed under another appropriate service classification.
+                                                        </description>
+                                                    </limit>
+                                                    <limit>
+                                                        <limitKind>
+                                                            <serviceMeasurement>demand</serviceMeasurement> 
+                                                            <profileMetric> 
+                                                                <profileVariable>Capacity</profileVariable>
+                                                            </profileMetric>
+                                                        </limitKind>
+                                                        <name>Active Energy Demand</name>
+                                                        <limitValue>200</limitValue>
+                                                        <limitMeasureSpecification>
+                                                            <calculationMethod>by_metered_quantity</calculationMethod>
+                                                            <measurementSource>demand</measurementSource>
+                                                            <unitOfMeasure>kW</unitOfMeasure>
+                                                            <measurementInterval>
+                                                                <calculationMode>SLIDING</calculationMode>
+                                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                                <calcIntervalPer>12</calcIntervalPer>
+                                                            </measurementInterval>
+                                                            <statisticKind>max</statisticKind>
+                                                            <inclusionStatus>inclusive</inclusionStatus>
+                                                        </limitMeasureSpecification>
+                                                        <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
+                                                            the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
+                                                            consecutive months, the customer thereafter shall be billed under another appropriate service classification.
+                                                        </description>
+                                                    </limit>        
+                                                </eligibility>
                                              <seasons>
                                                  <season>
                                                      <seasonName>Winter</seasonName>
@@ -2620,56 +2652,68 @@
                                                 Company (“ESCO”) provides Electric Power Supply to the customer. The Company provides the
                                                 delivery service only.
                                              </description>
-                                             <eligibility>
-                                                 <enrollmentCriteria>
-                                                     <enrollmentChoice>
-                                                     </enrollmentChoice>
-                                                 </enrollmentCriteria>
-                                                 <LimitType>
-                                                     <limit>
-                                                         <limitKind>ElectricDemand</limitKind>
-                                                         <name>Active Energy Demand</name>
-                                                         <limitValue>300</limitValue>
-                                                         <limitMeasureSpecification>
-                                                             <calculationMethod>avg</calculationMethod>
-                                                             <calculationBaseValue>calculationBaseValue0</calculationBaseValue>
-                                                             <measurementSource>demand</measurementSource>
-                                                             <unitOfMeasure>kW</unitOfMeasure>
-                                                             <measurementInterval>
-                                                                 <calculationMode>SLIDING</calculationMode>
-                                                                 <calcIntervalKind>MONTH</calcIntervalKind>
-                                                                 <calcIntervalPer>1</calcIntervalPer>
-                                                             </measurementInterval>
-                                                             <statisticKind>min</statisticKind>
-                                                             <inclusionStatus>inclusive</inclusionStatus>
-                                                         </limitMeasureSpecification>
-                                                         <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
-                                                             the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
-                                                             consecutive months, the customer thereafter shall be billed under another appropriate service classification.
-                                                         </description>
-                                                     </limit>
-                                                     <limit>
-                                                         <limitKind>ElectricDemand</limitKind>
-                                                         <name>Active Energy Demand</name>
-                                                         <limitValue>200</limitValue>
-                                                         <limitMeasureSpecification>
-                                                             <calculationMethod>by_metered_quantity</calculationMethod>
-                                                             <measurementSource>demand</measurementSource>
-                                                             <unitOfMeasure>kW</unitOfMeasure>
-                                                             <measurementInterval>
-                                                                 <calculationMode>SLIDING</calculationMode>
-                                                                 <calcIntervalKind>MONTH</calcIntervalKind>
-                                                                 <calcIntervalPer>12</calcIntervalPer>
-                                                             </measurementInterval>
-                                                             <statisticKind>max</statisticKind>
-                                                             <inclusionStatus>inclusive</inclusionStatus>
-                                                         </limitMeasureSpecification>
-                                                         <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
-                                                             the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
-                                                             consecutive months, the customer thereafter shall be billed under another appropriate service classification.</description>
-                                                     </limit>
-                                                 </LimitType>
-                                             </eligibility>
+                                            <eligibility>
+                                                <enrollmentCriteria>
+                                                    <enrollmentChoice>
+                                                        <enrollmentKind></enrollmentKind>
+                                                        <name></name>
+                                                        <description></description>
+                                                    </enrollmentChoice>
+                                                </enrollmentCriteria>
+                                                <limit>
+                                                    <limitKind>
+                                                        <serviceMeasurement>demand</serviceMeasurement>
+                                                        <profileMetric> 
+                                                            <profileVariable>Capacity</profileVariable>
+                                                        </profileMetric>
+                                                    </limitKind>
+                                                    <name>Active Energy Demand</name>
+                                                    <limitValue>300</limitValue>
+                                                    <limitMeasureSpecification>
+                                                        <calculationMethod>avg</calculationMethod>
+                                                        <calculationBaseValue>calculationBaseValue0</calculationBaseValue>
+                                                        <measurementSource>demand</measurementSource>
+                                                        <unitOfMeasure>kW</unitOfMeasure>
+                                                        <measurementInterval>
+                                                            <calculationMode>SLIDING</calculationMode>
+                                                            <calcIntervalKind>MONTH</calcIntervalKind>
+                                                            <calcIntervalPer>1</calcIntervalPer>
+                                                        </measurementInterval>
+                                                        <statisticKind>min</statisticKind>
+                                                        <inclusionStatus>inclusive</inclusionStatus>
+                                                    </limitMeasureSpecification>
+                                                    <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
+                                                        the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
+                                                        consecutive months, the customer thereafter shall be billed under another appropriate service classification.
+                                                    </description>
+                                                </limit>
+                                                <limit>
+                                                    <limitKind>
+                                                        <serviceMeasurement>demand</serviceMeasurement> 
+                                                        <profileMetric> 
+                                                            <profileVariable>Capacity</profileVariable>
+                                                        </profileMetric>
+                                                    </limitKind>
+                                                    <name>Active Energy Demand</name>
+                                                    <limitValue>200</limitValue>
+                                                    <limitMeasureSpecification>
+                                                        <calculationMethod>by_metered_quantity</calculationMethod>
+                                                        <measurementSource>demand</measurementSource>
+                                                        <unitOfMeasure>kW</unitOfMeasure>
+                                                        <measurementInterval>
+                                                            <calculationMode>SLIDING</calculationMode>
+                                                            <calcIntervalKind>MONTH</calcIntervalKind>
+                                                            <calcIntervalPer>12</calcIntervalPer>
+                                                        </measurementInterval>
+                                                        <statisticKind>max</statisticKind>
+                                                        <inclusionStatus>inclusive</inclusionStatus>
+                                                    </limitMeasureSpecification>
+                                                    <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
+                                                        the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
+                                                        consecutive months, the customer thereafter shall be billed under another appropriate service classification.
+                                                    </description>
+                                                </limit>        
+                                            </eligibility>
                                              <seasons>
                                                  <season>
                                                      <seasonName>Winter</seasonName>
@@ -3224,56 +3268,68 @@
                                                  Company under the NYISO tariff s approved by FERC, and Supply Adjustment Charge. Electricity supply is
                                                  provided by the Company.
                                              </description>
-                                             <eligibility>
-                                                 <enrollmentCriteria>
-                                                     <enrollmentChoice>
-                                                     </enrollmentChoice>
-                                                 </enrollmentCriteria>
-                                                 <LimitType>
-                                                     <limit>
-                                                         <limitKind>ElectricDemand</limitKind>
-                                                         <name>Active Energy Demand</name>
-                                                         <limitValue>300</limitValue>
-                                                         <limitMeasureSpecification>
-                                                             <calculationMethod>avg</calculationMethod>
-                                                             <calculationBaseValue>calculationBaseValue0</calculationBaseValue>
-                                                             <measurementSource>demand</measurementSource>
-                                                             <unitOfMeasure>kW</unitOfMeasure>
-                                                             <measurementInterval>
-                                                                 <calculationMode>SLIDING</calculationMode>
-                                                                 <calcIntervalKind>MONTH</calcIntervalKind>
-                                                                 <calcIntervalPer>1</calcIntervalPer>
-                                                             </measurementInterval>
-                                                             <statisticKind>min</statisticKind>
-                                                             <inclusionStatus>inclusive</inclusionStatus>
-                                                         </limitMeasureSpecification>
-                                                         <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
-                                                             the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
-                                                             consecutive months, the customer thereafter shall be billed under another appropriate service classification.
-                                                         </description>
-                                                     </limit>
-                                                     <limit>
-                                                         <limitKind>ElectricDemand</limitKind>
-                                                         <name>Active Energy Demand</name>
-                                                         <limitValue>200</limitValue>
-                                                         <limitMeasureSpecification>
-                                                             <calculationMethod>by_metered_quantity</calculationMethod>
-                                                             <measurementSource>demand</measurementSource>
-                                                             <unitOfMeasure>kW</unitOfMeasure>
-                                                             <measurementInterval>
-                                                                 <calculationMode>SLIDING</calculationMode>
-                                                                 <calcIntervalKind>MONTH</calcIntervalKind>
-                                                                 <calcIntervalPer>12</calcIntervalPer>
-                                                             </measurementInterval>
-                                                             <statisticKind>max</statisticKind>
-                                                             <inclusionStatus>inclusive</inclusionStatus>
-                                                         </limitMeasureSpecification>
-                                                         <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
-                                                             the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
-                                                             consecutive months, the customer thereafter shall be billed under another appropriate service classification.</description>
-                                                     </limit>
-                                                 </LimitType>
-                                             </eligibility>
+                                            <eligibility>
+                                                <enrollmentCriteria>
+                                                    <enrollmentChoice>
+                                                        <enrollmentKind></enrollmentKind>
+                                                        <name></name>
+                                                        <description></description>
+                                                    </enrollmentChoice>
+                                                </enrollmentCriteria>
+                                                <limit>
+                                                    <limitKind>
+                                                        <serviceMeasurement>demand</serviceMeasurement>
+                                                        <profileMetric> 
+                                                            <profileVariable>Capacity</profileVariable>
+                                                        </profileMetric>
+                                                    </limitKind>
+                                                    <name>Active Energy Demand</name>
+                                                    <limitValue>300</limitValue>
+                                                    <limitMeasureSpecification>
+                                                        <calculationMethod>avg</calculationMethod>
+                                                        <calculationBaseValue>calculationBaseValue0</calculationBaseValue>
+                                                        <measurementSource>demand</measurementSource>
+                                                        <unitOfMeasure>kW</unitOfMeasure>
+                                                        <measurementInterval>
+                                                            <calculationMode>SLIDING</calculationMode>
+                                                            <calcIntervalKind>MONTH</calcIntervalKind>
+                                                            <calcIntervalPer>1</calcIntervalPer>
+                                                        </measurementInterval>
+                                                        <statisticKind>min</statisticKind>
+                                                        <inclusionStatus>inclusive</inclusionStatus>
+                                                    </limitMeasureSpecification>
+                                                    <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
+                                                        the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
+                                                        consecutive months, the customer thereafter shall be billed under another appropriate service classification.
+                                                    </description>
+                                                </limit>
+                                                <limit>
+                                                    <limitKind>
+                                                        <serviceMeasurement>demand</serviceMeasurement> 
+                                                        <profileMetric> 
+                                                            <profileVariable>Capacity</profileVariable>
+                                                        </profileMetric>
+                                                    </limitKind>
+                                                    <name>Active Energy Demand</name>
+                                                    <limitValue>200</limitValue>
+                                                    <limitMeasureSpecification>
+                                                        <calculationMethod>by_metered_quantity</calculationMethod>
+                                                        <measurementSource>demand</measurementSource>
+                                                        <unitOfMeasure>kW</unitOfMeasure>
+                                                        <measurementInterval>
+                                                            <calculationMode>SLIDING</calculationMode>
+                                                            <calcIntervalKind>MONTH</calcIntervalKind>
+                                                            <calcIntervalPer>12</calcIntervalPer>
+                                                        </measurementInterval>
+                                                        <statisticKind>max</statisticKind>
+                                                        <inclusionStatus>inclusive</inclusionStatus>
+                                                    </limitMeasureSpecification>
+                                                    <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
+                                                        the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
+                                                        consecutive months, the customer thereafter shall be billed under another appropriate service classification.
+                                                    </description>
+                                                </limit>        
+                                            </eligibility>
                                              <seasons>
                                                  <season>
                                                      <seasonName>Winter</seasonName>
@@ -3849,56 +3905,68 @@
                                                     Company (“ESCO”) provides Electric Power Supply to the customer. The Company provides the
                                                     delivery service only.
                                              </description>
-                                             <eligibility>
-                                                 <enrollmentCriteria>
-                                                     <enrollmentChoice>   
-                                                     </enrollmentChoice>   
-                                                 </enrollmentCriteria>
-                                                 <LimitType>
-                                                     <limit>
-                                                         <limitKind>ElectricDemand</limitKind>
-                                                         <name>Active Energy Demand</name>
-                                                         <limitValue>300</limitValue>
-                                                         <limitMeasureSpecification>
-                                                             <calculationMethod>avg</calculationMethod>
-                                                             <calculationBaseValue>calculationBaseValue0</calculationBaseValue>
-                                                             <measurementSource>demand</measurementSource>
-                                                             <unitOfMeasure>kW</unitOfMeasure>
-                                                             <measurementInterval>
-                                                                 <calculationMode>SLIDING</calculationMode>
-                                                                 <calcIntervalKind>MONTH</calcIntervalKind>
-                                                                 <calcIntervalPer>1</calcIntervalPer>
-                                                             </measurementInterval>
-                                                             <statisticKind>min</statisticKind>
-                                                             <inclusionStatus>inclusive</inclusionStatus>
-                                                         </limitMeasureSpecification>
-                                                         <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
-                                                             the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
-                                                             consecutive months, the customer thereafter shall be billed under another appropriate service classification.
-                                                         </description>
-                                                     </limit>
-                                                     <limit>
-                                                         <limitKind>ElectricDemand</limitKind>
-                                                         <name>Active Energy Demand</name>
-                                                         <limitValue>200</limitValue>
-                                                         <limitMeasureSpecification>
-                                                             <calculationMethod>by_metered_quantity</calculationMethod>
-                                                             <measurementSource>demand</measurementSource>
-                                                             <unitOfMeasure>kW</unitOfMeasure>
-                                                             <measurementInterval>
-                                                                 <calculationMode>SLIDING</calculationMode>
-                                                                 <calcIntervalKind>MONTH</calcIntervalKind>
-                                                                 <calcIntervalPer>12</calcIntervalPer>
-                                                             </measurementInterval>
-                                                             <statisticKind>max</statisticKind>
-                                                             <inclusionStatus>inclusive</inclusionStatus>
-                                                         </limitMeasureSpecification>
-                                                         <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
-                                                             the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
-                                                             consecutive months, the customer thereafter shall be billed under another appropriate service classification.</description>
-                                                     </limit>
-                                                 </LimitType>
-                                             </eligibility>
+                                                <eligibility>
+                                                    <enrollmentCriteria>
+                                                        <enrollmentChoice>
+                                                            <enrollmentKind></enrollmentKind>
+                                                            <name></name>
+                                                            <description></description>
+                                                        </enrollmentChoice>
+                                                    </enrollmentCriteria>
+                                                    <limit>
+                                                        <limitKind>
+                                                            <serviceMeasurement>demand</serviceMeasurement>
+                                                            <profileMetric> 
+                                                                <profileVariable>Capacity</profileVariable>
+                                                            </profileMetric>
+                                                        </limitKind>
+                                                        <name>Active Energy Demand</name>
+                                                        <limitValue>300</limitValue>
+                                                        <limitMeasureSpecification>
+                                                            <calculationMethod>avg</calculationMethod>
+                                                            <calculationBaseValue>calculationBaseValue0</calculationBaseValue>
+                                                            <measurementSource>demand</measurementSource>
+                                                            <unitOfMeasure>kW</unitOfMeasure>
+                                                            <measurementInterval>
+                                                                <calculationMode>SLIDING</calculationMode>
+                                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                                <calcIntervalPer>1</calcIntervalPer>
+                                                            </measurementInterval>
+                                                            <statisticKind>min</statisticKind>
+                                                            <inclusionStatus>inclusive</inclusionStatus>
+                                                        </limitMeasureSpecification>
+                                                        <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
+                                                            the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
+                                                            consecutive months, the customer thereafter shall be billed under another appropriate service classification.
+                                                        </description>
+                                                    </limit>
+                                                    <limit>
+                                                        <limitKind>
+                                                            <serviceMeasurement>demand</serviceMeasurement> 
+                                                            <profileMetric> 
+                                                                <profileVariable>Capacity</profileVariable>
+                                                            </profileMetric>
+                                                        </limitKind>
+                                                        <name>Active Energy Demand</name>
+                                                        <limitValue>200</limitValue>
+                                                        <limitMeasureSpecification>
+                                                            <calculationMethod>by_metered_quantity</calculationMethod>
+                                                            <measurementSource>demand</measurementSource>
+                                                            <unitOfMeasure>kW</unitOfMeasure>
+                                                            <measurementInterval>
+                                                                <calculationMode>SLIDING</calculationMode>
+                                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                                <calcIntervalPer>12</calcIntervalPer>
+                                                            </measurementInterval>
+                                                            <statisticKind>max</statisticKind>
+                                                            <inclusionStatus>inclusive</inclusionStatus>
+                                                        </limitMeasureSpecification>
+                                                        <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
+                                                            the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
+                                                            consecutive months, the customer thereafter shall be billed under another appropriate service classification.
+                                                        </description>
+                                                    </limit>        
+                                                </eligibility>
                                              <seasons>
                                                  <season>
                                                      <seasonName>Winter</seasonName>
@@ -4456,52 +4524,64 @@
                                              <eligibility>
                                                  <enrollmentCriteria>
                                                      <enrollmentChoice>
-                                                     </enrollmentChoice>                                                  
+                                                         <enrollmentKind></enrollmentKind>
+                                                         <name></name>
+                                                         <description></description>
+                                                     </enrollmentChoice>
                                                  </enrollmentCriteria>
-                                                 <LimitType>
-                                                     <limit>
-                                                         <limitKind>ElectricDemand</limitKind>
-                                                         <name>Active Energy Demand</name>
-                                                         <limitValue>300</limitValue>
-                                                         <limitMeasureSpecification>
-                                                             <calculationMethod>avg</calculationMethod>
-                                                             <calculationBaseValue>calculationBaseValue0</calculationBaseValue>
-                                                             <measurementSource>demand</measurementSource>
-                                                             <unitOfMeasure>kW</unitOfMeasure>
-                                                             <measurementInterval>
-                                                                 <calculationMode>SLIDING</calculationMode>
-                                                                 <calcIntervalKind>MONTH</calcIntervalKind>
-                                                                 <calcIntervalPer>1</calcIntervalPer>
-                                                             </measurementInterval>
-                                                             <statisticKind>min</statisticKind>
-                                                             <inclusionStatus>inclusive</inclusionStatus>
-                                                         </limitMeasureSpecification>
-                                                         <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
-                                                             the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
-                                                             consecutive months, the customer thereafter shall be billed under another appropriate service classification.
-                                                         </description>
-                                                     </limit>
-                                                     <limit>
-                                                         <limitKind>ElectricDemand</limitKind>
-                                                         <name>Active Energy Demand</name>
-                                                         <limitValue>200</limitValue>
-                                                         <limitMeasureSpecification>
-                                                             <calculationMethod>by_metered_quantity</calculationMethod>
-                                                             <measurementSource>demand</measurementSource>
-                                                             <unitOfMeasure>kW</unitOfMeasure>
-                                                             <measurementInterval>
-                                                                 <calculationMode>SLIDING</calculationMode>
-                                                                 <calcIntervalKind>MONTH</calcIntervalKind>
-                                                                 <calcIntervalPer>12</calcIntervalPer>
-                                                             </measurementInterval>
-                                                             <statisticKind>max</statisticKind>
-                                                             <inclusionStatus>inclusive</inclusionStatus>
-                                                         </limitMeasureSpecification>
-                                                         <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
-                                                             the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
-                                                             consecutive months, the customer thereafter shall be billed under another appropriate service classification.</description>
-                                                     </limit>
-                                                 </LimitType>
+                                                 <limit>
+                                                     <limitKind>
+                                                         <serviceMeasurement>demand</serviceMeasurement>
+                                                         <profileMetric> 
+                                                             <profileVariable>Capacity</profileVariable>
+                                                         </profileMetric>
+                                                     </limitKind>
+                                                     <name>Active Energy Demand</name>
+                                                     <limitValue>300</limitValue>
+                                                     <limitMeasureSpecification>
+                                                         <calculationMethod>avg</calculationMethod>
+                                                         <calculationBaseValue>calculationBaseValue0</calculationBaseValue>
+                                                         <measurementSource>demand</measurementSource>
+                                                         <unitOfMeasure>kW</unitOfMeasure>
+                                                         <measurementInterval>
+                                                             <calculationMode>SLIDING</calculationMode>
+                                                             <calcIntervalKind>MONTH</calcIntervalKind>
+                                                             <calcIntervalPer>1</calcIntervalPer>
+                                                         </measurementInterval>
+                                                         <statisticKind>min</statisticKind>
+                                                         <inclusionStatus>inclusive</inclusionStatus>
+                                                     </limitMeasureSpecification>
+                                                     <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
+                                                         the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
+                                                         consecutive months, the customer thereafter shall be billed under another appropriate service classification.
+                                                     </description>
+                                                 </limit>
+                                                 <limit>
+                                                     <limitKind>
+                                                         <serviceMeasurement>demand</serviceMeasurement> 
+                                                         <profileMetric> 
+                                                             <profileVariable>Capacity</profileVariable>
+                                                         </profileMetric>
+                                                     </limitKind>
+                                                     <name>Active Energy Demand</name>
+                                                     <limitValue>200</limitValue>
+                                                     <limitMeasureSpecification>
+                                                         <calculationMethod>by_metered_quantity</calculationMethod>
+                                                         <measurementSource>demand</measurementSource>
+                                                         <unitOfMeasure>kW</unitOfMeasure>
+                                                         <measurementInterval>
+                                                             <calculationMode>SLIDING</calculationMode>
+                                                             <calcIntervalKind>MONTH</calcIntervalKind>
+                                                             <calcIntervalPer>12</calcIntervalPer>
+                                                         </measurementInterval>
+                                                         <statisticKind>max</statisticKind>
+                                                         <inclusionStatus>inclusive</inclusionStatus>
+                                                     </limitMeasureSpecification>
+                                                     <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
+                                                         the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
+                                                         consecutive months, the customer thereafter shall be billed under another appropriate service classification.
+                                                     </description>
+                                                 </limit>        
                                              </eligibility>
                                              <seasons>
                                                  <season>
@@ -5078,56 +5158,68 @@
                                                     Company (“ESCO”) provides Electric Power Supply to the customer. The Company provides the
                                                     delivery service only.
                                              </description>
-                                             <eligibility>
-                                                 <enrollmentCriteria>
-                                                     <enrollmentChoice> 
-                                                     </enrollmentChoice>   
-                                                 </enrollmentCriteria>
-                                                 <LimitType>
-                                                     <limit>
-                                                         <limitKind>ElectricDemand</limitKind>
-                                                         <name>Active Energy Demand</name>
-                                                         <limitValue>300</limitValue>
-                                                         <limitMeasureSpecification>
-                                                             <calculationMethod>avg</calculationMethod>
-                                                             <calculationBaseValue>calculationBaseValue0</calculationBaseValue>
-                                                             <measurementSource>demand</measurementSource>
-                                                             <unitOfMeasure>kW</unitOfMeasure>
-                                                             <measurementInterval>
-                                                                 <calculationMode>SLIDING</calculationMode>
-                                                                 <calcIntervalKind>MONTH</calcIntervalKind>
-                                                                 <calcIntervalPer>1</calcIntervalPer>
-                                                             </measurementInterval>
-                                                             <statisticKind>min</statisticKind>
-                                                             <inclusionStatus>inclusive</inclusionStatus>
-                                                         </limitMeasureSpecification>
-                                                         <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
-                                                             the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
-                                                             consecutive months, the customer thereafter shall be billed under another appropriate service classification.
-                                                         </description>
-                                                     </limit>
-                                                     <limit>
-                                                         <limitKind>ElectricDemand</limitKind>
-                                                         <name>Active Energy Demand</name>
-                                                         <limitValue>200</limitValue>
-                                                         <limitMeasureSpecification>
-                                                             <calculationMethod>by_metered_quantity</calculationMethod>
-                                                             <measurementSource>demand</measurementSource>
-                                                             <unitOfMeasure>kW</unitOfMeasure>
-                                                             <measurementInterval>
-                                                                 <calculationMode>SLIDING</calculationMode>
-                                                                 <calcIntervalKind>MONTH</calcIntervalKind>
-                                                                 <calcIntervalPer>12</calcIntervalPer>
-                                                             </measurementInterval>
-                                                             <statisticKind>max</statisticKind>
-                                                             <inclusionStatus>inclusive</inclusionStatus>
-                                                         </limitMeasureSpecification>
-                                                         <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
-                                                             the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
-                                                             consecutive months, the customer thereafter shall be billed under another appropriate service classification.</description>
-                                                     </limit>
-                                                 </LimitType>
-                                             </eligibility>
+                                                <eligibility>
+                                                    <enrollmentCriteria>
+                                                        <enrollmentChoice>
+                                                            <enrollmentKind></enrollmentKind>
+                                                            <name></name>
+                                                            <description></description>
+                                                        </enrollmentChoice>
+                                                    </enrollmentCriteria>
+                                                    <limit>
+                                                        <limitKind>
+                                                            <serviceMeasurement>demand</serviceMeasurement>
+                                                            <profileMetric> 
+                                                                <profileVariable>Capacity</profileVariable>
+                                                            </profileMetric>
+                                                        </limitKind>
+                                                        <name>Active Energy Demand</name>
+                                                        <limitValue>300</limitValue>
+                                                        <limitMeasureSpecification>
+                                                            <calculationMethod>avg</calculationMethod>
+                                                            <calculationBaseValue>calculationBaseValue0</calculationBaseValue>
+                                                            <measurementSource>demand</measurementSource>
+                                                            <unitOfMeasure>kW</unitOfMeasure>
+                                                            <measurementInterval>
+                                                                <calculationMode>SLIDING</calculationMode>
+                                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                                <calcIntervalPer>1</calcIntervalPer>
+                                                            </measurementInterval>
+                                                            <statisticKind>min</statisticKind>
+                                                            <inclusionStatus>inclusive</inclusionStatus>
+                                                        </limitMeasureSpecification>
+                                                        <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
+                                                            the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
+                                                            consecutive months, the customer thereafter shall be billed under another appropriate service classification.
+                                                        </description>
+                                                    </limit>
+                                                    <limit>
+                                                        <limitKind>
+                                                            <serviceMeasurement>demand</serviceMeasurement> 
+                                                            <profileMetric> 
+                                                                <profileVariable>Capacity</profileVariable>
+                                                            </profileMetric>
+                                                        </limitKind>
+                                                        <name>Active Energy Demand</name>
+                                                        <limitValue>200</limitValue>
+                                                        <limitMeasureSpecification>
+                                                            <calculationMethod>by_metered_quantity</calculationMethod>
+                                                            <measurementSource>demand</measurementSource>
+                                                            <unitOfMeasure>kW</unitOfMeasure>
+                                                            <measurementInterval>
+                                                                <calculationMode>SLIDING</calculationMode>
+                                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                                <calcIntervalPer>12</calcIntervalPer>
+                                                            </measurementInterval>
+                                                            <statisticKind>max</statisticKind>
+                                                            <inclusionStatus>inclusive</inclusionStatus>
+                                                        </limitMeasureSpecification>
+                                                        <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
+                                                            the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
+                                                            consecutive months, the customer thereafter shall be billed under another appropriate service classification.
+                                                        </description>
+                                                    </limit>        
+                                                </eligibility>
                                              <seasons>
                                                  <season>
                                                      <seasonName>Winter</seasonName>
@@ -5684,53 +5776,65 @@
                                              </description>
                                              <eligibility>
                                                  <enrollmentCriteria>
-                                                     <enrollmentChoice>     
-                                                     </enrollmentChoice>                                                  
+                                                     <enrollmentChoice>
+                                                         <enrollmentKind></enrollmentKind>
+                                                         <name></name>
+                                                         <description></description>
+                                                     </enrollmentChoice>
                                                  </enrollmentCriteria>
-                                                 <LimitType>
-                                                     <limit>
-                                                         <limitKind>ElectricDemand</limitKind>
-                                                         <name>Active Energy Demand</name>
-                                                         <limitValue>300</limitValue>
-                                                         <limitMeasureSpecification>
-                                                             <calculationMethod>avg</calculationMethod>
-                                                             <calculationBaseValue>calculationBaseValue0</calculationBaseValue>
-                                                             <measurementSource>demand</measurementSource>
-                                                             <unitOfMeasure>kW</unitOfMeasure>
-                                                             <measurementInterval>
-                                                                 <calculationMode>SLIDING</calculationMode>
-                                                                 <calcIntervalKind>MONTH</calcIntervalKind>
-                                                                 <calcIntervalPer>1</calcIntervalPer>
-                                                             </measurementInterval>
-                                                             <statisticKind>min</statisticKind>
-                                                             <inclusionStatus>inclusive</inclusionStatus>
-                                                         </limitMeasureSpecification>
-                                                         <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
-                                                             the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
-                                                             consecutive months, the customer thereafter shall be billed under another appropriate service classification.
-                                                         </description>
-                                                     </limit>
-                                                     <limit>
-                                                         <limitKind>ElectricDemand</limitKind>
-                                                         <name>Active Energy Demand</name>
-                                                         <limitValue>200</limitValue>
-                                                         <limitMeasureSpecification>
-                                                             <calculationMethod>by_metered_quantity</calculationMethod>
-                                                             <measurementSource>demand</measurementSource>
-                                                             <unitOfMeasure>kW</unitOfMeasure>
-                                                             <measurementInterval>
-                                                                 <calculationMode>SLIDING</calculationMode>
-                                                                 <calcIntervalKind>MONTH</calcIntervalKind>
-                                                                 <calcIntervalPer>12</calcIntervalPer>
-                                                             </measurementInterval>
-                                                             <statisticKind>max</statisticKind>
-                                                             <inclusionStatus>inclusive</inclusionStatus>
-                                                         </limitMeasureSpecification>
-                                                         <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
-                                                             the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
-                                                             consecutive months, the customer thereafter shall be billed under another appropriate service classification.</description>
-                                                     </limit>
-                                                 </LimitType>
+                                                 <limit>
+                                                     <limitKind>
+                                                         <serviceMeasurement>demand</serviceMeasurement>
+                                                         <profileMetric> 
+                                                             <profileVariable>Capacity</profileVariable>
+                                                         </profileMetric>
+                                                     </limitKind>
+                                                     <name>Active Energy Demand</name>
+                                                     <limitValue>300</limitValue>
+                                                     <limitMeasureSpecification>
+                                                         <calculationMethod>avg</calculationMethod>
+                                                         <calculationBaseValue>calculationBaseValue0</calculationBaseValue>
+                                                         <measurementSource>demand</measurementSource>
+                                                         <unitOfMeasure>kW</unitOfMeasure>
+                                                         <measurementInterval>
+                                                             <calculationMode>SLIDING</calculationMode>
+                                                             <calcIntervalKind>MONTH</calcIntervalKind>
+                                                             <calcIntervalPer>1</calcIntervalPer>
+                                                         </measurementInterval>
+                                                         <statisticKind>min</statisticKind>
+                                                         <inclusionStatus>inclusive</inclusionStatus>
+                                                     </limitMeasureSpecification>
+                                                     <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
+                                                         the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
+                                                         consecutive months, the customer thereafter shall be billed under another appropriate service classification.
+                                                     </description>
+                                                 </limit>
+                                                 <limit>
+                                                     <limitKind>
+                                                         <serviceMeasurement>demand</serviceMeasurement> 
+                                                         <profileMetric> 
+                                                             <profileVariable>Capacity</profileVariable>
+                                                         </profileMetric>
+                                                     </limitKind>
+                                                     <name>Active Energy Demand</name>
+                                                     <limitValue>200</limitValue>
+                                                     <limitMeasureSpecification>
+                                                         <calculationMethod>by_metered_quantity</calculationMethod>
+                                                         <measurementSource>demand</measurementSource>
+                                                         <unitOfMeasure>kW</unitOfMeasure>
+                                                         <measurementInterval>
+                                                             <calculationMode>SLIDING</calculationMode>
+                                                             <calcIntervalKind>MONTH</calcIntervalKind>
+                                                             <calcIntervalPer>12</calcIntervalPer>
+                                                         </measurementInterval>
+                                                         <statisticKind>max</statisticKind>
+                                                         <inclusionStatus>inclusive</inclusionStatus>
+                                                     </limitMeasureSpecification>
+                                                     <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
+                                                         the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
+                                                         consecutive months, the customer thereafter shall be billed under another appropriate service classification.
+                                                     </description>
+                                                 </limit>        
                                              </eligibility>
                                              <seasons>
                                                  <season>
@@ -6307,56 +6411,68 @@
                                                     Company (“ESCO”) provides Electric Power Supply to the customer. The Company provides the
                                                     delivery service only.
                                              </description>
-                                             <eligibility>
-                                                 <enrollmentCriteria>
-                                                     <enrollmentChoice>   
-                                                     </enrollmentChoice> 
-                                                 </enrollmentCriteria>
-                                                 <LimitType>
-                                                     <limit>
-                                                         <limitKind>ElectricDemand</limitKind>
-                                                         <name>Active Energy Demand</name>
-                                                         <limitValue>300</limitValue>
-                                                         <limitMeasureSpecification>
-                                                             <calculationMethod>avg</calculationMethod>
-                                                             <calculationBaseValue>calculationBaseValue0</calculationBaseValue>
-                                                             <measurementSource>demand</measurementSource>
-                                                             <unitOfMeasure>kW</unitOfMeasure>
-                                                             <measurementInterval>
-                                                                 <calculationMode>SLIDING</calculationMode>
-                                                                 <calcIntervalKind>MONTH</calcIntervalKind>
-                                                                 <calcIntervalPer>1</calcIntervalPer>
-                                                             </measurementInterval>
-                                                             <statisticKind>min</statisticKind>
-                                                             <inclusionStatus>inclusive</inclusionStatus>
-                                                         </limitMeasureSpecification>
-                                                         <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
-                                                             the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
-                                                             consecutive months, the customer thereafter shall be billed under another appropriate service classification.
-                                                         </description>
-                                                     </limit>
-                                                     <limit>
-                                                         <limitKind>ElectricDemand</limitKind>
-                                                         <name>Active Energy Demand</name>
-                                                         <limitValue>200</limitValue>
-                                                         <limitMeasureSpecification>
-                                                             <calculationMethod>by_metered_quantity</calculationMethod>
-                                                             <measurementSource>demand</measurementSource>
-                                                             <unitOfMeasure>kW</unitOfMeasure>
-                                                             <measurementInterval>
-                                                                 <calculationMode>SLIDING</calculationMode>
-                                                                 <calcIntervalKind>MONTH</calcIntervalKind>
-                                                                 <calcIntervalPer>12</calcIntervalPer>
-                                                             </measurementInterval>
-                                                             <statisticKind>max</statisticKind>
-                                                             <inclusionStatus>inclusive</inclusionStatus>
-                                                         </limitMeasureSpecification>
-                                                         <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
-                                                             the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
-                                                             consecutive months, the customer thereafter shall be billed under another appropriate service classification.</description>
-                                                     </limit>
-                                                 </LimitType>
-                                             </eligibility>
+                                                <eligibility>
+                                                    <enrollmentCriteria>
+                                                        <enrollmentChoice>
+                                                            <enrollmentKind></enrollmentKind>
+                                                            <name></name>
+                                                            <description></description>
+                                                        </enrollmentChoice>
+                                                    </enrollmentCriteria>
+                                                    <limit>
+                                                        <limitKind>
+                                                            <serviceMeasurement>demand</serviceMeasurement>
+                                                            <profileMetric> 
+                                                                <profileVariable>Capacity</profileVariable>
+                                                            </profileMetric>
+                                                        </limitKind>
+                                                        <name>Active Energy Demand</name>
+                                                        <limitValue>300</limitValue>
+                                                        <limitMeasureSpecification>
+                                                            <calculationMethod>avg</calculationMethod>
+                                                            <calculationBaseValue>calculationBaseValue0</calculationBaseValue>
+                                                            <measurementSource>demand</measurementSource>
+                                                            <unitOfMeasure>kW</unitOfMeasure>
+                                                            <measurementInterval>
+                                                                <calculationMode>SLIDING</calculationMode>
+                                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                                <calcIntervalPer>1</calcIntervalPer>
+                                                            </measurementInterval>
+                                                            <statisticKind>min</statisticKind>
+                                                            <inclusionStatus>inclusive</inclusionStatus>
+                                                        </limitMeasureSpecification>
+                                                        <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
+                                                            the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
+                                                            consecutive months, the customer thereafter shall be billed under another appropriate service classification.
+                                                        </description>
+                                                    </limit>
+                                                    <limit>
+                                                        <limitKind>
+                                                            <serviceMeasurement>demand</serviceMeasurement> 
+                                                            <profileMetric> 
+                                                                <profileVariable>Capacity</profileVariable>
+                                                            </profileMetric>
+                                                        </limitKind>
+                                                        <name>Active Energy Demand</name>
+                                                        <limitValue>200</limitValue>
+                                                        <limitMeasureSpecification>
+                                                            <calculationMethod>by_metered_quantity</calculationMethod>
+                                                            <measurementSource>demand</measurementSource>
+                                                            <unitOfMeasure>kW</unitOfMeasure>
+                                                            <measurementInterval>
+                                                                <calculationMode>SLIDING</calculationMode>
+                                                                <calcIntervalKind>MONTH</calcIntervalKind>
+                                                                <calcIntervalPer>12</calcIntervalPer>
+                                                            </measurementInterval>
+                                                            <statisticKind>max</statisticKind>
+                                                            <inclusionStatus>inclusive</inclusionStatus>
+                                                        </limitMeasureSpecification>
+                                                        <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
+                                                            the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
+                                                            consecutive months, the customer thereafter shall be billed under another appropriate service classification.
+                                                        </description>
+                                                    </limit>        
+                                                </eligibility>
                                              <seasons>
                                                  <season>
                                                      <seasonName>Winter</seasonName>
@@ -6913,53 +7029,65 @@
                                              </description>
                                              <eligibility>
                                                  <enrollmentCriteria>
-                                                     <enrollmentChoice>   
-                                                     </enrollmentChoice>  
+                                                     <enrollmentChoice>
+                                                         <enrollmentKind></enrollmentKind>
+                                                         <name></name>
+                                                         <description></description>
+                                                     </enrollmentChoice>
                                                  </enrollmentCriteria>
-                                                 <LimitType>
-                                                     <limit>
-                                                         <limitKind>ElectricDemand</limitKind>
-                                                         <name>Active Energy Demand</name>
-                                                         <limitValue>300</limitValue>
-                                                         <limitMeasureSpecification>
-                                                             <calculationMethod>avg</calculationMethod>
-                                                             <calculationBaseValue>calculationBaseValue0</calculationBaseValue>
-                                                             <measurementSource>demand</measurementSource>
-                                                             <unitOfMeasure>kW</unitOfMeasure>
-                                                             <measurementInterval>
-                                                                 <calculationMode>SLIDING</calculationMode>
-                                                                 <calcIntervalKind>MONTH</calcIntervalKind>
-                                                                 <calcIntervalPer>1</calcIntervalPer>
-                                                             </measurementInterval>
-                                                             <statisticKind>min</statisticKind>
-                                                             <inclusionStatus>inclusive</inclusionStatus>
-                                                         </limitMeasureSpecification>
-                                                         <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
-                                                             the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
-                                                             consecutive months, the customer thereafter shall be billed under another appropriate service classification.
-                                                         </description>
-                                                     </limit>
-                                                     <limit>
-                                                         <limitKind>ElectricDemand</limitKind>
-                                                         <name>Active Energy Demand</name>
-                                                         <limitValue>200</limitValue>
-                                                         <limitMeasureSpecification>
-                                                             <calculationMethod>by_metered_quantity</calculationMethod>
-                                                             <measurementSource>demand</measurementSource>
-                                                             <unitOfMeasure>kW</unitOfMeasure>
-                                                             <measurementInterval>
-                                                                 <calculationMode>SLIDING</calculationMode>
-                                                                 <calcIntervalKind>MONTH</calcIntervalKind>
-                                                                 <calcIntervalPer>12</calcIntervalPer>
-                                                             </measurementInterval>
-                                                             <statisticKind>max</statisticKind>
-                                                             <inclusionStatus>inclusive</inclusionStatus>
-                                                         </limitMeasureSpecification>
-                                                         <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
-                                                             the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
-                                                             consecutive months, the customer thereafter shall be billed under another appropriate service classification.</description>
-                                                     </limit>
-                                                 </LimitType>
+                                                 <limit>
+                                                     <limitKind>
+                                                         <serviceMeasurement>demand</serviceMeasurement>
+                                                         <profileMetric> 
+                                                             <profileVariable>Capacity</profileVariable>
+                                                         </profileMetric>
+                                                     </limitKind>
+                                                     <name>Active Energy Demand</name>
+                                                     <limitValue>300</limitValue>
+                                                     <limitMeasureSpecification>
+                                                         <calculationMethod>avg</calculationMethod>
+                                                         <calculationBaseValue>calculationBaseValue0</calculationBaseValue>
+                                                         <measurementSource>demand</measurementSource>
+                                                         <unitOfMeasure>kW</unitOfMeasure>
+                                                         <measurementInterval>
+                                                             <calculationMode>SLIDING</calculationMode>
+                                                             <calcIntervalKind>MONTH</calcIntervalKind>
+                                                             <calcIntervalPer>1</calcIntervalPer>
+                                                         </measurementInterval>
+                                                         <statisticKind>min</statisticKind>
+                                                         <inclusionStatus>inclusive</inclusionStatus>
+                                                     </limitMeasureSpecification>
+                                                     <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
+                                                         the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
+                                                         consecutive months, the customer thereafter shall be billed under another appropriate service classification.
+                                                     </description>
+                                                 </limit>
+                                                 <limit>
+                                                     <limitKind>
+                                                         <serviceMeasurement>demand</serviceMeasurement> 
+                                                         <profileMetric> 
+                                                             <profileVariable>Capacity</profileVariable>
+                                                         </profileMetric>
+                                                     </limitKind>
+                                                     <name>Active Energy Demand</name>
+                                                     <limitValue>200</limitValue>
+                                                     <limitMeasureSpecification>
+                                                         <calculationMethod>by_metered_quantity</calculationMethod>
+                                                         <measurementSource>demand</measurementSource>
+                                                         <unitOfMeasure>kW</unitOfMeasure>
+                                                         <measurementInterval>
+                                                             <calculationMode>SLIDING</calculationMode>
+                                                             <calcIntervalKind>MONTH</calcIntervalKind>
+                                                             <calcIntervalPer>12</calcIntervalPer>
+                                                         </measurementInterval>
+                                                         <statisticKind>max</statisticKind>
+                                                         <inclusionStatus>inclusive</inclusionStatus>
+                                                     </limitMeasureSpecification>
+                                                     <description>All purposes, in Entire Territory, by any customer with a basic demand of not less than 300 kW during any three of
+                                                         the previous 12 months, provided, however, that whenever the monthly basic demand has been 200 kW or less for 12
+                                                         consecutive months, the customer thereafter shall be billed under another appropriate service classification.
+                                                     </description>
+                                                 </limit>        
                                              </eligibility>
                                              <seasons>
                                                  <season>
