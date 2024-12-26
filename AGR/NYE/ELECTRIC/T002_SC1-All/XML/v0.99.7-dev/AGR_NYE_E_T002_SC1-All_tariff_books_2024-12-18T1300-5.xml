@@ -104,7 +104,6 @@
                                     </tariffBookLeafRanges>
                                     <dpsCaseNumber>22-E-0317</dpsCaseNumber>
                                     <iedrRatePlanBrowserURL>https://iedr.nyserda.ny.gov/rate-plan/?rateId=ERS-AGR-NYE-SC01-RES1</iedrRatePlanBrowserURL>
-                                    <tariffStatementTypeCode/>
                                 </provenanceMetadata>
                                 <name>Service Classification No. 1</name>
                                 <validityStatusDates>
@@ -328,7 +327,6 @@
                                     </tariffBookLeafRanges>
                                     <dpsCaseNumber>22-E-0317</dpsCaseNumber>
                                     <iedrRatePlanBrowserURL>https://iedr.nyserda.ny.gov/rate-plan/?rateId=EDS-AGR-NYE-SC01-RES-001</iedrRatePlanBrowserURL>
-                                    <tariffStatementTypeCode/>
                                 </provenanceMetadata>
                                 <name>Service Classification No. 1 NYSEG Supply Service (NSS)</name>
                                 <validityStatusDates>
@@ -551,7 +549,6 @@
                                     </tariffBookLeafRanges>
                                     <dpsCaseNumber>22-E-0317</dpsCaseNumber>
                                     <iedrRatePlanBrowserURL>https://iedr.nyserda.ny.gov/rate-plan/?rateId=ERS-AGR-NYE-SC01-S-RES-001</iedrRatePlanBrowserURL>
-                                    <tariffStatementTypeCode/>
                                 </provenanceMetadata>
                                 <name>Service Classification No. 1 - ESCO Supply Service (ESS)</name>
                                 <validityStatusDates>
@@ -773,8 +770,7 @@
                                         </tariffBookLeafRange>
                                     </tariffBookLeafRanges>
                                     <dpsCaseNumber>22-E-0317</dpsCaseNumber>
-                                    <iedrRatePlanBrowserURL>https://iedr.nyserda.ny.gov/rate-plan/?rateId=EDS-AGR-NYE-SC01-S-RES-001</iedrRatePlanBrowserURL>
-                                    <tariffStatementTypeCode/>
+                                    <iedrRatePlanBrowserURL>https://iedr.nyserda.ny.gov/rate-plan/?rateId=EDS-AGR-NYE-SC01-S-RES-001p</iedrRatePlanBrowserURL>
                                 </provenanceMetadata>
                                 <name>Service Classification No. 1 - Seasonal NYSEG Supply Service (NSS)</name>
                                 <validityStatusDates>
