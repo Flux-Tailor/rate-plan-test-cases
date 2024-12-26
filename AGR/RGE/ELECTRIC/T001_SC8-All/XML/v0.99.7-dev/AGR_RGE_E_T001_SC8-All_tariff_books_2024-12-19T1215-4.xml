@@ -137,9 +137,9 @@
                                 <eligibility>
                                     <enrollmentCriteria>
                                         <enrollmentChoice>
-                                            <enrollmentKind></enrollmentKind>
-                                            <name></name>
-                                            <description></description>
+                                            <enrollmentKind>VoluntaryEnrollment</enrollmentKind>
+                                            <name>VoluntaryEnrollment</name>
+                                            <description>Hourly Pricing is voluntary for any customer who would otherwise qualify for service under Service Classification No. 8 – Large General Service – Time of Use Rate. Once a customer elects Hourly Pricing they shall remain subject to this provision until their monthly measured demand has been 200 KW or less for 12 consecutive months, the customer shall then be billed under another appropriate service classification.</description>
                                         </enrollmentChoice>
                                     </enrollmentCriteria>
                                     <limit>
@@ -683,7 +683,7 @@
                                                      </measurementDefinition> 
                                                  </nonmeteredServiceCharge>  
                                             </charges>
-                                         </ratePlan>  
+                                         </ratePlan>
                                          <ratePlan ratePlanURI="">
                                             <ratePlanIdentifiers>
                                                 <serviceClassNumber>8</serviceClassNumber>
@@ -1402,9 +1402,9 @@
                                                 <eligibility>
                                                     <enrollmentCriteria>
                                                         <enrollmentChoice>
-                                                            <enrollmentKind></enrollmentKind>
-                                                            <name></name>
-                                                            <description></description>
+                                                            <enrollmentKind>VoluntaryEnrollment</enrollmentKind>
+                                                            <name>VoluntaryEnrollment</name>
+                                                            <description>Hourly Pricing is voluntary for any customer who would otherwise qualify for service under Service Classification No. 8 – Large General Service – Time of Use Rate. Once a customer elects Hourly Pricing they shall remain subject to this provision until their monthly measured demand has been 200 KW or less for 12 consecutive months, the customer shall then be billed under another appropriate service classification.</description>
                                                         </enrollmentChoice>
                                                     </enrollmentCriteria>
                                                   <limit>
@@ -2017,9 +2017,9 @@
                                                 <eligibility>
                                                     <enrollmentCriteria>
                                                         <enrollmentChoice>
-                                                            <enrollmentKind></enrollmentKind>
-                                                            <name></name>
-                                                            <description></description>
+                                                            <enrollmentKind>VoluntaryEnrollment</enrollmentKind>
+                                                            <name>VoluntaryEnrollment</name>
+                                                            <description>Hourly Pricing is voluntary for any customer who would otherwise qualify for service under Service Classification No. 8 – Large General Service – Time of Use Rate. Once a customer elects Hourly Pricing they shall remain subject to this provision until their monthly measured demand has been 200 KW or less for 12 consecutive months, the customer shall then be billed under another appropriate service classification.</description>
                                                         </enrollmentChoice>
                                                     </enrollmentCriteria>
                                                     <limit>
@@ -2565,7 +2565,7 @@
                                                  </nonmeteredServiceCharge>  
                                             </charges>
                                          </ratePlan>
-                                         </ratePlans> 
+                                      </ratePlans> 
                                     </rate> 
                                     <rate>
                                         <rateCode>SC08SI</rateCode>
@@ -2655,9 +2655,9 @@
                                             <eligibility>
                                                 <enrollmentCriteria>
                                                     <enrollmentChoice>
-                                                        <enrollmentKind></enrollmentKind>
-                                                        <name></name>
-                                                        <description></description>
+                                                        <enrollmentKind>VoluntaryEnrollment</enrollmentKind>
+                                                        <name>VoluntaryEnrollment</name>
+                                                        <description>Hourly Pricing is voluntary for any customer who would otherwise qualify for service under Service Classification No. 8 – Large General Service – Time of Use Rate. Once a customer elects Hourly Pricing they shall remain subject to this provision until their monthly measured demand has been 200 KW or less for 12 consecutive months, the customer shall then be billed under another appropriate service classification.</description>
                                                     </enrollmentChoice>
                                                 </enrollmentCriteria>
                                                 <limit>
@@ -3271,9 +3271,9 @@
                                             <eligibility>
                                                 <enrollmentCriteria>
                                                     <enrollmentChoice>
-                                                        <enrollmentKind></enrollmentKind>
-                                                        <name></name>
-                                                        <description></description>
+                                                        <enrollmentKind>VoluntaryEnrollment</enrollmentKind>
+                                                        <name>VoluntaryEnrollment</name>
+                                                        <description>Hourly Pricing is voluntary for any customer who would otherwise qualify for service under Service Classification No. 8 – Large General Service – Time of Use Rate. Once a customer elects Hourly Pricing they shall remain subject to this provision until their monthly measured demand has been 200 KW or less for 12 consecutive months, the customer shall then be billed under another appropriate service classification.</description>
                                                     </enrollmentChoice>
                                                 </enrollmentCriteria>
                                                 <limit>
@@ -3908,9 +3908,9 @@
                                                 <eligibility>
                                                     <enrollmentCriteria>
                                                         <enrollmentChoice>
-                                                            <enrollmentKind></enrollmentKind>
-                                                            <name></name>
-                                                            <description></description>
+                                                            <enrollmentKind>VoluntaryEnrollment</enrollmentKind>
+                                                            <name>VoluntaryEnrollment</name>
+                                                            <description>Hourly Pricing is voluntary for any customer who would otherwise qualify for service under Service Classification No. 8 – Large General Service – Time of Use Rate. Once a customer elects Hourly Pricing they shall remain subject to this provision until their monthly measured demand has been 200 KW or less for 12 consecutive months, the customer shall then be billed under another appropriate service classification.</description>
                                                         </enrollmentChoice>
                                                     </enrollmentCriteria>
                                                     <limit>
@@ -4524,9 +4524,9 @@
                                              <eligibility>
                                                  <enrollmentCriteria>
                                                      <enrollmentChoice>
-                                                         <enrollmentKind></enrollmentKind>
-                                                         <name></name>
-                                                         <description></description>
+                                                         <enrollmentKind>VoluntaryEnrollment</enrollmentKind>
+                                                         <name>VoluntaryEnrollment</name>
+                                                         <description>Hourly Pricing is voluntary for any customer who would otherwise qualify for service under Service Classification No. 8 – Large General Service – Time of Use Rate. Once a customer elects Hourly Pricing they shall remain subject to this provision until their monthly measured demand has been 200 KW or less for 12 consecutive months, the customer shall then be billed under another appropriate service classification.</description>
                                                      </enrollmentChoice>
                                                  </enrollmentCriteria>
                                                  <limit>
@@ -5161,9 +5161,9 @@
                                                 <eligibility>
                                                     <enrollmentCriteria>
                                                         <enrollmentChoice>
-                                                            <enrollmentKind></enrollmentKind>
-                                                            <name></name>
-                                                            <description></description>
+                                                            <enrollmentKind>VoluntaryEnrollment</enrollmentKind>
+                                                            <name>VoluntaryEnrollment</name>
+                                                            <description>Hourly Pricing is voluntary for any customer who would otherwise qualify for service under Service Classification No. 8 – Large General Service – Time of Use Rate. Once a customer elects Hourly Pricing they shall remain subject to this provision until their monthly measured demand has been 200 KW or less for 12 consecutive months, the customer shall then be billed under another appropriate service classification.</description>
                                                         </enrollmentChoice>
                                                     </enrollmentCriteria>
                                                     <limit>
@@ -5777,9 +5777,9 @@
                                              <eligibility>
                                                  <enrollmentCriteria>
                                                      <enrollmentChoice>
-                                                         <enrollmentKind></enrollmentKind>
-                                                         <name></name>
-                                                         <description></description>
+                                                         <enrollmentKind>VoluntaryEnrollment</enrollmentKind>
+                                                         <name>VoluntaryEnrollment</name>
+                                                         <description>Hourly Pricing is voluntary for any customer who would otherwise qualify for service under Service Classification No. 8 – Large General Service – Time of Use Rate. Once a customer elects Hourly Pricing they shall remain subject to this provision until their monthly measured demand has been 200 KW or less for 12 consecutive months, the customer shall then be billed under another appropriate service classification.</description>
                                                      </enrollmentChoice>
                                                  </enrollmentCriteria>
                                                  <limit>
@@ -6414,9 +6414,9 @@
                                                 <eligibility>
                                                     <enrollmentCriteria>
                                                         <enrollmentChoice>
-                                                            <enrollmentKind></enrollmentKind>
-                                                            <name></name>
-                                                            <description></description>
+                                                            <enrollmentKind>VoluntaryEnrollment</enrollmentKind>
+                                                            <name>VoluntaryEnrollment</name>
+                                                            <description>Hourly Pricing is voluntary for any customer who would otherwise qualify for service under Service Classification No. 8 – Large General Service – Time of Use Rate. Once a customer elects Hourly Pricing they shall remain subject to this provision until their monthly measured demand has been 200 KW or less for 12 consecutive months, the customer shall then be billed under another appropriate service classification.</description>
                                                         </enrollmentChoice>
                                                     </enrollmentCriteria>
                                                     <limit>
@@ -7030,9 +7030,9 @@
                                              <eligibility>
                                                  <enrollmentCriteria>
                                                      <enrollmentChoice>
-                                                         <enrollmentKind></enrollmentKind>
-                                                         <name></name>
-                                                         <description></description>
+                                                         <enrollmentKind>VoluntaryEnrollment</enrollmentKind>
+                                                         <name>VoluntaryEnrollment</name>
+                                                         <description>Hourly Pricing is voluntary for any customer who would otherwise qualify for service under Service Classification No. 8 – Large General Service – Time of Use Rate. Once a customer elects Hourly Pricing they shall remain subject to this provision until their monthly measured demand has been 200 KW or less for 12 consecutive months, the customer shall then be billed under another appropriate service classification.</description>
                                                      </enrollmentChoice>
                                                  </enrollmentCriteria>
                                                  <limit>
@@ -7580,7 +7580,6 @@
                                          </ratePlan>
                                        </ratePlans>
                                       </rate>
-   
                 </rates>
             </serviceClass>
         </serviceClasses>
