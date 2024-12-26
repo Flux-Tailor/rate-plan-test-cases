@@ -508,36 +508,36 @@
                                             <customerClasses>
                                                 <customerClass>Residential</customerClass>
                                             </customerClasses>
-                                        </profile>
-                                        <ratePlanTerritories>
-                                            <ratePlanTerritory>
-                                                <IedrRatePlanTerritoryId>Orange county</IedrRatePlanTerritoryId>
-                                                <territoryKind>legal_division</territoryKind>
-                                                <geographicUnit></geographicUnit>
-                                                <rawValue>OC</rawValue>
-                                                <effectivePeriod>
-                                                    <startDate>2024-01-01</startDate>
-                                                </effectivePeriod>
-                                            </ratePlanTerritory>
-                                            <ratePlanTerritory>
-                                                <IedrRatePlanTerritoryId>Sullivan county</IedrRatePlanTerritoryId>
-                                                <territoryKind>legal_division</territoryKind>
-                                                <geographicUnit></geographicUnit>
-                                                <rawValue>SC</rawValue>
-                                                <effectivePeriod>
-                                                    <startDate>2024-01-01</startDate>
-                                                </effectivePeriod>
-                                            </ratePlanTerritory>
-                                            <ratePlanTerritory>
-                                                <IedrRatePlanTerritoryId>Rockland county</IedrRatePlanTerritoryId>
-                                                <territoryKind>legal_division</territoryKind>
-                                                <geographicUnit></geographicUnit>
-                                                <rawValue>RC</rawValue>
-                                                <effectivePeriod>
-                                                    <startDate>2024-01-01</startDate>
-                                                </effectivePeriod>
-                                            </ratePlanTerritory>
+                                            <ratePlanTerritories>
+                                                <ratePlanTerritory>
+                                                    <IedrRatePlanTerritoryId>Orange county</IedrRatePlanTerritoryId>
+                                                    <territoryKind>legal_division</territoryKind>
+                                                    <geographicUnit></geographicUnit>
+                                                    <rawValue>OC</rawValue>
+                                                    <effectivePeriod>
+                                                        <startDate>2024-01-01</startDate>
+                                                    </effectivePeriod>
+                                                </ratePlanTerritory>
+                                                <ratePlanTerritory>
+                                                    <IedrRatePlanTerritoryId>Sullivan county</IedrRatePlanTerritoryId>
+                                                    <territoryKind>legal_division</territoryKind>
+                                                    <geographicUnit></geographicUnit>
+                                                    <rawValue>SC</rawValue>
+                                                    <effectivePeriod>
+                                                        <startDate>2024-01-01</startDate>
+                                                    </effectivePeriod>
+                                                </ratePlanTerritory>
+                                                <ratePlanTerritory>
+                                                    <IedrRatePlanTerritoryId>Rockland county</IedrRatePlanTerritoryId>
+                                                    <territoryKind>legal_division</territoryKind>
+                                                    <geographicUnit></geographicUnit>
+                                                    <rawValue>RC</rawValue>
+                                                    <effectivePeriod>
+                                                        <startDate>2024-01-01</startDate>
+                                                    </effectivePeriod>
+                                                </ratePlanTerritory>
                                         </ratePlanTerritories>
+                                        </profile>
                                     </ratePlanApplicability>
                                     <provenanceMetadata>
                                         <tariffBookLeafRanges>
