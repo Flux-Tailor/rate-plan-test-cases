@@ -19619,16 +19619,6 @@
                             <dwelling>Multifamily</dwelling>
                             <dwelling>SingleFamily</dwelling>
                         </dwellingScenario>
-                        <customerClasses>
-                            <customerClass>Residential</customerClass>
-                        </customerClasses>
-                        <customerEntities>
-                            <customerEntity>NonProfit</customerEntity>
-                        </customerEntities>
-                        <dwellingScenario>
-                            <dwelling>Multifamily</dwelling>
-                            <dwelling>SingleFamily</dwelling>
-                        </dwellingScenario>
                         <ratePlanTerritories>
                             <ratePlanTerritory>
                                 <IedrRatePlanTerritoryId>NYISO_A</IedrRatePlanTerritoryId>
@@ -19752,16 +19742,6 @@
                             <dwelling>Multifamily</dwelling>
                             <dwelling>SingleFamily</dwelling>
                         </dwellingScenario>
-                        <customerClasses>
-                            <customerClass>Residential</customerClass>
-                        </customerClasses>
-                        <customerEntities>
-                            <customerEntity>NonProfit</customerEntity>
-                        </customerEntities>
-                        <dwellingScenario>
-                            <dwelling>Multifamily</dwelling>
-                            <dwelling>SingleFamily</dwelling>
-                        </dwellingScenario>
                         <ratePlanTerritories>
                             <ratePlanTerritory>
                                 <IedrRatePlanTerritoryId>NYISO_A</IedrRatePlanTerritoryId>
@@ -19875,16 +19855,6 @@
                         </ratePlanModifierReferences>
                     </identifiers>
                     <profile>
-                        <customerClasses>
-                            <customerClass>Residential</customerClass>
-                        </customerClasses>
-                        <customerEntities>
-                            <customerEntity>NonProfit</customerEntity>
-                        </customerEntities>
-                        <dwellingScenario>
-                            <dwelling>Multifamily</dwelling>
-                            <dwelling>SingleFamily</dwelling>
-                        </dwellingScenario>
                         <customerClasses>
                             <customerClass>Residential</customerClass>
                         </customerClasses>
