@@ -162,4 +162,8 @@ cython_debug/
 #.idea/
 
 # macos file
-.DS_Store.DS_Store
+.DS_Store
+
+
+#Oxygen backup files
+*.xml.bak
