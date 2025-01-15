@@ -10,7 +10,7 @@
         <commodity>electricityPrimaryMetered</commodity>
         <dataSource>Statement</dataSource>
         <mediaType>application/pdf</mediaType>
-        <sourceURL>https://ets.dps.ny.gov/ets_web/search/searchShortcutEffectiveAction.cfm?M%3FIW%3F%21ZQOH%25NL%40LNR%3C%2BR%3F%2BXTWD8AM%3F%263%40JZ%3E%3EME%2AOC9%3E4J%292TH%21J%3EH%2AK%3D%26%28VP%0AMLF%5EGL%2A%5F%25AKO%2BS%5EH%3BQO%5F%2E%23%3C%2DD4%3B%2F%2FO%20%2AVBMFR4K%3BHI%2A%3A%29IE%22EGE%26X4QF%3B1IG%2A%0AMC%24VCF%5DUO%5CG%2E%5F%5FY%2A%2AOI%22%5FEK4%21K%403%27%40%2BZF%203NOD%3B%22Q%22Z%5DANH%22%40N%3A%2B%3DO%2AOQJM3I%0AM%27U%2AK5YVQD%26%22YCB%3AIJ%40%5EQX5KJD%26V%24XJ%2F%3B2%24MBMIS0%3D%26%2C%5CKW5NJ%2B%2C%3DQ%3B8LF%5B7L%0A%276%2B%28T6LJ%2CP0%20%20%0A</sourceURL>
+        <sourceURL>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2825933</sourceURL>
         <dataCreationMethod>Manual</dataCreationMethod>
         <dataDownloadURL>https://ets.dps.ny.gov/ets_web/search/showPDF.cfm?G%3E%29S2%3DJ9JSBW%27%5EJO%2F%20LKK4%3FXVAHQQ%3AW%2FLJ%5B%5E%3AICSBNKB%5FC%2A69NBFZ%0A</dataDownloadURL>
         <effectivePeriod>
@@ -18,15 +18,15 @@
         </effectivePeriod>
         <datePublished>2024-05-24</datePublished>
         <dateSourceLastUpdated>2024-06-01T00:00:00</dateSourceLastUpdated>
-        <dateTimeDataExtract>2024-12-22T14:23:31</dateTimeDataExtract>
-        <dateTimeDataTransfer>2024-12-22T14:23:31</dateTimeDataTransfer>
+        <dateTimeDataExtract>2025-01-15T17:30:14</dateTimeDataExtract>
+        <dateTimeDataTransfer>2025-01-15T17:30:14</dateTimeDataTransfer>
         <updateFrequency>annually</updateFrequency>
         <tariffStatementTypeCode>AMP</tariffStatementTypeCode>
         <type>Arrears Mgt. Prog. Surcharge</type>
         <docNumber>1</docNumber>
         <dpsCaseNumber>14-M-0565</dpsCaseNumber>
         <generalRuleReferences>
-            <generalRuleReference>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2825933</generalRuleReference>
+            <generalRuleReference>26.11</generalRuleReference>
         </generalRuleReferences>
         <statementCharges>
             <scopeOfApplicability>
@@ -1621,7 +1621,7 @@
         <commodity>electricityPrimaryMetered</commodity>
         <dataSource>Statement</dataSource>
         <mediaType>application/pdf</mediaType>
-        <sourceURL>https://ets.dps.ny.gov/ets_web/search/searchShortcutEffectiveAction.cfm?M%3FIW%3F%21ZQOH%25NL%40LNR%3C%2BR%3F%2BXTWD8AM%3F%263%40JZ%3E%3EME%2AOC9%3E4J%292TH%21J%3EH%2AK%3D%26%28VP%0AMLF%5EGL%2A%5F%25AKO%2BS%5EH%3BQO%5F%2E%23%3C%2DD4%3B%2F%2FO%20%2AVBMFR4K%3BHI%2A%3A%29IE%22EGE%26X4QF%3B1IG%2A%0AMC%24VCF%5DUO%5CG%2E%5F%5FY%2A%2AOI%22%5FEK4%21K%403%27%40%2BZF%203NOD%3B%22Q%22Z%5DANH%22%40N%3A%2B%3DO%2AOQJM3I%0AM%27U%2AK5YVQD%26%22YCB%3AIJ%40%5EQX5KJD%26V%24XJ%2F%3B2%24MBMIS0%3D%26%2C%5CKW5NJ%2B%2C%3DQ%3B8LF%5B7L%0A%276%2B%28T6LJ%2CP0%20%20%0A</sourceURL>
+        <sourceURL>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2814995</sourceURL>
         <dataCreationMethod>Manual</dataCreationMethod>
         <dataDownloadURL>https://ets.dps.ny.gov/ets_web/search/showPDF.cfm?G%3E%29S2%3DJ9JSBW%27%5F%2AO%26%20%5CKK4%3FXVAHQQ%3AW%2FLJ%5B%5E%3AICSBNKB%5FC%2A69NBFZ%0A</dataDownloadURL>
         <effectivePeriod>
@@ -1629,15 +1629,15 @@
         </effectivePeriod>
         <datePublished>2022-01-14</datePublished>
         <dateSourceLastUpdated>2024-06-01T00:00:00</dateSourceLastUpdated>
-        <dateTimeDataExtract>2024-12-22T14:23:31</dateTimeDataExtract>
-        <dateTimeDataTransfer>2024-12-22T14:23:31</dateTimeDataTransfer>
+        <dateTimeDataExtract>2025-01-15T17:30:14</dateTimeDataExtract>
+        <dateTimeDataTransfer>2025-01-15T17:30:14</dateTimeDataTransfer>
         <updateFrequency>annually</updateFrequency>
         <tariffStatementTypeCode>CCA</tariffStatementTypeCode>
         <type>Community Choice Aggregation</type>
         <docNumber>2</docNumber>
         <dpsCaseNumber>20-M-0082</dpsCaseNumber>
         <generalRuleReferences>
-            <generalRuleReference>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2814995</generalRuleReference>
+            <generalRuleReference>17.8</generalRuleReference>
         </generalRuleReferences>
         <statementCharges>
             <scopeOfApplicability>
@@ -1745,7 +1745,7 @@
         <commodity>electricityPrimaryMetered</commodity>
         <dataSource>Statement</dataSource>
         <mediaType>application/pdf</mediaType>
-        <sourceURL>https://ets.dps.ny.gov/ets_web/search/searchShortcutEffectiveAction.cfm?M%3FIW%3F%21ZQOH%25NL%40LNR%3C%2BR%3F%2BXTWD8AM%3F%263%40JZ%3E%3EME%2AOC9%3E4J%292TH%21J%3EH%2AK%3D%26%28VP%0AMLF%5EGL%2A%5F%25AKO%2BS%5EH%3BQO%5F%2E%23%3C%2DD4%3B%2F%2FO%20%2AVBMFR4K%3BHI%2A%3A%29IE%22EGE%26X4QF%3B1IG%2A%0AMC%24VCF%5DUO%5CG%2E%5F%5FY%2A%2AOI%22%5FEK4%21K%403%27%40%2BZF%203NOD%3B%22Q%22Z%5DANH%22%40N%3A%2B%3DO%2AOQJM3I%0AM%27U%2AK5YVQD%26%22YCB%3AIJ%40%5EQX5KJD%26V%24XJ%2F%3B2%24MBMIS0%3D%26%2C%5CKW5NJ%2B%2C%3DQ%3B8LF%5B7L%0A%276%2B%28T6LJ%2CP0%20%20%0A</sourceURL>
+        <sourceURL>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2827411</sourceURL>
         <dataCreationMethod>Manual</dataCreationMethod>
         <dataDownloadURL>https://ets.dps.ny.gov/ets_web/search/showPDF.cfm?G%3E%29S2%3DJ9JSBW%27%5EZW%28%21L%5BK4%3FXVAHQQ%3AW%2FLJ%5B%5E%3AICSBNKB%5FC%2A69NBFZ%0A</dataDownloadURL>
         <effectivePeriod>
@@ -1753,15 +1753,15 @@
         </effectivePeriod>
         <datePublished>2024-09-16</datePublished>
         <dateSourceLastUpdated>2024-06-01T00:00:00</dateSourceLastUpdated>
-        <dateTimeDataExtract>2024-12-22T14:23:31</dateTimeDataExtract>
-        <dateTimeDataTransfer>2024-12-22T14:23:31</dateTimeDataTransfer>
+        <dateTimeDataExtract>2025-01-15T17:30:14</dateTimeDataExtract>
+        <dateTimeDataTransfer>2025-01-15T17:30:14</dateTimeDataTransfer>
         <updateFrequency>annually</updateFrequency>
         <tariffStatementTypeCode>CESD</tariffStatementTypeCode>
         <type>Clean Energy Standard Delivery</type>
         <docNumber>3</docNumber>
         <dpsCaseNumber/>
         <generalRuleReferences>
-            <generalRuleReference>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2827411</generalRuleReference>
+            <generalRuleReference>26.5</generalRuleReference>
         </generalRuleReferences>
         <statementCharges>
             <scopeOfApplicability>
@@ -1892,7 +1892,7 @@
         <commodity>electricityPrimaryMetered</commodity>
         <dataSource>Statement</dataSource>
         <mediaType>application/pdf</mediaType>
-        <sourceURL>https://ets.dps.ny.gov/ets_web/search/searchShortcutEffectiveAction.cfm?M%3FIW%3F%21ZQOH%25NL%40LNR%3C%2BR%3F%2BXTWD8AM%3F%263%40JZ%3E%3EME%2AOC9%3E4J%292TH%21J%3EH%2AK%3D%26%28VP%0AMLF%5EGL%2A%5F%25AKO%2BS%5EH%3BQO%5F%2E%23%3C%2DD4%3B%2F%2FO%20%2AVBMFR4K%3BHI%2A%3A%29IE%22EGE%26X4QF%3B1IG%2A%0AMC%24VCF%5DUO%5CG%2E%5F%5FY%2A%2AOI%22%5FEK4%21K%403%27%40%2BZF%203NOD%3B%22Q%22Z%5DANH%22%40N%3A%2B%3DO%2AOQJM3I%0AM%27U%2AK5YVQD%26%22YCB%3AIJ%40%5EQX5KJD%26V%24XJ%2F%3B2%24MBMIS0%3D%26%2C%5CKW5NJ%2B%2C%3DQ%3B8LF%5B7L%0A%276%2B%28T6LJ%2CP0%20%20%0A</sourceURL>
+        <sourceURL>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2825369</sourceURL>
         <dataCreationMethod>Manual</dataCreationMethod>
         <dataDownloadURL>https://ets.dps.ny.gov/ets_web/search/showPDF.cfm?G%3E%29S2%3DJ9JSBW%27%5EJW%2D%20%3C%5BK4%3FXVAHQQ%3AW%2FLJ%5B%5E%3AICSBNKB%5FC%2A69NBFZ%0A</dataDownloadURL>
         <effectivePeriod>
@@ -1900,15 +1900,15 @@
         </effectivePeriod>
         <datePublished>2024-03-29</datePublished>
         <dateSourceLastUpdated>2024-06-01T00:00:00</dateSourceLastUpdated>
-        <dateTimeDataExtract>2024-12-22T14:23:31</dateTimeDataExtract>
-        <dateTimeDataTransfer>2024-12-22T14:23:31</dateTimeDataTransfer>
+        <dateTimeDataExtract>2025-01-15T17:30:14</dateTimeDataExtract>
+        <dateTimeDataTransfer>2025-01-15T17:30:14</dateTimeDataTransfer>
         <updateFrequency>annually</updateFrequency>
         <tariffStatementTypeCode>CESS</tariffStatementTypeCode>
         <type>Clean Energy Stan. Supply Surc</type>
         <docNumber>9</docNumber>
         <dpsCaseNumber/>
         <generalRuleReferences>
-            <generalRuleReference>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2825369</generalRuleReference>
+            <generalRuleReference>25.4</generalRuleReference>
         </generalRuleReferences>
         <statementCharges>
             <scopeOfApplicability>
@@ -2056,7 +2056,7 @@
         <commodity>electricityPrimaryMetered</commodity>
         <dataSource>Statement</dataSource>
         <mediaType>application/pdf</mediaType>
-        <sourceURL>https://ets.dps.ny.gov/ets_web/search/searchShortcutEffectiveAction.cfm?M%3FIW%3F%21ZQOH%25NL%40LNR%3C%2BR%3F%2BXTWD8AM%3F%263%40JZ%3E%3EME%2AOC9%3E4J%292TH%21J%3EH%2AK%3D%26%28VP%0AMLF%5EGL%2A%5F%25AKO%2BS%5EH%3BQO%5F%2E%23%3C%2DD4%3B%2F%2FO%20%2AVBMFR4K%3BHI%2A%3A%29IE%22EGE%26X4QF%3B1IG%2A%0AMC%24VCF%5DUO%5CG%2E%5F%5FY%2A%2AOI%22%5FEK4%21K%403%27%40%2BZF%203NOD%3B%22Q%22Z%5DANH%22%40N%3A%2B%3DO%2AOQJM3I%0AM%27U%2AK5YVQD%26%22YCB%3AIJ%40%5EQX5KJD%26V%24XJ%2F%3B2%24MBMIS0%3D%26%2C%5CKW5NJ%2B%2C%3DQ%3B8LF%5B7L%0A%276%2B%28T6LJ%2CP0%20%20%0A</sourceURL>
+        <sourceURL>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2825845</sourceURL>
         <dataCreationMethod>Manual</dataCreationMethod>
         <dataDownloadURL>https://ets.dps.ny.gov/ets_web/search/showPDF.cfm?G%3E%29S2%3DJ9JSBW%27%5EJK%28%21%5CSK4%3FXVAHQQ%3AW%2FLJ%5B%5E%3AICSBNKB%5FC%2A69NBFZ%0A</dataDownloadURL>
         <effectivePeriod>
@@ -2064,15 +2064,15 @@
         </effectivePeriod>
         <datePublished>2024-05-17</datePublished>
         <dateSourceLastUpdated>2024-06-01T00:00:00</dateSourceLastUpdated>
-        <dateTimeDataExtract>2024-12-22T14:23:31</dateTimeDataExtract>
-        <dateTimeDataTransfer>2024-12-22T14:23:31</dateTimeDataTransfer>
+        <dateTimeDataExtract>2025-01-15T17:30:14</dateTimeDataExtract>
+        <dateTimeDataTransfer>2025-01-15T17:30:14</dateTimeDataTransfer>
         <updateFrequency>annually</updateFrequency>
         <tariffStatementTypeCode>DLM</tariffStatementTypeCode>
         <type>Dynamic Load Management Surch</type>
         <docNumber>9</docNumber>
         <dpsCaseNumber>15-E-0751</dpsCaseNumber>
         <generalRuleReferences>
-            <generalRuleReference>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2825845</generalRuleReference>
+            <generalRuleReference>26.6</generalRuleReference>
         </generalRuleReferences>
         <statementCharges>
             <scopeOfApplicability>
@@ -4932,7 +4932,7 @@
         <commodity>electricityPrimaryMetered</commodity>
         <dataSource>Statement</dataSource>
         <mediaType>application/pdf</mediaType>
-        <sourceURL>https://ets.dps.ny.gov/ets_web/search/searchShortcutEffectiveAction.cfm?M%3FIW%3F%21ZQOH%25NL%40LNR%3C%2BR%3F%2BXTWD8AM%3F%263%40JZ%3E%3EME%2AOC9%3E4J%292TH%21J%3EH%2AK%3D%26%28VP%0AMLF%5EGL%2A%5F%25AKO%2BS%5EH%3BQO%5F%2E%23%3C%2DD4%3B%2F%2FO%20%2AVBMFR4K%3BHI%2A%3A%29IE%22EGE%26X4QF%3B1IG%2A%0AMC%24VCF%5DUO%5CG%2E%5F%5FY%2A%2AOI%22%5FEK4%21K%403%27%40%2BZF%203NOD%3B%22Q%22Z%5DANH%22%40N%3A%2B%3DO%2AOQJM3I%0AM%27U%2AK5YVQD%26%22YCB%3AIJ%40%5EQX5KJD%26V%24XJ%2F%3B2%24MBMIS0%3D%26%2C%5CKW5NJ%2B%2C%3DQ%3B8LF%5B7L%0A%276%2B%28T6LJ%2CP0%20%20%0A</sourceURL>
+        <sourceURL>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2825845</sourceURL>
         <dataCreationMethod>Manual</dataCreationMethod>
         <dataDownloadURL>https://ets.dps.ny.gov/ets_web/search/showPDF.cfm?G%3E%29S2%3DJ9JSBW%27%5EJK%28%21%5CCK4%3FXVAHQQ%3AW%2FLJ%5B%5E%3AICSBNKB%5FC%2A69NBFZ%0A</dataDownloadURL>
         <effectivePeriod>
@@ -4940,15 +4940,15 @@
         </effectivePeriod>
         <datePublished>2024-05-17</datePublished>
         <dateSourceLastUpdated>2024-06-01T00:00:00</dateSourceLastUpdated>
-        <dateTimeDataExtract>2024-12-22T14:23:31</dateTimeDataExtract>
-        <dateTimeDataTransfer>2024-12-22T14:23:31</dateTimeDataTransfer>
+        <dateTimeDataExtract>2025-01-15T17:30:14</dateTimeDataExtract>
+        <dateTimeDataTransfer>2025-01-15T17:30:14</dateTimeDataTransfer>
         <updateFrequency>annually</updateFrequency>
         <tariffStatementTypeCode>EVS</tariffStatementTypeCode>
         <type>Electric Vehicle Statement</type>
         <docNumber>5</docNumber>
         <dpsCaseNumber>15-E-0751</dpsCaseNumber>
         <generalRuleReferences>
-            <generalRuleReference>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2825845</generalRuleReference>
+            <generalRuleReference>26.1</generalRuleReference>
         </generalRuleReferences>
         <statementCharges>
             <scopeOfApplicability>
@@ -6543,7 +6543,7 @@
         <commodity>electricityPrimaryMetered</commodity>
         <dataSource>Statement</dataSource>
         <mediaType>application/pdf</mediaType>
-        <sourceURL>https://ets.dps.ny.gov/ets_web/search/searchShortcutEffectiveAction.cfm?M%3FIW%3F%21ZQOH%25NL%40LNR%3C%2BR%3F%2BXTWD8AM%3F%263%40JZ%3E%3EME%2AOC9%3E4J%292TH%21J%3EH%2AK%3D%26%28VP%0AMLF%5EGL%2A%5F%25AKO%2BS%5EH%3BQO%5F%2E%23%3C%2DD4%3B%2F%2FO%20%2AVBMFR4K%3BHI%2A%3A%29IE%22EGE%26X4QF%3B1IG%2A%0AMC%24VCF%5DUO%5CG%2E%5F%5FY%2A%2AOI%22%5FEK4%21K%403%27%40%2BZF%203NOD%3B%22Q%22Z%5DANH%22%40N%3A%2B%3DO%2AOQJM3I%0AM%27U%2AK5YVQD%26%22YCB%3AIJ%40%5EQX5KJD%26V%24XJ%2F%3B2%24MBMIS0%3D%26%2C%5CKW5NJ%2B%2C%3DQ%3B8LF%5B7L%0A%276%2B%28T6LJ%2CP0%20%20%0A</sourceURL>
+        <sourceURL>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2827549</sourceURL>
         <dataCreationMethod>Manual</dataCreationMethod>
         <dataDownloadURL>https://ets.dps.ny.gov/ets_web/search/showPDF.cfm?G%3E%29S2%3DJ9JSBW%27%5EZK%2E%20L%23K4%3FXVAHQQ%3AW%2FLJ%5B%5E%3AICSBNKB%5FC%2A69NBFZ%0A</dataDownloadURL>
         <effectivePeriod>
@@ -6552,15 +6552,15 @@
         </effectivePeriod>
         <datePublished>2024-10-29</datePublished>
         <dateSourceLastUpdated>2024-11-01T00:00:00</dateSourceLastUpdated>
-        <dateTimeDataExtract>2024-12-22T14:23:31</dateTimeDataExtract>
-        <dateTimeDataTransfer>2024-12-22T14:23:31</dateTimeDataTransfer>
+        <dateTimeDataExtract>2025-01-15T17:30:14</dateTimeDataExtract>
+        <dateTimeDataTransfer>2025-01-15T17:30:14</dateTimeDataTransfer>
         <updateFrequency>annually</updateFrequency>
         <tariffStatementTypeCode>MAC</tariffStatementTypeCode>
         <type>Monthly Adjustment Clause</type>
         <docNumber>154</docNumber>
         <dpsCaseNumber/>
         <generalRuleReferences>
-            <generalRuleReference>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2827549</generalRuleReference>
+            <generalRuleReference>26.1</generalRuleReference>
         </generalRuleReferences>
         <statementCharges>
             <scopeOfApplicability>
@@ -6692,7 +6692,7 @@
         <commodity>electricityPrimaryMetered</commodity>
         <dataSource>Statement</dataSource>
         <mediaType>application/pdf</mediaType>
-        <sourceURL>https://ets.dps.ny.gov/ets_web/search/searchShortcutEffectiveAction.cfm?M%3FIW%3F%21ZQOH%25NL%40LNR%3C%2BR%3F%2BXTWD8AM%3F%263%40JZ%3E%3EME%2AOC9%3E4J%292TH%21J%3EH%2AK%3D%26%28VP%0AMLF%5EGL%2A%5F%25AKO%2BS%5EH%3BQO%5F%2E%23%3C%2DD4%3B%2F%2FO%20%2AVBMFR4K%3BHI%2A%3A%29IE%22EGE%26X4QF%3B1IG%2A%0AMC%24VCF%5DUO%5CG%2E%5F%5FY%2A%2AOI%22%5FEK4%21K%403%27%40%2BZF%203NOD%3B%22Q%22Z%5DANH%22%40N%3A%2B%3DO%2AOQJM3I%0AM%27U%2AK5YVQD%26%22YCB%3AIJ%40%5EQX5KJD%26V%24XJ%2F%3B2%24MBMIS0%3D%26%2C%5CKW5NJ%2B%2C%3DQ%3B8LF%5B7L%0A%276%2B%28T6LJ%2CP0%20%20%0A</sourceURL>
+        <sourceURL>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2827721</sourceURL>
         <dataCreationMethod>Manual</dataCreationMethod>
         <dataDownloadURL>https://ets.dps.ny.gov/ets_web/search/showPDF.cfm?G%3E%29S2%3DJ9JSBW%27%5EZK%26%21%2C%5BK4%3FXVAHQQ%3AW%2FLJ%5B%5E%3AICSBNKB%5FC%2A69NBFZ%0A</dataDownloadURL>
         <effectivePeriod>
@@ -6700,15 +6700,15 @@
         </effectivePeriod>
         <datePublished>2024-11-04</datePublished>
         <dateSourceLastUpdated>2024-10-01T00:00:00</dateSourceLastUpdated>
-        <dateTimeDataExtract>2024-12-22T14:23:31</dateTimeDataExtract>
-        <dateTimeDataTransfer>2024-12-22T14:23:31</dateTimeDataTransfer>
+        <dateTimeDataExtract>2025-01-15T17:30:14</dateTimeDataExtract>
+        <dateTimeDataTransfer>2025-01-15T17:30:14</dateTimeDataTransfer>
         <updateFrequency>annually</updateFrequency>
         <tariffStatementTypeCode>MAC ADJ</tariffStatementTypeCode>
         <type>Monthly Adjustment Clause Adj</type>
         <docNumber>154</docNumber>
         <dpsCaseNumber/>
         <generalRuleReferences>
-            <generalRuleReference>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2827721</generalRuleReference>
+            <generalRuleReference>26.1</generalRuleReference>
         </generalRuleReferences>
         <statementCharges>
             <scopeOfApplicability>
@@ -6878,7 +6878,7 @@
         <commodity>electricityPrimaryMetered</commodity>
         <dataSource>Statement</dataSource>
         <mediaType>application/pdf</mediaType>
-        <sourceURL>https://ets.dps.ny.gov/ets_web/search/searchShortcutEffectiveAction.cfm?M%3FIW%3F%21ZQOH%25NL%40LNR%3C%2BR%3F%2BXTWD8AM%3F%263%40JZ%3E%3EME%2AOC9%3E4J%292TH%21J%3EH%2AK%3D%26%28VP%0AMLF%5EGL%2A%5F%25AKO%2BS%5EH%3BQO%5F%2E%23%3C%2DD4%3B%2F%2FO%20%2AVBMFR4K%3BHI%2A%3A%29IE%22EGE%26X4QF%3B1IG%2A%0AMC%24VCF%5DUO%5CG%2E%5F%5FY%2A%2AOI%22%5FEK4%21K%403%27%40%2BZF%203NOD%3B%22Q%22Z%5DANH%22%40N%3A%2B%3DO%2AOQJM3I%0AM%27U%2AK5YVQD%26%22YCB%3AIJ%40%5EQX5KJD%26V%24XJ%2F%3B2%24MBMIS0%3D%26%2C%5CKW5NJ%2B%2C%3DQ%3B8LF%5B7L%0A%276%2B%28T6LJ%2CP0%20%20%0A</sourceURL>
+        <sourceURL>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2827567</sourceURL>
         <dataCreationMethod>Manual</dataCreationMethod>
         <dataDownloadURL>https://ets.dps.ny.gov/ets_web/search/showPDF.cfm?G%3E%29S2%3DJ9JSBW%27%5EZK%2E%21%2CSK4%3FXVAHQQ%3AW%2FLJ%5B%5E%3AICSBNKB%5FC%2A69NBFZ%0A</dataDownloadURL>
         <effectivePeriod>
@@ -6886,15 +6886,15 @@
         </effectivePeriod>
         <datePublished>2024-10-29</datePublished>
         <dateSourceLastUpdated>2024-10-29T00:00:00</dateSourceLastUpdated>
-        <dateTimeDataExtract>2024-12-22T14:23:31</dateTimeDataExtract>
-        <dateTimeDataTransfer>2024-12-22T14:23:31</dateTimeDataTransfer>
+        <dateTimeDataExtract>2025-01-15T17:30:14</dateTimeDataExtract>
+        <dateTimeDataTransfer>2025-01-15T17:30:14</dateTimeDataTransfer>
         <updateFrequency>annually</updateFrequency>
         <tariffStatementTypeCode>MFC</tariffStatementTypeCode>
         <type>Merchant Function Charge</type>
         <docNumber>158</docNumber>
         <dpsCaseNumber/>
         <generalRuleReferences>
-            <generalRuleReference>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2827567</generalRuleReference>
+            <generalRuleReference>25.3</generalRuleReference>
         </generalRuleReferences>
         <statementCharges>
             <scopeOfApplicability>
@@ -7517,7 +7517,7 @@
         <commodity>electricityPrimaryMetered</commodity>
         <dataSource>Statement</dataSource>
         <mediaType>application/pdf</mediaType>
-        <sourceURL>https://ets.dps.ny.gov/ets_web/search/searchShortcutEffectiveAction.cfm?M%3FIW%3F%21ZQOH%25NL%40LNR%3C%2BR%3F%2BXTWD8AM%3F%263%40JZ%3E%3EME%2AOC9%3E4J%292TH%21J%3EH%2AK%3D%26%28VP%0AMLF%5EGL%2A%5F%25AKO%2BS%5EH%3BQO%5F%2E%23%3C%2DD4%3B%2F%2FO%20%2AVBMFR4K%3BHI%2A%3A%29IE%22EGE%26X4QF%3B1IG%2A%0AMC%24VCF%5DUO%5CG%2E%5F%5FY%2A%2AOI%22%5FEK4%21K%403%27%40%2BZF%203NOD%3B%22Q%22Z%5DANH%22%40N%3A%2B%3DO%2AOQJM3I%0AM%27U%2AK5YVQD%26%22YCB%3AIJ%40%5EQX5KJD%26V%24XJ%2F%3B2%24MBMIS0%3D%26%2C%5CKW5NJ%2B%2C%3DQ%3B8LF%5B7L%0A%276%2B%28T6LJ%2CP0%20%20%0A</sourceURL>
+        <sourceURL>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2828127</sourceURL>
         <dataCreationMethod>Manual</dataCreationMethod>
         <dataDownloadURL>https://ets.dps.ny.gov/ets_web/search/showPDF.cfm?G%3E%29S2%3DJ9JSBW%27%5EZC%26%21%3C%5BK4%3FXVAHQQ%3AW%2FLJ%5B%5E%3AICSBNKB%5FC%2A69NBFZ%0A</dataDownloadURL>
         <effectivePeriod>
@@ -7525,15 +7525,15 @@
         </effectivePeriod>
         <datePublished>2024-11-04</datePublished>
         <dateSourceLastUpdated>2024-10-01T00:00:00</dateSourceLastUpdated>
-        <dateTimeDataExtract>2024-12-22T14:23:31</dateTimeDataExtract>
-        <dateTimeDataTransfer>2024-12-22T14:23:31</dateTimeDataTransfer>
+        <dateTimeDataExtract>2025-01-15T17:30:14</dateTimeDataExtract>
+        <dateTimeDataTransfer>2025-01-15T17:30:14</dateTimeDataTransfer>
         <updateFrequency>annually</updateFrequency>
         <tariffStatementTypeCode>MSC ADJ</tariffStatementTypeCode>
         <type>Monthly Supply Charge Adjustment</type>
         <docNumber>156</docNumber>
         <dpsCaseNumber/>
         <generalRuleReferences>
-            <generalRuleReference>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2828127</generalRuleReference>
+            <generalRuleReference>25.2</generalRuleReference>
         </generalRuleReferences>
         <statementCharges>
             <scopeOfApplicability>
@@ -7704,7 +7704,7 @@
         <commodity>electricityPrimaryMetered</commodity>
         <dataSource>Statement</dataSource>
         <mediaType>application/pdf</mediaType>
-        <sourceURL>https://ets.dps.ny.gov/ets_web/search/searchShortcutEffectiveAction.cfm?M%3FIW%3F%21ZQOH%25NL%40LNR%3C%2BR%3F%2BXTWD8AM%3F%263%40JZ%3E%3EME%2AOC9%3E4J%292TH%21J%3EH%2AK%3D%26%28VP%0AMLF%5EGL%2A%5F%25AKO%2BS%5EH%3BQO%5F%2E%23%3C%2DD4%3B%2F%2FO%20%2AVBMFR4K%3BHI%2A%3A%29IE%22EGE%26X4QF%3B1IG%2A%0AMC%24VCF%5DUO%5CG%2E%5F%5FY%2A%2AOI%22%5FEK4%21K%403%27%40%2BZF%203NOD%3B%22Q%22Z%5DANH%22%40N%3A%2B%3DO%2AOQJM3I%0AM%27U%2AK5YVQD%26%22YCB%3AIJ%40%5EQX5KJD%26V%24XJ%2F%3B2%24MBMIS0%3D%26%2C%5CKW5NJ%2B%2C%3DQ%3B8LF%5B7L%0A%276%2B%28T6LJ%2CP0%20%20%0A</sourceURL>
+        <sourceURL>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2827551</sourceURL>
         <dataCreationMethod>Manual</dataCreationMethod>
         <dataDownloadURL>https://ets.dps.ny.gov/ets_web/search/showPDF.cfm?G%3E%29S2%3DJ9JSBW%27%5EZC%2E%20%5C%5BK4%3FXVAHQQ%3AW%2FLJ%5B%5E%3AICSBNKB%5FC%2A69NBFZ%0A</dataDownloadURL>
         <effectivePeriod>
@@ -7712,15 +7712,15 @@
         </effectivePeriod>
         <datePublished>2024-10-29</datePublished>
         <dateSourceLastUpdated>2024-11-01T00:00:00</dateSourceLastUpdated>
-        <dateTimeDataExtract>2024-12-22T14:23:31</dateTimeDataExtract>
-        <dateTimeDataTransfer>2024-12-22T14:23:31</dateTimeDataTransfer>
+        <dateTimeDataExtract>2025-01-15T17:30:14</dateTimeDataExtract>
+        <dateTimeDataTransfer>2025-01-15T17:30:14</dateTimeDataTransfer>
         <updateFrequency>annually</updateFrequency>
         <tariffStatementTypeCode>MSC CAP</tariffStatementTypeCode>
         <type>Market Supply Charge-Capacity</type>
         <docNumber>115</docNumber>
         <dpsCaseNumber/>
         <generalRuleReferences>
-            <generalRuleReference>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2827551</generalRuleReference>
+            <generalRuleReference>25.1, 20.6.2</generalRuleReference>
         </generalRuleReferences>
         <statementCharges>
             <scopeOfApplicability>
@@ -9876,7 +9876,7 @@
         <commodity>electricityPrimaryMetered</commodity>
         <dataSource>Statement</dataSource>
         <mediaType>application/pdf</mediaType>
-        <sourceURL>https://ets.dps.ny.gov/ets_web/search/searchShortcutEffectiveAction.cfm?M%3FIW%3F%21ZQOH%25NL%40LNR%3C%2BR%3F%2BXTWD8AM%3F%263%40JZ%3E%3EME%2AOC9%3E4J%292TH%21J%3EH%2AK%3D%26%28VP%0AMLF%5EGL%2A%5F%25AKO%2BS%5EH%3BQO%5F%2E%23%3C%2DD4%3B%2F%2FO%20%2AVBMFR4K%3BHI%2A%3A%29IE%22EGE%26X4QF%3B1IG%2A%0AMC%24VCF%5DUO%5CG%2E%5F%5FY%2A%2AOI%22%5FEK4%21K%403%27%40%2BZF%203NOD%3B%22Q%22Z%5DANH%22%40N%3A%2B%3DO%2AOQJM3I%0AM%27U%2AK5YVQD%26%22YCB%3AIJ%40%5EQX5KJD%26V%24XJ%2F%3B2%24MBMIS0%3D%26%2C%5CKW5NJ%2B%2C%3DQ%3B8LF%5B7L%0A%276%2B%28T6LJ%2CP0%20%20%0A</sourceURL>
+        <sourceURL>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2826795</sourceURL>
         <dataCreationMethod>Manual</dataCreationMethod>
         <dataDownloadURL>https://ets.dps.ny.gov/ets_web/search/showPDF.cfm?G%3E%29S2%3DJ9JSBW%27%5EZ%5B%2B%21L%23K4%3FXVAHQQ%3AW%2FLJ%5B%5E%3AICSBNKB%5FC%2A69NBFZ%0A</dataDownloadURL>
         <effectivePeriod>
@@ -9884,15 +9884,15 @@
         </effectivePeriod>
         <datePublished>2024-07-29</datePublished>
         <dateSourceLastUpdated>2024-06-01T00:00:00</dateSourceLastUpdated>
-        <dateTimeDataExtract>2024-12-22T14:23:31</dateTimeDataExtract>
-        <dateTimeDataTransfer>2024-12-22T14:23:31</dateTimeDataTransfer>
+        <dateTimeDataExtract>2025-01-15T17:30:14</dateTimeDataExtract>
+        <dateTimeDataTransfer>2025-01-15T17:30:14</dateTimeDataTransfer>
         <updateFrequency>annually</updateFrequency>
         <tariffStatementTypeCode>RDM</tariffStatementTypeCode>
         <type>Revenue Decoupling Mechanism</type>
         <docNumber>34</docNumber>
         <dpsCaseNumber/>
         <generalRuleReferences>
-            <generalRuleReference>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2826795</generalRuleReference>
+            <generalRuleReference>26.2</generalRuleReference>
         </generalRuleReferences>
         <statementCharges>
             <scopeOfApplicability>
@@ -10507,7 +10507,7 @@
         <commodity>electricityPrimaryMetered</commodity>
         <dataSource>Statement</dataSource>
         <mediaType>application/pdf</mediaType>
-        <sourceURL>https://ets.dps.ny.gov/ets_web/search/searchShortcutEffectiveAction.cfm?M%3FIW%3F%21ZQOH%25NL%40LNR%3C%2BR%3F%2BXTWD8AM%3F%263%40JZ%3E%3EME%2AOC9%3E4J%292TH%21J%3EH%2AK%3D%26%28VP%0AMLF%5EGL%2A%5F%25AKO%2BS%5EH%3BQO%5F%2E%23%3C%2DD4%3B%2F%2FO%20%2AVBMFR4K%3BHI%2A%3A%29IE%22EGE%26X4QF%3B1IG%2A%0AMC%24VCF%5DUO%5CG%2E%5F%5FY%2A%2AOI%22%5FEK4%21K%403%27%40%2BZF%203NOD%3B%22Q%22Z%5DANH%22%40N%3A%2B%3DO%2AOQJM3I%0AM%27U%2AK5YVQD%26%22YCB%3AIJ%40%5EQX5KJD%26V%24XJ%2F%3B2%24MBMIS0%3D%26%2C%5CKW5NJ%2B%2C%3DQ%3B8LF%5B7L%0A%276%2B%28T6LJ%2CP0%20%20%0A</sourceURL>
+        <sourceURL>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2823939</sourceURL>
         <dataCreationMethod>Manual</dataCreationMethod>
         <dataDownloadURL>https://ets.dps.ny.gov/ets_web/search/showPDF.cfm?G%3E%29S2%3DJ9JSBW%27%5E%3AK%2A%20LKK4%3FXVAHQQ%3AW%2FLJ%5B%5E%3AICSBNKB%5FC%2A69NBFZ%0A</dataDownloadURL>
         <effectivePeriod>
@@ -10515,15 +10515,15 @@
         </effectivePeriod>
         <datePublished>2023-12-15</datePublished>
         <dateSourceLastUpdated>2024-06-01T00:00:00</dateSourceLastUpdated>
-        <dateTimeDataExtract>2024-12-22T14:23:31</dateTimeDataExtract>
-        <dateTimeDataTransfer>2024-12-22T14:23:31</dateTimeDataTransfer>
+        <dateTimeDataExtract>2025-01-15T17:30:14</dateTimeDataExtract>
+        <dateTimeDataTransfer>2025-01-15T17:30:14</dateTimeDataTransfer>
         <updateFrequency>annually</updateFrequency>
         <tariffStatementTypeCode>SBC</tariffStatementTypeCode>
         <type>System Benefits Charge</type>
         <docNumber>14</docNumber>
         <dpsCaseNumber/>
         <generalRuleReferences>
-            <generalRuleReference>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2823939</generalRuleReference>
+            <generalRuleReference>26.4</generalRuleReference>
         </generalRuleReferences>
         <statementCharges>
             <scopeOfApplicability>
@@ -10690,7 +10690,7 @@
         <commodity>electricityPrimaryMetered</commodity>
         <dataSource>Statement</dataSource>
         <mediaType>application/pdf</mediaType>
-        <sourceURL>https://ets.dps.ny.gov/ets_web/search/searchShortcutEffectiveAction.cfm?M%3FIW%3F%21ZQOH%25NL%40LNR%3C%2BR%3F%2BXTWD8AM%3F%263%40JZ%3E%3EME%2AOC9%3E4J%292TH%21J%3EH%2AK%3D%26%28VP%0AMLF%5EGL%2A%5F%25AKO%2BS%5EH%3BQO%5F%2E%23%3C%2DD4%3B%2F%2FO%20%2AVBMFR4K%3BHI%2A%3A%29IE%22EGE%26X4QF%3B1IG%2A%0AMC%24VCF%5DUO%5CG%2E%5F%5FY%2A%2AOI%22%5FEK4%21K%403%27%40%2BZF%203NOD%3B%22Q%22Z%5DANH%22%40N%3A%2B%3DO%2AOQJM3I%0AM%27U%2AK5YVQD%26%22YCB%3AIJ%40%5EQX5KJD%26V%24XJ%2F%3B2%24MBMIS0%3D%26%2C%5CKW5NJ%2B%2C%3DQ%3B8LF%5B7L%0A%276%2B%28T6LJ%2CP0%20%20%0A</sourceURL>
+        <sourceURL>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2825845</sourceURL>
         <dataCreationMethod>Manual</dataCreationMethod>
         <dataDownloadURL>https://ets.dps.ny.gov/ets_web/search/showPDF.cfm?G%3E%29S2%3DJ9JSBW%27%5EJK%28%21%5C%5BK4%3FXVAHQQ%3AW%2FLJ%5B%5E%3AICSBNKB%5FC%2A69NBFZ%0A</dataDownloadURL>
         <effectivePeriod>
@@ -10698,15 +10698,15 @@
         </effectivePeriod>
         <datePublished>2024-05-17</datePublished>
         <dateSourceLastUpdated>2024-06-01T00:00:00</dateSourceLastUpdated>
-        <dateTimeDataExtract>2024-12-22T14:23:31</dateTimeDataExtract>
-        <dateTimeDataTransfer>2024-12-22T14:23:31</dateTimeDataTransfer>
+        <dateTimeDataExtract>2025-01-15T17:30:14</dateTimeDataExtract>
+        <dateTimeDataTransfer>2025-01-15T17:30:14</dateTimeDataTransfer>
         <updateFrequency>annually</updateFrequency>
         <tariffStatementTypeCode>SDR</tariffStatementTypeCode>
         <type>Delivery Revenue Surcharge</type>
         <docNumber>14</docNumber>
         <dpsCaseNumber>15-E-0751</dpsCaseNumber>
         <generalRuleReferences>
-            <generalRuleReference>https://ets.dps.ny.gov/ets_web/search/searchSubmissionID.cfm?sub_id=2825845</generalRuleReference>
+            <generalRuleReference>26.7</generalRuleReference>
         </generalRuleReferences>
         <statementCharges>
             <scopeOfApplicability>
